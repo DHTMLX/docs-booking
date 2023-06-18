@@ -52,19 +52,19 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 }
 
 .markdown > h1 {
-  font-size: 1.8rem;
+  font-size: 3rem;
 }
 
 /* h2 */
 
 .markdown>h2 {
-  --ifm-h2-font-size: 1.5rem;
+  --ifm-h2-font-size: 2rem;
 }
 
 /* h3 */
 
 .markdown>h3 {
-  --ifm-h3-font-size: 1.2rem;
+  --ifm-h3-font-size: 1.5rem;
 }
 
 /* end typography */
@@ -91,39 +91,30 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 
 /* end Search input styles */
 
-/* Header link */
-.iconExternalLink_3J9K,
-.iconExternalLink_node_modules-\@docusaurus-theme-classic-lib-next-theme-IconExternalLink-styles-module {
-  display: none;
+/* Link icons */
+
+.iconExternalLink_lCJq,
+.iconExternalLink_node_modules-\@docusaurus-theme-classic-lib-theme-IconExternalLink-styles-module,
+.iconExternalLink_nPIU,
+.iconExternalLink_node_modules-\@docusaurus-theme-classic-lib-theme-Icon-ExternalLink-styles-module {
+  display: none; /* hides the link icon */
 }
 
-/* end Header link */
-
-/* styles for tables */
-
-table {
-  display: inline-table;
-}
-
-table tr:nth-child(2n) {
-  background-color: var(--ifm-table-background);
-}
-
-tr {
-  line-height: 1.2;
-}
-table {
-  text-align: left;
-}
-
-/* end styles for tables */
-
+/* end Link icons */
 
 /* imgs */
 
 .markdown img {
   margin-bottom: var(--ifm-leading);
+
+  /* center alignment of images */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
+  border-radius: 3px;
 }
+
 
 /* end imgs */
 
@@ -147,8 +138,10 @@ table {
 /* for Code Snippet iframe */
 
 .snippet_iframe {
-border: 1px solid var(--ifm-hr-border-color);
-margin-bottom: var(--ifm-leading);
+  border: 1px solid var(--ifm-hr-border-color);
+  margin-bottom: var(--ifm-leading);
+
+  border-radius: 5px; 
 }
 
 /* end for Code Snippet iframe */
@@ -163,11 +156,19 @@ code {
 
 /* end small code block */
 
+/* styles for block of code */
+
+.token-line.theme-code-block-highlighted-line{ /* added after updating to 2.0.0-beta.19 */
+  background-color: rgb(156 159 166 / 30%);
+}
+
+/* end styles for block of code */
+
 /* list */
 
 .markdown ul  {
   margin-top: 10px;
-  line-height: 38px;
+	line-height: 38px;
 }
 
 ::marker {
@@ -175,3 +176,53 @@ code {
 }
 
 /* end list */
+
+/* buttons */
+
+.support_btn{
+  font-size: 16pt;
+  color: rgb(53, 148, 243);
+  background-color: transparent;
+  border: 1px solid rgba(53, 148, 243, 0.692);;
+  border-radius: 5px;
+  width: 280px;
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+.support_btn:hover{
+  background-color: rgba(53, 148, 243, 0.692);
+  color: white;
+}
+
+.support_btn > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* buttons end */
+
+
+/* styles for tables */
+
+table {
+  width: 100%;
+  display: inline-table;
+}
+table th:first-child {
+  width: 25%;
+}
+
+/* end styles for tables */
+
+/* styles for infoblock */
+
+.admonition-content > p {
+  line-height: 2.2;
+}
+
+.admonition {
+  margin-top: 15px;
+}
+
+/* end styles for infoblock */
