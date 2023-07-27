@@ -53,6 +53,11 @@ new booking.Booking("#root", {
 
 ## Booking properties
 
-| Name                                          | Description                                            |
-| --------------------------------------------- | ------------------------------------------------------ |
-| [](api/config/booking_configname_config.md)   | @getshort(api/config/booking_configname_config.md)     |
+| Name                                      | Description                                      |
+| ----------------------------------------- | ------------------------------------------------ |
+| [](api/config/js_booking_cards.md)        | @getshort(api/config/js_booking_cards.md)        |
+| [](api/config/js_booking_cardshape.md)    | @getshort(api/config/js_booking_cardshape.md)    |
+| [](api/config/js_booking_filteredcards.md)| @getshort(api/config/js_booking_filteredcards.md)|
+| [](api/config/js_booking_filtershape.md)  | @getshort(api/config/js_booking_filtershape.md)  |
+| [](api/config/js_booking_formshape.md)    | @getshort(api/config/js_booking_formshape.md)    |
+| [](api/config/js_booking_infoshape.md)    | @getshort(api/config/js_booking_infoshape.md)    |

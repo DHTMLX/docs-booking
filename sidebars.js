@@ -82,7 +82,13 @@ module.exports = {
 					collapsed: true,
 					items: [
 						// Booking properties
-						"api/config/booking_configname_config",
+						// "api/config/booking_configname_config", // To delete before release! 
+						"api/config/js_booking_cards",
+						"api/config/js_booking_cardshape",
+						"api/config/js_booking_filteredcards",
+						"api/config/js_booking_filtershape",
+						"api/config/js_booking_formshape",
+						"api/config/js_booking_infoshape",
 					]
 				}
 			]
@@ -99,8 +105,8 @@ module.exports = {
 				"guides/localization",
 				"guides/working_with_data",
 				"guides/working_with_server",
-				"guides/working_with_hotkeys"
-			]
-		}
+				"guides/working_with_hotkeys",
+			],
+		},
 	]
 };
