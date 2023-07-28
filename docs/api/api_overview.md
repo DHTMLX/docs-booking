@@ -30,8 +30,11 @@ new booking.Booking("#root", {
 ### Event Bus methods
 
 | Name                                                    | Description                                                    |
-| ------------------------------------------------------- | -------------------------------------------------------------- |
-| [](api/internal/booking_innermethodname_method.md)      | @getshort(api/internal/booking_innermethodname_method.md)      |
+| ------------------------------------------------------- | ---------------------------------------------------------- |
+| [](api/internal/js_booking_exec_method.md)      | @getshort(api/internal/js_booking_exec_method.md)      |
+| [](api/internal/js_booking_intercept_method.md) | @getshort(api/internal/js_booking_intercept_method.md) |
+| [](api/internal/js_booking_on_method.md)        | @getshort(api/internal/js_booking_on_method.md)        |
+| [](api/internal/js_booking_setnext_method.md)   | @getshort(api/internal/js_booking_setnext_method.md)   |
 
 ### State methods
 

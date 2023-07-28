@@ -42,7 +42,11 @@ module.exports = {
 							collapsible: true,
 							collapsed: true,
 							items: [
-								"api/internal/booking_innermethodname_method",
+								//"api/internal/booking_innermethodname_method",
+								"api/internal/js_booking_exec_method",
+								"api/internal/js_booking_intercept_method",
+								"api/internal/js_booking_on_method",
+								"api/internal/js_booking_setnext_method"
 							]
 						},
 						{
@@ -52,6 +56,8 @@ module.exports = {
 							collapsed: true,
 							items: [
 								"api/internal/booking_innermethodname_method",
+								//"api/internal/js_kanban_getreactivestate_method",
+								//"api/internal/js_kanban_getstate_method",
 							]
 						},
 						{
