@@ -51,9 +51,11 @@ new booking.Booking("#root", {
 
 ## Booking events
 
-| Name                                                  | Description                                                 |
-| ----------------------------------------------------- | ----------------------------------------------------------- |
-| [](api/events/booking_eventname_event.md)             | @getshort(api/events/booking_eventname_event.md)            |
+| Name                                      | Description                                      |
+| ----------------------------------------- | ------------------------------------------------ |
+| [](api/events/js_booking_confirmslot.md)  | @getshort(api/events/js_booking_confirmslot.md)  |
+| [](api/events/js_booking_selectslot.md)   | @getshort(api/events/js_booking_selectslot.md)   |
+| [](api/events/js_booking_setfilter.md)    | @getshort(api/events/js_booking_setfilter.md)    |
 
 ## Booking properties
 

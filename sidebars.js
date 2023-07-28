@@ -78,7 +78,10 @@ module.exports = {
 					collapsed: true,
 					items: [
 						// Booking events
-						"api/events/booking_eventname_event",
+						//"api/events/booking_eventname_event",
+						"api/events/js_booking_confirmslot",
+						"api/events/js_booking_selectslot",
+						"api/events/js_booking_setfilter",
 					]
 				},
 				{
