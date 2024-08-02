@@ -1,43 +1,51 @@
 ---
-sidebar_label: cards
+sidebar_label: data
 title: cards
 description: You can learn about the cards config in the documentation of the DHTMLX JavaScript Booking library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Booking.
 ---
 
-# cards
+# data
 
 ### Description
 
-@short: Optional. An array of objects containing the cards data
+@short: Required?. An array of objects containing the cards data
 
 ### Usage
 
 ~~~jsx {}
-cards?: [
+data: [
 	{
 		id: string | number,
 		title: string,
 		category?: string,
 		subtitle?: string,
 		details?: string,
-		preview?: string, // url
+		preview?: string, // link to image
 		price?: string,
 		review?: {
-			star: number,
+			stars: number,
 			count: number,
 		},
 		slots: [
 			{
-				from: number,
-				to: number,
-				size?: number,
-				gap?: number,
-				days?: array, // array of numbers
-				dates?: array, // array of numbers
-			}, {...}
+				from: number, // hours from 0 to 24
+				to: number, // hours from 0 to 24
+				size?: number, // length of slot in minutes
+				gap?: number, // gap between slots in minutes
+				days?: array, // days of week for which rule can be applied from 0 to 6
+				dates?: array, // exact dates for which rule can be applied, timestamps
+			}, 
 		],
-		availableSlots?: array, // array of numbers
-		usedSlots?: array, // array of numbers
+
+		availableSlots?: [
+			{
+				id: string|number,
+				time:[number, number] //timestamp, length in minutes
+			},
+		],
+		usedSlots?: number[], //timestamps
+		slotSize?: number, //minutes
+		slotGap?: number; //minutes
 	}, {...}
 ];
 ~~~
@@ -54,12 +62,12 @@ For each card object you can specify the following parameters:
 - `preview` - (optional) a card preview which is the link to the card image
 - `price` - (optional) the price of the service  
 - `review` - (optional) rating information that includes the following parameters:  
-  - `star` - (optional) the number of rating stars (out of five)  
+  - `stars` - (optional) the number of rating stars (out of five)  
   - `count` - (optional) the number of reviews
 - `slots` - (required) an array of objects with the following parameters for booking slots:
   - `from` - (required) a slot start time in hours from 0 to 24
   - `to` - (required) a slot end time in hours from 0 to 24
-  - `size` - (optional) the duration of one slot in minutes TBD
+  - `size` - (optional) the duration of one slot in minutes 
   - `gap` - (optional) the gap between slots in minutes; 0 is set by default
   - `days` - (optional) days of the week when a slot is available for booking; possible values: from 0 to 6 where 0 is Sunday and 6 is Saturday; if no days are specified, all days are applied by default; if days are specified, the slot parameters (**to**, **from**, **size**, **gap**) defined for these days will be applied
   - `dates` - (optional) an array of timestamps in milliseconds which are exact dates when a slot is available; the slot parameters (**to**, **from**, **size**, **gap**) for these specified dates will be applied 
@@ -68,7 +76,9 @@ Slot parameters specified for days will override common parameters defined for a
 Slot parameters specified for dates will override parameters defined for specific days and all days. 
 If several slots objects are created for the same day, make sure that slots time ranges (**from** and **to**) do not overlap, otherwise, all slots data for these days will not be applied.  
 :::
-- `availableSlots` - (optional) an array of timestamps of available slots in milliseconds; if available slots are specified here, all slots from the `slots` array are ignored (i.e., become unavailable)
+- `availableSlots` - (optional) an array of timestamps of available slots in milliseconds; if available slots are specified here, all slots from the `slots` array are ignored (i.e., become unavailable); each object in the array has the next parameters:
+  - `id` - (required) 
+  - `time` - (required) 
 - `usedSlots` - (optional) an array of timestamps of booked slots in milliseconds; these slots are not visible for a user
 
 ### Example

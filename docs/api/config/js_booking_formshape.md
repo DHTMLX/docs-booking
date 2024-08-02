@@ -8,27 +8,28 @@ description: You can learn about the formShape config in the documentation of th
 
 ### Description
 
-@short: Optional. An array of objects containing settings for managing the appearance and functionality of the Reservation editor
+@short: Required?. An array of objects containing settings for managing the appearance and functionality of the Reservation editor
 
 ### Usage
 
 ~~~jsx {}
-formShape?: [
-    {
-        type: "text" | "area",
-        name: string,
-        label: string,
-    }
-];
+formShape:
+  {
+    comp: "text" | "textarea",
+	key: string,
+	label?: string,
+	required?: boolean
+  };
 ~~~
 
 ### Parameters
 
 For each field you can specify the following parameters:
 
-- `type` - (optional) the field type (**text** or **area**)
-- `name` - (optional) the field name
+- `comp` - (optional) the field type (**text** or **area**)
+- `key` - (optional) 
 - `label` - (optional) the field label
+- `required` - (optional)
 
 ### Default config
 

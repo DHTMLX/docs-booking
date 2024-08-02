@@ -14,12 +14,18 @@ description: You can learn about the confirm-slot event in the documentation of 
 
 ~~~jsx {}
 "confirm-slot": ({
-    cardId: string | number,
-    data: {
-        [key: string]: string,
-    },
-    startTime: number,
-    confirmation: promise,
+    slot:{
+        id:string|number, //item id
+        time: [ number, number ], //timestamp, length in minutes
+    };
+    data:{
+        [key]: any, //fields described in formShape
+    };
+    confirm:{
+        promise:Promise,
+        done: (value:any) => void,
+        error: (error: Error) => void,
+    }
 }) => void;
 ~~~
 
@@ -27,11 +33,16 @@ description: You can learn about the confirm-slot event in the documentation of 
 
 The callback of the **confirm-slot** event can take an object with the following parameters:
 
-- `cardId` - (required) the ID of a card for which the booking of a slot is confirmed
+- `slot` - (required) an object with the next slot parameters:
+  - `id` - (required) the ID of a card for which the booking of a slot is confirmed
+  - `time` - (required)
 - `data` - (required) an abject with the booking screen form fields with the following parameters for each field:
    - `key` - (required) the form field ID. By default, three fields are added: *name*, *email*, *description*
    - `startTime` - (required) the start time of a slot in milliseconds
-- `confirmation` - (required) a promise with the confirmation status
+- `confirm` - (required) an object with the next parameters:
+ - `promise` -  promise with the confirmation status ?
+ - `done` -
+ - `error` - 
 
 ### Example
 

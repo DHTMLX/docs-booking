@@ -1,0 +1,40 @@
+---
+sidebar_label: select-item
+title: select-item Event
+description: You can learn about the select-item event in the documentation of the DHTMLX JavaScript Booking library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Booking.
+---
+
+# select-item
+
+### Description
+
+@short: Fires when ...
+
+### Usage
+
+~~~jsx {}
+"select-item": ({
+  id: string|number
+}) => void;
+~~~
+
+### Parameters
+
+The callback of the **select-item** event can take an object with the following parameters:
+
+- `id` - (required) the id of an item
+
+
+### Example
+
+~~~jsx {7-9}
+// create Booking
+const booking = new booking.Booking("#root", {
+	// initial configuration parameters
+});
+
+// subscribe on the "EVENT_TEMPLATE" event
+booking.api.on("EVENT_TEMPLATE", (obj) => {
+	...
+});
+~~~

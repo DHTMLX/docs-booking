@@ -8,30 +8,30 @@ description: You can learn about the filterShape config in the documentation of 
 
 ### Description
 
-@short: Optional. An object of settings for managing the filter functionality
+@short: Required?. An object of settings for managing the filter functionality
 
 ### Usage
 
 ~~~jsx {}
-filterShape?: {
-    global?: boolean,
-    date?: boolean,
-    time?: boolean | [
-        {
-            from: number,
-            to: number,
-            label: string,
-        }
-    ],
-    config?: {
-        debounce: number,
-    }
+filterShape:{
+	text?: boolean | [{
+         id:string; 
+         suggest?:string;
+    }],
+	date?: boolean;
+	time?: boolean | {
+		from: number | string;
+		to: number | string;
+		label: string;
+	};
 };
 ~~~
 
 ### Parameters
 
-- `global` - (optional) shows/hides the first search field
+- `text` - (optional) 
+  - `id` - (required)
+  - `suggest` - (required)
 - `date` - (optional) shows/hides the date field
 - `time` - (optional) shows/hides the time field. If set to **true**, it takes an array of objects with time options for a slot. For each object you can specify the following parameters:
   - `from` - (optional) a start time
@@ -44,8 +44,7 @@ filterShape?: {
         { from: 17, to: 20, label: "Evening" },
     ]
     ~~~
-- `config` - (optional) an object with the additional configuration parameters:  
-  - `debounce` - (optional) the time delay (in milliseconds) before sending an input to the server
+
 
 ### Default config
 

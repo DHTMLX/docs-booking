@@ -14,11 +14,8 @@ description: You can learn about the select-slot event in the documentation of t
 
 ~~~jsx {}
 "select-slot": ({
-    cardId: string | number,
-    slotTime: {
-        from?: Date,
-        to?: Date,
-    }
+    id: string | number,
+    time:[ number, number ] //timestamp, length in minutes
  }) => void;
 ~~~
 
@@ -26,10 +23,8 @@ description: You can learn about the select-slot event in the documentation of t
 
 The callback of the **select-slot** event can take an object with the following parameters:
 
-- `cardId` - (required) the ID of a card a selected slot belongs to
-- `slotTime` - (required) an object with the slot time parameters. In this object you can specify the following parameters:
-	- `from` - (optional) the slot start date
-	- `to` - (optional) the slot end date
+- `id` - (required) the ID of a card a selected slot belongs to
+- `time` - (required) 
   
 ### Example
 
