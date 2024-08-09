@@ -8,7 +8,7 @@ description: You can learn about the formShape config in the documentation of th
 
 ### Description
 
-@short: Required?. An array of objects containing settings for managing the appearance and functionality of the Reservation editor
+@short: Optional. An array of objects containing settings for managing the appearance and functionality of the Reservation editor
 
 ### Usage
 

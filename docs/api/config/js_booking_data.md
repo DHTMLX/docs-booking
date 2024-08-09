@@ -1,6 +1,6 @@
 ---
 sidebar_label: data
-title: cards
+title: data
 description: You can learn about the cards config in the documentation of the DHTMLX JavaScript Booking library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Booking.
 ---
 
@@ -8,7 +8,7 @@ description: You can learn about the cards config in the documentation of the DH
 
 ### Description
 
-@short: Required?. An array of objects containing the cards data
+@short: Optional. An array of objects containing the cards data
 
 ### Usage
 
@@ -46,7 +46,7 @@ data: [
 		usedSlots?: number[], //timestamps
 		slotSize?: number, //minutes
 		slotGap?: number; //minutes
-	}, {...}
+	}, 
 ];
 ~~~
 
@@ -77,14 +77,14 @@ Slot parameters specified for dates will override parameters defined for specifi
 If several slots objects are created for the same day, make sure that slots time ranges (**from** and **to**) do not overlap, otherwise, all slots data for these days will not be applied.  
 :::
 - `availableSlots` - (optional) an array of timestamps of available slots in milliseconds; if available slots are specified here, all slots from the `slots` array are ignored (i.e., become unavailable); each object in the array has the next parameters:
-  - `id` - (required) 
-  - `time` - (required) 
-- `usedSlots` - (optional) an array of timestamps of booked slots in milliseconds; these slots are not visible for a user
+  - `id` - (required) the id of a slot
+  - `time` - (required) duration in minutes
+- `usedSlots` - (optional) an array of timestamps of booked slots in milliseconds; 
 
 ### Example
 
-~~~jsx {1-42,45}
-const cards = [
+~~~jsx
+const data = [
 	{
 		id: "1",
 		title: "Debra Weeks",
@@ -94,7 +94,7 @@ const cards = [
 		preview: "https://files.webix.com/30d/d34de82e0a8e3b561988a46ce1e86743/stock-photo-doc.jpg",
 		price: "37 $",
 		review: {
-			star: 1,
+			stars: 1,
 			count: 40,
 		},
 		slots: [
@@ -128,7 +128,7 @@ const cards = [
 ];
 
 new booking.Booking("#root", {
-	cards,
+	data,
 	// other parameters
 });
 ~~~

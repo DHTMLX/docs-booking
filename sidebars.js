@@ -92,7 +92,7 @@ module.exports = {
 					items: [
 						// Booking properties
 						// "api/config/booking_configname_config", // To delete before release! 
-						"api/config/js_booking_cards",
+						"api/config/js_booking_data",
 						"api/config/js_booking_cardshape",
 						"api/config/js_booking_filteredcards",
 						"api/config/js_booking_filtershape",
@@ -112,7 +112,7 @@ module.exports = {
 				"guides/configuration",
 				"guides/customization",
 				"guides/localization",
-				"guides/working_with_data",
+				"guides/loading_data",
 				"guides/working_with_server",
 				"guides/working_with_hotkeys",
 			],
