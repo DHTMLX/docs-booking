@@ -1,5 +1,5 @@
 ---
-sidebar_label: api.on() ?
+sidebar_label: api.on() 
 title: on Method
 description: You can learn about the on method in the documentation of the DHTMLX JavaScript Booking library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Booking.
 ---
@@ -24,10 +24,9 @@ api.on(
 - `event` - (required) an event to be fired
 - `handler` - (required) a handler to be attached (the handler arguments will depend on the event to be fired)
 
-### Events
-
 :::info
-The full list of the Booking internal events can be found [**here**](api/api_overview.md/#booking-events)
+The full list of the Booking internal events you can find [**here**](/api/api_overview/#booking-events).
+Use the `api.on()` method if you want to listen to the actions without modifying them. To make changes to the actions, apply the [`api.intercept()`](/api/internal/js_booking_intercept) method.
 :::
 
 ### Example

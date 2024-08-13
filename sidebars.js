@@ -81,7 +81,7 @@ module.exports = {
 						//"api/events/booking_eventname_event",
 						"api/events/js_booking_confirmslot_event",
 						"api/events/js_booking_selectslot_event",
-						"api/events/js_booking_setfilter",
+						"api/events/js_booking_setfilter_event",
 					]
 				},
 				{

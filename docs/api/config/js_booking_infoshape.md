@@ -8,11 +8,8 @@ description: You can learn about the infoShape config in the documentation of th
 
 ### Description
 
-@short: Optional. An object with settings for managing the information block appearance
+@short: Optional. An object with settings for managing information displayed on the left side of the booking dialog 
 
-:::info
-This property allows you to manage the appearance of a booking info block.
-:::
 
 ### Usage
 
@@ -24,24 +21,27 @@ infoShape?: {
 	price?: boolean,
 	details?: boolean,
 };
+~~~
 
 ### Parameters
 
 An object has the following parameters:
 
-- `preview` - (optional) shows/hides a preview image in info block
-- `category` - (optional) shows/hides a category name in info block (e.g., a specialist's job)
-- `title` - (optional) shows/hides a title in info block (e.g., a specialist's name)
-- `price` - (optional) shows/hides a price information in info block
-- `details` - (optional) shows/hides a detail information in info block
-
-All parameters values are set to **true** by default, which means that all fields are displayed. 
+- `preview` - (optional) shows/hides a preview image in the information block (left side) of the booking dialog
+- `category` - (optional) shows/hides a category name on the left side of the booking dialog (for example, a specialist's job)
+- `title` - (optional) shows/hides a title in the information block of the booking dialog (e.g., a specialist's name)
+- `price` - (optional) shows/hides  price in the information block of the booking dialog
+- `details` - (optional) shows/hides details in the information block of the booking dialog
 
 ### Default config
 
 ~~~jsx {}
 const defaultInfoShape = {
-	...
+	preview: true,
+	category: true,
+	title: true,
+	price: true,
+	details: true,
 };
 ~~~
 

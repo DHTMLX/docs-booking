@@ -11,7 +11,7 @@ description: You can learn about the filteredCards config in the documentation o
 @short: Optional. An array of objects containing the filtered cards data
 
 :::info
-If no filters are applied, the `filteredCards` data are the same as the [`cards`](/api/properties/sv_booking_cards) data
+If no filters are applied, the `filteredCards` data will be the same as in [`data`](/api/properties/sv_booking_data).
 :::
 
 ### Usage

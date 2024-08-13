@@ -8,7 +8,7 @@ description: You can learn about the cardShape config in the documentation of th
 
 ### Description
 
-@short: Optional. An object of settings for managing appearance of the information blocks
+@short: Optional. An object with settings for managing information displayed in cards
 
 ### Usage
 
@@ -28,13 +28,13 @@ cardShape?: {
 
 To configure the card appearance, in the **cardShape** object you can specify the following parameters (fields):
 
-- `category` - (optional) shows/hides a booking category name
-- `details` - (optional) shows/hides a booking detail information
-- `preview` - (optional) shows/hides a booking preview image
-- `price` - (optional) shows/hides a booking price
-- `review` - (optional) shows/hides a booking rating information
-- `subtitle` - (optional) shows/hides a booking subtitle
-- `title` - (optional) shows/hides a booking title
+- `category` - (optional) shows/hides a card's name
+- `details` - (optional) shows/hides details
+- `preview` - (optional) shows/hides a preview image
+- `price` - (optional) shows/hides price 
+- `review` - (optional) shows/hides rating information
+- `subtitle` - (optional) shows/hides a card's subtitle
+- `title` - (optional) shows/hides a card's title
 
 ### Default config
 

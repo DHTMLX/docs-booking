@@ -24,10 +24,9 @@ api.intercept(
 - `event` - (required) an event to be fired
 - `callback` - (required) a callback to be performed (the callback arguments will depend on the event to be fired)
 
-### Events
-
 :::info
-The full list of the Booking internal events can be found [**here**](api/api_overview.md/#booking-events)
+The full list of the Booking internal events you can find [**here**](/api/api_overview/#booking-events).
+Use the [`api.on()`](/api/internal/js_booking_on) method if you want to listen to the actions without modifying them. To make changes to the actions, apply the `api.intercept()` method.
 :::
 
 ### Example

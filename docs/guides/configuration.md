@@ -9,7 +9,7 @@ description: You can learn about the configuration in the documentation of the D
 
 ## Adding cards
 
-To add a card with data, you should add an object to the [`data`](/api/config/js_booking_data) array. Using `data` parameters you are enabled to add plenty of information to a card, such as its name, category, rating information, slots for booking (both available and used), and more. Please, refer to [`data`](/api/config/js_booking_data) for the description of parameters.
+To add a card with data, you should add an object to the [`data`](/api/config/js_booking_data) array. Using `data` parameters you are enabled to add plenty of information to a card, such as its name, category, rating information, slots for booking (both available and used slots), and more. Please, refer to [`data`](/api/config/js_booking_data) for the description of parameters.
 
 ~~~jsx
 const data = [
