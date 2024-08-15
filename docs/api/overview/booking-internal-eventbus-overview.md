@@ -53,15 +53,15 @@ new booking.Booking("#root", {
 
 | Name                                      | Description                                      |
 | ----------------------------------------- | ------------------------------------------------ |
-| [](api/events/js_booking_confirmslot.md)  | @getshort(api/events/js_booking_confirmslot.md)  |
-| [](api/events/js_booking_selectslot.md)   | @getshort(api/events/js_booking_selectslot.md)   |
-| [](api/events/js_booking_setfilter.md)    | @getshort(api/events/js_booking_setfilter.md)    |
+| [](api/events/js_booking_confirmslot_event.md)  | @getshort(api/events/js_booking_confirmslot_event.md)  |
+| [](api/events/js_booking_selectslot_event.md)   | @getshort(api/events/js_booking_selectslot_event.md)   |
+| [](api/events/js_booking_setfilter_event.md)    | @getshort(api/events/js_booking_setfilter_event.md)    |
 
 ## Booking properties
 
 | Name                                      | Description                                      |
 | ----------------------------------------- | ------------------------------------------------ |
-| [](api/config/js_booking_cards.md)        | @getshort(api/config/js_booking_cards.md)        |
+| [](api/config/js_booking_data.md)         | @getshort(api/config/js_booking_data.md)         |
 | [](api/config/js_booking_cardshape.md)    | @getshort(api/config/js_booking_cardshape.md)    |
 | [](api/config/js_booking_filteredcards.md)| @getshort(api/config/js_booking_filteredcards.md)|
 | [](api/config/js_booking_filtershape.md)  | @getshort(api/config/js_booking_filtershape.md)  |

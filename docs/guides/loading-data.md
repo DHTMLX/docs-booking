@@ -10,7 +10,7 @@ description: You can learn how to load data into Booking in the documentation of
 
 The following information can be loaded into Booking:
 
-- [`data`](/api/properties/sv_booking_data) - an array of objects containing cards data 
+- [`data`](/api/properties/booking-data) - an array of objects containing cards data 
 
 You can prepare data in a separate file. Here is an example of an appropriate data set:
 

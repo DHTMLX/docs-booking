@@ -9,7 +9,7 @@ description: You can learn about the configuration in the documentation of the D
 
 ## Adding cards
 
-To add a card with data, you should add an object to the [`data`](/api/config/js_booking_data) array. Using `data` parameters you are enabled to add plenty of information to a card, such as its name, category, rating information, slots for booking (both available and used slots), and more. Please, refer to [`data`](/api/config/js_booking_data) for the description of parameters.
+To add a card with data, you should add an object to the [`data`](/api/config/booking-data) array. Using `data` parameters you are enabled to add plenty of information to a card, such as its name, category, rating information, slots for booking (both available and used slots), and more. Please, refer to [`data`](/api/config/booking-data) for the description of parameters.
 
 ~~~jsx
 const data = [
@@ -39,7 +39,7 @@ new booking.Booking("#root", {
 
 A slot is a time unit available for booking. Available slots are displayed for the next five days starting from the current day or from the start date from the filter. 
 
-To add booking slots to a card, use the `slots` parameter of the [`data`](/api/config/js_booking_data) property. You can apply one common slots rule to all days of the required card and specific rules to selected days or even dates. 
+To add booking slots to a card, use the `slots` parameter of the [`data`](/api/config/booking-data) property. You can apply one common slots rule to all days of the required card and specific rules to selected days or even dates. 
 
 For example, if you want to add booking slots with the same parameters to all days of the selected card, i.e., add slots with the same duration, the same start and end time to all days of the selected card, you should add one object to the `slots` array with the required parameters. 
 
@@ -142,7 +142,7 @@ In case you have common slots parameters and specific parameters for some days, 
 
 ## Marking slots as used or available
 
-To mark slots as used (booked) and make them not visible for a user, use the `usedSlots` parameter of the [`data`](/api/config/js_booking_data) property.
+To mark slots as used (booked) and make them not visible for a user, use the `usedSlots` parameter of the [`data`](/api/config/booking-data) property.
 
 Example:
 
@@ -222,7 +222,7 @@ new booking.Booking("#root", {
 
 ## Defining the structure of cards
 
-You can configure what information all cards will display on their left side using the [`cardShape`](/api/config/js_booking_cardshape) property.
+You can configure what information all cards will display on their left side using the [`cardShape`](/api/config/booking-cardshape) property.
 
 On the left side of a card the following information items are displayed by default:
 - preview: card image
@@ -233,7 +233,7 @@ On the left side of a card the following information items are displayed by defa
 - price: the price of the service
 - details: other details of a card
 
-To hide any information block from cards' display, set the appropriate parameter value of the [`cardShape`](/api/config/js_booking_cardshape) property to **false**.
+To hide any information block from cards' display, set the appropriate parameter value of the [`cardShape`](/api/config/booking-cardshape) property to **false**.
 
 Example:
 

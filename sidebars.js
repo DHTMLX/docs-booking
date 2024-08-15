@@ -6,7 +6,7 @@ module.exports = {
 		},
 		{
 			type: "doc",
-			id: "how_to_start"
+			id: "how-to-start"
 		},
 		{
 			type: "doc",
@@ -17,9 +17,13 @@ module.exports = {
 			label: "API",
 			collapsible: true,
 			collapsed: false,
+			link: {
+                type: "doc",
+                id: "api/overview/booking-api-overview"
+            },
 			items: [
-				"api/api_overview",
-				// Booking methods
+
+
 				{
 					type: "category",
 					label: "Booking methods",
@@ -43,10 +47,10 @@ module.exports = {
 							collapsed: true,
 							items: [
 								//"api/internal/booking_innermethodname_method",
-								"api/internal/js_booking_exec",
-								"api/internal/js_booking_intercept",
-								"api/internal/js_booking_on",
-								"api/internal/js_booking_setnext",
+								"api/internal/booking-exec",
+								"api/internal/booking-intercept",
+								"api/internal/booking-on",
+								"api/internal/booking-setnext",
 							]
 						},
 						{
@@ -56,19 +60,10 @@ module.exports = {
 							collapsed: true,
 							items: [
 								// "api/internal/booking_innermethodname_method",
-								"api/internal/js_booking_getreactivestate",
-								"api/internal/js_booking_getstate",
+								"api/internal/booking-getreactivestate",
+								"api/internal/booking-getstate",
 							]
 						},
-						{
-							type: "category",
-							label: "REST methods",
-							collapsible: true,
-							collapsed: true,
-							items: [
-								"api/internal/booking_innermethodname_method",
-							]
-						}
 					]
 				},
 				{
@@ -79,9 +74,9 @@ module.exports = {
 					items: [
 						// Booking events
 						//"api/events/booking_eventname_event",
-						"api/events/js_booking_confirmslot_event",
-						"api/events/js_booking_selectslot_event",
-						"api/events/js_booking_setfilter_event",
+						"api/events/booking-confirmslot-event",
+						"api/events/booking-selectslot-event",
+						"api/events/booking-setfilter-event",
 					]
 				},
 				{
@@ -92,12 +87,12 @@ module.exports = {
 					items: [
 						// Booking properties
 						// "api/config/booking_configname_config", // To delete before release! 
-						"api/config/js_booking_data",
-						"api/config/js_booking_cardshape",
-						"api/config/js_booking_filteredcards",
-						"api/config/js_booking_filtershape",
-						"api/config/js_booking_formshape",
-						"api/config/js_booking_infoshape",
+						"api/config/booking-data",
+						"api/config/booking-cardshape",
+						"api/config/booking-filteredcards",
+						"api/config/booking-filtershape",
+						"api/config/booking-formshape",
+						"api/config/booking-infoshape",
 					]
 				}
 			]
@@ -112,9 +107,9 @@ module.exports = {
 				"guides/configuration",
 				"guides/customization",
 				"guides/localization",
-				"guides/loading_data",
-				"guides/working_with_server",
-				"guides/working_with_hotkeys",
+				"guides/loading-data",
+				"guides/working-with-server",
+				"guides/working-with-hotkeys",
 			],
 		},
 	]

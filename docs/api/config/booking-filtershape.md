@@ -8,30 +8,30 @@ description: You can learn about the filterShape config in the documentation of 
 
 ### Description
 
-@short: Required?. An object of settings for managing the filter functionality
+@short: Optional. An object of settings for managing the filter functionality
 
 ### Usage
 
 ~~~jsx {}
 filterShape:{
-	text?: boolean | [{
-         id:string; 
-         suggest?:string;
+    text?: boolean | [{
+        id:string,
+        suggest?:string,
     }],
-	date?: boolean;
-	time?: boolean | {
-		from: number | string;
-		to: number | string;
-		label: string;
+    date?: boolean,
+    time?: boolean | {
+        from: number | string,
+        to: number | string,
+        label: string,
 	};
 };
 ~~~
 
 ### Parameters
 
-- `text` - (optional) 
+- `text` - (optional) TBD
   - `id` - (required)
-  - `suggest` - (required)
+  - `suggest` - (required) TBD
 - `date` - (optional) shows/hides the date field
 - `time` - (optional) shows/hides the time field. If set to **true**, it takes an array of objects with time options for a slot. For each object you can specify the following parameters:
   - `from` - (optional) a start time
