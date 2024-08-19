@@ -64,7 +64,7 @@ For each card object you can specify the following parameters:
 - `review` - (optional) rating information that includes the following parameters:  
   - `stars` - (optional) the number of rating stars (out of five)  
   - `count` - (optional) the number of reviews
-- `slots` - (required) an array of objects with the following parameters for booking slots:
+- `slots` - (required) an array of objects with the following parameters for each slot object:
   - `from` - (required) a slot start time in hours from 0 to 24
   - `to` - (required) a slot end time in hours from 0 to 24
   - `size` - (optional) the duration of one slot in minutes 
@@ -80,8 +80,8 @@ If several slots objects are created for the same day, make sure that slots time
   - `id` - (required) the id of a slot
   - `time` - (required) duration in minutes
 - `usedSlots` - (optional) an array of timestamps of booked slots in milliseconds;
-- `slotSize` - (optional) the duration of a slot in minutes; the value will be applied to all slots of this card if other value is not set inside the `slots` object
-- `slotGap` - (optional) the gap between slots in minutes; the value will be applied to all slots of this card if any other value is not specified inside the `slots` object
+- `slotSize` - (optional) the duration of a slot in minutes; the value will be applied to all slots of this card if other value is not set inside the `slots` object; 60 minutes is set by default
+- `slotGap` - (optional) the gap between slots in minutes that is set for all slot in the current card; this value is applied if any other value is not specified inside the `slots` object; 0 is set by default
 
 ### Example
 

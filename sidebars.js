@@ -93,6 +93,8 @@ module.exports = {
 						"api/config/booking-filtershape",
 						"api/config/booking-formshape",
 						"api/config/booking-infoshape",
+						"api/config/booking-slotgap",
+						"api/config/booking-slotsize",
 					]
 				}
 			]

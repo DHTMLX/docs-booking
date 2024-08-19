@@ -22,15 +22,19 @@ The method returns an object with the following parameters of state:
 
 ~~~jsx {}
 {	
-	cards,
-    cardShape,
-    filteredCards,
-    filterShape,
-    filterData,
-    formShape,
-	... TODO
+	data,//an array of cards objects
+    cardShape,//an object with settings for cards
+    filteredData,//filtered data array
+    filterShape,//an object with filter settings
+    filterValues,//an object with filter values (text, data, time)
+    formShape,//an array of objects with settings for the Booking editor dialog
+	infoShape,//an object with settings for the left side of the Booking editor
+    selectedItem,//single data item
+    selectedSlot,//an object with slot id and timestamp in minutes
+    slotGap,//slots gap in minutes
+    slotSize,//slot size in minutes
 }
-~~~  
+ 
 
 ### Example
 
@@ -41,12 +45,9 @@ const booking = new booking.Booking("#root", {
 	cardShape
 });
 
-// get the State of Kanban
+// get the State of Booking
 const state = booking.api.getState();
-console.log(state.cards); // output the cards data
-console.log(state.cardShape); // output the card configuration
-console.log(state.formShape); // output the editor configuration
-//...
+console.log(state); // 
 ~~~
 
 **Related articles:**
