@@ -35,8 +35,8 @@ The callback of the **filter-data** event can take an object with the following 
   - `start` - the slot start date
   - `end` - the slot end date 
 - `time` - (required) an array of objects containing time options for a slot. For each object, you can specify the following parameters:
-  - `from` - (required) the start time
-  - `to` - (required) the end time
+  - `from` - (required) the start time (available formats: "h:m", ?)
+  - `to` - (required) the end time (available formats: "h:m", ?)
 
 ### Example
 

@@ -35,7 +35,7 @@ const booking = new booking.Booking("#root", {
 	// initial configuration parameters
 });
 
-//output the date  
+// output the date  
 booking.api.on("select-item-date", (ev) => {
 	console.log(ev.date);
 });
