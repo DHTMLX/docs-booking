@@ -74,9 +74,11 @@ module.exports = {
 					items: [
 						// Booking events
 						//"api/events/booking_eventname_event",
-						"api/events/booking-confirmslot-event",
+						"api/events/booking-confirmslot-event",						
+						"api/events/booking-filterdata-event",
 						"api/events/booking-selectslot-event",
-						"api/events/booking-setfilter-event",
+						"api/events/booking-selectitem-event",
+						"api/events/booking-selectitemdate-event",
 					]
 				},
 				{
@@ -89,7 +91,6 @@ module.exports = {
 						// "api/config/booking_configname_config", // To delete before release! 
 						"api/config/booking-data",
 						"api/config/booking-cardshape",
-						"api/config/booking-filteredcards",
 						"api/config/booking-filtershape",
 						"api/config/booking-formshape",
 						"api/config/booking-infoshape",

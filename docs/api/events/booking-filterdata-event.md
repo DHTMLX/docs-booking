@@ -8,7 +8,7 @@ description: You can learn about the filter-data event in the documentation of t
 
 ### Description
 
-@short: Fires when ...
+@short: Fires when filters are applied
 
 ### Usage
 
@@ -31,9 +31,9 @@ description: You can learn about the filter-data event in the documentation of t
 The callback of the **filter-data** event can take an object with the following parameters:
 
 - `text` - (required) the text in the search field
-- `date` - (required) the slot date; each object has the next parameters:
-  - `start` - 
-  - `end` - 
+- `date` - (required) an object with the start and end date for a slot; each object has the next parameters:
+  - `start` - the slot start date
+  - `end` - the slot end date 
 - `time` - (required) an array of objects containing time options for a slot. For each object, you can specify the following parameters:
   - `from` - (required) the start time
   - `to` - (required) the end time
@@ -43,13 +43,13 @@ The callback of the **filter-data** event can take an object with the following 
 ~~~jsx {7-10}
 // create Booking
 const booking = new booking.Booking("#root", {
-	cards,
+	data,
 	cardShape
 });
 
-// ...
-booking.api.on("set-filter", (obj) => {
-	console.log(obj.time);
+//output the date object for filtered data
+booking.api.on("filter-data", (ev) => {
+   console.log(ev.date);
 });
 ~~~
 

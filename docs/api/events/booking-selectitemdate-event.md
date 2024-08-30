@@ -8,7 +8,7 @@ description: You can learn about the select-item-date event in the documentation
 
 ### Description
 
-@short: Fires when ...
+@short: Fires when an item is selected
 
 ### Usage
 
@@ -24,7 +24,7 @@ description: You can learn about the select-item-date event in the documentation
 The callback of the **select-item-date** event can take an object with the following parameters:
 
 - `id` - (required) the id of an item
-- `date` - (required)
+- `date` - (required) the date set for the selected item
 
 
 ### Example
@@ -35,8 +35,8 @@ const booking = new booking.Booking("#root", {
 	// initial configuration parameters
 });
 
-// subscribe on the "EVENT_TEMPLATE" event
-booking.api.on("EVENT_TEMPLATE", (obj) => {
-	...
+//output the date  
+booking.api.on("select-item-date", (ev) => {
+	console.log(ev.date);
 });
 ~~~

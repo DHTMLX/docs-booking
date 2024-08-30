@@ -15,7 +15,7 @@ description: You can learn about the select-slot event in the documentation of t
 ~~~jsx {}
 "select-slot": ({
     id: string | number,
-    time:[ number, number ] //timestamp, length in minutes
+    time:[ number, number ] 
  }) => void;
 ~~~
 
@@ -24,7 +24,7 @@ description: You can learn about the select-slot event in the documentation of t
 The callback of the **select-slot** event can take an object with the following parameters:
 
 - `id` - (required) the ID of a card a selected slot belongs to
-- `time` - (required) 
+- `time` - (required) an array with the slot start time in milliseconds and the slot duration in minutes
   
 ### Example
 
@@ -35,9 +35,9 @@ const booking = new booking.Booking("#root", {
 	cardShape
 });
 
-// ...
+// output the id of the selected slot
 booking.api.on("select-slot", (obj) => {
-	console.log(obj.cardId);
+	console.log(obj.id);
 });
 ~~~
 

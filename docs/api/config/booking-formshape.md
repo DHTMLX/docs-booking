@@ -8,7 +8,7 @@ description: You can learn about the formShape config in the documentation of th
 
 ### Description
 
-@short: Optional. An array of objects containing settings for managing the appearance and functionality of the Reservation editor
+@short: Optional. An array of objects containing settings for managing the appearance and functionality of the Booking editor 
 
 ### Usage
 
@@ -34,9 +34,25 @@ For each field you can specify the following parameters:
 ### Default config
 
 ~~~jsx {}
-const defaultFormShape = {
-	...
-};
+const defaultFormShape = [
+    {
+		comp: "text",
+		key: "name",
+		label: "Name",
+		required: true,
+	},
+	{
+		comp: "text",
+		key: "email",
+		label: "Email",
+		required: true,
+	},
+	{
+		comp: "textarea",
+		key: "description",
+		label: "Description",
+	},
+]
 ~~~
 
 ### Example

@@ -8,7 +8,7 @@ description: You can learn about the select-item event in the documentation of t
 
 ### Description
 
-@short: Fires when ...
+@short: Fires when an item is selected
 
 ### Usage
 
@@ -31,10 +31,11 @@ The callback of the **select-item** event can take an object with the following 
 // create Booking
 const booking = new booking.Booking("#root", {
 	// initial configuration parameters
+	data, 
 });
 
-// subscribe on the "EVENT_TEMPLATE" event
-booking.api.on("EVENT_TEMPLATE", (obj) => {
-	...
+// output the id
+booking.api.on("select-item", (ev) => {
+	console.log(ev.id);
 });
 ~~~

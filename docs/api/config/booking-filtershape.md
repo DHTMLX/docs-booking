@@ -50,7 +50,16 @@ filterShape:{
 
 ~~~jsx {}
 const defaultFilterShape = {
-	...
+  text: true,
+  date: true,
+  time: defaultTimeRanges,
+  autoApply: false,
+};
+
+const defaultTimeRanges = {
+  {from: 8, to: 12, label: "Morning" },
+  { from: 12, to: 17, label: "Afternoon" },
+  { from: 17, to: 20, label: "Evening" },
 };
 ~~~
 
