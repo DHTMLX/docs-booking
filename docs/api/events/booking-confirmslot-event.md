@@ -40,9 +40,9 @@ The callback of the **confirm-slot** event can take an object with the following
    - `key` - (required) the form field ID. By default, three fields are added: *name*, *email*, *description*
    - `startTime` - (required) the start time of a slot in milliseconds
 - `confirm` - (required) an object with the next parameters:
- - `promise` -  promise with the confirmation status ?
- - `done` -
- - `error` - 
+ - `promise` -  (required) a promise that represents the confirmation status. This is a JavaScript Promise object that represents the asynchronous operation of confirming the slot booking. The promise will be resolved or rejected based on the outcome of the booking process. You can attach `.then` and `.catch` handlers to this promise to handle the success or failure of the booking.
+ - `done` - (required) a callback function that should be called when booking is successfully confirmed. Calling this function will resolve the promise, indicating that the booking was successful. You can call this function after receiving a positive response from the server.
+ - `error` - (required) a callback function that should be called when booking fails. Calling this function will reject the promise, indicating that the booking was unsuccessful. You can call this function after receiving a negative response from the server.
 
 ### Example
 

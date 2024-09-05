@@ -35,6 +35,69 @@ new booking.Booking("#root", {
 });
 ~~~
 
+## Defining the structure of cards
+
+You can configure what information all cards will display on their left side using the [`cardShape`](/api/config/booking-cardshape) property.
+
+On the left side of a card the following information items are displayed by default:
+- preview: card image
+- review: rating information with the number of rating stars (out of five) and the number of reviews
+- category: the subtitle of a card
+- title: the title of a card which is a specialist's name
+- subtitle: the subtitle of a card. for example, experience details 
+- price: the price of the service
+- details: other details of a card
+
+To hide any information block from cards' display, set the appropriate parameter value of the [`cardShape`](/api/config/booking-cardshape) property to **false**.
+
+Example:
+
+~~~jsx
+    const data = [
+    {
+        id: "ee828b5d-a034-420c-889b-978840015d6a",
+        title: "Natalie Tyson",
+        category: "Allergist",
+        subtitle: "2 years of experiece",
+        details: "Lexington Avenue 54\nWheatfields, Hungary",
+        preview: "https://files.webix.com/30d/d34de82e0a8e3b561988a46ce1e86743/stock-photo-doc.jpg",
+        price: "27 $",
+        review: {
+        stars: 4,
+        count: 120,
+        },
+        slots: [
+        {
+            from: 9,
+            to: 21,
+            days: [1, 2, 3, 4, 5],
+        },
+        {
+            from: 10,
+            to: 18,
+            days: [6, 0],
+        },
+        ],
+    },
+    ];
+
+    const cardShape = {
+    preview: true,
+    review: true,
+    category: true,
+    title: true,
+    subtitle: true,
+    price: true,
+    details: false,
+    };
+
+    new booking.Booking("#root", {
+        data,
+        cardShape,
+        // other parameters
+    });
+~~~
+
 ## Filling cards with slots
 
 A slot is a time unit available for booking. Available slots are displayed for the next five days starting from the current day or from the start date from the filter. 
@@ -220,68 +283,7 @@ new booking.Booking("#root", {
 });
 ~~~
 
-## Defining the structure of cards
 
-You can configure what information all cards will display on their left side using the [`cardShape`](/api/config/booking-cardshape) property.
-
-On the left side of a card the following information items are displayed by default:
-- preview: card image
-- review: rating information with the number of rating stars (out of five) and the number of reviews
-- category: the subtitle of a card
-- title: the title of a card which is a specialist's name
-- subtitle: the subtitle of a card. for example, experience details 
-- price: the price of the service
-- details: other details of a card
-
-To hide any information block from cards' display, set the appropriate parameter value of the [`cardShape`](/api/config/booking-cardshape) property to **false**.
-
-Example:
-
-~~~jsx
-const data = [
-  {
-    id: "ee828b5d-a034-420c-889b-978840015d6a",
-    title: "Natalie Tyson",
-    category: "Allergist",
-    subtitle: "2 years of experiece",
-    details: "Lexington Avenue 54\nWheatfields, Hungary",
-    preview: "https://files.webix.com/30d/d34de82e0a8e3b561988a46ce1e86743/stock-photo-doc.jpg",
-    price: "27 $",
-    review: {
-      stars: 4,
-      count: 120,
-    },
-    slots: [
-      {
-        from: 9,
-        to: 21,
-        days: [1, 2, 3, 4, 5],
-      },
-      {
-        from: 10,
-        to: 18,
-        days: [6, 0],
-      },
-    ],
-  },
-];
-
-const cardShape = {
-  preview: true,
-  review: true,
-  category: true,
-  title: true,
-  subtitle: true,
-  price: true,
-  details: false,
-};
-
-new booking.Booking("#root", {
-	data,
-    cardShape,
-	// other parameters
-});
-~~~
 
 
 

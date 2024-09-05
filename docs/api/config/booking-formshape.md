@@ -26,16 +26,16 @@ formShape:
 
 For each field you can specify the following parameters:
 
-- `comp` - (optional) the field type (**text** or **area**)
+- `comp` - (optional) the field type (**text** or **textarea**)
 - `key` - (optional) 
 - `label` - (optional) the field label
-- `required` - (optional)
+- `required` - (optional) if the value is set to **true**, the field should not be empty and it's required to submit the booking form; if **false**, the field can be empty
 
 ### Default config
 
 ~~~jsx {}
 const defaultFormShape = [
-    {
+	{
 		comp: "text",
 		key: "name",
 		label: "Name",
