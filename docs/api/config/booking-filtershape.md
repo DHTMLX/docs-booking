@@ -41,7 +41,7 @@ filterShape:{
   - `to` - (required) the end time for a slot; it can be a number from 0 to 24 that specifies the time in hours (e.g., 9 means 9:00, 8.5 means 8:30) or a string in the format "h:m" (for example, "8:30")
   - `label` - (optional) placeholder for the time field
 If the `time` parameters are not set, the default values are applied: see [Default config](#default-config) below.
-- `autoApply` - (optional) tif **true**, the search criteria will be automatically applied (no need to initiate the search by clicking the button); **false** is set by default
+- `autoApply` - (optional) if **true**, the search criteria will be automatically applied (no need to initiate the search by clicking the button); **false** is set by default
 
 ### Default config
 
@@ -78,6 +78,7 @@ const filterShape = {
 };
 
 new booking.Booking("#root", {
+  data,
 	filterShape,
 	// other parameters
 });

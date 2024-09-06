@@ -283,6 +283,57 @@ new booking.Booking("#root", {
 });
 ~~~
 
+## Configuring the Booking editor 
+
+To configure the fields that should be displayed in the Booking editor, use the [`formShape`](/api/config/booking-formshape) property.
+
+To add a new filed, add a new object to the array. To make a field required for filling, set the `required` parameter to *true*. 
+
+~~~jsx {1-17,20}
+const formShape = [
+    {
+        type: "text",
+        key: "name",
+        label: "Your name",
+    },
+    {
+        type: "text",
+        key: "contact",
+        label: "Mobile",
+        required: true,
+    },
+    {
+        type: "textarea",
+        key: "description",
+        label: "Details",
+    },
+];
+
+new booking.Booking("#root", {
+	formShape,
+	// other parameters
+});
+~~~
+
+To manage information that is displayed on the left side of the Booking editor, apply the [`infoShape`](/api/config/booking-infoshape) property. You can hide necessary fields from display by setting values to *false*.
+
+~~~jsx {1-7,10}
+const infoShape = {
+	preview: true,
+	category: true,
+	title: true,
+	price: true,
+	details: false,
+};
+
+new booking.Booking("#root", {
+	data,
+	infoShape,
+	// other parameters
+});
+~~~
+
+
 
 
 

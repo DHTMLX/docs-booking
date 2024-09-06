@@ -27,11 +27,11 @@ infoShape?: {
 
 An object has the following parameters:
 
-- `preview` - (optional) shows/hides a preview image in the information block (left side) of the booking dialog
-- `category` - (optional) shows/hides a category name on the left side of the booking dialog (for example, a specialist's job)
-- `title` - (optional) shows/hides a title in the information block of the booking dialog (e.g., a specialist's name)
-- `price` - (optional) shows/hides  price in the information block of the booking dialog
-- `details` - (optional) shows/hides details in the information block of the booking dialog
+- `preview` - (optional) shows/hides a preview image in the information block (left side) of the Booking dialog
+- `category` - (optional) shows/hides a category name on the left side of the Booking dialog (for example, a specialist's job)
+- `title` - (optional) shows/hides a title in the information block of the Booking dialog (e.g., a specialist's name)
+- `price` - (optional) shows/hides price in the information block of the Booking dialog
+- `details` - (optional) shows/hides details in the information block of the Booking dialog
 
 ### Default config
 
@@ -57,6 +57,7 @@ const infoShape = {
 };
 
 new booking.Booking("#root", {
+	data,
 	infoShape,
 	// other parameters
 });

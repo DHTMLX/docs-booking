@@ -36,8 +36,8 @@ The callback of the **confirm-slot** event can take an object with the following
 - `slot` - (required) an object with the next slot parameters:
   - `id` - (required) the ID of a card for which the booking of a slot is confirmed
   - `time` - (required) an array with the slot start time in milliseconds and the slot duration in minutes
-- `data` - (required) an abject with the booking screen form fields with the following parameters for each field:
-   - `key` - (required) the form field ID. By default, three fields are added: *name*, *email*, *description*
+- `data` - (required) an abject with the booking screen fields with the following parameters for each field:
+   - `key` - (required) the form field ID (from the [`formShape`](/api/config/booking-formshape)). By default, three fields are added: *name*, *email*, *description*
    - `startTime` - (required) the start time of a slot in milliseconds
 - `confirm` - (required) an object with the next parameters:
  - `promise` -  (required) a promise that represents the confirmation status. This is a JavaScript Promise object that represents the asynchronous operation of confirming the slot booking. The promise will be resolved or rejected based on the outcome of the booking process. You can attach `.then` and `.catch` handlers to this promise to handle the success or failure of the booking.

@@ -8,7 +8,7 @@ description: You can learn about the formShape config in the documentation of th
 
 ### Description
 
-@short: Optional. An array of objects containing settings for managing the appearance and functionality of the Booking editor 
+@short: Optional. An array of objects containing settings for configuring fields in the Booking editor 
 
 ### Usage
 
@@ -27,7 +27,7 @@ formShape:
 For each field you can specify the following parameters:
 
 - `comp` - (optional) the field type (**text** or **textarea**)
-- `key` - (optional) 
+- `key` - (optional) the id of a field
 - `label` - (optional) the field label
 - `required` - (optional) if the value is set to **true**, the field should not be empty and it's required to submit the booking form; if **false**, the field can be empty
 
@@ -61,22 +61,23 @@ const defaultFormShape = [
 const formShape = [
     {
         type: "text",
-        name: "name",
+        key: "name",
         label: "Name",
     },
     {
         type: "text",
-        name: "email",
-        label: "eMail",
+        key: "contact",
+        label: "Mobile",
     },
     {
-        type: "area",
-        name: "description",
+        type: "textarea",
+        key: "description",
         label: "Details",
     },
 ];
 
 new booking.Booking("#root", {
+	data,
 	formShape,
 	// other parameters
 });

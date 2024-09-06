@@ -46,7 +46,6 @@ data: [
 		usedSlots?: number[], //timestamps
 		slotSize?: number, //minutes
 		slotGap?: number, //minutes
-		date?: Date - ? tbd
 	}, 
 ];
 ~~~
@@ -80,10 +79,9 @@ If several slots objects are created for the same day, make sure that slots time
 - `availableSlots` - (optional) an array of timestamps of available slots in milliseconds; if available slots are specified here, all slots from the `slots` array are ignored (i.e., become unavailable); each object in the array has the next parameters:
   - `id` - (required) the id of a slot
   - `time` - (required) slot duration in minutes
-- `usedSlots` - (optional) an array of timestamps of booked slots in milliseconds;
-- `slotSize` - (optional) the duration of a slot in minutes; the value will be applied to all slots of this card if other value is not set inside the `slots` object; 60 minutes is set by default
+- `usedSlots` - (optional) an array of timestamps of booked slots in milliseconds
+- `slotSize` - (optional) the duration of a slot in minutes; the value will be applied to all slots of this card if other value is not set inside the `slots` object; *60* minutes is set by default
 - `slotGap` - (optional) the gap between slots in minutes that is set for all slots in the current card; this value is applied if any other value is not specified inside the `slots` object; 0 is set by default
-
 
 ### Example
 
