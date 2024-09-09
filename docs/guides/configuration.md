@@ -289,7 +289,7 @@ To configure the fields that should be displayed in the Booking editor, use the 
 
 To add a new filed, add a new object to the array. To make a field required for filling, set the `required` parameter to *true*. 
 
-~~~jsx {1-17,20}
+~~~jsx 
 const formShape = [
     {
         type: "text",
@@ -333,8 +333,112 @@ new booking.Booking("#root", {
 });
 ~~~
 
+## Configuring the filter 
 
+You can configure filter settings via the [`filterShape`](/api/properties/filterShape) property. Default configuration is the following:
 
+~~~jsx {}
+const defaultFilterShape = {
+  text: [
+		{ id: "category", label: "speciality", suggest: true },
+		{ id: "title", label: "specialist", suggest: true },
+		{ id: "details", label: "location" },
+	],
+	date: true,
+	time: defaultTimeRanges,
+	autoApply: false,
+};
+
+const defaultTimeRanges = [
+	{ from: 8, to: 12, label: "Morning" },
+	{ from: 12, to: 17, label: "Afternoon" },
+	{ from: 17, to: 20, label: "Evening" },
+];
+~~~
+
+### Hiding filter input fields
+
+All input fields are displayed by default: text, time, and date. To hide the fields, apply the [`filterShape`](/api/properties/filterShape) property and set the corresponding parameters to **false**. 
+
+Example:
+
+~~~jsx 
+const filterShape = {
+  date: false,
+};
+
+new booking.Booking("#root", {
+  data,
+  filterShape,
+	// other parameters
+});
+~~~
+
+### Configuring filter fields
+
+To show the values that match a user's input text in the **text** field, set the `suggest` parameter of the [`filterShape`](/api/properties/filterShape) property to **true**. The values from the [`data`](/api/config/booking-data) object will be displayed. To add labels to these fields, apply the `label` parameter of the [`filterShape`](/api/properties/filterShape) property. 
+
+Example:
+
+~~~jsx 
+const filterShape = {
+    text: [
+        { id: "category", label: "specialization", suggest: true },
+        { id: "title", label: "doctor", suggest: true },
+        { id: "details", label: "location", suggest: true },
+    ],
+};
+
+new booking.Booking("#root", {
+    data,
+    filterShape,
+    //other parameters
+});
+~~~
+
+To define the time filtering options, for the `time` parameter of the [`filterShape`](/api/properties/filterShape) property specify the start and end slot time values:
+
+- `from` - the start time for a slot; it can be a number from 0 to 24 that specifies the time in hours (e.g., 9 means 9:00, 8.5 means 8:30) or a string in the format "h:m" (for example, "8:30")
+- `to` - the end time for a slot; it can be a number from 0 to 24 that specifies the time in hours (e.g., 9 means 9:00, 8.5 means 8:30) or a string in the format "h:m" (for example, "8:30")
+
+And you can also add a placeholder to each time range.
+
+Example:
+
+~~~jsx 
+const filterShape = {
+  time: [
+    { from: "8:30", to: "11:50", label: "Morning" },
+    { from: "12:30", to: "16:50", label: "Afternoon" },
+    { from: "17:00", to: "19:50", label: "Evening" },
+    { from: "20:00", to: "22:50", label: "Urgent" },
+  ],
+};
+
+new booking.Booking("#root", {
+  data,
+  filterShape,
+	// other parameters
+});
+~~~
+
+### Enabling the autoApply mode for the filter
+
+To hide the **Search** button and make the filter apply right after a user's input, seth the `autoApply` parameter of the [`filterShape`](/api/properties/filterShape) property to **true**.
+
+Example:
+
+~~~jsx 
+const filterShape = {
+    autoApply: true,
+};
+
+new booking.Booking("#root", {
+    data,
+    filterShape,
+    // other parameters
+});
+~~~
 
 
 

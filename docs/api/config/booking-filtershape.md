@@ -66,7 +66,7 @@ const defaultTimeRanges = [
 
 ### Example
 
-~~~jsx {1-12,15}
+~~~jsx 
 const filterShape = {
   date: false,
   autoApply: true,
