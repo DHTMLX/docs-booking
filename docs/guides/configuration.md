@@ -376,7 +376,7 @@ new booking.Booking("#root", {
 
 ### Configuring filter fields
 
-To show the values that match a user's input text in the **text** field, set the `suggest` parameter of the [`filterShape`](/api/properties/filterShape) property to **true**. The values from the [`data`](/api/config/booking-data) object will be displayed. To add labels to these fields, apply the `label` parameter of the [`filterShape`](/api/properties/filterShape) property. 
+To enable the auto-complete and show the values that match a user's input text in the **text** field, set the `suggest` parameter of the [`filterShape`](/api/properties/filterShape) property to **true**. The values from the [`data`](/api/config/booking-data) object will be displayed. To add labels to these fields, apply the `label` parameter of the [`filterShape`](/api/properties/filterShape) property. 
 
 Example:
 
@@ -424,7 +424,7 @@ new booking.Booking("#root", {
 
 ### Enabling the autoApply mode for the filter
 
-To hide the **Search** button and make the filter apply right after a user's input, seth the `autoApply` parameter of the [`filterShape`](/api/properties/filterShape) property to **true**.
+To hide the **Search** button and make the filter apply right after a user's input, set the `autoApply` parameter of the [`filterShape`](/api/properties/filterShape) property to **true**.
 
 Example:
 

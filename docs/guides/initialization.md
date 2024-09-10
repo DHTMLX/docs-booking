@@ -52,11 +52,13 @@ new booking.Booking("#root", {
 
 ### Configuration properties
 
-List of properties here
+:::info
+The full list of properties to configure **Booking** can be found [**here**](api/overview/properties-overview.md).
+:::
 
 ## Example
 
 In this snippet you can see how to initialize **JavaScript Booking** with the initial settings:
 
-**[TODO]!!! Заменить ссылку на сниппет с инициализацией**
+**[TODO]!!! 
 <iframe src="" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>

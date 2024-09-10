@@ -33,7 +33,7 @@ filterShape:{
 
 - `text` - (optional) if **true**, the text input field is displayed (default); if **false**, the text field is hidden
   - `id` - (required) the id of a card
-  - `suggest` - (required) if **true**, the values (from the [`data`](/api/config/booking-data) object) that match a user's input text will be displayed
+  - `suggest` - (required) if **true**, the auto-complete is enabled and the values (from the [`data`](/api/config/booking-data) object) that match a user's input text will be displayed 
   - `label` - (optional) the label for the property from the `data` object. See [Default config](#default-config) below.
 - `date` - (optional) shows/hides the date field; **true** is set by default (the field is shown)
 - `time` - (optional) shows/hides the time field. If set to **true**, it takes an array of objects with default time options for a slot. For each object you can specify the following parameters:
