@@ -24,15 +24,16 @@ description: You can learn about the select-item-date event in the documentation
 The callback of the **select-item-date** event can take an object with the following parameters:
 
 - `id` - (required) the id of an item
-- `date` - (required) the date set for the selected item
+- `date` - (required) the date that was set for the selected item
 
 
 ### Example
 
-~~~jsx {7-9}
+~~~jsx {7-10}
 // create Booking
 const booking = new booking.Booking("#root", {
-	// initial configuration parameters
+    data,
+    // other configuration parameters
 });
 
 // output the date  

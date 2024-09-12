@@ -31,8 +31,8 @@ The callback of the **select-slot** event can take an object with the following 
 ~~~jsx {7-10}
 // create Booking
 const booking = new booking.Booking("#root", {
-	cards,
-	cardShape
+	data,
+	// other configuration parameters
 });
 
 // output the id of the selected slot

@@ -32,22 +32,26 @@ The full list of the Booking internal events can be found [**here**](api/booking
 
 ### Example
 
-~~~jsx {7-17}
-// create Booking
-const booking = new booking.Booking("#root", {
-	cards,
-	cardShape
-});
+The example below demonstrates how to apply filter at the initialization:
 
-// ...
-booking.api.exec("set-filter", {
+~~~jsx 
+const widget = new booking.Booking("#root", {
+	data,
+	//other configuration parameters
+});
+widget.api.exec("filter-data", {
 	filterData: {
+		text: "Allergist",
 		date: {
-			start: new Date(),
-			end: new Date(2023, 4, 10),
+			start: new Date,
+			end: new Date(2025, 2, 12),
 		},
-		global: "Allergist",
-		time: [],
+		time: [
+			{
+				from: 12,
+				to: 20,
+			},
+		],
 	},
 });
 ~~~

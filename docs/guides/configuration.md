@@ -329,7 +329,7 @@ const infoShape = {
 new booking.Booking("#root", {
 	data,
 	infoShape,
-	// other parameters
+	//other parameters
 });
 ~~~
 
@@ -364,13 +364,13 @@ Example:
 
 ~~~jsx 
 const filterShape = {
-  date: false,
+    date: false,
 };
 
 new booking.Booking("#root", {
-  data,
-  filterShape,
-	// other parameters
+    data,
+    filterShape,
+    // other parameters
 });
 ~~~
 

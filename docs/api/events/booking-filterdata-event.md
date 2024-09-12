@@ -20,8 +20,8 @@ description: You can learn about the filter-data event in the documentation of t
 			end: Date | null,
 		},
 		time:[{ 
-			from: number;
-			to: number
+			from: number | string,
+			to: number | string,
 		}]
  }) => void;
 ~~~
@@ -40,16 +40,26 @@ The callback of the **filter-data** event can take an object with the following 
 
 ### Example
 
-~~~jsx {7-10}
-// create Booking
-const booking = new booking.Booking("#root", {
-	data,
-	cardShape
-});
+The example below demonstrates how to apply filter at the initialization using the [`api.exec()`](/api/internal/booking-exec) method:
 
-//output the date object for filtered data
-booking.api.on("filter-data", (ev) => {
-   console.log(ev.date);
+~~~jsx
+// create Booking
+const widget = new booking.Booking("#root", {
+	data,
+	// other configuration parameters
+});
+widget.api.exec("filter-data", {
+	text: "Allergist",
+	date: {
+		start: new Date,
+		end: new Date(2025, 4, 10),
+	},
+	time: [
+		{
+			from: 12,
+			to: 20,
+		},
+	],
 });
 ~~~
 

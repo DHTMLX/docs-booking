@@ -49,13 +49,12 @@ The callback of the **confirm-slot** event can take an object with the following
 ~~~jsx {7-10}
 // create Booking
 const booking = new booking.Booking("#root", {
-	cards,
-	cardShape
+	data,
+	// other configuration parameters
 });
 
-// ...
 booking.api.on("confirm-slot", (obj) => {
-	console.log(obj.cardId);
+	console.log("The slot id for which booking was confirmed:", obj.id);
 });
 ~~~
 

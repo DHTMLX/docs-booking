@@ -127,15 +127,38 @@ const de = {
 ~~~
 </details>
 
-## Custom locale
+## Applying locales
 
-To apply a custom locale you need to:
+You can access built-in locales via the booking object.  ???
 
-- create the custom locale (or modify the existed one) and provide translations for all text labels in Booking (it can be any language you need)
-- apply the new locale via the [**locale**](api/config/booking_locale_config.md) property or by calling the [**setLocale()**](api/methods/booking_setlocale_method.md) method that takes an object with translations (custom locale) as a parameter
+Example:
+
+~~~jsx
+new booking.Booking("#root", {
+    data,
+    // other properties
+	locale: booking.locales.de,
+});
+~~~
+
+To apply a custom locale, you need to:
+
+- create a custom locale object (or modify the default one) and provide translations for all text labels (it can be any language you need)
+- apply the new locale to via its [`locale`](/api/config/locale-property) property or use the [`setLocale()`](/api/methods/setlocale-method) method
+
+~~~jsx
+// create Pivot
+const widget = new booking.Booking("#root", {
+  data,
+//other configuration properties
+});
+
+const ko = {...} //object with locale
+widget.setLocale(ko);
+~~~
 
 ## Example
 
-In this snippet you can see how to switch through the *EN*, *RU* and *CN* locales:
+In this snippet you can see how to switch through the *EN* and *?* locales:
 
 <iframe src="" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

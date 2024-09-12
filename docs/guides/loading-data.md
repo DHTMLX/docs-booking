@@ -101,7 +101,7 @@ const data = [
 	];
 ~~~
 
-## Loading data from a local source
+## Loading data 
 
 You can load JSON data into Booking from an external file or the server-side script after the component has been initialized.
 

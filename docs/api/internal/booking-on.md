@@ -31,13 +31,15 @@ Use the `api.on()` method if you want to listen to the actions without modifying
 
 ### Example
 
-~~~jsx {7-8}
+~~~jsx {7-10}
 // create Booking
 const booking = new booking.Booking("#root", {
-	cards,
-	cardShape
+	data,
+	// other configuration parameters
 });
 
-// ...
-booking.api.intercept("event-name", handler);
+// output the selected slot id and time
+booking.api.on("select-slot", (obj) => {
+	console.log("The selected slot", obj.id, "and time", obj.time);
+});
 ~~~

@@ -27,14 +27,14 @@ The callback of the **select-item** event can take an object with the following 
 
 ### Example
 
-~~~jsx {7-9}
+~~~jsx {7-10}
 // create Booking
 const booking = new booking.Booking("#root", {
-	// initial configuration parameters
 	data, 
+	// other configuration parameters
 });
 
-// output the id
+// output the id of the selected item
 booking.api.on("select-item", (ev) => {
 	console.log(ev.id);
 });

@@ -22,24 +22,27 @@ api.setNext(next: any): void;
 
 ### Example
 
-~~~jsx {11}
-const url = "https://some_backend_url";
-const restProvider = new booking.RestDataProvider(url);
+The example below shows how to use the `api.setNext()` method to integrate some custom class into the Event Bus order:
+
+~~~jsx
+const booking = new booking.Booking("#root", { data: [] });
+const server = "https://some-backend-url";
+
+// Assume you have a custom server service class named someServerService
+const someServerService = new ServerDataService(server);
 
 Promise.all([
-	restProvider.getCards(),
-]).then(([cards]) => {
-	const booking = new booking.Booking("#root", {
-		cards,
-		cardShape
-	});
-	booking.api.setNext(restProvider);
+    fetch(server + "/data").then((res) => res.json())
+]).then(([data]) => {
+    booking.setConfig({ data });
+    
+// Integrate the serverDataService into the Event Bus order of widget
+booking.api.setNext(someServerService);
+
 });
 ~~~
 
-:::info
-You need to include **RestDataProvider** into the **Event Bus** order to perform operations with data (**adding**, **deleting** etc.) and send the corresponding requests to the server
-:::
+
 
 **Related articles:**
 - [Working with server](../../../guides/working_with_server)

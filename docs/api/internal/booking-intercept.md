@@ -34,13 +34,13 @@ Use the [`api.on()`](/api/internal/js_booking_on) method if you want to listen t
 ~~~jsx {7-11}
 // create Booking
 const booking = new booking.Booking("#root", {
-	cards,
-	cardShape
+	data,
+	// other configuration parameters
 });
 
-// every time the set-filter event is triggered, the time field will contain only the morning time
-booking.api.intercept("set-filter", data => {
-	data.filterData.time = [{ start: 9, end: 12 }];
+// every time the filter-data event is triggered, slots will be shown only for the morning time
+booking.api.intercept("filter-data", data => {
+	data.time = [{ from: 9, to: 12 }];
 	return data;
 });
 ~~~
