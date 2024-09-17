@@ -52,7 +52,7 @@ To hide any information block from cards' display, set the appropriate parameter
 
 Example:
 
-~~~jsx
+~~~jsx {36}
     const data = [
     {
         id: "ee828b5d-a034-420c-889b-978840015d6a",
@@ -100,16 +100,68 @@ Example:
 
 ## Filling cards with slots
 
-A slot is a time unit available for booking. Available slots are displayed for the next five days starting from the current day or from the start date from the filter. 
+A slot is a time unit available for booking. Available slots for cards are displayed for the next five days starting from the current day or from the start date from the filter. 
 
-To add booking slots to a card, use the `slots` parameter of the [`data`](/api/config/booking-data) property. You can apply one common slots rule to all days of the required card and specific rules to selected days or even dates. 
+### Adding slots for booking
+
+To add booking slots to a card, add an object to the `slots` array of the [`data`](/api/config/booking-data) property.
+In the example below, the slots are added for the specified card for Tuesdays and Fridays from 12 a.m. to 6 p.m and each slot duration is 30 minutes with 10-minutes gap between slots. 
+
+~~~jsx {16-23}
+const data = [
+    {
+        id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
+        title: "Debra Weeks",
+        category: "Allergist",
+        subtitle: "7 years of experience",
+        details: 
+                "Silverstone Medical Center (Vanderbilt Avenue 13, Chestnut, New Zealand)",
+        preview:
+				"https://files.webix.com/30d/d34de82e0a8e3b561988a46ce1e86743/stock-photo-doc.jpg",
+        price: "37 $",
+        review: {
+            star: 1,
+            count: 40,
+        },
+        slots: [
+            {
+                from: 12,
+                to: 18,
+                size: 50,
+                gap: 10,
+                days: [2, 5],
+            },
+
+            {...}, //other slots
+        ],
+    },]
+		
+new booking.Booking("#root", {
+	data,
+	// other parameters
+});
+~~~
+
+### Defining slot rules
+
+Parameters of each object in the `slots` array of the [`data`](/api/config/booking-data) property allow specifying the next settings: 
+
+- slots start and end time
+- slot sizes (duration in minutes)
+- slot gaps (the length between slot)
+- days to which slots should be applied
+
+When applying these rules, you can apply one common rule to all days of the required card or apply different rules (specific rules to selected days or even dates), namely, you can:  
+
+- set the same parameters to all days of a specific card, which means you can add slots with the same duration, the same start and end time to all days of the selected card
+- set different slot duration and slot gaps to the same card by applying different parameters to days of the week of the same card
 
 For example, if you want to add booking slots with the same parameters to all days of the selected card, i.e., add slots with the same duration, the same start and end time to all days of the selected card, you should add one object to the `slots` array with the required parameters. 
 
 Example:
 
 ~~~jsx
-const cards = [
+const data = [
     {
         id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
         title: "Debra Weeks",
@@ -146,7 +198,7 @@ But if you need to add slots with one set of parameters to some days of the week
 Example:
 
 ~~~jsx 
-const cards = [
+const data = [
     {
         id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
         title: "Debra Weeks",
@@ -196,21 +248,21 @@ new booking.Booking("#root", {
 });
 ~~~
 
-:::note
+:::info
 In case you have common slots parameters and specific parameters for some days, you should be aware of the following: 
 - Slot parameters specified for days will override common parameters defined for all days. 
 - Slot parameters specified for dates will override parameters defined for specific days and all days. 
 - If several slots objects are created for the same day, make sure that slots time ranges (**from** and **to**) do not overlap, otherwise, all slots data for these days will not be applied.  
 :::
 
-## Marking slots as used or available
+### Marking slots as used or available
 
 To mark slots as used (booked) and make them not visible for a user, use the `usedSlots` parameter of the [`data`](/api/config/booking-data) property.
 
 Example:
 
 ~~~jsx
-const cards = [
+const data = [
     {
         id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
         title: "Debra Weeks",
@@ -243,14 +295,14 @@ new booking.Booking("#root", {
 });
 ~~~
 
-To mark available slots, use the `availableSlots` parameter of the `cards` property.
+To mark available slots, use the `availableSlots` parameter of the [`data`](/api/config/booking-data) property.
 
 If available slots are specified here, all slots from the `slots` array are ignored (i.e., become unavailable).
 
 Example:
 
 ~~~jsx
-const cards = [
+const data = [
     {
         id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
         title: "Debra Weeks",
@@ -285,9 +337,9 @@ new booking.Booking("#root", {
 
 ## Configuring the Booking editor 
 
-To configure the fields that should be displayed in the Booking editor, use the [`formShape`](/api/config/booking-formshape) property.
+To configure the fields that should be displayed in the Booking editor dialog, use the [`formShape`](/api/config/booking-formshape) property.
 
-To add a new filed, add a new object to the array. To make a field required for filling, set the `required` parameter to *true*. 
+To add a new field, add a new object to the array. To make a field required for filling, set the `required` parameter to *true*. 
 
 ~~~jsx 
 const formShape = [
@@ -315,7 +367,7 @@ new booking.Booking("#root", {
 });
 ~~~
 
-To manage information that is displayed on the left side of the Booking editor, apply the [`infoShape`](/api/config/booking-infoshape) property. You can hide necessary fields from display by setting values to *false*.
+To manage information that is displayed on the left side of the Booking editor dialog, apply the [`infoShape`](/api/config/booking-infoshape) property. You can hide necessary fields from display by setting values to *false*.
 
 ~~~jsx {1-7,10}
 const infoShape = {

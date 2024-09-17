@@ -73,13 +73,11 @@ Besides the ***en*** locale, Booking also includes the built-in ***de*** locale.
 ~~~jsx
 const de = {
 	lang: "de",
-	booking: booking: {
+	booking: {
 		//Filter bar
 		"What date would be best?":
-			"Welches Datum würde Ihnen am besten passen?",
+		"Welches Datum würde Ihnen am besten passen?",
 		"What time would be best?": "Welche Zeit würde Ihnen am besten passen?",
-		"Choose a date": "Wählen Sie bitte das Datum",
-		"Choose a time": "Wählen Sie bitte die Zeit",
 		Search: "Suchen",
 		filterCategoryName: "Fachgebiet",
 		filterTitleName: "Spezialist/in",
@@ -93,14 +91,11 @@ const de = {
 		reviews: "Bewertungen",
 
 		// Slots
-		"Select the time slot to book online":
-			"Wählen Sie bitte das Zeitfenster aus, um online zu buchen",
 		"Unfortunately, there are no slots available for the selected date.":
 			"Leider sind keine Termine für den ausgewählten Tag verfügbar.",
 		"Click here": "Klicken bitte Sie hier",
 		"if you want to open a specialist card and choose from other free slots.":
 			"wenn Sie eine Facharztkarte öffnen und aus weiteren freien Zeitfenstern wählen möchten.",
-		"Select date & time": "Wählen Sie bitte das Datum und die Zeit aus",
 		minutes: "Minuten",
 		Confirm: "Bestätigen",
 
@@ -109,7 +104,6 @@ const de = {
 		Name: "Name",
 		Email: "Email",
 		Description: "Beschreibung",
-		"Type something...": "Schreiben Sie bitte etwas...",
 		"Book an appointment": "Vereinbaren Sie bitte einen Termin",
 		"Booking your appointment": "Buchen Sie bitte Ihren Termin",
 		"Please do not close the window":
@@ -121,13 +115,68 @@ const de = {
 		"Please go back and try again.":
 			"Bitte gehen Sie zurück und versuchen Sie noch einmal.",
 		"Go back": "Gehen Sie zurück",
-		" is required": " ist erforderlich",
 	},
+		calendar: {
+			monthFull: [
+				"Januar",
+				"Februar",
+				"März",
+				"April",
+				"Mai",
+				"Juni",
+				"Juli",
+				"August",
+				"September",
+				"Oktober",
+				"November",
+				"Dezember",
+			],
+			monthShort: [
+				"Jan",
+				"Feb",
+				"Mrz",
+				"Apr",
+				"Mai",
+				"Jun",
+				"Jul",
+				"Aug",
+				"Sep",
+				"Okt",
+				"Nov",
+				"Dez",
+			],
+			dayFull: [
+				"Sonntag",
+				"Montag",
+				"Dienstag",
+				"Mittwoch",
+				"Donnerstag",
+				"Freitag",
+				"Samstag",
+			],
+			dayShort: ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"],
+			hours: "Stunden",
+			minutes: "Minuten",
+			done: "Fertig",
+			clear: "Entfernen",
+			today: "Heute",
+
+			weekStart: 1,
+			timeFormat: 24,
+			dateFormat: "%d.%n.%Y",
+		},
+
+		core: {
+			ok: "OK",
+			cancel: "Abbrechen",
+		},
 };
 ~~~
 </details>
 
 ## Applying locales
+
+TBD!!!
 
 You can access built-in locales via the booking object.  ???
 

@@ -53,7 +53,7 @@ new booking.Booking("#root", {
 ### Configuration properties
 
 :::info
-The full list of properties to configure **Booking** can be found [**here**](api/overview/properties-overview.md).
+The full list of properties to configure **Booking** can be found [**here**](api/overview/booking-properties-overview.md).
 :::
 
 ## Example

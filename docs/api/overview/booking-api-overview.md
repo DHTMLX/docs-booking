@@ -48,8 +48,10 @@ new booking.Booking("#root", {
 | Name                                      | Description                                      |
 | ----------------------------------------- | ------------------------------------------------ |
 | [](../events/booking-confirmslot-event.md)  | @getshort(../events/booking-confirmslot-event.md)  |
+| [](../events/booking-filterdata-event.md)  | @getshort(../events/booking-filterdata-event.md)    |
+| [](../events/booking-selectitem-event.md)  | @getshort(../events/booking-selectitem-event.md)    |
+| [](../events/booking-selectitemdate-event.md)  | @getshort(../events/booking-selectitemdate-event.md)  |
 | [](../events/booking-selectslot-event.md)   | @getshort(../events/booking-selectslot-event.md)   |
-| [](../events/booking-setfilter-event.md)    | @getshort(../events/booking-setfilter-event.md)    |
 
 ## Booking properties
 
@@ -57,7 +59,8 @@ new booking.Booking("#root", {
 | ----------------------------------------- | ------------------------------------------------ |
 | [](../config/booking-data.md)         | @getshort(../config/booking-data.md)         |
 | [](../config/booking-cardshape.md)    | @getshort(../config/booking-cardshape.md)    |
-| [](../config/booking-filteredcards.md)| @getshort(../config/booking-filteredcards.md)|
 | [](../config/booking-filtershape.md)  | @getshort(../config/booking-filtershape.md)  |
 | [](../config/booking-formshape.md)    | @getshort(../config/booking-formshape.md)    |
 | [](../config/booking-infoshape.md)    | @getshort(../config/booking-infoshape.md)    |
+| [](../config/booking-slotgap.md)    | @getshort(../config/booking-slotgap.md)        |
+| [](../config/booking-slotsize.md)    | @getshort(../config/booking-slotsize.md)      |
