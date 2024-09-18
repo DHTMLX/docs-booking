@@ -108,9 +108,9 @@ module.exports = {
 			items: [
 				"guides/initialization",
 				"guides/configuration",
-				"guides/customization",
 				"guides/localization",
 				"guides/loading-data",
+				"guides/styling",
 				"guides/working-with-hotkeys",
 			],
 		},
