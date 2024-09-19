@@ -198,10 +198,10 @@ Example:
 To apply a custom locale, you need to:
 
 - create a custom locale object (or modify the default one) and provide translations for all text labels (it can be any language you need)
-- apply the new locale via its [`locale`](/api/config/locale-property) property or use the [`setLocale()`](/api/methods/setlocale-method) method
+- apply the new locale via its [`locale`](/api/config/locale-property) property or use the [`setLocale()`](/api/methods/booking-setlocale-method) method
 
 ~~~jsx
-// create Pivot
+// create Booking
 const widget = new booking.Booking("#root", {
   data,
 });
@@ -216,3 +216,7 @@ widget.setLocale(ko);
 In this snippet you can see how to switch through the *EN* and *DE* locales:
 
 <iframe src="" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+
+**Related articles**: 
+- [locale](/api/config/booking-locale)
+- [setLocale()](/api/methods/booking-setlocale-methods)
