@@ -182,17 +182,14 @@ To apply a built-in locale, use the [`locale`](/api/config/locale-property) prop
 Example:
 
 ~~~jsx
-<script>
-    const { data } = getData();
-    const widget = new booking.Booking("#root", {
-        data,
-        // option 1
-        locale: de,
-    });
-
-    // option 2
-    // widget.setLocale(de);
-</script>
+const { data } = getData();
+const widget = new booking.Booking("#root", {
+	data,
+	// option 1
+	locale: de,
+});
+// option 2
+// widget.setLocale(de);
 ~~~
 
 To apply a custom locale, you need to:
