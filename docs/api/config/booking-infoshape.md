@@ -8,7 +8,7 @@ description: You can learn about the infoShape config in the documentation of th
 
 ### Description
 
-@short: Optional. An object with settings for managing information displayed on the left side of the Booking editor
+@short: Optional. An object with settings for managing information displayed on the left side of the Booking dialog
 
 
 ### Usage

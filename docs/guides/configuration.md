@@ -335,9 +335,9 @@ new booking.Booking("#root", {
 });
 ~~~
 
-## Configuring the Booking editor 
+## Configuring the Booking dialog
 
-To configure the fields that should be displayed in the Booking editor dialog, use the [`formShape`](/api/config/booking-formshape) property.
+To configure the fields that should be displayed in the Booking dialog, use the [`formShape`](/api/config/booking-formshape) property.
 
 To add a new field, add a new object to the array. To make a field required for filling, set the `required` parameter to *true*. 
 
@@ -367,7 +367,7 @@ new booking.Booking("#root", {
 });
 ~~~
 
-To manage information that is displayed on the left side of the Booking editor dialog, apply the [`infoShape`](/api/config/booking-infoshape) property. You can hide necessary fields from display by setting values to *false*.
+To manage information that is displayed on the left side of the Booking dialog, apply the [`infoShape`](/api/config/booking-infoshape) property. You can hide necessary fields from display by setting values to *false*.
 
 ~~~jsx {1-7,10}
 const infoShape = {

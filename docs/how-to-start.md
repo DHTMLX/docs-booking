@@ -156,7 +156,7 @@ new booking.Booking("#root", {
 
 ## What's next
 
-That's all you need to create a simple Booking on a page. Now you can dive into the Booking API to configure it to the needs of your application:
+That's all you need to create a simple Booking on a page. Now you are ready to embark on a journey with the Booking API:
 
 - [Guides](/category/guides) pages provide instructions about installation, loading data, styling, and other helpful tips to go smoothly with the Booking configuration
 - [API reference](/api/overview/main-overview) gives description of the Booking functionality

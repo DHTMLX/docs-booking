@@ -8,7 +8,7 @@ description: You can learn about the cardShape config in the documentation of th
 
 ### Description
 
-@short: Optional. An object with settings for managing information displayed in cards
+@short: Optional. An object with settings for managing information displayed on the left side of cards
 
 ### Usage
 

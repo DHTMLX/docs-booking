@@ -8,7 +8,7 @@ description: You can learn about the formShape config in the documentation of th
 
 ### Description
 
-@short: Optional. An array of objects containing settings for configuring fields in the Booking editor 
+@short: Optional. An array of objects containing settings for configuring fields in the Booking dialog
 
 ### Usage
 
