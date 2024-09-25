@@ -1,10 +1,10 @@
 ---
-sidebar_label: cardShape
+sidebar_label: infoShape
 title: infoShape
 description: You can learn about the infoShape config in the documentation of the DHTMLX JavaScript Booking library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Booking.
 ---
 
-# cardShape
+# infoShape
 
 ### Description
 
@@ -47,7 +47,7 @@ const defaultInfoShape = {
 
 ### Example
 
-~~~jsx {1-7,10}
+~~~jsx {1-7,11}
 const infoShape = {
 	preview: true,
 	category: true,

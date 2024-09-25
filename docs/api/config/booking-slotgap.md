@@ -11,7 +11,7 @@ description: You can learn about the slotGap in the documentation of the DHTMLX 
 @short: Optional. Defines a gap between booking slots for all cards
 
 :::note
-The value will be applied in case the gap is not set for the `gap` or `slotGap` parameter inside the [`data`](/api/config/booking-data) property.
+The value will be applied in case the gap value is not set for the `gap` or `slotGap` parameter inside the [`data`](/api/config/booking-data) property.
 :::
 
 ### Usage
@@ -26,7 +26,7 @@ slotGap?: number;
 
 ### Example
 
-~~~jsx {1-7,10}
+~~~jsx {}
 const slotGap = 10;
 
 new booking.Booking("#root", {

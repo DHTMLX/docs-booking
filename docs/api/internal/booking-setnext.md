@@ -24,7 +24,7 @@ api.setNext(next: any): void;
 
 The example below shows how to use the `api.setNext()` method to integrate some custom class into the Event Bus order:
 
-~~~jsx
+~~~jsx {12-13}
 const booking = new booking.Booking("#root", { data: [] });
 const server = "https://some-backend-url";
 
@@ -42,7 +42,5 @@ booking.api.setNext(someServerService);
 });
 ~~~
 
-
-
 **Related articles:**
-- [Working with server](../../../guides/working_with_server)
+- [Loading data](/guides/loading-data)

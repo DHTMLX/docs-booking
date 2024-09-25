@@ -29,7 +29,7 @@ module.exports = {
 					label: "Booking methods",
 					collapsible: true,
 					collapsed: true,
-					items: [
+			     	items: [
 						"api/methods/booking-setlocale-method",
 					]
 				},
@@ -45,6 +45,10 @@ module.exports = {
 							label: "Event Bus methods",
 							collapsible: true,
 							collapsed: true,
+							link: {
+								type: "doc",
+								id: "api/overview/booking-internal-eventbus-overview"
+							},
 							items: [
 								//"api/internal/booking_innermethodname_method",
 								"api/internal/booking-exec",
@@ -58,6 +62,10 @@ module.exports = {
 							label: "State methods",
 							collapsible: true,
 							collapsed: true,
+							link: {
+								type: "doc",
+								id: "api/overview/booking-internal-state-overview"
+							},
 							items: [
 								// "api/internal/booking_innermethodname_method",
 								"api/internal/booking-getreactivestate",
@@ -71,6 +79,10 @@ module.exports = {
 					label: "Booking events",
 					collapsible: true,
 					collapsed: true,
+					link: {
+                        type: "doc",
+                        id: "api/overview/booking-events-overview"
+                    },
 					items: [
 						// Booking events
 						//"api/events/booking_eventname_event",
@@ -86,9 +98,12 @@ module.exports = {
 					label: "Booking properties",
 					collapsible: true,
 					collapsed: true,
+					link: {
+                        type: "doc",
+                        id: "api/overview/booking-properties-overview"
+                    },
 					items: [
 						// Booking properties
-						// "api/config/booking_configname_config", // To delete before release! 
 						"api/config/booking-data",
 						"api/config/booking-cardshape",
 						"api/config/booking-filtershape",

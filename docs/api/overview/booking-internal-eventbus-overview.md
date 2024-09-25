@@ -8,9 +8,9 @@ description: You can have an API overview of JavaScript Booking in the documenta
 
 | Name                                     | Description                                     |
 | ---------------------------------------- | ----------------------------------------------- |
-| [](api/internal/js_booking_exec.md)      | @getshort(api/internal/js_booking_exec.md)      |
-| [](api/internal/js_booking_intercept.md) | @getshort(api/internal/js_booking_intercept.md) |
-| [](api/internal/js_booking_on.md)        | @getshort(api/internal/js_booking_on.md)        |
-| [](api/internal/js_booking_setnext.md)   | @getshort(api/internal/js_booking_setnext.md)   |
+| [](../internal/booking-exec.md)      | @getshort(../internal/booking-exec.md)            |
+| [](../internal/booking-intercept.md) | @getshort(../internal/booking-intercept.md)       |
+| [](../internal/booking-on.md)        | @getshort(../internal/booking-on.md)              |
+| [](../internal/booking-setnext.md)   | @getshort(../internal/booking-setnext.md)         |
 
 

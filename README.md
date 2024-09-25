@@ -1,6 +1,6 @@
 <h1 align="center"><a href="https://docs-next.dhtmlx.com/booking/">DHTMLX Booking Documentation</a></h1>
 
-New Booking description here
+JavaScript Booking library is a ready-made component designed to be easily incorporated into your application. It provides end-users with functionality for scheduling appointments online with wide search options. 
 
 ## Explore documentation locally
 

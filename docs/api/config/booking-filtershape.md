@@ -13,7 +13,7 @@ description: You can learn about the filterShape config in the documentation of 
 ### Usage
 
 ~~~jsx {}
-filterShape:{
+filterShape: {
     text?: boolean | [{
         id: string,
         label?: string,
@@ -47,40 +47,40 @@ If the `time` parameters are not set, the default values are applied: see [Defau
 
 ~~~jsx {}
 const defaultFilterShape = {
-  text: [
-		{ id: "category", label: "speciality", suggest: true },
-		{ id: "title", label: "specialist", suggest: true },
-		{ id: "details", label: "location" },
-	],
-	date: true,
-	time: defaultTimeRanges,
-	autoApply: false,
+    text: [
+        { id: "category", label: "speciality", suggest: true },
+        { id: "title", label: "specialist", suggest: true },
+        { id: "details", label: "location" },
+    ],
+    date: true,
+    time: defaultTimeRanges,
+    autoApply: false,
 };
 
 const defaultTimeRanges = [
-	{ from: 8, to: 12, label: "Morning" },
-	{ from: 12, to: 17, label: "Afternoon" },
-	{ from: 17, to: 20, label: "Evening" },
+    { from: 8, to: 12, label: "Morning" },
+    { from: 12, to: 17, label: "Afternoon" },
+    { from: 17, to: 20, label: "Evening" },
 ];
 ~~~
 
 ### Example
 
-~~~jsx 
+~~~jsx {1-9,13}
 const filterShape = {
-  date: false,
-  autoApply: true,
-  time: [
-    { from: 8, to: 11, label: "Morning" },
-    { from: 12, to: 16, label: "Afternoon" },
-    { from: 17, to: 20, label: "Evening" },
-  ],
+    date: false,
+    autoApply: true,
+    time: [
+        { from: 8, to: 11, label: "Morning" },
+        { from: 12, to: 16, label: "Afternoon" },
+        { from: 17, to: 20, label: "Evening" },
+    ],
 };
 
 new booking.Booking("#root", {
-  data,
-	filterShape,
-	// other parameters
+    data,
+    filterShape,
+    // other parameters
 });
 ~~~
 

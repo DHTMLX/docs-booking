@@ -177,7 +177,7 @@ const de = {
 
 ## Applying locales
 
-To apply a built-in locale, use the [`locale`](/api/config/locale-property) property or [`setLocale()`](/api/methods/setlocale-method) method.
+To apply a built-in locale, use the [`locale`](/api/config/booking-locale) property or [`setLocale()`](/api/methods/booking-setlocale-method) method.
 
 Example:
 
@@ -195,7 +195,7 @@ const widget = new booking.Booking("#root", {
 To apply a custom locale, you need to:
 
 - create a custom locale object (or modify the default one) and provide translations for all text labels (it can be any language you need)
-- apply the new locale via its [`locale`](/api/config/locale-property) property or use the [`setLocale()`](/api/methods/booking-setlocale-method) method
+- apply the new locale via its [`locale`](/api/config/booking-locale) property or use the [`setLocale()`](/api/methods/booking-setlocale-method) method
 
 ~~~jsx
 // create Booking
@@ -216,4 +216,4 @@ In this snippet you can see how to switch through the *EN* and *DE* locales:
 
 **Related articles**: 
 - [locale](/api/config/booking-locale)
-- [setLocale()](/api/methods/booking-setlocale-methods)
+- [setLocale()](/api/methods/booking-setlocale-method)

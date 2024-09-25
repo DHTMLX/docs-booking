@@ -20,7 +20,7 @@ cardShape?: {
     price?: boolean,
     review?: boolean,
     subtitle?: boolean,
-    title?: boolean,
+    title?: boolean
 };
 ~~~
 

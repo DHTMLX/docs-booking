@@ -9,8 +9,11 @@ description: You can have an API overview of JavaScript Booking in the documenta
 
 | Name                                      | Description                                      |
 | ----------------------------------------- | ------------------------------------------------ |
-| [](api/events/booking-confirmslot-event.md)  | @getshort(api/events/booking-confirmslot-event.md)  |
-| [](api/events/booking-selectslot-event.md)   | @getshort(api/events/booking-selectslot-event.md)   |
-| [](api/events/booking-setfilter-event.md)    | @getshort(api/events/booking-setfilter-event.md)    |
+| [](..events/booking-confirmslot-event.md)  | @getshort(../events/booking-confirmslot-event.md)  |
+| [](../events/booking-filterdata-event.md)  | @getshort(../events/booking-filterdata-event.md)    |
+| [](../events/booking-selectitem-event.md)  | @getshort(../events/booking-selectitem-event.md)    |
+| [](../events/booking-selectitemdate-event.md)  | @getshort(../events/booking-selectitemdate-event.md) |
+| [](../events/booking-selectslot-event.md)   | @getshort(../events/booking-selectslot-event.md)   |
+
 
 

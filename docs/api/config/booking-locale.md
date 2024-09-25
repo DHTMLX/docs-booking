@@ -35,5 +35,5 @@ const widget = new booking.Booking("#root", {
 ~~~
 
 **Related articles**: 
-- [setLocale()](/api/methods/booking-setlocale-booking)
+- [setLocale()](/api/methods/booking-setlocale-method)
 - [Localization](/guides/localization)

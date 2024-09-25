@@ -8,9 +8,11 @@ description: You can have an API overview of JavaScript Booking in the documenta
 
 | Name                                      | Description                                      |
 | ----------------------------------------- | ------------------------------------------------ |
-| [](api/config/booking-data.md)         | @getshort(api/config/booking-data.md)         |
-| [](api/config/booking-cardshape.md)    | @getshort(api/config/booking-cardshape.md)    |
-| [](api/config/booking-filteredcards.md)| @getshort(api/config/booking-filteredcards.md)|
-| [](api/config/booking-filtershape.md)  | @getshort(api/config/booking-filtershape.md)  |
-| [](api/config/booking-formshape.md)    | @getshort(api/config/booking-formshape.md)    |
-| [](api/config/booking-infoshape.md)    | @getshort(api/config/booking-infoshape.md)    |
+| [](../config/booking-data.md)         | @getshort(../config/booking-data.md)               |
+| [](../config/booking-cardshape.md)    | @getshort(../config/booking-cardshape.md)          |
+| [](../config/booking-filtershape.md)  | @getshort(../config/booking-filtershape.md)        |
+| [](../config/booking-formshape.md)    | @getshort(../config/booking-formshape.md)          |
+| [](../config/booking-infoshape.md)    | @getshort(../config/booking-infoshape.md)          |
+| [](../config/booking-locale.md)       | @getshort(../config/booking-locale.md)             |
+| [](../config/booking-slotgap.md)      | @getshort(../config/booking-slotgap.md)            |
+| [](../config/booking-slotsize.md)     | @getshort(../config/booking-slotsize.md)           |

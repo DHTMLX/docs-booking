@@ -72,7 +72,7 @@ Now you are ready to add booking to the page. First, let's create the DIV contai
     <body>
         <div id="root"></div>
         <script>
-            const table = new booking.booking("#root", {
+            const widget = new booking.Booking("#root", {
                 // configuration properties
             });
         </script>
@@ -159,4 +159,4 @@ new booking.Booking("#root", {
 That's all you need to create a simple Booking on a page. Now you are ready to embark on a journey with the Booking API:
 
 - [Guides](/category/guides) pages provide instructions about installation, loading data, styling, and other helpful tips to go smoothly with the Booking configuration
-- [API reference](/api/overview/main-overview) gives description of the Booking functionality
+- [API reference](/api/overview/booking-api-overview) gives description of the Booking functionality

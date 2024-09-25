@@ -8,6 +8,6 @@ description: You can have an API overview of JavaScript Booking in the documenta
 
 | Name                                            | Description                                            |
 | ----------------------------------------------- | ------------------------------------------------------ |
-| [](api/internal/booking-getreactivestate.md) | @getshort(api/internal/booking-getreactivestate.md) |
-| [](api/internal/booking-getstate.md)         | @getshort(api/internal/booking-getstate.md)         |
+| [](../internal/booking-getreactivestate.md) | @getshort(../internal/booking-getreactivestate.md) |
+| [](../internal/booking-getstate.md)         | @getshort(../internal/booking-getstate.md)         |
 

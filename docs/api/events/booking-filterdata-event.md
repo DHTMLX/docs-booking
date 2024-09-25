@@ -42,7 +42,7 @@ The callback of the **filter-data** event can take an object with the following 
 
 The example below demonstrates how to apply filter at the initialization using the [`api.exec()`](/api/internal/booking-exec) method:
 
-~~~jsx
+~~~jsx {6-18}
 // create Booking
 const widget = new booking.Booking("#root", {
 	data,
