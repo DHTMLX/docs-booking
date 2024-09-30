@@ -8,12 +8,25 @@ description: You can learn about Styling in the documentation of the DHTMLX Java
 
 ## Default style
 
-tbd
+~~~css
+.wx-material-theme {
+    --wx-theme-name: material;
+    --wx-pivot-primary-hover: #194e9e;
+    --wx-pivot-border-color: var(--wx-color-font-disabled);
+    --wx-pivot-field-hover: linear-gradient(
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.1) 100%
+    );
+}
+~~~
 
+:::tip Note
+Next versions of Booking can bring some changes for the variables and their names. Please, do not forget to check the names after updating to the newer versions and modify them in your code to avoid problems with display of the component.
+:::
 
 ## Built-in theme
 
-The widget provides the next built-in themes: /// 
+The widget provides one built-in theme which is the **Material** theme. 
 
 You can apply the theme via adding the corresponding *CSS* classes to the widget container:
 

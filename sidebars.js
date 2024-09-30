@@ -127,7 +127,6 @@ module.exports = {
 				"guides/localization",
 				"guides/loading-data",
 				"guides/styling",
-				"guides/working-with-hotkeys",
 			],
 		},
 	]
