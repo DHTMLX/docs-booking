@@ -476,7 +476,7 @@ new booking.Booking("#root", {
 
 ### Enabling the autoApply mode for the filter
 
-To hide the **Search** button and make the filter apply right after a user's input, set the `autoApply` parameter of the [`filterShape`](/api/config/booking-filterShape) property to **true**.
+To hide the **Search** button and make the filter immediately apply a user's input, set the `autoApply` parameter of the [`filterShape`](/api/config/booking-filterShape) property to **true**.
 
 Example:
 
