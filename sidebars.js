@@ -121,6 +121,12 @@ module.exports = {
 			label: "Guides",
 			collapsible: true,
 			collapsed: true,
+			link: {
+				type: 'generated-index',
+				title: 'Guides',
+				keywords: ['guides'],
+				image: '/img/docusaurus.png',
+			},
 			items: [
 				"guides/initialization",
 				"guides/configuration",

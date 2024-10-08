@@ -12,6 +12,6 @@ description: SEO data
 
 -   Configurable cards with data
 -   Configurable fields and data displayed in the Booking dialog
--   Configurable slot duration and gap between slots
+-   Configurable slot duration and gaps between slots
 -   Configurable filter
 -   Localization 
