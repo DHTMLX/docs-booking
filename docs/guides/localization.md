@@ -84,15 +84,19 @@ const en = {
 	lang: "en",
 
 	booking: {
-	    //Filter bar
+		//Filter bar
 		"What date would be best?": "What date would be best?",
 		"What time would be best?": "What time would be best?",
-		"Choose a date": "Choose a date",
-		"Choose a time": "Choose a time",
 		Search: "Search",
-		filterCategoryName: "Speciality",
-		filterTitleName: "Specialist",
-		textInputPlaceholder: "Search specialist, speciality or location...",
+		textSearchPlaceholder: labels => {
+			const last = labels.pop();
+			if (labels.length)
+				return `Search ${labels.join(", ")} or ${last}...`;
+			return `Search ${last}`;
+		},
+		location: "location",
+		specialist: "specialist",
+		speciality: "speciality",
 		Morning: "Morning",
 		Afternoon: "Afternoon",
 		Evening: "Evening",
@@ -101,33 +105,30 @@ const en = {
 		reviews: "reviews",
 
 		// Slots
-		"Select the time slot to book online":
-			"Select the time slot to book online",
-		"Unfortunately, there are no slots available for the selected date.":
-			"Unfortunately, there are no slots available for the selected date.",
-		"Click here": "Click here",
-		"if you want to open a specialist card and choose from other free slots.":
-			"if you want to open a specialist card and choose from other free slots.",
-		"Select date & time": "Select date & time",
+		"Unfortunately, there are no slots available for the selected date":
+			"Unfortunately, there are no slots available for the selected date",
+		"No slots in the system": "No slots in the system",
+		"Next available date": "Next available date",
 		minutes: "minutes",
 		Confirm: "Confirm",
 
 		// Booking window
-		"Your Details": "Your Details",
+		"Your details": "Your details",
 		Name: "Name",
 		Email: "Email",
 		Description: "Description",
-		"Type something...": "Type something...",
-		"Book an appointment": "Book an appointment",
+		"Make an appointment": "Make an appointment",
 		"Booking your appointment": "Booking your appointment",
 		"Please do not close the window": "Please do not close the window",
 		"Appointment confirmed": "Appointment confirmed",
-		"Failed to process this booking": "Failed to process this booking",
+		"Failed Appointment": "Failed Appointment",
 		"Oops, something went wrong!": "Oops, something went wrong!",
-		"Please go back and try again.": "Please go back and try again.",
+		"Please go back and try again": "Please go back and try again",
 		"Go back": "Go back",
 		" is required": " is required",
-	}
+		monthDayFormat: "%M %d",
+		fullDateFormat: "%D, %d %F %Y",
+	},
 	
 };
 ~~~
@@ -209,13 +210,18 @@ const de = {
 	booking: {
 		//Filter bar
 		"What date would be best?":
-		"Welches Datum würde Ihnen am besten passen?",
+			"Welches Datum würde Ihnen am besten passen?",
 		"What time would be best?": "Welche Zeit würde Ihnen am besten passen?",
 		Search: "Suchen",
-		filterCategoryName: "Fachgebiet",
-		filterTitleName: "Spezialist/in",
-		textInputPlaceholder:
-			"Suchen Sie nach Spezialist/in, Fachgebiet oder Standort...",
+		textSearchPlaceholder: labels => {
+			const last = labels.pop();
+			if (labels.length)
+				return `Suchen Sie nach ${labels.join(", ")} oder ${last}...`;
+			return `Suchen Sie nach ${last}`;
+		},
+		location: "Standort",
+		specialist: "Spezialist/in",
+		speciality: "Fachgebiet",
 		Morning: "Morgen",
 		Afternoon: "Nachmittag",
 		Evening: "Abend",
@@ -224,30 +230,31 @@ const de = {
 		reviews: "Bewertungen",
 
 		// Slots
-		"Unfortunately, there are no slots available for the selected date.":
-			"Leider sind keine Termine für den ausgewählten Tag verfügbar.",
-		"Click here": "Klicken bitte Sie hier",
-		"if you want to open a specialist card and choose from other free slots.":
-			"wenn Sie eine Facharztkarte öffnen und aus weiteren freien Zeitfenstern wählen möchten.",
+		"Unfortunately, there are no slots available for the selected date":
+			"Leider sind keine Termine für den ausgewählten Tag verfügbar",
+		"No slots in the system": "Keine Steckplätze im System",
+		"Next available date": "Nächstes verfügbares Datum",
 		minutes: "Minuten",
 		Confirm: "Bestätigen",
 
 		// Booking window
-		"Your Details": "Ihre Angaben",
+		"Your details": "Ihre Angaben",
 		Name: "Name",
 		Email: "Email",
 		Description: "Beschreibung",
-		"Book an appointment": "Vereinbaren Sie bitte einen Termin",
+		"Make an appointment": "Vereinbaren Sie einen Termin",
 		"Booking your appointment": "Buchen Sie bitte Ihren Termin",
 		"Please do not close the window":
 			"Bitte schließen Sie das Fenster nicht",
 		"Appointment confirmed": "Termin ist bestätigt",
-		"Failed to process this booking":
-			"Diese Buchung konnte nicht bearbeitet werden",
+		"Failed Appointment": "Gescheiterte Ernennung",
 		"Oops, something went wrong!": "Hoppla! Etwas ist schiefgelaufen!",
-		"Please go back and try again.":
-			"Bitte gehen Sie zurück und versuchen Sie noch einmal.",
+		"Please go back and try again":
+			"Bitte gehen Sie zurück und versuchen Sie noch einmal",
 		"Go back": "Gehen Sie zurück",
+		" is required": " ist erforderlich",
+		monthDayFormat: "%M %d",
+		fullDateFormat: "%D, %d %F %Y",
 	},
 };
 ~~~
