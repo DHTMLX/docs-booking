@@ -54,12 +54,8 @@ const defaultCardShape = {
 
 ~~~jsx {1-9,12}
 const cardShape = {
-	preview: true,
 	review: false,
-	category: true,
-	title: true,
 	subtitle: false,
-	price: true,
 	details: false,
 };
 

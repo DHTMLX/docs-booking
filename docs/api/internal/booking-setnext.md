@@ -31,15 +31,11 @@ const server = "https://some-backend-url";
 // Assume you have a custom server service class named someServerService
 const someServerService = new ServerDataService(server);
 
-Promise.all([
-    fetch(server + "/data").then((res) => res.json())
-]).then(([data]) => {
-    booking.setConfig({ data });
+fetch(server + "/data").then((res) => res.json()).then((data) => { 
+	widget.setConfig({data});
     
 // Integrate the serverDataService into the Event Bus order of widget
 booking.api.setNext(someServerService);
-
-});
 ~~~
 
 **Related articles:**

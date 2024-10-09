@@ -7,44 +7,21 @@ description: You can learn about the configuration in the documentation of the D
 # Configuration
 
 
-## Adding cards
+## Loading data for cards
 
-To add a card with data, you should add an object to the [`data`](/api/config/booking-data) array. Using `data` parameters you are enabled to add plenty of information to a card, such as its name, category, rating information, slots for booking (both available and used slots), and more. Please, refer to [`data`](/api/config/booking-data) for the description of parameters.
+To load data, add the data to the [`data`](/api/config/booking-data) array. See all instructions here: [`Loading data`](/guides/loading-data).
 
-~~~jsx
-const data = [
-	{
-        id: "7d1bc2e1-df36-413b-8154-591e5f176fb1",
-        title: "Barnett Mueller",
-        category: "Allergist",
-        subtitle: "6 years of experience",
-        details: "Navy Street 1\nKiskimere, United States",
-        preview: "",
-        price: "22 $",
-        review: {
-            stars: 0,
-            count: 88,
-        },
-        slots: [{ from: 15, to: 18, size: 20, gap: 10 }],
-    },
-];
-
-new booking.Booking("#root", {
-	data,
-	// other parameters
-});
-~~~
 
 ## Defining the structure of cards
 
 You can configure what information all cards will display on their left side using the [`cardShape`](/api/config/booking-cardshape) property.
 
-On the left side of a card the following information items are displayed by default:
+On the left side of a card the following data fields are displayed by default:
 - preview: card image
 - review: rating information with the number of rating stars (out of five) and the number of reviews
 - category: the subtitle of a card
 - title: the title of a card which is a specialist's name
-- subtitle: the subtitle of a card. for example, experience details 
+- subtitle: the subtitle of a card, for example, experience details 
 - price: the price of the service
 - details: other details of a card
 
@@ -65,18 +42,12 @@ const data = [
         review: {
         stars: 4,
         count: 120,
-        },
+    },
         slots: [
-        {
-            from: 9,
-            to: 21,
-            days: [1, 2, 3, 4, 5],
-        },
-        {
-            from: 10,
-            to: 18,
-            days: [6, 0],
-        },
+            {
+                from: 9,
+                to: 21,
+            },
         ],
     },
 ];
@@ -127,7 +98,7 @@ const data = [
             {
                 from: 12,
                 to: 18,
-                size: 50,
+                size: 30,
                 gap: 10,
                 days: [2, 5],
             },
@@ -178,7 +149,7 @@ const data = [
         },
         slots: [
             {
-                //a common rule for all days\
+                //a common rule for all days
                 from: 14, //slots start time
                 to: 17, // slots end time
                 size: 30, // each slot duration in minutes
@@ -231,12 +202,12 @@ const data = [
                 days: [2, 5],
             },
             {
-                //this rule is applied to days 3 and 4 (Wed and Thu) and exact date
+                //this rule is applied to days 3 and 4 (Wednesdays and Thursdays) and exact date
                 from: 18,
                 to: 20,
                 size: 45,
                 gap: 20,
-                days: [1, 3],
+                days: [3, 4],
                 dates: [ 1683234000000 ] // exact upcoming date (May 5, 2023, Friday)
             },
         ],
@@ -257,7 +228,7 @@ In case you have common slots parameters and specific parameters for some days, 
 
 ### Marking slots as used or available
 
-To mark slots as used (booked) and make them not visible for a user, use the `usedSlots` parameter of the [`data`](/api/config/booking-data) property.
+To mark slots as used (booked) and make them not visible for a user, use the `usedSlots` parameter of the required card item of the [`data`](/api/config/booking-data) property.
 
 Example:
 
@@ -390,6 +361,12 @@ new booking.Booking("#root", {
 You can configure filter settings via the [`filterShape`](/api/config/booking-filterShape) property. Default configuration is the following:
 
 ~~~jsx {}
+const defaultTimeRanges = [
+	{ from: 8, to: 12, label: "Morning" },
+	{ from: 12, to: 17, label: "Afternoon" },
+	{ from: 17, to: 20, label: "Evening" },
+];
+
 const defaultFilterShape = {
     text: [
 		{ id: "category", label: "speciality", suggest: true },
@@ -400,12 +377,6 @@ const defaultFilterShape = {
 	time: defaultTimeRanges,
 	autoApply: false,
 };
-
-const defaultTimeRanges = [
-	{ from: 8, to: 12, label: "Morning" },
-	{ from: 12, to: 17, label: "Afternoon" },
-	{ from: 17, to: 20, label: "Evening" },
-];
 ~~~
 
 ### Hiding filter input fields

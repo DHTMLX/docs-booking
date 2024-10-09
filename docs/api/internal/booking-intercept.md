@@ -41,6 +41,5 @@ const booking = new booking.Booking("#root", {
 // every time the filter-data event is triggered, slots will be shown only for the morning time
 booking.api.intercept("filter-data", data => {
 	data.time = [{ from: 9, to: 12 }];
-	return data;
 });
 ~~~

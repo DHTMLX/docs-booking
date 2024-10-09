@@ -46,6 +46,12 @@ If the `time` parameters are not set, the default values are applied: see [Defau
 ### Default config
 
 ~~~jsx {}
+const defaultTimeRanges = [
+    { from: 8, to: 12, label: "Morning" },
+    { from: 12, to: 17, label: "Afternoon" },
+    { from: 17, to: 20, label: "Evening" },
+];
+
 const defaultFilterShape = {
     text: [
         { id: "category", label: "speciality", suggest: true },
@@ -56,12 +62,6 @@ const defaultFilterShape = {
     time: defaultTimeRanges,
     autoApply: false,
 };
-
-const defaultTimeRanges = [
-    { from: 8, to: 12, label: "Morning" },
-    { from: 12, to: 17, label: "Afternoon" },
-    { from: 17, to: 20, label: "Evening" },
-];
 ~~~
 
 ### Example

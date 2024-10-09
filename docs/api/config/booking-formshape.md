@@ -26,7 +26,7 @@ formShape: {
 For each field you can specify the following parameters:
 
 - `comp` - (optional) the field type (**text** or **textarea**)
-- `key` - (optional) the id of a field
+- `key` - (required) the id of a field
 - `label` - (optional) the field label
 - `required` - (optional) if the value is set to **true**, the field should not be empty and it's required to submit the booking form; if **false**, the field can be empty
 

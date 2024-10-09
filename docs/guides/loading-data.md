@@ -166,9 +166,8 @@ To get server data, you can send the request for data using the native **fetch**
 const widget = new booking.Booking("#booking", {data: []});
 const server = "https://some-backend-url";
 
-Promise.all([
-   fetch(server + "/data").then((res) => res.json()),
-   ]).then(([data]) => {
-   widget.setConfig({data});
- });
+fetch(server + "/data").then((res) => res.json()).then((data) => { 
+	widget.setConfig({data});
+});
+
 ~~~

@@ -49,10 +49,6 @@ const defaultInfoShape = {
 
 ~~~jsx {1-7,11}
 const infoShape = {
-	preview: true,
-	category: true,
-	title: true,
-	price: true,
 	details: false,
 };
 
