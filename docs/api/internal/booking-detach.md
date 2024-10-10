@@ -24,7 +24,7 @@ api.detach(tag: number | string ): void;
 
 In the example below we add an object with the **tag** property to the [`api.on()`](/api/internal/booking-on) handler, and then we use the `api.detach()` method to stop logging the [`open-filter`](/api/events/booking-selectslot-event) event.
 
-~~~jsx {5-19}
+~~~jsx {6-20}
 const widget = new booking.Booking("#root", {
 	data,
 	//other configuration parameters
