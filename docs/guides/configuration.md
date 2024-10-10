@@ -29,7 +29,7 @@ To hide any information block from cards' display, set the appropriate parameter
 
 Example:
 
-~~~jsx {36}
+~~~jsx {35}
 const data = [
     {
         id: "ee828b5d-a034-420c-889b-978840015d6a",

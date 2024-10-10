@@ -37,3 +37,4 @@ widget.setConfirmHandler((ev) => {
 });
 ~~~
 
+**Related articles**: [Saving slots reservations to the server](/guides/saving-reservations)
