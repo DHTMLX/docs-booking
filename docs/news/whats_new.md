@@ -14,4 +14,5 @@ description: SEO data
 -   Configurable fields and data displayed in the Booking dialog
 -   Configurable slot duration and gaps between slots
 -   Configurable filter
+-   The `setConfirmHandler()` method to set handlers for confirming the booking of a slot
 -   Localization 
