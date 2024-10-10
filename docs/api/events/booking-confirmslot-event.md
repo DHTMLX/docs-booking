@@ -57,4 +57,4 @@ booking.api.on("confirm-slot", (obj) => {
 });
 ~~~
 
-**Related articles:** TODO
+**Related articles:** [`setConfirmHandler`](/api/methods/booking-setconfirmhandler-method) method

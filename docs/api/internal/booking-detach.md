@@ -52,5 +52,4 @@ button.addEventListener("click", stop);
 button.textContent = "Stop logging";
 
 document.body.appendChild(button);
-
 ~~~

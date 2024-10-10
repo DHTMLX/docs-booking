@@ -169,5 +169,4 @@ const server = "https://some-backend-url";
 fetch(server + "/data").then((res) => res.json()).then((data) => { 
 	widget.setConfig({data});
 });
-
 ~~~

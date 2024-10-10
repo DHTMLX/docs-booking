@@ -30,6 +30,9 @@ module.exports = {
 					collapsible: true,
 					collapsed: true,
 			     	items: [
+						"api/methods/booking-serialize-method",
+						"api/methods/booking-setconfig-method",
+						"api/methods/booking-setconfirmhandler-method",
 						"api/methods/booking-setlocale-method",
 					]
 				},
@@ -132,6 +135,7 @@ module.exports = {
 				"guides/configuration",
 				"guides/localization",
 				"guides/loading-data",
+				"guides/saving-reservations",
 				"guides/styling",
 			],
 		},
