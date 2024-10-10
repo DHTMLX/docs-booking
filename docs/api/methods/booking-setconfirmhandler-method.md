@@ -18,7 +18,7 @@ setConfirmHandler(confirmHandler: (ev) => any): void;
 
 ### Parameters
 
-The method takes the `confirmHandler` function that will be called when confirming a slot for booking. The function takes the same object as in the callback of the [`confirm-slot`](/api/events/booking-confirmslot-event) event.
+The method takes the `confirmHandler` function that will be called when confirming a slot for booking. The function takes the object as in the [`confirm-slot`](/api/events/booking-confirmslot-event) event.
 
 ### Example
 
@@ -31,9 +31,6 @@ const widget = new booking.Booking("#root", {
 widget.setConfirmHandler((ev) => {
 	const confirm  = ev.confirm;
 	console.log("Booking info:", ev);
-	setTimeout(() => {
-		Math.random() < 0.5 ? confirm.error() : confirm.done();
-	}, 1000);
 });
 ~~~
 
