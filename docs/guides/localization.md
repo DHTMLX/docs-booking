@@ -134,7 +134,7 @@ const en = {
 ~~~
 
 :::info
-Besides the ***en*** locale, Booking also includes the built-in ***de*** and ***ch*** locales.
+Besides the ***en*** locale, Booking also includes the built-in ***de*** and ***cn*** locales.
 :::
 
 <details>
