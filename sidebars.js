@@ -54,6 +54,7 @@ module.exports = {
 							},
 							items: [
 								//"api/internal/booking_innermethodname_method",
+								"api/internal/booking-detach",
 								"api/internal/booking-exec",
 								"api/internal/booking-intercept",
 								"api/internal/booking-on",
