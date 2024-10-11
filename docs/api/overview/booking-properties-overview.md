@@ -1,7 +1,7 @@
 ---
 sidebar_label: Properties overview
 title: Properties Overview
-description: You can have an API overview of JavaScript Booking in the documentation of the DHTMLX JavaScript Booking library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Booking.
+description: You can have properties overview of JavaScript Booking in the documentation of the DHTMLX JavaScript Booking library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Booking.
 ---
 
 # Properties overview
@@ -15,4 +15,5 @@ description: You can have an API overview of JavaScript Booking in the documenta
 | [](../config/booking-infoshape.md)    | @getshort(../config/booking-infoshape.md)          |
 | [](../config/booking-locale.md)       | @getshort(../config/booking-locale.md)             |
 | [](../config/booking-slotgap.md)      | @getshort(../config/booking-slotgap.md)            |
+| [](../config/booking-slotlimit.md)      | @getshort(../config/booking-slotlimit.md)        |
 | [](../config/booking-slotsize.md)     | @getshort(../config/booking-slotsize.md)           |

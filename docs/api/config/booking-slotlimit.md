@@ -23,12 +23,11 @@ slotLimit?: Date;
 ### Example
 
 ~~~jsx {}
-const slotSize = 45;
-
 new booking.Booking("#root", {
-	slotSize,
+	data,
+	slotLimit: new Date(2024, 11, 11),
 	// other parameters
 });
 ~~~
 
-**Related articles:**
+

@@ -23,12 +23,15 @@ module.exports = {
             },
 			items: [
 
-
-				{
+			{
 					type: "category",
 					label: "Booking methods",
 					collapsible: true,
 					collapsed: true,
+					link: {
+							type: "doc",
+							id: "api/overview/booking-methods-overview"
+						},
 			     	items: [
 						"api/methods/booking-serialize-method",
 						"api/methods/booking-setconfig-method",
@@ -115,6 +118,7 @@ module.exports = {
 						"api/config/booking-infoshape",
 						"api/config/booking-locale",
 						"api/config/booking-slotgap",
+						"api/config/booking-slotlimit",
 						"api/config/booking-slotsize",
 					]
 				}

@@ -8,7 +8,7 @@ description: You can learn about the detach method in the documentation of the D
 
 ## Description
 
-Allows removing/detaching event handlers
+@short: Allows removing/detaching event handlers
 
 ## Usage
 

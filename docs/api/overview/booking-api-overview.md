@@ -23,6 +23,9 @@ new booking.Booking("#root", {
 
 | Name                                               | Description                                               |
 | -------------------------------------------------- | --------------------------------------------------------- |
+| [](../methods/booking-serialize-method.md)         | @getshort(../methods/booking-serialize-method.md)         |
+| [](../methods/booking-setconfig-method.md)         | @getshort(../methods/booking-setconfig-method.md)         |
+| [](../methods/booking-setconfirmhandler-method.md) | @getshort(../methods/booking-setconfirmhandler-method.md) |
 | [](../methods/booking-setlocale-method.md)         | @getshort(../methods/booking-setlocale-method.md)         |
 
 ## Booking internal API
@@ -31,10 +34,13 @@ new booking.Booking("#root", {
 
 | Name                                     | Description                                     |
 | ---------------------------------------- | ----------------------------------------------- |
-| [](../internal/booking-exec.md)      | @getshort(../internal/booking-exec.md)            |
-| [](../internal/booking-intercept.md) | @getshort(../internal/booking-intercept.md)       |
-| [](../internal/booking-on.md)        | @getshort(../internal/booking-on.md)              |
-| [](../internal/booking-setnext.md)   | @getshort(../internal/booking-setnext.md)         |
+| [](../internal/booking-detach.md)    | @getshort(../internal/booking-detach.md)            |
+| [](../internal/booking-exec.md)      | @getshort(../internal/booking-exec.md)              |
+| [](../internal/booking-intercept.md) | @getshort(../internal/booking-intercept.md)         |
+| [](../internal/booking-on.md)        | @getshort(../internal/booking-on.md)                |
+| [](../internal/booking-setnext.md)   | @getshort(../internal/booking-setnext.md)           |
+
+
 
 ### State methods
 
@@ -64,4 +70,5 @@ new booking.Booking("#root", {
 | [](../config/booking-infoshape.md)    | @getshort(../config/booking-infoshape.md)          |
 | [](../config/booking-locale.md)       | @getshort(../config/booking-locale.md)             |
 | [](../config/booking-slotgap.md)      | @getshort(../config/booking-slotgap.md)            |
+| [](../config/booking-slotlimit.md)      | @getshort(../config/booking-slotlimit.md)        |
 | [](../config/booking-slotsize.md)     | @getshort(../config/booking-slotsize.md)           |
