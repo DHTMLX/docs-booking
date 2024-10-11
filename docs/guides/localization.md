@@ -81,7 +81,7 @@ const en = {
         timeFormat: "%H:%i"
     }
 	
-	lang: "en",
+	lang: "en-US",
 
 	booking: {
 		//Filter bar
@@ -204,7 +204,7 @@ const de = {
 		dateFormat: "%d.%m.%Y",
 	};
 	
-	lang: "de",
+	lang: "de-DE",
 
 	// booking
 	booking: {
@@ -330,7 +330,7 @@ const cn = {
 		dateFormat: "%Y-%m-%d",
 	};
 	
-	lang: "cn",
+	lang: "zh-CN",
 
 	//booking
 	booking: {

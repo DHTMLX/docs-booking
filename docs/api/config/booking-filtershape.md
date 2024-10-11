@@ -84,4 +84,3 @@ new booking.Booking("#root", {
 });
 ~~~
 
-**Related articles:**

@@ -41,4 +41,4 @@ booking.api.on("select-slot", (obj) => {
 });
 ~~~
 
-**Related articles:** TODO
+

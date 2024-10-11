@@ -50,4 +50,4 @@ const state = booking.api.getState();
 console.log(state); 
 ~~~
 
-**Related articles:**
+
