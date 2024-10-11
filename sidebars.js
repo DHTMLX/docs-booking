@@ -128,7 +128,7 @@ module.exports = {
 			type: "category",
 			label: "Guides",
 			collapsible: true,
-			collapsed: true,
+			collapsed: false,
 			link: {
 				type: 'generated-index',
 				title: 'Guides',
@@ -137,9 +137,9 @@ module.exports = {
 			},
 			items: [
 				"guides/initialization",
-				"guides/configuration",
-				"guides/localization",
 				"guides/loading-data",
+				"guides/configuration",
+				"guides/localization",				
 				"guides/saving-reservations",
 				"guides/styling",
 			],

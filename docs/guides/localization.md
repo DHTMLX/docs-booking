@@ -14,7 +14,6 @@ The English locale is applied by default:
 
 ~~~jsx {}
 const en = {
-
 	//calendar
     calendar: {
         monthFull: [
@@ -265,7 +264,6 @@ const de = {
 
 ~~~jsx
 const cn = {
-
 	// calendar
 	calendar: {
 		monthFull: [
@@ -378,7 +376,6 @@ const cn = {
 		monthDayFormat: "%M %d",
 		fullDateFormat: "%D, %d %F %Y",
 	},
-
 };
 ~~~
 </details>
