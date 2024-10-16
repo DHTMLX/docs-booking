@@ -182,3 +182,4 @@ The snippet below shows how to save slots reservations to the server:
 - [confirm-slot](/api/events/booking-confirmslot-event) event
 - [setConfig()](/api/methods/booking-setconfig-method) method
 - [setConfirmHandler()](/api/methods/booking-setconfirmhandler-method) method
+- [Saving slots reservations to the server](/guides/saving-reservations)
