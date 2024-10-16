@@ -173,7 +173,7 @@ fetch(server + "/data").then((res) => res.json()).then((data) => {
 
 ## Example
 
-The snippet below shows to save slots reservations to the server:
+The snippet below shows how to save slots reservations to the server:
 
 <iframe src="https://snippet.dhtmlx.com/dpbmyr8j?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
