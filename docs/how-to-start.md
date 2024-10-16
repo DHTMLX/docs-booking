@@ -84,7 +84,7 @@ Now you are ready to add booking to the page. First, let's create the DIV contai
 
 To start working with Booking, first you need to provide the initial data, and then you can add other configuration properties you want to be applied at the initialization. The example below creates Booking with two cards:
 - the [`data`](/api/config/booking-data) property allows adding data to each card, such as title, image, rating data, and booking slots
-- the [`cardShape`](/api/config/booking-infoshape) property helps to configure which cards' data fields to display 
+- the [`cardShape`](/api/config/booking-cardshape) property helps to configure which cards' data fields to display 
 
 ~~~jsx
 const data = [
