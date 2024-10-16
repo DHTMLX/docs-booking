@@ -11,7 +11,7 @@ description: SEO data
 ### Initial functionality
 
 -   The ability to schedule appointments via the single card view or Booking dialog
--   Configurable cards with data
+-   Configurable cards with data 
 -   Configurable fields and data displayed in the Booking dialog
 -   The ability to [define slot rules](/guides/configuration#defining-slot-rules)
 -   Configurable filter
