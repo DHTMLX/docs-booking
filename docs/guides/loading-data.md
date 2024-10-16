@@ -170,3 +170,9 @@ fetch(server + "/data").then((res) => res.json()).then((data) => {
 	widget.setConfig({data});
 });
 ~~~
+
+## Example
+
+The snippet below demonstrates how to load a large dataset:
+
+<iframe src="https://snippet.dhtmlx.com/7nb30n46?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

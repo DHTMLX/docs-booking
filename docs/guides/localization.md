@@ -124,11 +124,12 @@ const en = {
 		"Oops, something went wrong!": "Oops, something went wrong!",
 		"Please go back and try again": "Please go back and try again",
 		"Go back": "Go back",
-		" is required": " is required",
+		" should not be empty": " should not be empty",
+		" should contain valid email address":
+			" should contain valid email address",
 		monthDayFormat: "%M %d",
 		fullDateFormat: "%D, %d %F %Y",
-	},
-	
+	},	
 };
 ~~~
 
@@ -251,7 +252,9 @@ const de = {
 		"Please go back and try again":
 			"Bitte gehen Sie zurück und versuchen Sie noch einmal",
 		"Go back": "Gehen Sie zurück",
-		" is required": " ist erforderlich",
+		" should not be empty": " sollte nicht leer sein",
+		" should contain valid email address":
+			"sollte eine gültige E-Mail-Adresse enthalten",
 		monthDayFormat: "%M %d",
 		fullDateFormat: "%D, %d %F %Y",
 	},
@@ -372,7 +375,8 @@ const cn = {
 		"Oops, something went wrong!": "哎呀，出错了!",
 		"Please go back and try again": "请回去再试一次",
 		"Go back": "返回",
-		" is required": " 需要",
+		" should not be empty": " 不应为空",
+		" should contain valid email address": " 应包含有效的电子邮件地址",
 		monthDayFormat: "%M %d",
 		fullDateFormat: "%D, %d %F %Y",
 	},
@@ -412,12 +416,41 @@ const ko = {...} // object with locale
 widget.setLocale(ko);
 ~~~
 
+## Changing the time format
+
+You can change the time format via the `timeFormat` parameter of the `formats` object of [locale](/api/config/booking-locale). 
+
+~~~jsx
+let clockFormat = 12;
+const locale = booking.locales["en"];
+setTimeFormat(clockFormat);
+
+function setTimeFormat(clock){
+    locale.formats.timeFormat = clock === 12 ? "%g:%i %a" : "%H:%i";
+}
+
+const widget = new booking.Booking("#root", {
+    locale, 
+    data: dataset,
+});
+
+function changeFormat() {
+    clockFormat = clockFormat === 12 ? 24  : 12;
+    setTimeFormat(clockFormat);
+    widget.setLocale(locale);
+       
+}
+~~~
+
+:::info
+You can also see the example in the [snippet tool](https://snippet.dhtmlx.com/rxjnw54x)
+:::
 
 ## Example
 
-In this snippet you can see how to switch through the *EN* and *DE* locales:
+In this snippet you can see how to switch between the *EN* and *DE* locales:
 
-<iframe src="" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+<iframe src="https://snippet.dhtmlx.com/7khy4ayf?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 **Related articles**: 
 - [locale](/api/config/booking-locale)

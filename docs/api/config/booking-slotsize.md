@@ -35,4 +35,6 @@ new booking.Booking("#root", {
 });
 ~~~
 
+The snippet below shows how to set duration and [gap](/api/config/booking-slotgap) for all slots:
 
+<iframe src="https://snippet.dhtmlx.com/pw8xsl1p?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

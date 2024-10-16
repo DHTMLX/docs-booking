@@ -105,4 +105,4 @@ The next example shows how to change the background color for cards:
 
 In this snippet you can see how to apply a custom style to Booking: 
 
-<iframe src="https://snippet.dhtmlx.com/" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe> 
+<iframe src="https://snippet.dhtmlx.com/d7w3jtqz?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe> 

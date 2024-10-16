@@ -47,9 +47,10 @@ const defaultInfoShape = {
 
 ### Example
 
-~~~jsx {1-7,11}
+~~~jsx {}
 const infoShape = {
-	details: false,
+	preview: false,
+	price: false,
 };
 
 new booking.Booking("#root", {
@@ -59,4 +60,6 @@ new booking.Booking("#root", {
 });
 ~~~
 
+The snippet below shows how to configure what to display on the left side of the Booking dialog:
 
+<iframe src="https://snippet.dhtmlx.com/pd6wp1xc?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

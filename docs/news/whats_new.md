@@ -12,7 +12,7 @@ description: SEO data
 
 -   Configurable cards with data
 -   Configurable fields and data displayed in the Booking dialog
--   Configurable slot duration and gaps between slots
+-   Ability to [define slot rules](/guides/configuration#defining-slot-rules)
 -   Configurable filter
 -   The `setConfirmHandler()` method to set handlers for confirming the booking of a slot
 -   Localization 

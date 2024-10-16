@@ -39,12 +39,21 @@ const defaultFormShape = [
 		key: "name",
 		label: "Name",
 		required: true,
+		validation: val => {
+			return !!val.replace(/\s/g, "");
+		},
+		errorMessage: " should not be empty",
 	},
 	{
 		comp: "text",
 		key: "email",
 		label: "Email",
 		required: true,
+		validation: val => {
+			const regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+			return val && regEx.test(val);
+		},
+		errorMessage: " should contain valid email address",
 	},
 	{
 		comp: "textarea",
@@ -82,4 +91,6 @@ new booking.Booking("#root", {
 });
 ~~~
 
+The snippet below shows how to configure the fields in the Booking dialog:
 
+<iframe src="https://snippet.dhtmlx.com/yeqkuzx7?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

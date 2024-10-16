@@ -18,7 +18,7 @@ slotLimit?: Date;
 
 ### Parameters
 
-- `Date` - the next available date until which slots should be searched in case none are found for 5 days starting from the current date or the start date in the filter
+- `Date` - the next available date until which slots should be searched in case none are found for 5 days starting from the current date or the start date in the filter; the default value is the current Date. 
 
 ### Example
 

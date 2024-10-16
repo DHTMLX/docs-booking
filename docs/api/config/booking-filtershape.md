@@ -66,14 +66,14 @@ const defaultFilterShape = {
 
 ### Example
 
-~~~jsx {1-9,13}
+~~~jsx {}
 const filterShape = {
     date: false,
     autoApply: true,
     time: [
         { from: 8, to: 11, label: "Morning" },
-        { from: 12, to: 16, label: "Afternoon" },
-        { from: 17, to: 20, label: "Evening" },
+        { from: 12, to: 18, label: "Afternoon" },
+        { from: 18, to: 21, label: "Evening" },
     ],
 };
 
@@ -84,3 +84,6 @@ new booking.Booking("#root", {
 });
 ~~~
 
+The snippet below demonstrates how to configure filter: 
+
+<iframe src="https://snippet.dhtmlx.com/b5uj78bs?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

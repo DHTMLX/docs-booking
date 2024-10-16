@@ -58,7 +58,6 @@ The full list of properties to configure **Booking** can be found [**here**](api
 
 ## Example
 
-In this snippet you can see how to initialize **JavaScript Booking** with the initial settings:
+In this snippet you can see how to initialize **JavaScript Booking** with initial settings:
 
-**[TODO]!!! 
-<iframe src="" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
+<iframe src="https://snippet.dhtmlx.com/6it4ohez?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

@@ -9,7 +9,7 @@ description: You can learn about the configuration in the documentation of the D
 
 ## Loading data for cards
 
-To load data, add the data to the [`data`](/api/config/booking-data) array. See all instructions here: [`Loading data`](/guides/loading-data).
+To load data, add data to the [`data`](/api/config/booking-data) array. See all instructions here: [`Loading data`](/guides/loading-data).
 
 
 ## Defining the structure of cards
@@ -29,7 +29,7 @@ To hide any information block from cards' display, set the appropriate parameter
 
 Example:
 
-~~~jsx {35}
+~~~jsx {24}
 const data = [
     {
         id: "ee828b5d-a034-420c-889b-978840015d6a",
@@ -53,12 +53,6 @@ const data = [
 ];
 
 const cardShape = {
-    preview: true,
-    review: true,
-    category: true,
-    title: true,
-    subtitle: true,
-    price: true,
     details: false,
 };
 
@@ -68,6 +62,10 @@ new booking.Booking("#root", {
     // other parameters
 });
 ~~~
+
+:::info
+Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/6mxd7918)
+:::
 
 ## Filling cards with slots
 
@@ -125,7 +123,23 @@ Parameters of each object in the `slots` array of the [`data`](/api/config/booki
 When applying these rules, you can apply one common rule to all days of the required card or apply different rules (specific rules to selected days or even dates), namely, you can:  
 
 - set the same parameters to all days of a specific card, which means you can add slots with the same duration, the same start and end time to all days of the selected card
-- set different slot duration and slot gaps to the same card by applying different parameters to days of the week of the same card
+- set different slot duration and slot gaps to the same card by applying different parameters to days of the week of the same card or specific dates
+
+When applying **slot size and gap**, you can:
+- set specific values to specific slots of the required card(s) using the `size` and `gap` parameters in the `slots` array of the [`data`](/api/config/booking-data) property (these values have the highest priority and will override the next values in this list)
+- set specific values to all slots of the selected card using the `slotSize` and `slotGap` parameters of the [`data`](/api/config/booking-data) property 
+- set global values to all cards in the widget by using the [`slotSize`](/api/config/booking-slotsize) and [`slotGap`](/api/config/booking-slotgap) properties
+
+:::info
+In case you have common slots parameters and specific parameters for some days, you should be aware of the following: 
+- Slot parameters defined for specific days will override common parameters defined for all days. 
+- Slot parameters specified for dates will override parameters defined for specific days and all days. 
+- If several slots objects are created for the same day, make sure that slots time ranges (from and to) with **different** size and gap do not overlap, otherwise all slots data for these days will not be applied.
+:::
+
+For all slots of the widget, you can also set the [`slotLimit`](/api/config/booking-slotlimit) value that defines the next available date until which slots should be searched in case none are found for 5 days starting from the current date or the start date in the filter; the default value is the current Date. 
+
+#### Examples of defining slot rules
 
 For example, if you want to add booking slots with the same parameters to all days of the selected card, i.e., add slots with the same duration, the same start and end time to all days of the selected card, you should add one object to the `slots` array with the required parameters. 
 
@@ -219,12 +233,7 @@ new booking.Booking("#root", {
 });
 ~~~
 
-:::info
-In case you have common slots parameters and specific parameters for some days, you should be aware of the following: 
-- Slot parameters specified for days will override common parameters defined for all days. 
-- Slot parameters specified for dates will override parameters defined for specific days and all days. 
-- If several slots objects are created for the same day, make sure that slots time ranges (**from** and **to**) do not overlap, otherwise, all slots data for these days will not be applied.  
-:::
+To see how to set [duration](/api/config/booking-slotsize) and [gap](/api/config/booking-slotgap) for all slots in the widget, [open the snippet tool](https://snippet.dhtmlx.com/pw8xsl1p). 
 
 ### Marking slots as used or available
 
@@ -338,6 +347,10 @@ new booking.Booking("#root", {
 });
 ~~~
 
+:::info
+Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/yeqkuzx7)
+:::
+
 To manage information that is displayed on the left side of the Booking dialog, apply the [`infoShape`](/api/config/booking-infoshape) property. You can hide necessary fields from display by setting values to *false*.
 
 ~~~jsx {1-7,11}
@@ -355,6 +368,10 @@ new booking.Booking("#root", {
 	//other parameters
 });
 ~~~
+
+:::info
+Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/pd6wp1xc)
+:::
 
 ## Configuring the filter 
 
@@ -463,5 +480,9 @@ new booking.Booking("#root", {
 });
 ~~~
 
+### Example
 
+The snippet below demonstrates how to configure the filter: 
+
+<iframe src="https://snippet.dhtmlx.com/b5uj78bs?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 

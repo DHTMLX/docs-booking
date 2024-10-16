@@ -67,3 +67,6 @@ booking.setConfig({
 });
 ~~~
 
+The snippet below demonstrates how to load already filtered data:
+
+<iframe src="https://snippet.dhtmlx.com/f77ytme5?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

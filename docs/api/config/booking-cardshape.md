@@ -52,11 +52,11 @@ const defaultCardShape = {
 
 ### Example
 
-~~~jsx {1-9,12}
+~~~jsx {}
 const cardShape = {
 	review: false,
 	subtitle: false,
-	details: false,
+	price: false,
 };
 
 new booking.Booking("#root", {
@@ -65,4 +65,6 @@ new booking.Booking("#root", {
 });
 ~~~
 
-**Related articles:**
+The snippet below demonstrates how to configure the what to display on the left side of cards:
+
+<iframe src="https://snippet.dhtmlx.com/6mxd7918?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

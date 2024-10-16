@@ -52,6 +52,11 @@ fetch("/server/url")
         });
 ~~~
 
+## Example
+
+<iframe src="https://snippet.dhtmlx.com/dpbmyr8j?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+
+
 **Related articles**: 
 - [confirm-slot](/api/events/booking-confirmslot-event) event
 - [setConfig()](/api/methods/booking-setconfig-method) method
