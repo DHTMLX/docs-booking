@@ -65,6 +65,6 @@ new booking.Booking("#root", {
 });
 ~~~
 
-The snippet below demonstrates how to configure the what to display on the left side of cards:
+The snippet below demonstrates how to configure what to display on the left side of cards:
 
 <iframe src="https://snippet.dhtmlx.com/6mxd7918?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
