@@ -10,10 +10,10 @@ description: SEO data
 
 ### Initial functionality
 
--   Ability to schedule appointments via the single card view or Booking dialog
+-   The ability to schedule appointments via the single card view or Booking dialog
 -   Configurable cards with data
 -   Configurable fields and data displayed in the Booking dialog
--   Ability to [define slot rules](/guides/configuration#defining-slot-rules)
+-   The ability to [define slot rules](/guides/configuration#defining-slot-rules)
 -   Configurable filter
 -   The `setConfirmHandler()` method to set handlers for confirming the booking of a slot
 -   Localization 
