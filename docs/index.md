@@ -72,6 +72,5 @@ You can also make an appointment via the single card view:
 
 ## What's next
 
-To get the eye-catching Booking widget as the one in the snippet below, follow the next sections of this documentation.
+Now you can [start with creating a simple Booking widget on your page](/how-to-start).
 
-<iframe src="https://snippet.dhtmlx.com/d7w3jtqz?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe> 
