@@ -139,17 +139,15 @@ const data = [
 		},
 ]
 
-const infoShape = {
-    preview: true,
-    category: true,
-    title: true,
-    price: true,
-    details: true,
+const cardShape = {
+	review: false,
+	subtitle: false,
+	price: false,
 };
 
 new booking.Booking("#root", {
 	data,
-	infoShape,
+	cardShape,
 	// other parameters
 });
 ~~~
