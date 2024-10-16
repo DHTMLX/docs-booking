@@ -72,10 +72,11 @@ For each card object you can specify the following parameters:
   - `days` - (optional) days of the week when a slot is available for booking; possible values: from 0 to 6 where 0 is Sunday and 6 is Saturday; if no days are specified, all days are applied by default; if days are specified, the slot parameters (**to**, **from**, **size**, **gap**) defined for these days will be applied
   - `dates` - (optional) an array of timestamps in milliseconds which are exact dates when a slot is available; the slot parameters (**to**, **from**, **size**, **gap**) for these specified dates will be applied 
 :::note
-- Slot parameters specified for days will override common parameters defined for all days. 
-- Slot parameters specified for dates will override parameters defined for specific days and all days. 
-- If several slots objects are created for the same day, make sure that slots time ranges (from and to) with **different** size and gap do not overlap, otherwise all slots data for these days will not be applied. 
+Slot parameters specified for days will override common parameters defined for all days. 
+Slot parameters specified for dates will override parameters defined for specific days and all days. 
+If several slots objects are created for the same day, make sure that slots time ranges (from and to) with **different** size and gap do not overlap, otherwise all slots data for these days will not be applied. 
 :::
+
 - `availableSlots` - (optional) an array of timestamps of available slots in milliseconds; if available slots are specified here, all slots from the `slots` array are ignored (i.e., become unavailable); each object in the array has the next parameters:
   - `id` - (required) the id of a slot
   - `time` - (required) an array that includes timestamp and slot duration in minutes
