@@ -35,7 +35,7 @@ const data = [
         id: "ee828b5d-a034-420c-889b-978840015d6a",
         title: "Natalie Tyson",
         category: "Allergist",
-        subtitle: "2 years of experiece",
+        subtitle: "2 years of experience",
         details: "Lexington Avenue 54\nWheatfields, Hungary",
         preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
         price: "27 $",
@@ -76,13 +76,13 @@ A slot is a time unit available for booking. Available slots for cards are displ
 To add booking slots to a card, add an object to the `slots` array of the [`data`](/api/config/booking-data) property.
 In the example below, the slots are added for the specified card for Tuesdays and Fridays from 12 a.m. to 6 p.m and each slot duration is 30 minutes with 10-minutes gap between slots. 
 
-~~~jsx {16-23}
+~~~jsx {15-22}
 const data = [
     {
         id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
         title: "Natalie Tyson",
         category: "Therapist",
-        subtitle: "2 years of experiece",
+        subtitle: "2 years of experience",
         details: "Cleveland Clinic\n9500 Euclid Ave",
         preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
         price: "37 $",
@@ -149,7 +149,7 @@ const data = [
         id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
         title: "Natalie Tyson",
         category: "Therapist",
-        subtitle: "2 years of experiece",
+        subtitle: "2 years of experience",
         details: "Cleveland Clinic\n9500 Euclid Ave",
         preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
         price: "37 $",
@@ -184,7 +184,7 @@ const data = [
         id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
         title: "Natalie Tyson",
         category: "Therapist",
-        subtitle: "2 years of experiece",
+        subtitle: "2 years of experience",
         details: "Cleveland Clinic\n9500 Euclid Ave",
         preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
         price: "37 $",
@@ -241,7 +241,7 @@ const data = [
         id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
         title: "Natalie Tyson",
         category: "Therapist",
-        subtitle: "2 years of experiece",
+        subtitle: "2 years of experience",
         details: "Cleveland Clinic\n9500 Euclid Ave",
         preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
         price: "37 $",
@@ -279,7 +279,7 @@ const data = [
         id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
         title: "Natalie Tyson",
         category: "Therapist",
-        subtitle: "2 years of experiece",
+        subtitle: "2 years of experience",
         details: "Cleveland Clinic\n9500 Euclid Ave",
         preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
         price: "37 $",
