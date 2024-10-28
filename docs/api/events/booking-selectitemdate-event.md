@@ -15,7 +15,7 @@ description: You can learn about the select-item-date event in the documentation
 ~~~jsx {}
 "select-item-date": ({
   id: string|number,
-  date: number
+  date: number 
 }) => void;
 ~~~
 
