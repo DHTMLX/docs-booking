@@ -31,7 +31,7 @@ description: You can learn about the filter-data event in the documentation of t
 The callback of the **filter-data** event can take an object with the following parameters:
 
 - `text` - (required) the text in the search field
-- `date` - (required) Date object with the start and end date for a slot; 
+- `date` - (required) Date object with the start and end date for a slot:
   - `start` - the slot start date
   - `end` - the slot end date 
 - `time` - (required) an array of objects containing time options for a slot. For each object, you can specify the following parameters:
