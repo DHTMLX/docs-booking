@@ -16,89 +16,81 @@ You can prepare data in a separate file. Here is an example of an appropriate da
 
 ~~~jsx title="data.js"
 const data = [
-		{
-			id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
-			title: "Debra Weeks",
-			category: "Allergist",
-			subtitle: "7 years of experience",
-			details:
-				"Silverstone Medical Center (Vanderbilt Avenue 13, Chestnut, New Zealand)",
-			preview:
-				"https://files.webix.com/30d/d34de82e0a8e3b561988a46ce1e86743/stock-photo-doc.jpg",
-			price: "37 $",
-			review: {
-				stars: 1,
-				count: 40,
-			},
-		},
-		{
-			id: "9b037564-77be-429f-b719-eebbe499027a",
-			title: "Conrad Hubbard",
-			category: "Allergist",
-			subtitle: "2 years of experience",
-			details:
-				"Desert Springs Hospital (Schroeders Avenue 90, Fannett, Ethiopia)",
-			preview:
-				"https://files.webix.com/30d/d34de82e0a8e3b561988a46ce1e86743/stock-photo-doc.jpg",
-			price: "25 $",
-			review: {
-				stars: 1,
-				count: 10,
-			},
-		},
-		{
-			id: "7d1bc2e1-df36-413b-8154-591e5f176fb1",
-			title: "Barnett Mueller",
-			category: "Allergist",
-			subtitle: "6 years of experience",
-			details: "Navy Street 1, Kiskimere, United States",
-			preview: "",
-			price: "22 $",
-			review: {
-				stars: 0,
-				count: 88,
-			},
-		},
-		{
-			id: "af98c3e8-0ae1-4472-bdff-1d3c246abae5",
-			title: "Myrtle Wise",
-			category: "Allergist",
-			subtitle: "4 years of experience",
-			details: "Prescott Place 5, Freeburn, Bulgaria",
-			preview: "",
-			price: "22 $",
-			review: {
-				stars: 4,
-				count: 127,
-			},
-		},
-		{
-			id: "39bfd8a2-c6c9-469c-8d0c-061656e0fbc0",
-			title: "Browning Peck",
-			category: "Allergist",
-			subtitle: "11 years of experience",
-			details: "Seacoast Terrace 174, Belvoir, Mauritania",
-			preview: "",
-			price: "29 $",
-			review: {
-				stars: 0,
-				count: 192,
-			},
-		},
-		{
-			id: "a3589553-73bb-4c3b-8c59-1a1be0db71b7",
-			title: "Holder Holman",
-			category: "Allergist",
-			subtitle: "7 years of experience",
-			details: "Cropsey Avenue 5, Odessa, Puerto Rico",
-			preview: "",
-			price: "38 $",
-			review: {
-				stars: 2,
-				count: 181,
-			},
-		},
-	];
+	{
+        id: "ee828b5d-a034-420c-889b-978840015d6a",
+        title: "Natalie Tyson",
+        category: "Therapist",
+        subtitle: "2 years of experiece",
+        details: "Cleveland Clinic\n9500 Euclid Ave",
+        preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
+        price: "$35",
+        review: {
+            stars: 4,
+            count: 120,
+        },
+        slots: [
+            {
+                from: 9, to: 20,
+                days: [1, 2, 3, 4, 5],
+            },
+            {
+                from: 10, to: 18,
+                days: [6, 0],
+            },
+        ],
+    },
+    {
+        id: "5c9b64ad-1830-4e5b-a5f9-8acea10706df",
+        title: "James Anderson",
+        category: "Allergist",
+        subtitle: "3 years of experiece",
+        details: "UCLA Medical Center\n57 Westwood Plaza",
+        preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/11.jpg",
+        price: "$30",
+        review: {
+            stars: 4,
+            count: 64,
+        },
+        slotSize: 45,
+        slotGap: 10,
+        slots: [
+            {
+                from: "9:15", to: 17,
+                days: [1, 2, 3, 4, 5],
+            },
+        ],
+    },
+    {
+        id: "9b037564-77be-429f-b719-eebbe499027a",
+        title: "Emma Johnson",
+        category: "Cardiologist",
+        subtitle: "2 years of experience",
+        details: "Stanford Health Care\n1468 Madison Ave",
+        preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/03.jpg",
+        price: "$25",
+        review: {
+            stars: 5,
+            count: 10,
+        },
+        slots: [
+            {
+                from: 14, to: 17,
+                size: 30, gap: 10,
+            },
+            {
+                from: 12, to: 19,
+                size: 50, gap: 20,
+                days: [2], dates: [getDate(0)],
+            },
+            {
+                from: "18:30", to: 20,
+                size: 20, gap: 20,
+                days: [3, 4, 5],
+            },
+        ],
+        usedSlots: [getDate(0, 12), getDate(0, 18)],
+    },
+];
 ~~~
 
 ## Loading data 
@@ -118,18 +110,28 @@ function getData() {
 }
 const data = [
     {
-        id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
-        title: "Debra Weeks",
-        category: "Allergist",
-        subtitle: "7 years of experience",
-        details: "Silverstone Medical Center (Vanderbilt Avenue 13, Chestnut, New Zealand)",
-        preview: "https://files.webix.com/30d/d34de82e0a8e3b561988a46ce1e86743/stock-photo-doc.jpg",
-        price: "37 $",
+        id: "ee828b5d-a034-420c-889b-978840015d6a",
+        title: "Natalie Tyson",
+        category: "Therapist",
+        subtitle: "2 years of experiece",
+        details: "Cleveland Clinic\n9500 Euclid Ave",
+        preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
+        price: "$35",
         review: {
-            stars: 1,
-            count: 40,
+            stars: 4,
+            count: 120,
+        },
+        slots: [
+            {
+                from: 9, to: 20,
+                days: [1, 2, 3, 4, 5],
             },
-	},
+            {
+                from: 10, to: 18,
+                days: [6, 0],
+            },
+        ],
+    },
     //other data
 ],
 

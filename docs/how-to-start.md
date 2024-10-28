@@ -88,55 +88,53 @@ To start working with Booking, first you need to provide the initial data, and t
 
 ~~~jsx
 const data = [
-		{
-			id: "ee828b5d-a034-420c-889b-978840015d6a",
-			title: "Natalie Tyson",
-			category: "Allergist",
-			subtitle: "2 years of experiece",
-			details: "Lexington Avenue 54\nWheatfields, Hungary",
-			preview:
-				"https://files.webix.com/30d/d34de82e0a8e3b561988a46ce1e86743/stock-photo-doc.jpg",
-			price: "27 $",
-			review: {
-				stars: 4,
-				count: 120,
-			},
-			slots: [
-				{
-					from: 9,
-					to: 21,
-					days: [1, 2, 3, 4, 5],
-				},
-				{
-					from: 10,
-					to: 18,
-					days: [6, 0],
-				},
-			],
-		},
-		{
-			id: "5c9b64ad-1830-4e5b-a5f9-8acea10706df",
-			title: "Luz Lancaster",
-			category: "Allergist",
-			subtitle: "3 years of experiece",
-			details: "Ludlam Place 128\nMooresburg, Antigua and Barbuda",
-			preview:
-				"https://files.webix.com/30d/d34de82e0a8e3b561988a46ce1e86743/stock-photo-doc.jpg",
-			price: "27 $",
-			review: {
-				stars: 4,
-				count: 64,
-			},
-			slotSize: 45,
-			slotGap: 10,
-			slots: [
-				{
-					from: 9,
-					to: 17,
-					days: [1, 2, 3, 4, 5],
-				},
-			],
-		},
+	{
+        id: "ee828b5d-a034-420c-889b-978840015d6a",
+        title: "Natalie Tyson",
+        category: "Therapist",
+        subtitle: "2 years of experiece",
+        details: "Cleveland Clinic\n9500 Euclid Ave",
+        preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
+        price: "$35",
+        review: {
+            stars: 4,
+            count: 120,
+        },
+        slots: [
+            {
+                from: 9,
+                to: 20,
+                days: [1, 2, 3, 4, 5],
+            },
+            {
+                from: 10,
+                to: 18,
+                days: [6, 0],
+            },
+        ],
+    },
+    {
+        id: "5c9b64ad-1830-4e5b-a5f9-8acea10706df",
+        title: "James Anderson",
+        category: "Allergist",
+        subtitle: "3 years of experiece",
+        details: "UCLA Medical Center\n57 Westwood Plaza",
+        preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/11.jpg",
+        price: "$30",
+        review: {
+            stars: 4,
+            count: 64,
+        },
+        slotSize: 45,
+        slotGap: 10,
+        slots: [
+            {
+                from: "9:15",
+                to: 17,
+                days: [1, 2, 3, 4, 5],
+            },
+        ],
+    }
 ]
 
 const cardShape = {

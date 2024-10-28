@@ -95,8 +95,7 @@ const data = [
         subtitle: "7 years of experience",
         details: 
                 "Silverstone Medical Center (Vanderbilt Avenue 13, Chestnut, New Zealand)",
-        preview:
-				"https://files.webix.com/30d/d34de82e0a8e3b561988a46ce1e86743/stock-photo-doc.jpg",
+        preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
         price: "37 $",
         review: {
             star: 1,

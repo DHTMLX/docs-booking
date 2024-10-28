@@ -37,7 +37,7 @@ const data = [
         category: "Allergist",
         subtitle: "2 years of experiece",
         details: "Lexington Avenue 54\nWheatfields, Hungary",
-        preview: "https://files.webix.com/30d/d34de82e0a8e3b561988a46ce1e86743/stock-photo-doc.jpg",
+        preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
         price: "27 $",
         review: {
         stars: 4,
@@ -80,13 +80,11 @@ In the example below, the slots are added for the specified card for Tuesdays an
 const data = [
     {
         id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
-        title: "Debra Weeks",
-        category: "Allergist",
-        subtitle: "7 years of experience",
-        details: 
-                "Silverstone Medical Center (Vanderbilt Avenue 13, Chestnut, New Zealand)",
-        preview:
-				"https://files.webix.com/30d/d34de82e0a8e3b561988a46ce1e86743/stock-photo-doc.jpg",
+        title: "Natalie Tyson",
+        category: "Therapist",
+        subtitle: "2 years of experiece",
+        details: "Cleveland Clinic\n9500 Euclid Ave",
+        preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
         price: "37 $",
         review: {
             star: 1,
@@ -149,13 +147,11 @@ Example:
 const data = [
     {
         id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
-        title: "Debra Weeks",
-        category: "Allergist",
-        subtitle: "7 years of experience",
-        details: 
-                "Silverstone Medical Center (Vanderbilt Avenue 13, Chestnut, New Zealand)",
-        preview:
-				"https://files.webix.com/30d/d34de82e0a8e3b561988a46ce1e86743/stock-photo-doc.jpg",
+        title: "Natalie Tyson",
+        category: "Therapist",
+        subtitle: "2 years of experiece",
+        details: "Cleveland Clinic\n9500 Euclid Ave",
+        preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
         price: "37 $",
         review: {
             star: 1,
@@ -186,13 +182,11 @@ Example:
 const data = [
     {
         id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
-        title: "Debra Weeks",
-        category: "Allergist",
-        subtitle: "7 years of experience",
-        details: 
-                "Silverstone Medical Center (Vanderbilt Avenue 13, Chestnut, New Zealand)",
-        preview:
-				"https://files.webix.com/30d/d34de82e0a8e3b561988a46ce1e86743/stock-photo-doc.jpg",
+        title: "Natalie Tyson",
+        category: "Therapist",
+        subtitle: "2 years of experiece",
+        details: "Cleveland Clinic\n9500 Euclid Ave",
+        preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
         price: "37 $",
         review: {
             star: 1,
@@ -245,13 +239,11 @@ Example:
 const data = [
     {
         id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
-        title: "Debra Weeks",
-        category: "Allergist",
-        subtitle: "7 years of experience",
-        details: 
-                "Silverstone Medical Center (Vanderbilt Avenue 13, Chestnut, New Zealand)",
-        preview:
-				"https://files.webix.com/30d/d34de82e0a8e3b561988a46ce1e86743/stock-photo-doc.jpg",
+        title: "Natalie Tyson",
+        category: "Therapist",
+        subtitle: "2 years of experiece",
+        details: "Cleveland Clinic\n9500 Euclid Ave",
+        preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
         price: "37 $",
         review: {
             star: 1,
@@ -285,13 +277,11 @@ Example:
 const data = [
     {
         id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
-        title: "Debra Weeks",
-        category: "Allergist",
-        subtitle: "7 years of experience",
-        details: 
-                "Silverstone Medical Center (Vanderbilt Avenue 13, Chestnut, New Zealand)",
-        preview:
-				"https://files.webix.com/30d/d34de82e0a8e3b561988a46ce1e86743/stock-photo-doc.jpg",
+        title: "Natalie Tyson",
+        category: "Therapist",
+        subtitle: "2 years of experiece",
+        details: "Cleveland Clinic\n9500 Euclid Ave",
+        preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
         price: "37 $",
         review: {
             star: 1,
