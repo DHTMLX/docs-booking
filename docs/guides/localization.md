@@ -107,6 +107,8 @@ const en = {
 		"Unfortunately, there are no slots available for the selected date":
 			"Unfortunately, there are no slots available for the selected date",
 		"No slots in the system": "No slots in the system",
+		"No available slots that match search criteria":
+			"No available slots that match search criteria",
 		"Next available date": "Next available date",
 		minutes: "minutes",
 		Confirm: "Confirm",
@@ -233,6 +235,8 @@ const de = {
 		"Unfortunately, there are no slots available for the selected date":
 			"Leider sind keine Termine für den ausgewählten Tag verfügbar",
 		"No slots in the system": "Keine Steckplätze im System",
+		"No available slots that match search criteria":
+			"Keine verfügbaren Steckplätze, die den Suchkriterien entsprechen",
 		"Next available date": "Nächstes verfügbares Datum",
 		minutes: "Minuten",
 		Confirm: "Bestätigen",
@@ -358,6 +362,8 @@ const cn = {
 		"Unfortunately, there are no slots available for the selected date":
 			"很遗憾，所选日期没有空位",
 		"No slots in the system": "系统中没有插槽",
+		"No available slots that match search criteria":
+			"没有符合搜寻条件的可用插槽",
 		"Next available date": "下一个可用日期",
 		minutes: "分钟",
 		Confirm: "确认",
