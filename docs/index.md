@@ -9,7 +9,7 @@ description: You can have an overview of DHTMLX JavaScript Booking library in th
 
 ## Overview
 
-JavaScript Booking library is a ready-made component designed to be easily incorporated into your application. It provides end-users with functionality for scheduling appointments online and wide filtering options. 
+JavaScript Booking library is a ready-made component designed to be easily incorporated into your application. It provides end-users with functionality for scheduling appointments online and wide filtering options. The widget is made responsive and optimised for mobile devices. 
 
 ## Booking structure
 
