@@ -135,7 +135,7 @@ In case you have common slots parameters and specific parameters for some days, 
 - If several slots objects are created for the same day, make sure that slots time ranges (from and to) with **different** size and gap do not overlap, otherwise all slots data for these days will not be applied.
 :::
 
-For all slots of the widget, you can also set the [`slotLimit`](/api/config/booking-slotlimit) value that defines the next available date until which slots should be searched in case none are found for 5 days starting from the current date or the start date in the filter; the default value is the current Date. 
+For all slots of the widget, you can also set the [`end`](/api/config/booking-end) value that defines the date until which slots are displayed and/or the [`start`](/api/config/booking-start) date from which to start showing slots.
 
 #### Examples of defining slot rules
 

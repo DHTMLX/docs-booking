@@ -111,15 +111,16 @@ module.exports = {
                     },
 					items: [
 						// Booking properties
-						"api/config/booking-data",
 						"api/config/booking-cardshape",
+						"api/config/booking-data",
+						"api/config/booking-end",
 						"api/config/booking-filtershape",
 						"api/config/booking-formshape",
 						"api/config/booking-infoshape",
 						"api/config/booking-locale",
 						"api/config/booking-slotgap",
-						"api/config/booking-slotlimit",
 						"api/config/booking-slotsize",
+						"api/config/booking-start",
 					]
 				}
 			]
