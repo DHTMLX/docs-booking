@@ -212,7 +212,7 @@ const config = {
 			items: [
 				{
 					"label": "Examples",
-					"href": "https://snippet.dhtmlx.com", // [TODO] change before release
+					"href": "https://snippet.dhtmlx.com/d7w3jtqz?tag=booking", 
 					"position": "right"
 				},
 				{
@@ -227,7 +227,7 @@ const config = {
 				},
 				{
 					"label": "Download",
-					"href": "https://dhtmlx.com/docs/products/dhtmlxBooking/download.shtml", // [TODO] change before release
+					"href": "https://dhtmlx.com/docs/products/dhtmlxBooking/", 
 					"position": "right"
 				}
 			],
@@ -240,12 +240,12 @@ const config = {
 					"items": [
 						{
 							"label": "Download Booking",
-							"href": "https://dhtmlx.com/docs/products/dhtmlxBooking/download.shtml", // [TODO] change before release
+							"href": "https://dhtmlx.com/docs/products/dhtmlxBooking/",
 							"position": "right"
 						},
 						{
 							"label": "Examples",
-							"href": "https://snippet.dhtmlx.com", // [TODO] change before release
+							"href": "https://snippet.dhtmlx.com/d7w3jtqz?tag=booking", 
 							"position": "right"
 						},
 						{

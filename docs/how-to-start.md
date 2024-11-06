@@ -12,14 +12,14 @@ This clear and comprehensive tutorial will guide your through the steps you need
 
 ## Step 1. Downloading and installing packages
 
-[Download the package](https://dhtmlx.com/docs/products/dhtmlxbooking/download.shtml) and unpack it into a folder of your project.
+[Download the package](https://dhtmlx.com/docs/products/dhtmlxBooking/) and unpack it into a folder of your project.
 
 You can import JavaScript Booking into your project using `yarn` or `npm` package manager.
 
 #### Installing trial Booking via npm and yarn
 
 :::info
-If you want to use the trial version of Booking, download the trial [booking package](https://dhtmlx.com/docs/products/dhtmlxbooking/download.shtml) and follow the steps mentioned in the *README* file. Note that trial booking is available for 30 days only.
+If you want to use the trial version of Booking, download the trial [booking package](https://dhtmlx.com/docs/products/dhtmlxBooking/) and follow the steps mentioned in the *README* file. Note that trial booking is available for 30 days only.
 :::
 
 #### Installing PRO Booking via npm and yarn

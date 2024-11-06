@@ -10,7 +10,7 @@ This guide will give you detailed instructions on how to create Booking on a pag
 
 1. [Include the Booking source files on a page](#including-source-files).
 2. [Create a container for Booking](#creating-container).
-3. [Initialize Booking with a constructor](#initializing-file-manager).
+3. [Initialize Booking with a constructor](#initializing-booking).
 
 ## Including source files
 

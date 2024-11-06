@@ -8,6 +8,8 @@ description: SEO data
 
 ## Version 1.0.0
 
+Released on November 6, 2024
+
 ### Initial functionality
 
 - [Various rules](/guides/configuration#defining-slot-rules) for defining item slots

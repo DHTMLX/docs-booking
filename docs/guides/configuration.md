@@ -366,7 +366,7 @@ Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/pd6wp1xc
 
 ## Configuring the filter
 
-You can configure filter settings via the [`filterShape`](/api/config/booking-filterShape) property. Default configuration is the following:
+You can configure filter settings via the [`filterShape`](/api/config/booking-filtershape) property. Default configuration is the following:
 
 ~~~jsx {}
 const defaultTimeRanges = [
@@ -389,7 +389,7 @@ const defaultFilterShape = {
 
 ### Hiding filter input fields
 
-All input fields are displayed by default: text, time, and date. To hide the fields, apply the [`filterShape`](/api/config/booking-filterShape) property and set the corresponding parameters to **false**.
+All input fields are displayed by default: text, time, and date. To hide the fields, apply the [`filterShape`](/api/config/booking-filtershape) property and set the corresponding parameters to **false**.
 
 Example:
 
@@ -407,7 +407,7 @@ new booking.Booking("#root", {
 
 ### Configuring filter fields
 
-To enable the auto-complete and show the values that match a user's input text in the **text** field, set the `suggest` parameter of the [`filterShape`](/api/config/booking-filterShape) property to **true**. The values from the [`data`](/api/config/booking-data) object will be displayed. To add labels to these fields, apply the `label` parameter of the [`filterShape`](/api/config/booking-filterShape) property. 
+To enable the auto-complete and show the values that match a user's input text in the **text** field, set the `suggest` parameter of the [`filterShape`](/api/config/booking-filtershape) property to **true**. The values from the [`data`](/api/config/booking-data) object will be displayed. To add labels to these fields, apply the `label` parameter of the [`filterShape`](/api/config/booking-filtershape) property. 
 
 Example:
 
@@ -427,7 +427,7 @@ new booking.Booking("#root", {
 });
 ~~~
 
-To define the time filtering options, for the `time` parameter of the [`filterShape`](/api/config/booking-filterShape) property specify the start and end slot time values:
+To define the time filtering options, for the `time` parameter of the [`filterShape`](/api/config/booking-filtershape) property specify the start and end slot time values:
 
 - `from` - the start time for a slot; it can be a number from 0 to 24 that specifies the time in hours (e.g., 9 means 9:00, 8.5 means 8:30) or a string in the format "h:m" (for example, "8:30")
 - `to` - the end time for a slot; it can be a number from 0 to 24 that specifies the time in hours (e.g., 9 means 9:00, 8.5 means 8:30) or a string in the format "h:m" (for example, "8:30")
@@ -455,7 +455,7 @@ new booking.Booking("#root", {
 
 ### Enabling the autoApply mode for the filter
 
-To hide the **Search** button and make the filter immediately apply a user's input, set the `autoApply` parameter of the [`filterShape`](/api/config/booking-filterShape) property to **true**.
+To hide the **Search** button and make the filter immediately apply a user's input, set the `autoApply` parameter of the [`filterShape`](/api/config/booking-filtershape) property to **true**.
 
 Example:
 
