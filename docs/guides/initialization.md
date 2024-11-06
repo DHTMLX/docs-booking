@@ -14,7 +14,7 @@ This guide will give you detailed instructions on how to create Booking on a pag
 
 ## Including source files
 
-[Download the package](https://dhtmlx.com/docs/products/dhtmlxBooking/download.shtml) and unpack it into a folder of your project.
+[Download the package](https://dhtmlx.com/docs/products/dhtmlxBooking/) and unpack it into a folder of your project.
 
 To create Booking, you need to include 2 source files on your page:
 
