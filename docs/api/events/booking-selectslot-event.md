@@ -16,7 +16,7 @@ description: You can learn about the select-slot event in the documentation of t
 "select-slot": ({
     id: string | number,
     time:[ number, number ] 
- }) => void;
+}) => void;
 ~~~
 
 ### Parameters
@@ -31,14 +31,12 @@ The callback of the **select-slot** event can take an object with the following 
 ~~~jsx {7-10}
 // create Booking
 const booking = new booking.Booking("#root", {
-	data,
-	// other configuration parameters
+    data,
+    // other configuration parameters
 });
 
 // output the id of the selected slot
 booking.api.on("select-slot", (obj) => {
-	console.log(obj.id);
+    console.log(obj.id);
 });
 ~~~
-
-

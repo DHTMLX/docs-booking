@@ -14,8 +14,8 @@ description: You can learn about the select-item-date event in the documentation
 
 ~~~jsx {}
 "select-item-date": ({
-  id: string|number,
-  date: number 
+    id: string|number,
+    date: number 
 }) => void;
 ~~~
 
@@ -25,7 +25,6 @@ The callback of the **select-item-date** event can take an object with the follo
 
 - `id` - (required) the id of an item
 - `date` - (required) the date (in milliseconds) that was set for the selected item
-
 
 ### Example
 
@@ -38,6 +37,6 @@ const booking = new booking.Booking("#root", {
 
 // output the date  
 booking.api.on("select-item-date", (ev) => {
-	console.log(ev.date);
+    console.log(ev.date);
 });
 ~~~

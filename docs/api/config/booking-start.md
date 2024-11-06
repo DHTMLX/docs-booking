@@ -18,20 +18,18 @@ start?: Date;
 
 ### Parameters
 
-- `Date` - the start date from which to display available slots; the default value is the current date.
+- `Date` - (optional) the start date from which to display available slots; the default value is the current date.
 
 ### Example
 
 ~~~jsx {}
 new booking.Booking("#root", {
-	data,
-	start: new Date(2024, 10, 10),
-	// other parameters
+    data,
+    start: new Date(2024, 10, 10),
+    // other parameters
 });
 ~~~
-
 
 The snippet below shows how to set the start date:
 
 <iframe src="https://snippet.dhtmlx.com/cm7871sl?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
-

@@ -17,14 +17,14 @@ filterShape: {
     text?: boolean | [{
         id: string,
         label?: string,
-        suggest?: boolean, 
+        suggest?: boolean
     }],
     date?: boolean,
     time?: boolean | [{
         from: number | string,
         to: number | string,
-        label?: string,
-	}],
+        label?: string
+    }],
     autoApply?: boolean
 };
 ~~~
@@ -33,7 +33,7 @@ filterShape: {
 
 - `text` - (optional) if **true**, the text input field is displayed (default); if **false**, the text field is hidden
   - `id` - (required) the id of a card
-  - `suggest` - (required) if **true**, the auto-complete is enabled and the values (from the [`data`](/api/config/booking-data) object) that match a user's input text will be displayed 
+  - `suggest` - (required) if **true**, the auto-complete is enabled and the values (from the [`data`](/api/config/booking-data) object) that match a user's input text will be displayed
   - `label` - (optional) the label for the property from the `data` object. See [Default config](#default-config) below.
 - `date` - (optional) shows/hides the date field; **true** is set by default (the field is shown)
 - `time` - (optional) shows/hides the time field. If set to **true**, it takes an array of objects with default time options for a slot. For each object you can specify the following parameters:
@@ -49,18 +49,18 @@ If the `time` parameters are not set, the default values are applied: see [Defau
 const defaultTimeRanges = [
     { from: 8, to: 12, label: "Morning" },
     { from: 12, to: 17, label: "Afternoon" },
-    { from: 17, to: 20, label: "Evening" },
+    { from: 17, to: 20, label: "Evening" }
 ];
 
 const defaultFilterShape = {
     text: [
         { id: "category", label: "speciality", suggest: true },
         { id: "title", label: "specialist", suggest: true },
-        { id: "details", label: "location" },
+        { id: "details", label: "location" }
     ],
     date: true,
     time: defaultTimeRanges,
-    autoApply: false,
+    autoApply: false
 };
 ~~~
 
@@ -73,8 +73,8 @@ const filterShape = {
     time: [
         { from: 8, to: 11, label: "Morning" },
         { from: 12, to: 18, label: "Afternoon" },
-        { from: 18, to: 21, label: "Evening" },
-    ],
+        { from: 18, to: 21, label: "Evening" }
+    ]
 };
 
 new booking.Booking("#root", {

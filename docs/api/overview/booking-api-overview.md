@@ -10,7 +10,7 @@ description: You can have an API overview of JavaScript Booking in the documenta
 
 ~~~jsx {}
 new booking.Booking("#root", {
-	// initial configuration parameters
+    // initial configuration parameters
 });
 ~~~
 
@@ -40,8 +40,6 @@ new booking.Booking("#root", {
 | [](../internal/booking-on.md)        | @getshort(../internal/booking-on.md)                |
 | [](../internal/booking-setnext.md)   | @getshort(../internal/booking-setnext.md)           |
 
-
-
 ### State methods
 
 | Name                                            | Description                                            |
@@ -61,8 +59,8 @@ new booking.Booking("#root", {
 
 ## Booking properties
 
-| Name                                      | Description                                      |
-| ----------------------------------------- | ------------------------------------------------ |
+| Name                                  | Description                                        |
+| ------------------------------------- | -------------------------------------------------- |
 | [](../config/booking-data.md)         | @getshort(../config/booking-data.md)               |
 | [](../config/booking-end.md)          | @getshort(../config/booking-end.md)                |
 | [](../config/booking-cardshape.md)    | @getshort(../config/booking-cardshape.md)          |

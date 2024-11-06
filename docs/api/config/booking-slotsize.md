@@ -22,7 +22,7 @@ slotSize?: number;
 
 ### Parameters
 
-- `number` - the duration of a booking slot in minutes; the default value is 60 minutes
+- `number` - (optional) the duration of a booking slot in minutes; the default value is 60 minutes
 
 ### Example
 
@@ -30,8 +30,8 @@ slotSize?: number;
 const slotSize = 45;
 
 new booking.Booking("#root", {
-	slotSize,
-	// other parameters
+    slotSize,
+    // other parameters
 });
 ~~~
 

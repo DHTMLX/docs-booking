@@ -6,8 +6,8 @@ description: You can have properties overview of JavaScript Booking in the docum
 
 # Properties overview
 
-| Name                                      | Description                                      |
-| ----------------------------------------- | ------------------------------------------------ |
+| Name                                  | Description                                        |
+| ------------------------------------- | -------------------------------------------------- |
 | [](../config/booking-data.md)         | @getshort(../config/booking-data.md)               |
 | [](../config/booking-end.md)          | @getshort(../config/booking-end.md)                |
 | [](../config/booking-cardshape.md)    | @getshort(../config/booking-cardshape.md)          |

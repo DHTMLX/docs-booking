@@ -126,12 +126,12 @@ const onAfterDataTransformation = (data) => {
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+//const lightCodeTheme = require('prism-react-renderer/themes/github');
+//const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-	noIndex: true, // TODO: delete before release
+	noIndex: false, 
 	title: 'DHTMLX Booking Docs',
 	tagline: 'DHTMLX Booking Docs',
 	url: 'https://docs.dhtmlx.com',
@@ -181,6 +181,22 @@ const config = {
 			}
 		]
 	],
+
+	themes: [ 
+		[ // Local search parameters
+			require.resolve("@easyops-cn/docusaurus-search-local"),
+			{
+				indexDocs: true,
+				indexPages: true,
+				hashed: true,
+				highlightSearchTermsOnTargetPage: true,
+				removeDefaultStemmer: true,
+				removeDefaultStopWordFilter: true,
+				explicitSearchResultPath: true
+			}
+		]
+	],
+	
   	themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -288,10 +304,10 @@ const config = {
 			],
 		},
     	prism: {
-			theme: lightCodeTheme,
-			darkTheme: darkCodeTheme,
+			//theme: lightCodeTheme,
+			//darkTheme: darkCodeTheme,
 		},
-		algolia: {
+		/*algolia: {
 			// This is a read-only, search-only key served directly by the front-end, managed by Algolia via their
 			// free DocSearch program. The key is not sensitive. See https://docsearch.algolia.com/ for more details.
 			appId: '123',
@@ -302,7 +318,7 @@ const config = {
 			// Optional: Algolia search parameters
 			searchParameters: {},
 			//... other Algolia params
-		}
+		}*/
     })
 };
 

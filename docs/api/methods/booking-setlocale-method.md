@@ -26,7 +26,7 @@ setLocale(null | locale?: object): void;
 ~~~jsx {}
 // create Booking
 const booking = new booking.Booking("#root", {
-	data,
+    data,
     // initial configuration parameters
 });
 
@@ -37,6 +37,6 @@ booking.setLocale(de);
 booking.setLocale(); // or setLocale(null);
 ~~~
 
-**Related articles**: 
+**Related articles**:
 - [locale](/api/config/booking-locale)
 - [Localization](/guides/localization)

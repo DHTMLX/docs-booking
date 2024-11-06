@@ -72,7 +72,7 @@ Now you are ready to add booking to the page. First, let's create the DIV contai
     <body>
         <div id="root"></div>
         <script>
-            const widget = new booking.Booking("#root", {
+            const booking = new booking.Booking("#root", {
                 // configuration properties
             });
         </script>
@@ -83,12 +83,13 @@ Now you are ready to add booking to the page. First, let's create the DIV contai
 ## Step 4. Configuring Booking
 
 To start working with Booking, first you need to provide the initial data, and then you can add other configuration properties you want to be applied at the initialization. The example below creates Booking with two cards:
-- the [`data`](/api/config/booking-data) property allows adding data to each card, such as title, image, rating data, and booking slots
-- the [`cardShape`](/api/config/booking-cardshape) property helps to configure which cards' data fields to display 
 
-~~~jsx
+- the [`data`](/api/config/booking-data) property allows adding data to each card, such as title, image, rating data, and booking slots
+- the [`cardShape`](/api/config/booking-cardshape) property helps to configure which cards' data fields to display
+
+~~~jsx {}
 const data = [
-	{
+    {
         id: "ee828b5d-a034-420c-889b-978840015d6a",
         title: "Natalie Tyson",
         category: "Therapist",
@@ -98,20 +99,20 @@ const data = [
         price: "$35",
         review: {
             stars: 4,
-            count: 120,
+            count: 120
         },
         slots: [
             {
                 from: 9,
                 to: 20,
-                days: [1, 2, 3, 4, 5],
+                days: [1, 2, 3, 4, 5]
             },
             {
                 from: 10,
                 to: 18,
-                days: [6, 0],
-            },
-        ],
+                days: [6, 0]
+            }
+        ]
     },
     {
         id: "5c9b64ad-1830-4e5b-a5f9-8acea10706df",
@@ -123,7 +124,7 @@ const data = [
         price: "$30",
         review: {
             stars: 4,
-            count: 64,
+            count: 64
         },
         slotSize: 45,
         slotGap: 10,
@@ -131,22 +132,22 @@ const data = [
             {
                 from: "9:15",
                 to: 17,
-                days: [1, 2, 3, 4, 5],
-            },
-        ],
+                days: [1, 2, 3, 4, 5]
+            }
+        ]
     }
-]
+];
 
 const cardShape = {
-	review: false,
-	subtitle: false,
-	price: false,
+    review: false,
+    subtitle: false,
+    price: false
 };
 
 new booking.Booking("#root", {
-	data,
-	cardShape,
-	// other parameters
+    data,
+    cardShape,
+    // other parameters
 });
 ~~~
 

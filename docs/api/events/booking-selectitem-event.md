@@ -14,7 +14,7 @@ description: You can learn about the select-item event in the documentation of t
 
 ~~~jsx {}
 "select-item": ({
-  id: string|number
+    id: string|number
 }) => void;
 ~~~
 
@@ -24,18 +24,17 @@ The callback of the **select-item** event can take an object with the following 
 
 - `id` - (required) the id of an item
 
-
 ### Example
 
 ~~~jsx {7-10}
 // create Booking
 const booking = new booking.Booking("#root", {
-	data, 
-	// other configuration parameters
+    data, 
+    // other configuration parameters
 });
 
 // output the id of the selected item
 booking.api.on("select-item", (ev) => {
-	console.log(ev.id);
+    console.log(ev.id);
 });
 ~~~

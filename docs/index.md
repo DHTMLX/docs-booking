@@ -9,11 +9,11 @@ description: You can have an overview of DHTMLX JavaScript Booking library in th
 
 ## Overview
 
-JavaScript Booking library is a ready-made component designed to be easily incorporated into your application. It provides end-users with functionality for scheduling appointments online and wide filtering options. The widget is made responsive and optimised for mobile devices. 
+JavaScript Booking library is a ready-made component designed to be easily incorporated into your application. It provides end-users with functionality for scheduling appointments online and wide filtering options. The widget is made responsive and optimised for mobile devices.
 
 ## Booking structure
 
-The Booking UI includes the two main parts: the filter area and the list of cards with slots. Each card's view consists of the card's information block and slots available for booking. 
+The Booking UI includes the two main parts: the filter area and the list of cards with slots. Each card's view consists of the card's information block and slots available for booking.
 
 ![main](assets/main.png)
 
@@ -33,10 +33,9 @@ All cards are displayed as a list. The left side of each card in the list shows 
 
 The right side of each card has clickable slots available for booking. Slots are displayed for the current month starting from the current date.
 
-
 ### A single card view
 
-To open the view of a single card, click inside the left area of a card. The single card dialog shows the card's title, calendar and available slots for the date selected in the calendar. 
+To open the view of a single card, click inside the left area of a card. The single card dialog shows the card's title, calendar and available slots for the date selected in the calendar.
 
 ![single-card](assets/single-card.png)
 
@@ -50,9 +49,10 @@ For the instruction about booking, please, refer to [Making an appointment](#mak
 
 ## Filtering data
 
-To filter cards by different text fields, date and time, a user should enter the required values in the input fields and click the **Search** button. A user can filter  cards by category and title by default. The next default time ranges are available for filtering: 
-- from: 8, to: 12 (Morning),
-- from: 12, to: 17 (Afternoon),
+To filter cards by different text fields, date and time, a user should enter the required values in the input fields and click the **Search** button. A user can filter  cards by category and title by default. The next default time ranges are available for filtering:
+
+- from: 8, to: 12 (Morning)
+- from: 12, to: 17 (Afternoon)
 - from: 17, to: 20 (Evening)
 
 It's possible to configure the filter settings via API: [Configuring the filter](/guides/configuration#configuring-the-filter)
@@ -73,4 +73,3 @@ You can also make an appointment via the single card view:
 ## What's next
 
 Now you can [start with creating a simple Booking widget on your page](/how-to-start).
-

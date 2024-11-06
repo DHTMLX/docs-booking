@@ -14,8 +14,8 @@ description: You can learn about the intercept method in the documentation of th
 
 ~~~jsx {}
 api.intercept(
-	event: string,
-	callback: function
+    event: string,
+    callback: function
 ): void;
 ~~~
 
@@ -34,12 +34,12 @@ Use the [`api.on()`](/api/internal/booking-on) method if you want to listen to t
 ~~~jsx {7-11}
 // create Booking
 const booking = new booking.Booking("#root", {
-	data,
-	// other configuration parameters
+    data,
+    // other configuration parameters
 });
 
 // every time the filter-data event is triggered, slots will be shown only for the morning time
 booking.api.intercept("filter-data", data => {
-	data.time = [{ from: 9, to: 12 }];
+    data.time = [{ from: 9, to: 12 }];
 });
 ~~~

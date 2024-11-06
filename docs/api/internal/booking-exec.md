@@ -14,8 +14,8 @@ description: You can learn about the exec method in the documentation of the DHT
 
 ~~~jsx {}
 api.exec(
-	event: string,
-	config: object
+    event: string,
+    config: object
 ): void;
 ~~~
 
@@ -35,23 +35,23 @@ The full list of the Booking internal events can be found [**here**](/api/overvi
 The example below demonstrates how to apply filter at the initialization:
 
 ~~~jsx {5-19}
-const widget = new booking.Booking("#root", {
-	data,
-	//other configuration parameters
+const booking = new booking.Booking("#root", {
+    data,
+    //other configuration parameters
 });
-widget.api.exec("filter-data", {
-	filterData: {
-		text: "Allergist",
-		date: {
-			start: new Date,
-			end: new Date(2025, 2, 12),
-		},
-		time: [
-			{
-				from: 12,
-				to: 20,
-			},
-		],
-	},
+booking.api.exec("filter-data", {
+    filterData: {
+        text: "Allergist",
+        date: {
+            start: new Date,
+            end: new Date(2025, 2, 12)
+        },
+        time: [
+            {
+                from: 12,
+                to: 20
+            }
+        ]
+    }
 });
 ~~~

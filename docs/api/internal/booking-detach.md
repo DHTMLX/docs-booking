@@ -18,7 +18,7 @@ api.detach(tag: number | string ): void;
 
 ## Parameters
 
-- `tag` - the name of the action tag
+- `tag` - (required) the name of the action tag
 
 ## Example
 
@@ -26,8 +26,8 @@ In the example below we add an object with the **tag** property to the [`api.on(
 
 ~~~jsx {6-20}
 const booking = new booking.Booking("#root", {
-	data,
-	//other configuration parameters
+    data,
+    //other configuration parameters
 });
 
 // add handler

@@ -21,19 +21,19 @@ locale?: object;
 By default, Booking uses the [English](/guides/localization/#default-locale) locale. You can set it to the custom locale as well.
 
 :::tip
-To change the current locale dynamically, you can use the [`setLocale()`](/api/methods/booking-setlocale-method) method 
+To change the current locale dynamically, you can use the [`setLocale()`](/api/methods/booking-setlocale-method) method
 :::
 
 ### Example
 
 ~~~jsx
 const { data } = getData();
-const widget = new booking.Booking("#root", {
-	data,
-	locale: de,
+const booking = new booking.Booking("#root", {
+    data,
+    locale: de
 });
 ~~~
 
-**Related articles**: 
+**Related articles**:
 - [setLocale()](/api/methods/booking-setlocale-method)
 - [Localization](/guides/localization)
