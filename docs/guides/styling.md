@@ -78,8 +78,7 @@ To customize the appearance of Booking to your project needs, you need to apply 
         --wx-icon-color: rgba(149, 179, 223, 0.7);
         --wx-booking-primary-hover: #194e9e;
         --wx-booking-border-color: 1px solid #818080;
-        --wx-border: 1px dashed #818080;
-        
+        --wx-border: 1px dashed #818080; 
     }
 </style>
 ~~~
@@ -88,21 +87,21 @@ The next example shows how to change the background color for cards:
 
 ~~~html
 <style>
-.demo {
-    .wx-booking .wx-list > .wx-card,
-    .wx-booking .wx-slot-dates > .wx-date-item {
-        background-color: #e8f3f7;
-    }
+    .demo {
+        .wx-booking .wx-list > .wx-card,
+        .wx-booking .wx-slot-dates > .wx-date-item {
+            background-color: #e8f3f7;
+        }
 
-    .wx-booking .wx-slot-dates > .wx-date-item.selected {
-        background-color: #bfdde7;
+        .wx-booking .wx-slot-dates > .wx-date-item.selected {
+            background-color: #bfdde7;
+        }
     }
-}
 </style>
 ~~~
 
 ## Example
 
-In this snippet you can see how to apply a custom style to Booking: 
+In this snippet you can see how to apply a custom style to Booking:
 
-<iframe src="https://snippet.dhtmlx.com/d7w3jtqz?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe> 
+<iframe src="https://snippet.dhtmlx.com/d7w3jtqz?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

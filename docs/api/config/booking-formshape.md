@@ -14,10 +14,10 @@ description: You can learn about the formShape config in the documentation of th
 
 ~~~jsx {}
 formShape: {
-	comp: "text" | "textarea",
-	key: string,
-	label?: string,
-	required?: boolean
+    comp: "text" | "textarea",
+    key: string,
+    label?: string,
+    required?: boolean
 };
 ~~~
 
@@ -25,7 +25,7 @@ formShape: {
 
 For each field you can specify the following parameters:
 
-- `comp` - (optional) the field type (**text** or **textarea**)
+- `comp` - (required) the field type (**text** or **textarea**)
 - `key` - (required) the id of a field
 - `label` - (optional) the field label
 - `required` - (optional) if the value is set to **true**, the field should not be empty and it's required to submit the booking form; if **false**, the field can be empty
@@ -34,33 +34,33 @@ For each field you can specify the following parameters:
 
 ~~~jsx {}
 const defaultFormShape = [
-	{
-		comp: "text",
-		key: "name",
-		label: "Name",
-		required: true,
-		validation: val => {
-			return !!val.replace(/\s/g, "");
-		},
-		errorMessage: " should not be empty",
-	},
-	{
-		comp: "text",
-		key: "email",
-		label: "Email",
-		required: true,
-		validation: val => {
-			const regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-			return val && regEx.test(val);
-		},
-		errorMessage: " should contain valid email address",
-	},
-	{
-		comp: "textarea",
-		key: "description",
-		label: "Description",
-	},
-]
+    {
+        comp: "text",
+        key: "name",
+        label: "Name",
+        required: true,
+        validation: val => {
+            return !!val.replace(/\s/g, "");
+        },
+        errorMessage: " should not be empty"
+    },
+    {
+        comp: "text",
+        key: "email",
+        label: "Email",
+        required: true,
+        validation: val => {
+            const regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+            return val && regEx.test(val);
+        },
+        errorMessage: " should contain valid email address"
+    },
+    {
+        comp: "textarea",
+        key: "description",
+        label: "Description"
+    }
+];
 ~~~
 
 ### Example
@@ -70,24 +70,24 @@ const formShape = [
     {
         type: "text",
         key: "name",
-        label: "Name",
+        label: "Name"
     },
     {
         type: "text",
         key: "contact",
-        label: "Mobile",
+        label: "Mobile"
     },
     {
         type: "textarea",
         key: "description",
-        label: "Details",
+        label: "Details"
     },
 ];
 
 new booking.Booking("#root", {
-	data,
-	formShape,
-	// other parameters
+    data,
+    formShape,
+    // other parameters
 });
 ~~~
 

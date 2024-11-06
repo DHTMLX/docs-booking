@@ -32,7 +32,7 @@ const server = "https://some-backend-url";
 const someServerService = new ServerDataService(server);
 
 fetch(server + "/data").then((res) => res.json()).then((data) => { 
-	widget.setConfig({data});
+    booking.setConfig({data});
 });   
 // Integrate the serverDataService into the Event Bus order of widget
 booking.api.setNext(someServerService);

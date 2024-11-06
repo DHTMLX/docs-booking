@@ -14,8 +14,8 @@ description: You can learn about the on method in the documentation of the DHTML
 
 ~~~jsx {}
 api.on(
-	event: string,
-	handler: function
+    event: string,
+    handler: function
 ): void;
 ~~~
 
@@ -34,12 +34,12 @@ Use the `api.on()` method if you want to listen to the actions without modifying
 ~~~jsx {7-10}
 // create Booking
 const booking = new booking.Booking("#root", {
-	data,
-	// other configuration parameters
+    data,
+    // other configuration parameters
 });
 
 // output the selected slot id and time
 booking.api.on("select-slot", (obj) => {
-	console.log("The selected slot", obj.id, "and time", obj.time);
+    console.log("The selected slot", obj.id, "and time", obj.time);
 });
 ~~~

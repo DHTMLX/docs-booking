@@ -25,10 +25,9 @@ Returns [data](/api/config/booking-data) array.
 ~~~jsx {}
 // create Booking
 const booking = new booking.Booking("#root", {
-	data,
+    data,
     // configuration parameters
 });
 
 console.log(booking.serialize());
 ~~~
-

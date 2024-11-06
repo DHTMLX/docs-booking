@@ -6,7 +6,6 @@ description: You can have events overview of JavaScript Booking in the documenta
 
 # Events overview
 
-
 | Name                                      | Description                                      |
 | ----------------------------------------- | ------------------------------------------------ |
 | [](../events/booking-confirmslot-event.md)  | @getshort(../events/booking-confirmslot-event.md)  |
@@ -14,6 +13,3 @@ description: You can have events overview of JavaScript Booking in the documenta
 | [](../events/booking-selectitem-event.md)  | @getshort(../events/booking-selectitem-event.md)    |
 | [](../events/booking-selectitemdate-event.md)  | @getshort(../events/booking-selectitemdate-event.md) |
 | [](../events/booking-selectslot-event.md)   | @getshort(../events/booking-selectslot-event.md)   |
-
-
-

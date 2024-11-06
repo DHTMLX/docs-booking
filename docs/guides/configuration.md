@@ -6,11 +6,9 @@ description: You can learn about the configuration in the documentation of the D
 
 # Configuration
 
-
 ## Loading data for cards
 
 To load data, add data to the [`data`](/api/config/booking-data) array. See all instructions here: [`Loading data`](/guides/loading-data).
-
 
 ## Defining the structure of cards
 
@@ -41,19 +39,19 @@ const data = [
         price: "27 $",
         review: {
         stars: 4,
-        count: 120,
+        count: 120
     },
         slots: [
             {
                 from: 9,
-                to: 21,
-            },
-        ],
-    },
+                to: 21
+            }
+        ]
+    }
 ];
 
 const cardShape = {
-    details: false,
+    details: false
 };
 
 new booking.Booking("#root", {
@@ -74,7 +72,7 @@ A slot is a time unit available for booking. Available slots for cards are displ
 ### Adding slots for booking
 
 To add booking slots to a card, add an object to the `slots` array of the [`data`](/api/config/booking-data) property.
-In the example below, the slots are added for the specified card for Tuesdays and Fridays from 12 a.m. to 6 p.m and each slot duration is 30 minutes with 10-minutes gap between slots. 
+In the example below, the slots are added for the specified card for Tuesdays and Fridays from 12 a.m. to 6 p.m and each slot duration is 30 minutes with 10-minutes gap between slots.
 
 ~~~jsx {15-22}
 const data = [
@@ -88,7 +86,7 @@ const data = [
         price: "37 $",
         review: {
             star: 1,
-            count: 40,
+            count: 40
         },
         slots: [
             {
@@ -96,16 +94,16 @@ const data = [
                 to: 18,
                 size: 30,
                 gap: 10,
-                days: [2, 5],
+                days: [2, 5]
             },
-
             {...}, //other slots
-        ],
-    },]
-		
+        ]
+    }
+];
+        
 new booking.Booking("#root", {
-	data,
-	// other parameters
+    data,
+    // other parameters
 });
 ~~~
 
@@ -143,7 +141,7 @@ For example, if you want to add booking slots with the same parameters to all da
 
 Example:
 
-~~~jsx
+~~~jsx {}
 const data = [
     {
         id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
@@ -155,7 +153,7 @@ const data = [
         price: "37 $",
         review: {
             star: 1,
-            count: 40,
+            count: 40
         },
         slots: [
             {
@@ -163,14 +161,15 @@ const data = [
                 from: 14, //slots start time
                 to: 17, // slots end time
                 size: 30, // each slot duration in minutes
-                gap: 10, // a gap between slots
-            },
-        ],
-    },]
+                gap: 10 // a gap between slots
+            }
+        ]
+    }
+];
 
 new booking.Booking("#root", {
-	data,
-	// other parameters
+    data,
+    // other parameters
 });
 ~~~
     
@@ -178,7 +177,7 @@ But if you need to add slots with one set of parameters to some days of the week
 
 Example:
 
-~~~jsx 
+~~~jsx {}
 const data = [
     {
         id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
@@ -190,7 +189,7 @@ const data = [
         price: "37 $",
         review: {
             star: 1,
-            count: 40,
+            count: 40
         },
         slots: [
             {
@@ -198,7 +197,7 @@ const data = [
                 from: 14,
                 to: 17,
                 size: 30,
-                gap: 10,
+                gap: 10
             },
             {
                 //this rule is applied to days 2 and 5 (Tuesdays and Fridays) except
@@ -207,7 +206,7 @@ const data = [
                 to: 17,
                 size: 50,
                 gap: 20,
-                days: [2, 5],
+                days: [2, 5]
             },
             {
                 //this rule is applied to days 3 and 4 (Wednesdays and Thursdays) and exact date
@@ -217,17 +216,18 @@ const data = [
                 gap: 20,
                 days: [3, 4],
                 dates: [ 1683234000000 ] // exact upcoming date (May 5, 2023, Friday)
-            },
-        ],
-    },]
-		
+            }
+        ]
+    }
+];
+        
 new booking.Booking("#root", {
-	data,
-	// other parameters
+    data,
+    // other parameters
 });
 ~~~
 
-To see how to set [duration](/api/config/booking-slotsize) and [gap](/api/config/booking-slotgap) for all slots in the widget, [open the snippet tool](https://snippet.dhtmlx.com/pw8xsl1p). 
+To see how to set [duration](/api/config/booking-slotsize) and [gap](/api/config/booking-slotgap) for all slots in the widget, [open the snippet tool](https://snippet.dhtmlx.com/pw8xsl1p).
 
 ### Marking slots as used or available
 
@@ -235,7 +235,7 @@ To mark slots as used (booked) and make them not visible for a user, use the `us
 
 Example:
 
-~~~jsx
+~~~jsx {}
 const data = [
     {
         id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
@@ -247,7 +247,7 @@ const data = [
         price: "37 $",
         review: {
             star: 1,
-            count: 40,
+            count: 40
         },
         slots: [
             {
@@ -255,15 +255,15 @@ const data = [
                 from: 14, //slots start time
                 to: 17, // slots end time
                 size: 30, // each slot duration in minutes
-                gap: 10, // a gap between slots
-            },
+                gap: 10 // a gap between slots
+            }
         ],
-        usedSlots: [ 1683234000000 ], // an array of timestamps of booked slots in milliseconds
+        usedSlots: [ 1683234000000 ] // an array of timestamps of booked slots in milliseconds
     },]
 
 new booking.Booking("#root", {
-	data,
-	// other parameters
+    data,
+    // other parameters
 });
 ~~~
 
@@ -273,7 +273,7 @@ If available slots are specified here, all slots from the `slots` array are igno
 
 Example:
 
-~~~jsx
+~~~jsx {}
 const data = [
     {
         id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
@@ -285,7 +285,7 @@ const data = [
         price: "37 $",
         review: {
             star: 1,
-            count: 40,
+            count: 40
         },
         slots: [
             {
@@ -293,15 +293,16 @@ const data = [
                 from: 14, //slots start time
                 to: 17, // slots end time
                 size: 30, // each slot duration in minutes
-                gap: 10, // a gap between slots
-            },
+                gap: 10 // a gap between slots
+            }
         ],
-        availableSlots: [ 1693325145000, 1693584345000 ], // an array of timestamps of available slots in milliseconds
-    },]
+        availableSlots: [ 1693325145000, 1693584345000 ] // an array of timestamps of available slots in milliseconds
+    }
+];
 
 new booking.Booking("#root", {
-	data,
-	// other parameters
+    data,
+    // other parameters
 });
 ~~~
 
@@ -311,29 +312,29 @@ To configure the fields that should be displayed in the Booking dialog, use the 
 
 To add a new field, add a new object to the array. To make a field required for filling, set the `required` parameter to *true*. 
 
-~~~jsx 
+~~~jsx {}
 const formShape = [
     {
         type: "text",
         key: "name",
-        label: "Your name",
+        label: "Your name"
     },
     {
         type: "text",
         key: "contact",
         label: "Mobile",
-        required: true,
+        required: true
     },
     {
         type: "textarea",
         key: "description",
-        label: "Details",
-    },
+        label: "Details"
+    }
 ];
 
 new booking.Booking("#root", {
-	formShape,
-	// other parameters
+    formShape,
+    // other parameters
 });
 ~~~
 
@@ -345,17 +346,17 @@ To manage information that is displayed on the left side of the Booking dialog, 
 
 ~~~jsx {1-7,11}
 const infoShape = {
-	preview: true,
-	category: true,
-	title: true,
-	price: true,
-	details: false,
+    preview: true,
+    category: true,
+    title: true,
+    price: true,
+    details: false
 };
 
 new booking.Booking("#root", {
-	data,
-	infoShape,
-	//other parameters
+    data,
+    infoShape,
+    //other parameters
 });
 ~~~
 
@@ -363,36 +364,36 @@ new booking.Booking("#root", {
 Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/pd6wp1xc)
 :::
 
-## Configuring the filter 
+## Configuring the filter
 
 You can configure filter settings via the [`filterShape`](/api/config/booking-filterShape) property. Default configuration is the following:
 
 ~~~jsx {}
 const defaultTimeRanges = [
-	{ from: 8, to: 12, label: "Morning" },
-	{ from: 12, to: 17, label: "Afternoon" },
-	{ from: 17, to: 20, label: "Evening" },
+    { from: 8, to: 12, label: "Morning" },
+    { from: 12, to: 17, label: "Afternoon" },
+    { from: 17, to: 20, label: "Evening" }
 ];
 
 const defaultFilterShape = {
     text: [
-		{ id: "category", label: "speciality", suggest: true },
-		{ id: "title", label: "specialist", suggest: true },
-		{ id: "details", label: "location" },
-	],
-	date: true,
-	time: defaultTimeRanges,
-	autoApply: false,
+        { id: "category", label: "speciality", suggest: true },
+        { id: "title", label: "specialist", suggest: true },
+        { id: "details", label: "location" }
+    ],
+    date: true,
+    time: defaultTimeRanges,
+    autoApply: false
 };
 ~~~
 
 ### Hiding filter input fields
 
-All input fields are displayed by default: text, time, and date. To hide the fields, apply the [`filterShape`](/api/config/booking-filterShape) property and set the corresponding parameters to **false**. 
+All input fields are displayed by default: text, time, and date. To hide the fields, apply the [`filterShape`](/api/config/booking-filterShape) property and set the corresponding parameters to **false**.
 
 Example:
 
-~~~jsx 
+~~~jsx {}
 const filterShape = {
     date: false,
 };
@@ -410,12 +411,12 @@ To enable the auto-complete and show the values that match a user's input text i
 
 Example:
 
-~~~jsx 
+~~~jsx {}
 const filterShape = {
     text: [
         { id: "category", label: "specialization", suggest: true },
         { id: "title", label: "doctor", suggest: true },
-        { id: "details", label: "location", suggest: true },
+        { id: "details", label: "location", suggest: true }
     ],
 };
 
@@ -435,20 +436,20 @@ And you can also add a placeholder to each time range.
 
 Example:
 
-~~~jsx 
+~~~jsx {}
 const filterShape = {
     time: [
         { from: "8:30", to: "11:50", label: "Morning" },
         { from: "12:30", to: "16:50", label: "Afternoon" },
         { from: "17:00", to: "19:50", label: "Evening" },
-        { from: "20:00", to: "22:50", label: "Urgent" },
-  ],
+        { from: "20:00", to: "22:50", label: "Urgent" }
+    ]
 };
 
 new booking.Booking("#root", {
-  data,
-  filterShape,
-	// other parameters
+    data,
+    filterShape,
+    // other parameters
 });
 ~~~
 
@@ -458,7 +459,7 @@ To hide the **Search** button and make the filter immediately apply a user's inp
 
 Example:
 
-~~~jsx 
+~~~jsx {}
 const filterShape = {
     autoApply: true,
 };
@@ -472,7 +473,6 @@ new booking.Booking("#root", {
 
 ### Example
 
-The snippet below demonstrates how to configure the filter: 
+The snippet below demonstrates how to configure the filter:
 
 <iframe src="https://snippet.dhtmlx.com/b5uj78bs?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
-

@@ -24,17 +24,15 @@ The method takes the `confirmHandler` function that will be called when confirmi
 
 ~~~jsx {}
 const { data } = getData();
-const widget = new booking.Booking("#root", {
-	data,
+const booking = new booking.Booking("#root", {
+    data
 });
 
-widget.setConfirmHandler((ev) => {
-	const confirm  = ev.confirm;
-	console.log("Booking info:", ev);
+booking.setConfirmHandler((ev) => {
+    console.log("Booking info:", ev);
 });
 ~~~
 
 <iframe src="https://snippet.dhtmlx.com/dpbmyr8j?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
-
 
 **Related articles**: [Saving slots reservations to the server](/guides/saving-reservations)

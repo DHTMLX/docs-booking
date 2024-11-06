@@ -10,16 +10,15 @@ description: You can learn about the infoShape config in the documentation of th
 
 @short: Optional. An object with settings for managing information displayed on the left side of the Booking dialog
 
-
 ### Usage
 
 ~~~jsx {}
 infoShape?: {
-	preview?: boolean,
-	category?: boolean,
-	title?: boolean,
-	price?: boolean,
-	details?: boolean,
+    preview?: boolean,
+    category?: boolean,
+    title?: boolean,
+    price?: boolean,
+    details?: boolean
 };
 ~~~
 
@@ -37,11 +36,11 @@ An object has the following parameters:
 
 ~~~jsx {}
 const defaultInfoShape = {
-	preview: true,
-	category: true,
-	title: true,
-	price: true,
-	details: true,
+    preview: true,
+    category: true,
+    title: true,
+    price: true,
+    details: true
 };
 ~~~
 
@@ -49,14 +48,14 @@ const defaultInfoShape = {
 
 ~~~jsx {}
 const infoShape = {
-	preview: false,
-	price: false,
+    preview: false,
+    price: false
 };
 
 new booking.Booking("#root", {
-	data,
-	infoShape,
-	// other parameters
+    data,
+    infoShape,
+    // other parameters
 });
 ~~~
 

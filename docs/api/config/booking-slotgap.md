@@ -22,7 +22,7 @@ slotGap?: number;
 
 ### Parameters
 
-- `number` - a gap between slots in minutes; 0 is set by default
+- `number` - (optional) a gap between slots in minutes; 0 is set by default
 
 ### Example
 
@@ -30,8 +30,8 @@ slotGap?: number;
 const slotGap = 10;
 
 new booking.Booking("#root", {
-	slotGap,
-	// other parameters
+    slotGap,
+    // other parameters
 });
 ~~~
 

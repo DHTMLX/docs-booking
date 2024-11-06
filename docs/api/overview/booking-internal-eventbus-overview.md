@@ -6,12 +6,10 @@ description: You can have event bus methods overview of JavaScript Booking in th
 
 # Event Bus methods
 
-| Name                                     | Description                                     |
-| ---------------------------------------- | ----------------------------------------------- |
+| Name                                 | Description                                         |
+| ------------------------------------ | --------------------------------------------------- |
 | [](../internal/booking-detach.md)    | @getshort(../internal/booking-detach.md)            |
 | [](../internal/booking-exec.md)      | @getshort(../internal/booking-exec.md)              |
 | [](../internal/booking-intercept.md) | @getshort(../internal/booking-intercept.md)         |
 | [](../internal/booking-on.md)        | @getshort(../internal/booking-on.md)                |
 | [](../internal/booking-setnext.md)   | @getshort(../internal/booking-setnext.md)           |
-
-

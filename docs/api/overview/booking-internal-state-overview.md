@@ -6,8 +6,7 @@ description: You can have an API overview of JavaScript Booking in the documenta
 
 # State methods overview
 
-| Name                                            | Description                                            |
-| ----------------------------------------------- | ------------------------------------------------------ |
+| Name                                        | Description                                        |
+| ------------------------------------------- | -------------------------------------------------- |
 | [](../internal/booking-getreactivestate.md) | @getshort(../internal/booking-getreactivestate.md) |
 | [](../internal/booking-getstate.md)         | @getshort(../internal/booking-getstate.md)         |
-

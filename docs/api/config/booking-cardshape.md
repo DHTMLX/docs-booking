@@ -31,7 +31,7 @@ To configure the card appearance, in the **cardShape** object you can specify th
 - `category` - (optional) shows/hides a card's name
 - `details` - (optional) shows/hides details
 - `preview` - (optional) shows/hides a preview image
-- `price` - (optional) shows/hides price 
+- `price` - (optional) shows/hides price
 - `review` - (optional) shows/hides rating information
 - `subtitle` - (optional) shows/hides a card's subtitle
 - `title` - (optional) shows/hides a card's title
@@ -40,13 +40,13 @@ To configure the card appearance, in the **cardShape** object you can specify th
 
 ~~~jsx {}
 const defaultCardShape = {
-	category: true,
-	details: true,
-	preview: true,
-	price: true,
-	review: true,
-	subtitle: false,
-	title: true,
+    category: true,
+    details: true,
+    preview: true,
+    price: true,
+    review: true,
+    subtitle: false,
+    title: true
 };
 ~~~
 
@@ -54,14 +54,14 @@ const defaultCardShape = {
 
 ~~~jsx {}
 const cardShape = {
-	review: false,
-	subtitle: false,
-	price: false,
+    review: false,
+    subtitle: false,
+    price: false
 };
 
 new booking.Booking("#root", {
-	cardShape,
-	// other parameters
+    cardShape,
+    // other parameters
 });
 ~~~
 

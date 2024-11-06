@@ -12,6 +12,3 @@ description: You can have methods overview of JavaScript Booking in the document
 | [](../methods/booking-setconfig-method.md)         | @getshort(../methods/booking-setconfig-method.md)         |
 | [](../methods/booking-setconfirmhandler-method.md) | @getshort(../methods/booking-setconfirmhandler-method.md) |
 | [](../methods/booking-setlocale-method.md)         | @getshort(../methods/booking-setlocale-method.md)         |
-
-
-

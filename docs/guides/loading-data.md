@@ -16,7 +16,7 @@ You can prepare data in a separate file. Here is an example of an appropriate da
 
 ~~~jsx title="data.js"
 const data = [
-	{
+    {
         id: "ee828b5d-a034-420c-889b-978840015d6a",
         title: "Natalie Tyson",
         category: "Therapist",
@@ -26,18 +26,18 @@ const data = [
         price: "$35",
         review: {
             stars: 4,
-            count: 120,
+            count: 120
         },
         slots: [
             {
                 from: 9, to: 20,
-                days: [1, 2, 3, 4, 5],
+                days: [1, 2, 3, 4, 5]
             },
             {
                 from: 10, to: 18,
-                days: [6, 0],
-            },
-        ],
+                days: [6, 0]
+            }
+        ]
     },
     {
         id: "5c9b64ad-1830-4e5b-a5f9-8acea10706df",
@@ -49,16 +49,16 @@ const data = [
         price: "$30",
         review: {
             stars: 4,
-            count: 64,
+            count: 64
         },
         slotSize: 45,
         slotGap: 10,
         slots: [
             {
                 from: "9:15", to: 17,
-                days: [1, 2, 3, 4, 5],
-            },
-        ],
+                days: [1, 2, 3, 4, 5]
+            }
+        ]
     },
     {
         id: "9b037564-77be-429f-b719-eebbe499027a",
@@ -70,26 +70,26 @@ const data = [
         price: "$25",
         review: {
             stars: 5,
-            count: 10,
+            count: 10
         },
         slots: [
             {
                 from: 14, to: 17,
-                size: 30, gap: 10,
+                size: 30, gap: 10
             },
             {
                 from: 12, to: 19,
                 size: 50, gap: 20,
-                days: [2], dates: [getDate(0)],
+                days: [2], dates: [getDate(0)]
             },
             {
                 from: "18:30", to: 20,
                 size: 20, gap: 20,
-                days: [3, 4, 5],
+                days: [3, 4, 5]
             },
         ],
-        usedSlots: [getDate(0, 12), getDate(0, 18)],
-    },
+        usedSlots: [getDate(0, 12), getDate(0, 18)]
+    }
 ];
 ~~~
 
@@ -101,13 +101,14 @@ To load local data from a separate file, first prepare the source file with data
 
 Example:
 
-~~~jsx
+~~~jsx {}
 function getData() {
-  return {
-    data,
-    cardShape,
-  };
+    return {
+        data,
+        cardShape
+    };
 }
+
 const data = [
     {
         id: "ee828b5d-a034-420c-889b-978840015d6a",
@@ -119,21 +120,21 @@ const data = [
         price: "$35",
         review: {
             stars: 4,
-            count: 120,
+            count: 120
         },
         slots: [
             {
                 from: 9, to: 20,
-                days: [1, 2, 3, 4, 5],
+                days: [1, 2, 3, 4, 5]
             },
             {
                 from: 10, to: 18,
-                days: [6, 0],
-            },
-        ],
+                days: [6, 0]
+            }
+        ]
     },
     //other data
-],
+];
 
 const cardShape = {
     preview: true,
@@ -142,7 +143,7 @@ const cardShape = {
     title: true,
     subtitle: true,
     price: true,
-    details: true,
+    details: true
 };
 ~~~
 
@@ -155,21 +156,21 @@ Second, add the path to the source data file:
 <script src="./common/data.js"></script>
 ~~~
 
-Create Booking and load data: 
+Create Booking and load data:
 
 ~~~jsx {}
 const { data } = getData();
-const widget = new booking.Booking("#root", { data });
+const booking = new booking.Booking("#root", { data });
 ~~~
 
 To get server data, you can send the request for data using the native **fetch** method (or any other way):
 
-~~~jsx
-const widget = new booking.Booking("#booking", {data: []});
+~~~jsx {}
+const booking = new booking.Booking("#booking", {data: []});
 const server = "https://some-backend-url";
 
 fetch(server + "/data").then((res) => res.json()).then((data) => { 
-	widget.setConfig({data});
+    booking.setConfig({data});
 });
 ~~~
 
@@ -179,8 +180,7 @@ The snippet below shows how to save slots reservations to the server:
 
 <iframe src="https://snippet.dhtmlx.com/dpbmyr8j?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-
-**Related articles**: 
+**Related articles**:
 - [confirm-slot](/api/events/booking-confirmslot-event) event
 - [setConfig()](/api/methods/booking-setconfig-method) method
 - [setConfirmHandler()](/api/methods/booking-setconfirmhandler-method) method
