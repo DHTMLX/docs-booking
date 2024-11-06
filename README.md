@@ -27,13 +27,13 @@ $ yarn start
 
 ## Related sources
 
-[Download DHTMLX Booking](https://dhtmlx.com/docs/products/dhtmlxBooking/download.shtml)
+[Download DHTMLX Booking](https://dhtmlx.com/docs/products/dhtmlxBooking/)
 
-[Live demos](https://snippet.dhtmlx.com/)
+[Live demos](https://snippet.dhtmlx.com/d7w3jtqz?tag=booking)
 
 [Blog](https://dhtmlx.com/blog/)
 
-[Forum](https://forum.dhtmlx.com/)
+[Forum](https://forum.dhtmlx.com/c/widgets/)
 
 ## Follow us
 
