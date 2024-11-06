@@ -1,6 +1,6 @@
-<h1 align="center"><a href="https://docs.dhtmlx.com/booking/">DHTMLX Booking Documentation</a></h1>
+<h1 align="center"><a href="https://docs-next.dhtmlx.com/booking/">DHTMLX Booking Documentation</a></h1>
 
-New Booking description here
+JavaScript Booking library is a ready-made component designed to be easily incorporated into your application. It provides end-users with functionality for scheduling appointments online with wide search options. The widget is made responsive and optimised for mobile devices.
 
 ## Explore documentation locally
 
@@ -27,13 +27,13 @@ $ yarn start
 
 ## Related sources
 
-[Download DHTMLX Booking](https://dhtmlx.com/docs/products/dhtmlxBooking/download.shtml)
+[Download DHTMLX Booking](https://dhtmlx.com/docs/products/dhtmlxBooking/)
 
-[Live demos](https://snippet.dhtmlx.com/)
+[Live demos](https://snippet.dhtmlx.com/d7w3jtqz?tag=booking)
 
 [Blog](https://dhtmlx.com/blog/)
 
-[Forum](https://forum.dhtmlx.com/)
+[Forum](https://forum.dhtmlx.com/c/widgets/)
 
 ## Follow us
 

@@ -10,7 +10,7 @@ This guide will give you detailed instructions on how to create Booking on a pag
 
 1. [Include the Booking source files on a page](#including-source-files).
 2. [Create a container for Booking](#creating-container).
-3. [Initialize Booking with a constructor](#initializing-file-manager).
+3. [Initialize Booking with a constructor](#initializing-booking).
 
 ## Including source files
 
@@ -52,11 +52,12 @@ new booking.Booking("#root", {
 
 ### Configuration properties
 
-List of properties here
+:::info
+The full list of properties to configure **Booking** can be found [**here**](api/overview/booking-properties-overview.md).
+:::
 
 ## Example
 
-In this snippet you can see how to initialize **JavaScript Booking** with the initial settings:
+In this snippet you can see how to initialize **JavaScript Booking** with initial settings:
 
-**[TODO]!!! Заменить ссылку на сниппет с инициализацией**
-<iframe src="" frameborder="0" class="snippet_iframe" width="100%" height="500"></iframe>
+<iframe src="https://snippet.dhtmlx.com/6it4ohez?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
