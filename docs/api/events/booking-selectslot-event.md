@@ -24,7 +24,7 @@ description: You can learn about the select-slot event in the documentation of t
 The callback of the **select-slot** event can take an object with the following parameters:
 
 - `id` - (required) the ID of a card the selected slot belongs to
-- `time` - (required) an array with the slot start time in milliseconds and the slot duration in minutes
+- `time` - (required) an array with the slot start time in milliseconds and the slot duration in minutes (timestamps are in a local timezone)
   
 ### Example
 
