@@ -6,7 +6,18 @@ description: You can learn about working with server in the documentation of the
 
 # Working with server
 
-About loading data from the server see here: [Loading data](/guides/loading-data#loading-data-1).  
+## Loading data 
+
+To get server data, you can send the request for data using the native **fetch** method (or any other way):
+
+~~~jsx {}
+const booking = new booking.Booking("#booking", {data: []});
+const server = "https://some-backend-url";
+
+fetch(server + "/data").then((res) => res.json()).then((data) => { 
+    booking.setConfig({data});
+});
+~~~
 
 ## Saving slots reservations to the server
 
@@ -53,13 +64,11 @@ fetch("/server/url")
     });
 ~~~
 
-## Converting timestamps
+## Working with UTC data
 
-In case the widget is applied in different timezones, you can convert timestamps when loading data and sending data to the server.
+The widget applies a local timezone but if you have UTC data it's necessary to convert data to a local timezone.
 
-The next example demonstrates how to convert a UTC timestamp into the local timezone during the loading process and how to convert the local time back to UTC when sending data to the server. 
-
-In the example below, the **g2l** function converts a UTC timestamp into the local timezone. During the data loading process, this function is used to convert the times in *usedSlots* and *slots* from UTC to the local time. The **l2g** function converts a local time back to UTC. It's applied during slots reservation, namely, the **l2g** function is used to convert the local time (from slot.time[0]) to UTC before sending it to the server.
+For example, if you have UTC timestamps, you can apply the functions provided in the example below to convert them. The **g2l** function converts a UTC timestamp into the local timezone. During the data loading process, this function is used to convert the times in *usedSlots* and *slots* from UTC to the local time. The **l2g** function converts a local time back to UTC. It's applied during slots reservation, namely, the **l2g** function is used to convert the local time (from slot.time[0]) to UTC before sending it to the server.
 
 ~~~jsx
 const serverURL = "https://some-backend-url";
