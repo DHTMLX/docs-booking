@@ -6,8 +6,6 @@ description: You can learn how to load data into Booking in the documentation of
 
 # Loading data
 
-## Preparing data
-
 The following information can be loaded into Booking:
 
 - [`data`](/api/config/booking-data) - an array of objects containing cards data 
@@ -93,8 +91,6 @@ const data = [
 ];
 ~~~
 
-## Loading data 
-
 You can load JSON data into Booking from an external file or the server-side script after the component has been initialized.
 
 To load local data from a separate file, first prepare the source file with data.
@@ -163,22 +159,9 @@ const { data } = getData();
 const booking = new booking.Booking("#root", { data });
 ~~~
 
-To get server data, you can send the request for data using the native **fetch** method (or any other way):
+About loading data from the server, refer to [Working with server](/guides/saving-reservations)
 
-~~~jsx {}
-const booking = new booking.Booking("#booking", {data: []});
-const server = "https://some-backend-url";
-
-fetch(server + "/data").then((res) => res.json()).then((data) => { 
-    booking.setConfig({data});
-});
-~~~
-
-## Example
-
-The snippet below shows how to save slots reservations to the server:
-
-<iframe src="https://snippet.dhtmlx.com/dpbmyr8j?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+---
 
 **Related articles**:
 - [confirm-slot](/api/events/booking-confirmslot-event) event

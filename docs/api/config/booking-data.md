@@ -69,7 +69,7 @@ For each card object you can specify the following parameters:
   - `size` - (optional) the duration of one slot in minutes
   - `gap` - (optional) the gap between slots in minutes; 0 is set by default
   - `days` - (optional) days of the week when a slot is available for booking; possible values: from 0 to 6 where 0 is Sunday and 6 is Saturday; if no days are specified, all days are applied by default; if days are specified, the slot parameters (**to**, **from**, **size**, **gap**) defined for these days will be applied
-  - `dates` - (optional) an array of timestamps in milliseconds which are exact dates when a slot is available; the slot parameters (**to**, **from**, **size**, **gap**) for these specified dates will be applied
+  - `dates` - (optional) an array of timestamps in milliseconds which are exact dates when a slot is available; the slot parameters (**to**, **from**, **size**, **gap**) for these specified dates will be applied (timestamps are in a local timezone)
 
 :::note
 Slot parameters specified for days will override common parameters defined for all days.
@@ -79,8 +79,8 @@ If several slots objects are created for the same day, make sure that slots time
 
 - `availableSlots` - (optional) an array of timestamps of available slots in milliseconds; if available slots are specified here, all slots from the `slots` array are ignored (i.e., become unavailable); each object in the array has the next parameters:
   - `id` - (required) the id of a slot
-  - `time` - (required) an array that includes timestamp and slot duration in minutes
-- `usedSlots` - (optional) an array of timestamps of booked slots in milliseconds
+  - `time` - (required) an array that includes timestamp and slot duration in minutes (timestamps are in a local timezone)
+- `usedSlots` - (optional) an array of timestamps of booked slots in milliseconds (timestamps are in a local timezone)
 - `slotSize` - (optional) the duration of a slot in minutes; the value will be applied to all slots of this card if other value is not set inside the `slots` object; *60* minutes is set by default
 - `slotGap` - (optional) the gap between slots in minutes that is set for all slots in the current card; this value is applied if any other value is not specified inside the `slots` object; 0 is set by default
 
