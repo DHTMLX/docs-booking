@@ -6,6 +6,24 @@ description: SEO data
 
 # What's new
 
+## Version 1.0.1 (November 29, 2024)
+
+### Fixes
+
+- UI flickers when starting from non-desktop layout
+- Incorrect position of the "back" icon in modal window
+- Incorrect cash icon in the booking form
+
+## Version 1.0 (November 6, 2024)
+
+### Initial functionality
+
+- Various rules for defining item slots
+- Configurable cards to display data items
+- Configurable filtering by date, time and text
+- Configurable booking dialog
+- Localization
+
 ## Version 1.0.0
 
 Released on November 6, 2024
