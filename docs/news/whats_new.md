@@ -6,7 +6,9 @@ description: SEO data
 
 # What's new
 
-## Version 1.0.1 (November 29, 2024)
+## Version 1.0.1 
+
+Released on November 29, 2024
 
 ### Fixes
 
@@ -14,7 +16,9 @@ description: SEO data
 - Incorrect position of the "back" icon in modal window
 - Incorrect cash icon in the booking form
 
-## Version 1.0 (November 6, 2024)
+## Version 1.0
+
+Released on November 6, 2024
 
 ### Initial functionality
 
