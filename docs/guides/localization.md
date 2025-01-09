@@ -67,7 +67,9 @@ const en = {
     //core
     core: {
         ok:"OK",
-        cancel:"Cancel"
+        cancel:"Cancel",
+        select: "Select",
+        "No data": "No data"
     },
     //formats
     formats: {
@@ -186,6 +188,8 @@ const de = {
     core: {
         ok: "OK",
         cancel: "Abbrechen",
+        select: "Auswählen",
+        "No data": "Keine Daten",
     },
     // formats
     formats: {
@@ -307,6 +311,8 @@ const cn = {
     core: {
         ok: "确定",
         cancel: "取消",
+        select: "选择",
+        "No data": "没有数据",
     },
     // formats
     formats: {
