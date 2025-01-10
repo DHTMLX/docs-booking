@@ -62,7 +62,7 @@ const en = {
         am: ["am", "AM"],
         pm: ["pm", "PM"],
         weekStart: 7,
-        timeFormat: 24
+        clockFormat: 24
     },
     //core
     core: {
