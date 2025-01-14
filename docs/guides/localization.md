@@ -428,8 +428,39 @@ function changeFormat() {
 ~~~
 
 :::info
-You can also see the example in the [snippet tool](https://snippet.dhtmlx.com/rxjnw54x)
+You can also see an example in the [snippet tool](https://snippet.dhtmlx.com/rxjnw54x)
 :::
+
+## Date and time format specification 
+
+Booking uses the following characters for setting the date and time format:
+
+| Character | Definition                                        |Example                  |
+| :-------- | :------------------------------------------------ |:------------------------|
+| %d        | day as a number with leading zero                 | from 01 to 31           |
+| %j        | day as a number                                   | from 1 to 31            |
+| %D        | short name of the day (abbreviation)              | Su Mo Tu Sat            |
+| %l        | full name of the day                              | Sunday Monday Tuesday   |
+| %W        | week as a number with leading zero (with Monday as the first day of the week) | from 01 to 52/53        |
+| %m        | month as a number with leading zero               | from 01 to 12           |
+| %n        | month as a number                                 | from 1 to 12            |
+| %M        | short name of the month                           | Jan Feb Mar             |
+| %F        | full name of the month                            | January February March  |
+| %y        | year as a number, 2 digits                        | 24                      |
+| %Y        | year as a number, 4 digits                        | 2024                    |
+| %h        | hours 12-format with leading zero                 | from 01 to 12           |
+| %g        | hours 12-format                                   | from 1 to 12            |
+| %H        | hours 24-format with leading zero                 | from 00 to 23           |
+| %G        | hours 24-format                                   | from 0 to 23            |
+| %i        | minutes with leading zero                         | from 01 to 59           |
+| %s        | seconds with leading zero                         | from 01 to 59           |
+| %S        | milliseconds                                      | 128                     |
+| %a        | am or pm                                          | am (for time from midnight until noon) and pm (for time from noon until midnight)|
+| %A        | AM or PM                                          | AM (for time from midnight until noon) and PM (for time from noon until midnight)|
+| %c        | displays date and time in the ISO 8601 date format| 2024-10-04T05:04:09     |
+
+
+To present the 20th of June, 2024 with the exact time as *2024-09-20 16:47:08.128*, specify "%Y-%m-%d-%H:%i:%s.%u".
 
 ## Example
 
