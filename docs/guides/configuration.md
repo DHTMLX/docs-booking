@@ -12,9 +12,13 @@ To load data, add data to the [`data`](/api/config/booking-data) array. See all 
 
 ## Defining the structure of cards
 
-You can configure what information all cards will display on their left side using the [`cardShape`](/api/config/booking-cardshape) property.
+You can configure what information all cards will display on their left side using the [`cardShape`](/api/config/booking-cardshape) property or the [`cardTemplate`](/api/config/booking-cardtemplate) property, which also allows customizing the appearance of each card's block.
 
-On the left side of a card the following data fields are displayed by default:
+:::info
+Both properties allow you to control which fields to display in a card's left-hand block. But `cardTemplate` also helps tailor the appearance of each card and control how the fields are arranged. If both are applied, `cardTemplate` will override the `cardShape` settings.
+:::
+
+On the left side of each card the following data fields are displayed by default:
 - preview: card image
 - review: rating information with the number of rating stars (out of five) and the number of reviews
 - category: the subtitle of a card
@@ -63,6 +67,66 @@ new booking.Booking("#root", {
 
 :::info
 Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/6mxd7918)
+:::
+
+To apply a template to each card (the left-hand block), use the [`cardTemplate`](/api/config/booking-cardtemplate) property. 
+
+First, create a function that takes a card object and returns a string of HTML. In the example, `cardPreviewTemplate` returns HTML for a card that includes a preview image (card.preview), category (card.category), title (card.title), and price (card.price). To add new fields to a card, modify the template string. In the example below, we add `<div class="">` blocks inside the `cardPreviewTemplate` function. 
+
+~~~jsx {}
+function cardPreviewTemplate({ card }) {
+	return `
+        <div class="custom-preview" data-action="preview-click">
+            <div class="preview-left">
+                <div
+                    style="background-image: url(${card.preview})"
+                    class="card-photo"
+                ></div>
+                <!-- <div class="card-photo-empty" /> -->
+                </div>
+
+                <div class="preview-right">
+                <div class="category">${card.category}</div>
+                <div class="title">${card.title}</div>
+                <div class="price">${card.price}</div>
+            </div>
+        </div>
+        `;
+}
+~~~
+
+Then you need to assign the`cardTemplate` property to your custom template function.
+
+~~~jsx
+const widget = new Booking("#root", {
+	data,
+	cardTemplate: template(card => cardPreviewTemplate(card)),
+});
+// other parameters
+~~~
+
+If you want add some look and feel to your card, you should add styles to your CSS:
+
+~~~css
+.custom-preview {
+    display: flex;
+	width: 100%;
+	height: 100%;
+	gap: 30px;
+}
+
+.preview-left {
+	width: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+// other styles
+~~~
+
+TBD!!!
+:::info
+Please, see an example in the [snippet tool](https://snippet.dhtmlx.com)
 :::
 
 ## Filling cards with slots
@@ -363,6 +427,86 @@ new booking.Booking("#root", {
 :::info
 Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/pd6wp1xc)
 :::
+
+You can also apply a template using the [`infoTemplate`](/config/booking-infotemplate) property that allows managing the fields in the information block of the Booking dialog. Both [`infoTemplate`](/config/booking-infotemplate) and [`infoShape`](/api/config/booking-infoshape) properties allow you to define which fields to display. But `infoTemplate` also helps tailor the appearance of the information block. If both are applied, `infoTemplate` will override the `infoShape` settings.
+
+To apply a template, first, you need to define the function that will generate the custom HTML for the information block. This function will receive the card and slot objects as input parameters, which are `selectedItem` (card) and `formattedDate` (slot) in the example below. To add more fields, add `<div class="">` blocks inside the `customInfoTemplate` function:
+
+~~~jsx
+function customInfoTemplate({ selectedItem, formattedDate, _ }) {
+    return `
+        <div class="custom-info">
+            ${
+                selectedItem.preview
+                    ? `<div style="background-image: url(${selectedItem.preview})" class="photo"></div>`
+                    : `<div class="photo-empty"></div>`
+            }
+
+            <div class="price">
+                <i class="icon wxi-cash"></i>
+                <span>${selectedItem.price}</span>
+            </div>
+            <span class="category">${_(selectedItem.category)}</span>
+            <span class="title">${selectedItem.title}</span>
+            <div class="date" data-action="reset-slot">
+                <i class="icon wxi-calendar"></i>
+                <span>${formattedDate}</span>
+            </div>
+        </div>
+    `;
+}
+~~~
+
+Then pass the `infoTemplate` function into the Booking configuration as follows:
+
+~~~jsx
+const widget = new Booking("#root", {
+    data,
+    infoTemplate: template(selectedItem => customInfoTemplate(selectedItem)),
+});
+~~~
+
+Optionally, you can apply custom styles to the information block in your CSS:
+
+~~~css
+.custom-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.photo {
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+}
+
+.photo-empty {
+    width: 200px;
+    height: 200px;
+    background-color: #e0e0e0;
+    text-align: center;
+    line-height: 200px;
+}
+
+.date {
+    color: #3a8dff;
+    cursor: pointer;
+}
+~~~
+
+:::info
+Please, see an example in the [snippet tool](https://snippet.dhtmlx.com) !!!!TBD
+:::
+
 
 ## Configuring the filter
 
