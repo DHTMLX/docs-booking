@@ -1,0 +1,309 @@
+---
+sidebar_label: Integration with Vue
+title: Integration with Vue
+description: You can learn about the integration with Vue in the documentation of the DHTMLX JavaScript Booking library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Booking.
+---
+
+# Integration with Vue
+
+:::tip
+You should be familiar with the basic concepts and patterns of [**Vue**](https://vuejs.org/) before reading this documentation. To refresh your knowledge, please refer to the [**Vue 3 documentation**](https://vuejs.org/guide/introduction.html#getting-started).
+:::
+
+DHTMLX Booking is compatible with **Vue**. We have prepared code examples on how to use DHTMLX Booking with **Vue 3**. For more information, refer to the corresponding [**Example on GitHub**](https://github.com/DHTMLX/vue-booking-demo).
+
+## Creating a project
+
+:::info
+Before you start to create a new project, install [**Node.js**](https://nodejs.org/en/).
+:::
+
+To create a **Vue** project, run the following command:
+
+~~~json
+npm create vue@latest
+~~~
+
+This command installs and executes `create-vue`, the official **Vue** project scaffolding tool. Check the details in the [Vue.js Quick Start](https://vuejs.org/guide/quick-start.html#creating-a-vue-application).
+
+Let's name the project as **my-vue-booking-app**.
+
+### Installation of dependencies
+
+Go to the app directory:
+
+~~~json
+cd my-vue-booking-app
+~~~
+
+Install dependencies and start the dev server. For this, use a package manager:
+
+- if you use [**yarn**](https://yarnpkg.com/), run the following commands:
+
+~~~jsx
+yarn
+yarn start // or yarn dev
+~~~
+
+- if you use [**npm**](https://www.npmjs.com/), run the following commands:
+
+~~~json
+npm install
+npm run dev
+~~~
+
+The app should run on a localhost (for instance `http://localhost:3000`).
+
+## Creating Booking
+
+Now you should get the DHTMLX Booking source code. First of all, stop the app and proceed with installing the Booking package.
+
+### Step 1. Package installation
+
+Download the [**trial Booking package**](/how-to-start/#installing-trial-booking-via-npm-and-yarn) and follow steps mentioned in the README file. Note that trial Booking is available 30 days only.
+
+### Step 2. Component creation
+
+Now you need to create a Vue component, to add Booking into the application. Create a new file in the ***src/components/*** directory and name it ***Booking.vue***.
+
+#### Import source files
+
+Open the ***Booking.vue*** file and import Booking source files. Note that:
+
+- if you use PRO version and install the Booking package from a local folder, the import paths look like this:
+
+~~~html title="Booking.vue"
+<script>
+import { Booking } from 'dhx-booking-package';
+import 'dhx-booking-package/dist/booking.css';
+</script>
+~~~
+
+Note that depending on the used package, the source files can be minified. In this case make sure that you are importing the CSS file as ***booking.min.css***.
+
+- if you use the trial version of Booking, specify the following paths:
+
+~~~html title="Booking.vue"
+<script>
+import { Booking } from '@dhx/trial-booking';
+import '@dhx/trial-booking/dist/booking.css';
+<script>
+~~~
+
+:::info
+In this tutorial you can see how to configure the **trial** version of Booking.
+:::
+
+#### Setting the container and adding Booking
+
+To display Booking on the page, you need to create the container for Booking, and initialize this component using the corresponding constructor:
+
+~~~html {2,7-8,18} title="Booking.vue"
+<script>
+import { Booking } from "@dhx/trial-booking";
+import "@dhx/trial-booking/dist/booking.css";
+
+export default {
+    mounted() {
+        // initialize the Booking component
+        this.booking = new Booking(this.$refs.container, {});
+    },
+
+    unmounted() {
+        this.booking.destructor(); // destruct Booking
+    }
+};
+</script>
+
+<template>
+    <div ref="container" class="widget"></div>
+</template>
+~~~
+
+#### Adding styles
+
+To display Booking correctly, you need to specify important styles for Booking and its container in the main css file of the project:
+
+~~~css title="main.css"
+/* specify styles for initial page */
+html,
+body,
+#app { /* make sure that you use the #app root container */
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* specify styles for the Booking container */
+.widget {
+    height: 100%;
+}
+~~~
+
+#### Loading data
+
+To add data into the Booking, you need to provide a data set. You can create the ***data.js*** file in the ***src/*** directory and add some data into it:
+
+~~~jsx title="data.js"
+export function getData() {
+    function getDate(addDays, hoursValue = 0, minutesValue = 0) {
+        const date = new Date();
+        const secondsValue = 0; // round to minutes
+        const msValue = 0;
+    
+        date.setDate(date.getDate() + addDays);
+        date.setHours(hoursValue, minutesValue, secondsValue, msValue);
+    
+        return date.getTime();
+    }
+
+    return [
+        {
+            id: "ee828b5d-a034-420c-889b-978840015d6a",
+            title: "Natalie Tyson",
+            category: "Therapist",
+            subtitle: "2 years of experiece",
+            details: "Cleveland Clinic\n9500 Euclid Ave",
+            preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
+            price: "$35",
+            review: {
+                stars: 4,
+                count: 120
+            },
+            slots: [
+                {
+                    from: 9,
+                    to: 20,
+                    days: [1, 2, 3, 4, 5]
+                },
+                {
+                    from: 10,
+                    to: 18,
+                    days: [6, 0]
+                }
+            ]
+        },
+        {
+            id: "9b037564-77be-429f-b719-eebbe499027a",
+            title: "Emma Johnson",
+            category: "Cardiologist",
+            subtitle: "2 years of experience",
+            details: "Stanford Health Care\n1468 Madison Ave",
+            preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/03.jpg",
+            price: "$25",
+            review: {
+                stars: 5,
+                count: 10
+            },
+            slots: [
+                {
+                    from: 14,
+                    to: 17,
+                    size: 30,
+                    gap: 10
+                },
+                {
+                    from: 12,
+                    to: 19,
+                    size: 50,
+                    gap: 20,
+                    days: [2],
+                    dates: [getDate(0)]
+                },
+                {
+                    from: "18:30",
+                    to: 20,
+                    size: 20,
+                    gap: 20,
+                    days: [3, 4, 5]
+                }
+            ],
+            usedSlots: [getDate(0, 12), getDate(0, 18)]
+        },
+        // ...
+    ];
+}
+~~~
+
+Then open the ***App.vue*** file, import data, and initialize it via the inner `data()` method. After this you can pass data into the new created `<Booking/>` component as **props**:
+
+~~~html {3,7-10,15} title="App.vue"
+<script>
+import Booking from "./components/Booking.vue";
+import { getData } from "./data";
+
+export default {
+    components: { Booking },
+    data() {
+        const dataset = getData();
+        return { dataset };
+    }
+};
+</script>
+
+<template>
+    <Booking :data="dataset" />
+</template>
+~~~
+
+Go to the ***Booking.vue*** file and apply the passed **props** to the Booking configuration object:
+
+~~~html {6,10} title="Booking.vue"
+<script>
+import { Booking } from "@dhx/trial-booking";
+import "@dhx/trial-booking/dist/booking.css";
+
+export default {
+    props: ["data"],
+
+    mounted() {
+        this.booking = new Booking(this.$refs.container, {,
+            data: this.data,
+            // other configuration properties
+        });
+    },
+
+    unmounted() {
+        this.booking.destructor();
+    }
+};
+</script>
+
+<template>
+    <div ref="container" class="widget"></div>
+</template>
+~~~
+
+Now the Booking component is ready to use. When the element will be added to the page, it will initialize the Booking with data. You can provide necessary configuration settings as well. Visit our [Booking API docs](/api/overview/booking-properties-overview/) to check the full list of available properties.
+
+#### Handling events
+
+When a user makes some action in the Booking, it invokes an event. You can use these events to detect the action and run the desired code for it. See the [full list of events](/api/overview/booking-events-overview/).
+
+Open ***Booking.vue*** and complete the `mounted()` method:
+
+~~~html {8-11} title="Booking.vue"
+<script>
+// ...
+export default {
+    // ...
+    mounted() {
+        this.booking = new Booking(this.$refs.container, {});
+
+        // output the id of the selected slot
+        booking.api.on("select-slot", (obj) => {
+            console.log(obj.id);
+        });
+    }
+    // ...
+}
+</script>
+
+<!--...-->
+~~~
+
+After that, you can start the app to see Booking loaded with data on a page.
+
+![Booking initialization](../assets/trial-booking.png)
+
+Now you know how to integrate DHTMLX Booking with Vue. You can customize the code according to your specific requirements. The final example you can find on [**GitHub**](https://github.com/DHTMLX/vue-booking-demo).
