@@ -90,7 +90,7 @@ In this tutorial you can see how to configure the **trial** version of Booking.
 
 To display Booking on the page, you need to create the container for Booking, and initialize this component using the corresponding constructor:
 
-~~~jsx {2,6,9-10} title="Booking.jsx"
+~~~jsx {2,6,9-10,17} title="Booking.jsx"
 import { useEffect, useRef } from "react";
 import { Booking } from "@dhx/trial-booking";
 import "@dhx/trial-booking/dist/booking.css"; // include Booking styles
@@ -184,7 +184,7 @@ export function getData() {
             price: "$25",
             review: {
                 stars: 5,
-                count: 10,
+                count: 10
             },
             slots: [
                 {
@@ -207,9 +207,9 @@ export function getData() {
                     size: 20,
                     gap: 20,
                     days: [3, 4, 5]
-                },
+                }
             ],
-            usedSlots: [getDate(0, 12), getDate(0, 18)],
+            usedSlots: [getDate(0, 12), getDate(0, 18)]
         },
         // ...
     ];

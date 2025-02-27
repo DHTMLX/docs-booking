@@ -186,14 +186,14 @@ export function getData() : any {
             price: "$25",
             review: {
                 stars: 5,
-                count: 10,
+                count: 10
             },
             slots: [
                 {
                     from: 14,
                     to: 17,
                     size: 30,
-                    gap: 10,
+                    gap: 10
                 },
                 {
                     from: 12,
@@ -201,17 +201,17 @@ export function getData() : any {
                     size: 50,
                     gap: 20,
                     days: [2],
-                    dates: [getDate(0)],
+                    dates: [getDate(0)]
                 },
                 {
                     from: "18:30",
                     to: 20,
                     size: 20,
                     gap: 20,
-                    days: [3, 4, 5],
+                    days: [3, 4, 5]
                 },
             ],
-            usedSlots: [getDate(0, 12), getDate(0, 18)],
+            usedSlots: [getDate(0, 12), getDate(0, 18)]
         },
         // ...
     ];
