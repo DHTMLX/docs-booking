@@ -28,67 +28,53 @@ cardTemplate?: (item: obj) => string;
 
 ### Example
 
-In the example below we create a function that takes the card object and returns HTML for a card (that includes a preview image (card.preview), category (card.category), title (card.title), and price (card.price)). You need to create your own HTML template to be applied to a card. Pass the function into the Booking configuration by assigning the function to the `cardTemplate` property.  
+In the example below we create a function that takes the card object and returns HTML for a card that includes a preview image (card.preview), category (card.category), title (card.title), and price (card.price). You need to create your own HTML template to be applied to a card. Pass the function into the Booking configuration by assigning the function to the `cardTemplate` property.  
 
-~~~jsx {}
-function cardPreviewTemplate({ card }) {
-	return `
-        <div class="custom-preview" data-action="preview-click">
-            <div class="preview-left">
-                <div
-                    style="background-image: url(${card.preview})"
-                    class="card-photo"
-                ></div>
-                <!-- <div class="card-photo-empty" /> -->
-                </div>
+~~~html {}
+<style>
+    .custom-preview {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        gap: 30px;
+    }
 
-                <div class="preview-right">
-                <div class="category">${card.category}</div>
-                <div class="title">${card.title}</div>
-                <div class="price">${card.price}</div>
+    .preview-left {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    // other styles
+</style>
+
+<script>
+    function cardPreviewTemplate({ card }) {
+        return `
+            <div class="custom-preview" data-action="preview-click">
+                <div class="preview-left">
+                    <div
+                        style="background-image: url(${card.preview})"
+                        class="card-photo"
+                    ></div>
+                    <!-- <div class="card-photo-empty" /> -->
+                    </div>
+
+                    <div class="preview-right">
+                    <div class="category">${card.category}</div>
+                    <div class="title">${card.title}</div>
+                    <div class="price">${card.price}</div>
                 </div>
-                </div>
-                `;
-}
+            </div>
+            `;
+    }
 
 const widget = new Booking("#root", {
 	data,
 	cardTemplate: template(card => cardPreviewTemplate(card)),
 });
 // other parameters
-~~~
-
-If you want to modify default styles, add styles to your CSS:
-
-~~~css
-.custom-preview {
-	display: flex;
-	width: 100%;
-	height: 100%;
-	gap: 30px;
-}
-
-.preview-left {
-	width: auto;
-	display: flex;
-	flex-direction: column;
-	gap: 4px;
-}
-
-.preview-right {
-	flex-grow: 1;
-	align-self: center;
-	overflow: hidden;
-	font-family: 'Maven Pro', sans-serif;
-	line-height: var(--wx-line-height-md);
-	position: relative;
-	background-color: rgb(233, 235, 236);
-	color: rgb(75, 74, 74);
-	padding: 20px;
-	border-radius: 10px;
-   	transition: all 1s;
-}
-//other styles
+</script>
 ~~~
 
 TBD!!!

@@ -8,7 +8,7 @@ description: You can learn about renderType in the documentation of the DHTMLX J
 
 ### Description
 
-@short: Optional. Defines a type of rendering cards
+@short: Optional. Defines how types are rendered
 
 The property helps optimize performance when working with a large number of cards. 
 
@@ -20,8 +20,8 @@ renderType?: "default" | "lazy";
 
 ### Parameters
 
-- `default` - renders all cards that should be displayed (set by default)
-- `lazy` - renders only the visual part of cards 
+- `default` - renders all cards loaded to the widget (set by default)
+- `lazy` - renders only visible cards
 
 ### Example
 

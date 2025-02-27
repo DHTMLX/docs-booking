@@ -15,7 +15,9 @@ To load data, add data to the [`data`](/api/config/booking-data) array. See all 
 You can configure what information all cards will display on their left side using the [`cardShape`](/api/config/booking-cardshape) property or the [`cardTemplate`](/api/config/booking-cardtemplate) property, which also allows customizing the appearance of each card's block.
 
 :::info
-Both properties allow you to control which fields to display in a card's left-hand block. But `cardTemplate` also helps tailor the appearance of each card and control how the fields are arranged. If both are applied, `cardTemplate` will override the `cardShape` settings.
+`cardTemplate` helps completely customize the appearance of a card by providing your own custom HTML. It gives full control over the card's layout, design and content.
+`cardShape` allows you only to modify the default template by hiding/showing fields. 
+If both are applied, `cardTemplate` will override the `cardShape` settings.
 :::
 
 On the left side of each card the following data fields are displayed by default:
@@ -71,28 +73,47 @@ Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/6mxd7918
 
 To apply a template to each card (the left-hand block), use the [`cardTemplate`](/api/config/booking-cardtemplate) property. 
 
-First, create a function that takes a card object and returns a string of HTML. In the example, `cardPreviewTemplate` returns HTML for a card that includes a preview image (card.preview), category (card.category), title (card.title), and price (card.price). To add new fields to a card, modify the template string. In the example below, we add `<div class="">` blocks inside the `cardPreviewTemplate` function. 
+First, create a function that takes a card object and returns a string of HTML. To define a template, arrange card item properties into any HTML blocks with custom styles. In the example, `cardPreviewTemplate` returns HTML for a card that includes a preview image (card.preview), category (card.category), title (card.title), and price (card.price). 
 
-~~~jsx {}
-function cardPreviewTemplate({ card }) {
-	return `
-        <div class="custom-preview" data-action="preview-click">
-            <div class="preview-left">
-                <div
-                    style="background-image: url(${card.preview})"
-                    class="card-photo"
-                ></div>
-                <!-- <div class="card-photo-empty" /> -->
+~~~html {}
+<style>
+    .custom-preview {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        gap: 30px;
+    }
+
+    .preview-left {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    // other styles
+</style>
+
+<script>
+    function cardPreviewTemplate({ card }) {
+        return `
+            <div class="custom-preview" data-action="preview-click">
+                <div class="preview-left">
+                    <div
+                        style="background-image: url(${card.preview})"
+                        class="card-photo"
+                    ></div>
+                    <!-- <div class="card-photo-empty" /> -->
+                    </div>
+
+                    <div class="preview-right">
+                    <div class="category">${card.category}</div>
+                    <div class="title">${card.title}</div>
+                    <div class="price">${card.price}</div>
                 </div>
-
-                <div class="preview-right">
-                <div class="category">${card.category}</div>
-                <div class="title">${card.title}</div>
-                <div class="price">${card.price}</div>
             </div>
-        </div>
-        `;
-}
+            `;
+    }
+</script>
 ~~~
 
 Then you need to assign the`cardTemplate` property to your custom template function.
@@ -103,25 +124,6 @@ const widget = new Booking("#root", {
 	cardTemplate: template(card => cardPreviewTemplate(card)),
 });
 // other parameters
-~~~
-
-If you want add some look and feel to your card, you should add styles to your CSS:
-
-~~~css
-.custom-preview {
-    display: flex;
-	width: 100%;
-	height: 100%;
-	gap: 30px;
-}
-
-.preview-left {
-	width: auto;
-	display: flex;
-	flex-direction: column;
-	gap: 4px;
-}
-// other styles
 ~~~
 
 TBD!!!
@@ -428,33 +430,55 @@ new booking.Booking("#root", {
 Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/pd6wp1xc)
 :::
 
-You can also apply a template using the [`infoTemplate`](/config/booking-infotemplate) property that allows managing the fields in the information block of the Booking dialog. Both [`infoTemplate`](/config/booking-infotemplate) and [`infoShape`](/api/config/booking-infoshape) properties allow you to define which fields to display. But `infoTemplate` also helps tailor the appearance of the information block. If both are applied, `infoTemplate` will override the `infoShape` settings.
+To fully customize the appearance and content of a card, apply your own template using the [`infoTemplate`](/config/booking-infotemplate) property (`infoShape` can be used only to hide/show fields provided by the default template). If both properties are applied, `infoTemplate` will override the `infoShape` settings.
 
-To apply a template, first, you need to define the function that will generate the custom HTML for the information block. This function will receive the card and slot objects as input parameters, which are `selectedItem` (card) and `formattedDate` (slot) in the example below. To add more fields, add `<div class="">` blocks inside the `customInfoTemplate` function:
+To apply a template, you need to define the function that will generate the custom HTML for the information block. This function will receive the card and slot objects as input parameters, which are `item` (card object) and `slot` (slot timestamp) as in the example below. You should also define your custom template by arranging card item properties into any HTML blocks with custom styles.
 
-~~~jsx
-function customInfoTemplate({ selectedItem, formattedDate, _ }) {
-    return `
-        <div class="custom-info">
-            ${
-                selectedItem.preview
-                    ? `<div style="background-image: url(${selectedItem.preview})" class="photo"></div>`
-                    : `<div class="photo-empty"></div>`
-            }
+~~~html
+<style>
+	/* custom info */
+	.custom-info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+	}
 
-            <div class="price">
-                <i class="icon wxi-cash"></i>
-                <span>${selectedItem.price}</span>
-            </div>
-            <span class="category">${_(selectedItem.category)}</span>
-            <span class="title">${selectedItem.title}</span>
-            <div class="date" data-action="reset-slot">
-                <i class="icon wxi-calendar"></i>
-                <span>${formattedDate}</span>
-            </div>
-        </div>
-    `;
-}
+	.info-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+		padding: 34px;
+		background: rgba(128, 128, 155, 0.12);
+		border-radius: 8px;
+	}
+// other styles
+</style>
+
+<script>
+    function cardInfoTemplate({
+        item,
+        slot,
+    }) {
+            return `
+                <div class="custom-info">
+                    <div class="info-wrapper">
+                        <div class="photo-wrapper">
+                            ${getPhotoElement(item.preview, "info")}
+                        </div>
+                        <span class="info-title">${item.title}</span>
+                        <span class="info-category">${item.category}</span>
+                        <div class="date" data-action="reset-slot">
+                            <i class="icon wxi-calendar"></i>
+                            <span>${formatDate(slot, { dateFormat, timeFormat })}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+</script>
 ~~~
 
 Then pass the `infoTemplate` function into the Booking configuration as follows:
@@ -462,45 +486,10 @@ Then pass the `infoTemplate` function into the Booking configuration as follows:
 ~~~jsx
 const widget = new Booking("#root", {
     data,
-    infoTemplate: template(selectedItem => customInfoTemplate(selectedItem)),
+    infoTemplate: template(item =>
+	    cardInfoTemplate(item)
+	),
 });
-~~~
-
-Optionally, you can apply custom styles to the information block in your CSS:
-
-~~~css
-.custom-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 20px;
-}
-
-.price {
-    font-weight: bold;
-}
-
-.photo {
-    height: 200px;
-    width: 200px;
-    border-radius: 5px;
-    background-size: cover;
-    background-position: center;
-}
-
-.photo-empty {
-    width: 200px;
-    height: 200px;
-    background-color: #e0e0e0;
-    text-align: center;
-    line-height: 200px;
-}
-
-.date {
-    color: #3a8dff;
-    cursor: pointer;
-}
 ~~~
 
 :::info

@@ -23,37 +23,53 @@ infoTemplate?: (item: obj, slot: obj) => string;
 
 ### Example
 
-In the example below, we define the `customInfoTemplate` function that will generate the custom HTML for the information block. This function will receive the `selectedItem` (card) and the `formattedDate` (slot) as input parameters. The function returns div containers representing the information block for a selected booking item, including an image, price, category, title, and formatted date. We also assign our custom function to `infoTemplate`.
+In the example below, we define the `customInfoTemplate` function that will generate the custom HTML for the information block. This function will receive the `item` (card object) and `slot` (slot timestamp) as input parameters. The function returns div containers representing the information block for a selected booking item, including an image, category, title, and formatted date. We also assign our custom function to `infoTemplate`.
 
-~~~jsx {}
-function customInfoTemplate({ selectedItem, formattedDate, _ }) {
-    return `
-        <div class="custom-info">
-            ${
-                selectedItem.preview
-                    ? `<div style="background-image: url(${selectedItem.preview})" class="photo"></div>`
-                    : `<div class="photo-empty"></div>`
-            }
+~~~html
+<style>
+	/* custom info */
+	.custom-info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+	}
 
-            <div class="price">
-                <i class="icon wxi-cash"></i>
-                <span>${selectedItem.price}</span>
-            </div>
-            <span class="category">${_(selectedItem.category)}</span>
-            <span class="title">${selectedItem.title}</span>
-            <div class="date" data-action="reset-slot">
-                <i class="icon wxi-calendar"></i>
-                <span>${formattedDate}</span>
-            </div>
-        </div>
-    `;
-}
-const widget = new Booking("#root", {
-    data,
-    infoTemplate: template(selectedItem => customInfoTemplate(selectedItem)),
-    // other settings
-});
+	.info-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+		padding: 34px;
+		background: rgba(128, 128, 155, 0.12);
+		border-radius: 8px;
+	}
+// other styles
+</style>
 
+<script>
+    function cardInfoTemplate({
+        item,
+        slot,
+    }) {
+            return `
+                <div class="custom-info">
+                    <div class="info-wrapper">
+                        <div class="photo-wrapper">
+                            ${getPhotoElement(item.preview, "info")}
+                        </div>
+                        <span class="info-title">${item.title}</span>
+                        <span class="info-category">${item.category}</span>
+                        <div class="date" data-action="reset-slot">
+                            <i class="icon wxi-calendar"></i>
+                            <span>${formatDate(slot, { dateFormat, timeFormat })}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+</script>
 ~~~
 
 The snippet below shows how to apply a template to the information block of the Booking dialog: !!!tbd
