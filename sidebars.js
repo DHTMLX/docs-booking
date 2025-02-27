@@ -120,6 +120,7 @@ module.exports = {
 						"api/config/booking-infoshape",
 						"api/config/booking-infotemplate",
 						"api/config/booking-locale",
+						"api/config/booking-rendertype",
 						"api/config/booking-slotgap",
 						"api/config/booking-slotsize",
 						"api/config/booking-start",
