@@ -23,7 +23,7 @@ infoTemplate?: (item: obj, slot: obj) => string;
 
 ### Example
 
-In the example below, we define the `customInfoTemplate` function that will generate the custom HTML for the information block. This function will receive the `item` (card object) and `slot` (slot timestamp) as input parameters. The function returns div containers representing the information block for a selected booking item, including an image, category, title, and formatted date. We also assign our custom function to `infoTemplate`.
+In the example below, we define the `cardInfoTemplate` function that will generate the custom HTML for the information block. This function will receive the `item` (card object) and `slot` (slot timestamp) as input parameters. The function returns div containers representing the information block for a selected booking item, including an image, category, title, and formatted date. We also assign our custom function to `infoTemplate`.
 
 ~~~html
 <style>

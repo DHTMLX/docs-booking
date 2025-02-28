@@ -28,7 +28,7 @@ cardTemplate?: (item: obj) => string;
 
 ### Example
 
-In the example below we create a function that takes the card object and returns HTML for a card that includes a preview image (card.preview), category (card.category), title (card.title), and price (card.price). You need to create your own HTML template to be applied to a card. Pass the function into the Booking configuration by assigning the function to the `cardTemplate` property.  
+In the example below we create a function that takes the `card` object and returns HTML for a card that includes a preview image (card.preview), category (card.category), title (card.title), and price (card.price). You need to create your own HTML template to be applied to a card. Pass the function into the Booking configuration by assigning the function to the `cardTemplate` property.  
 
 ~~~html {}
 <style>

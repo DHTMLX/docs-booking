@@ -430,7 +430,7 @@ new booking.Booking("#root", {
 Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/pd6wp1xc)
 :::
 
-To fully customize the appearance and content of a card, apply your own template using the [`infoTemplate`](/api/config/booking-infotemplate) property (`infoShape` can be used only to hide/show fields provided by the default template). If both properties are applied, `infoTemplate` will override the `infoShape` settings.
+To fully customize the appearance and content of the information block, apply your own template using the [`infoTemplate`](/api/config/booking-infotemplate) property (`infoShape` can be used only to hide/show fields provided by the default template). If both properties are applied, `infoTemplate` will override the `infoShape` settings.
 
 To apply a template, you need to define the function that will generate the custom HTML for the information block. This function will receive the card and slot objects as input parameters, which are `item` (card object) and `slot` (slot timestamp) as in the example below. You should also define your custom template by arranging card item properties into any HTML blocks with custom styles.
 
