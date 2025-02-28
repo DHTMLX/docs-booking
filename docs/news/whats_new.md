@@ -6,6 +6,15 @@ description: SEO data
 
 # What's new
 
+## Version 1.1 
+
+Released on ...
+
+### Features
+
+- Ability to add templates via the [`cardTemplate`](/api/config/booking-cardtemplate) and [`infoTemplate`](/api/config/booking-infotemplate) properties
+- [`renderType`](/api/config/booking-rendertype) added to handle big data loading
+
 ## Version 1.0.1 
 
 Released on November 29, 2024

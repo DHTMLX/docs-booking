@@ -17,6 +17,7 @@ description: You can have properties overview of JavaScript Booking in the docum
 | [](../config/booking-infoshape.md)    | @getshort(../config/booking-infoshape.md)          |
 | [](../config/booking-infotemplate.md) | @getshort(../config/booking-infotemplate.md)       |
 | [](../config/booking-locale.md)       | @getshort(../config/booking-locale.md)             |
+| [](../config/booking-rendertype.md)   | @getshort(../config/booking-rendertype.md)         |
 | [](../config/booking-slotgap.md)      | @getshort(../config/booking-slotgap.md)            |
 | [](../config/booking-slotsize.md)     | @getshort(../config/booking-slotsize.md)           |
 | [](../config/booking-start.md)        | @getshort(../config/booking-start.md)              |

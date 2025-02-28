@@ -8,7 +8,7 @@ description: You can learn about renderType in the documentation of the DHTMLX J
 
 ### Description
 
-@short: Optional. Defines how types are rendered
+@short: Optional. Defines how cards are rendered
 
 The property helps optimize performance when working with a large number of cards. 
 
