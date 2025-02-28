@@ -70,7 +70,7 @@ The snippet below demonstrates how to configure what fields to display on the le
 <iframe src="https://snippet.dhtmlx.com/6mxd7918?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 :::info
-You can also configure the appearance of a card using the [`cardTemplate`](/api/config/booking-cardTemplate) property. If both `cardTemplate` and `cardShape` are applied, `cardTemplate` will override the `cardShape` settings. 
+You can also configure the appearance of a card using the [`cardTemplate`](/api/config/booking-cardtemplate) property. If both `cardTemplate` and `cardShape` are applied, `cardTemplate` will override the `cardShape` settings. 
 :::
 
 **Related articles:** 
