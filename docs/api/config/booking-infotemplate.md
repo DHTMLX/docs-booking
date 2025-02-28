@@ -13,12 +13,12 @@ description: You can learn about the infoTemplate config in the documentation of
 ### Usage
 
 ~~~jsx {}
-infoTemplate?: (item: obj, slot: obj) => string;
+infoTemplate?: ({item: obj, slot: number}) => string;
 ~~~
 
 ### Parameters
 
-`infoTemplate` takes the `card` item object and selected `slot` object as input and returns a string of HTML.
+`infoTemplate` takes the `card` item object and selected `slot` timestamp as input and returns a string of HTML.
 
 
 ### Example
@@ -27,7 +27,6 @@ In the example below, we define the `cardInfoTemplate` function that will genera
 
 ~~~html
 <style>
-	/* custom info */
 	.custom-info {
 		display: flex;
 		flex-direction: column;
@@ -45,10 +44,12 @@ In the example below, we define the `cardInfoTemplate` function that will genera
 		background: rgba(128, 128, 155, 0.12);
 		border-radius: 8px;
 	}
-// other styles
+    /* other styles */
 </style>
 
 <script>
+    const { Booking, template } = booking; // import template helper
+
     function cardInfoTemplate({
         item,
         slot,
@@ -69,6 +70,11 @@ In the example below, we define the `cardInfoTemplate` function that will genera
                 </div>
             `;
         }
+
+    const widget = new Booking("#root", {
+	    data,
+	    infoTemplate: template(item => cardInfoTemplate(item)), // pass the function to the widget configuration
+    });
 </script>
 ~~~
 

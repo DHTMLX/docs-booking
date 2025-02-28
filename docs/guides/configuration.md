@@ -90,10 +90,12 @@ First, create a function that takes a card object and returns a string of HTML. 
         flex-direction: column;
         gap: 4px;
     }
-    // other styles
+    /* other styles */
 </style>
 
 <script>
+    const { Booking, template } = booking;
+
     function cardPreviewTemplate({ card }) {
         return `
             <div class="custom-preview" data-action="preview-click">
@@ -116,9 +118,11 @@ First, create a function that takes a card object and returns a string of HTML. 
 </script>
 ~~~
 
-Then you need to assign the`cardTemplate` property to your custom template function.
+Then you also need to import the template helper and assign the`cardTemplate` property to your custom template function.
 
 ~~~jsx
+const { Booking, template } = booking;
+
 const widget = new Booking("#root", {
 	data,
 	cardTemplate: template(card => cardPreviewTemplate(card)),
@@ -436,7 +440,6 @@ To apply a template, you need to define the function that will generate the cust
 
 ~~~html
 <style>
-	/* custom info */
 	.custom-info {
 		display: flex;
 		flex-direction: column;
@@ -454,10 +457,12 @@ To apply a template, you need to define the function that will generate the cust
 		background: rgba(128, 128, 155, 0.12);
 		border-radius: 8px;
 	}
-// other styles
+    /* other styles */
 </style>
 
 <script>
+    const { Booking, template } = booking;
+
     function cardInfoTemplate({
         item,
         slot,
@@ -481,14 +486,14 @@ To apply a template, you need to define the function that will generate the cust
 </script>
 ~~~
 
-Then pass the `infoTemplate` function into the Booking configuration as follows:
+Then you also need to import the template helper and pass the `infoTemplate` function into the Booking configuration as follows:
 
 ~~~jsx
+const { Booking, template } = booking;
+
 const widget = new Booking("#root", {
     data,
-    infoTemplate: template(item =>
-	    cardInfoTemplate(item)
-	),
+    infoTemplate: template(item => cardInfoTemplate(item)),
 });
 ~~~
 

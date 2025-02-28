@@ -19,7 +19,7 @@ You can also specify which fields to display using the [`cardShape`](/api/config
 ### Usage
 
 ~~~jsx {}
-cardTemplate?: (item: obj) => string;
+cardTemplate?: ({item: obj}) => string;
 ~~~
 
 ### Parameters
@@ -45,10 +45,12 @@ In the example below we create a function that takes the `card` object and retur
         flex-direction: column;
         gap: 4px;
     }
-    // other styles
+    /* other styles */
 </style>
 
 <script>
+    const { Booking, template } = booking; //import template helper
+
     function cardPreviewTemplate({ card }) {
         return `
             <div class="custom-preview" data-action="preview-click">
@@ -69,11 +71,11 @@ In the example below we create a function that takes the `card` object and retur
             `;
     }
 
-const widget = new Booking("#root", {
-	data,
-	cardTemplate: template(card => cardPreviewTemplate(card)),
-});
-// other parameters
+    const widget = new Booking("#root", {
+	    data,
+	    cardTemplate: template(card => cardPreviewTemplate(card)), // pass the function to Booking configuration
+    });
+    // other parameters
 </script>
 ~~~
 
