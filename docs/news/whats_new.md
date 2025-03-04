@@ -10,10 +10,10 @@ description: SEO data
 
 Released on ...
 
-### Features
+### New functionality
 
+- Lazy rendering of cards via the [`renderType`](/api/config/booking-rendertype) property
 - Ability to embed templates via the [`cardTemplate`](/api/config/booking-cardtemplate) and [`infoTemplate`](/api/config/booking-infotemplate) properties
-- [`renderType`](/api/config/booking-rendertype) added to handle big data loading
 
 ## Version 1.0.1 
 
