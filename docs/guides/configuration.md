@@ -10,7 +10,7 @@ description: You can learn about the configuration in the documentation of the D
 
 To load data, add data to the [`data`](/api/config/booking-data) array. See all instructions here: [`Loading data`](/guides/loading-data).
 
-## Defining the structure of cards
+## Defining the structure of cards 
 
 You can configure what information all cards will display on their left side using the [`cardShape`](/api/config/booking-cardshape) property or the [`cardTemplate`](/api/config/booking-cardtemplate) property, which also allows customizing the appearance of each card's block.
 
@@ -130,9 +130,8 @@ const widget = new Booking("#root", {
 });
 ~~~
 
-TBD!!!
 :::info
-Please, see an example in the [snippet tool](https://snippet.dhtmlx.com)
+Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/k2v01vng)
 :::
 
 ## Filling cards with slots
@@ -499,7 +498,7 @@ const widget = new Booking("#root", {
 ~~~
 
 :::info
-Please, see an example in the [snippet tool](https://snippet.dhtmlx.com) !!!!TBD
+Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/byb94ipu) 
 :::
 
 

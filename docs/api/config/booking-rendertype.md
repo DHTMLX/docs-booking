@@ -33,5 +33,6 @@ new booking.Booking("#root", {
 });
 ~~~
 
-TBD!!!
-<iframe src="https://snippet.dhtmlx.com/?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+The snippet below shows how to handle rendering large data sets: 
+
+<iframe src="https://snippet.dhtmlx.com/fb9a5a3b?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

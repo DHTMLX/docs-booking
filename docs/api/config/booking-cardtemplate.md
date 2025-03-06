@@ -79,10 +79,10 @@ In the example below we create a function that takes the `card` object and retur
 </script>
 ~~~
 
-TBD!!!
-The snippet below demonstrates how to apply a template to a card:
 
-<iframe src="https://snippet.dhtmlx.com" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+The snippet below demonstrates how to apply a template to the left block of a card:
+
+<iframe src="https://snippet.dhtmlx.com/k2v01vng" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 **Related articles:** 
 
