@@ -62,3 +62,12 @@ new booking.Booking("#root", {
 The snippet below shows how to configure what to display on the left side of the Booking dialog:
 
 <iframe src="https://snippet.dhtmlx.com/pd6wp1xc?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+
+:::info
+You can also control which fields to display in the information block of the Booking dialog using the [`infoTemplate`](/api/config/booking-infotemplate) property. But if both properties are applied, `infoTemplate` will override the `infoShape` settings.
+:::
+
+**Related articles:** 
+
+- [Configuring the Booking dialog](/guides/configuration/#configuring-the-booking-dialog)
+- [`infoTemplate`](/api/config/booking-infotemplate)

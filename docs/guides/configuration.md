@@ -10,11 +10,17 @@ description: You can learn about the configuration in the documentation of the D
 
 To load data, add data to the [`data`](/api/config/booking-data) array. See all instructions here: [`Loading data`](/guides/loading-data).
 
-## Defining the structure of cards
+## Defining the structure of cards 
 
-You can configure what information all cards will display on their left side using the [`cardShape`](/api/config/booking-cardshape) property.
+You can configure what information all cards will display on their left side using the [`cardShape`](/api/config/booking-cardshape) property or the [`cardTemplate`](/api/config/booking-cardtemplate) property, which also allows customizing the appearance of each card's block.
 
-On the left side of a card the following data fields are displayed by default:
+:::info
+`cardTemplate` helps completely customize the appearance of a card by providing your own custom HTML. It gives full control over the card's layout, design and content.
+`cardShape` allows you only to modify the default template by hiding/showing fields. 
+If both are applied, `cardTemplate` will override the `cardShape` settings.
+:::
+
+On the left side of each card the following data fields are displayed by default:
 - preview: card image
 - review: rating information with the number of rating stars (out of five) and the number of reviews
 - category: the subtitle of a card
@@ -63,6 +69,69 @@ new booking.Booking("#root", {
 
 :::info
 Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/6mxd7918)
+:::
+
+To apply a template to each card (the left-hand block), use the [`cardTemplate`](/api/config/booking-cardtemplate) property. 
+
+First, create a function that takes a card object and returns a string of HTML. To define a template, arrange card item properties into any HTML blocks with custom styles. In the example, `cardPreviewTemplate` returns HTML for a card that includes a preview image (card.preview), category (card.category), title (card.title), and price (card.price). 
+
+~~~html {}
+<style>
+    .custom-preview {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        gap: 30px;
+    }
+
+    .preview-left {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    /* other styles */
+</style>
+
+<script>
+    const { Booking, template } = booking;
+
+    function cardPreviewTemplate({ card }) {
+        return `
+            <div class="custom-preview" data-action="preview-click">
+                <div class="preview-left">
+                    <div
+                        style="background-image: url(${card.preview})"
+                        class="card-photo"
+                    ></div>
+                    <!-- <div class="card-photo-empty" /> -->
+                    </div>
+
+                    <div class="preview-right">
+                    <div class="category">${card.category}</div>
+                    <div class="title">${card.title}</div>
+                    <div class="price">${card.price}</div>
+                </div>
+            </div>
+            `;
+    }
+</script>
+~~~
+
+Then you also need to import the **template** helper and assign the`cardTemplate` property to your custom template function.
+
+~~~jsx
+const { Booking, template } = booking;
+
+const widget = new Booking("#root", {
+	data,
+	cardTemplate: template(card => cardPreviewTemplate(card)),
+    // other parameters
+});
+~~~
+
+:::info
+Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/k2v01vng)
 :::
 
 ## Filling cards with slots
@@ -363,6 +432,75 @@ new booking.Booking("#root", {
 :::info
 Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/pd6wp1xc)
 :::
+
+To fully customize the appearance and content of the information block, apply your own template using the [`infoTemplate`](/api/config/booking-infotemplate) property (`infoShape` can be used only to hide/show fields provided by the default template). If both properties are applied, `infoTemplate` will override the `infoShape` settings.
+
+To apply a template, you need to define the function that will generate the custom HTML for the information block. This function will receive the card and slot objects as input parameters, which are `item` (card object) and `slot` (slot timestamp) as in the example below. You should also define your custom template by arranging card item properties into any HTML blocks with custom styles.
+
+~~~html
+<style>
+	.custom-info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+	}
+
+	.info-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+		padding: 34px;
+		background: rgba(128, 128, 155, 0.12);
+		border-radius: 8px;
+	}
+    /* other styles */
+</style>
+
+<script>
+    const { Booking, template } = booking;
+
+    function cardInfoTemplate({
+        item,
+        slot,
+    }) {
+            return `
+                <div class="custom-info">
+                    <div class="info-wrapper">
+                        <div class="photo-wrapper">
+                            ${getPhotoElement(item.preview, "info")}
+                        </div>
+                        <span class="info-title">${item.title}</span>
+                        <span class="info-category">${item.category}</span>
+                        <div class="date" data-action="reset-slot">
+                            <i class="icon wxi-calendar"></i>
+                            <span>${formatDate(slot, { dateFormat, timeFormat })}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+</script>
+~~~
+
+Then you also need to import the **template** helper and pass the `infoTemplate` function into the Booking configuration as follows:
+
+~~~jsx
+const { Booking, template } = booking;
+
+const widget = new Booking("#root", {
+    data,
+    infoTemplate: template(item => cardInfoTemplate(item)),
+    // other parameters
+});
+~~~
+
+:::info
+Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/byb94ipu) 
+:::
+
 
 ## Configuring the filter
 

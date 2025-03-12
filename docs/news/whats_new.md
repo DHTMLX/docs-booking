@@ -6,6 +6,15 @@ description: SEO data
 
 # What's new
 
+## Version 1.1 
+
+Released on March 12, 2025
+
+### New functionality
+
+- Lazy rendering of cards via the [`renderType`](/api/config/booking-rendertype) property
+- Ability to embed templates via the [`cardTemplate`](/api/config/booking-cardtemplate) and [`infoTemplate`](/api/config/booking-infotemplate) properties
+
 ## Version 1.0.1 
 
 Released on November 29, 2024

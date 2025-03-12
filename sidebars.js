@@ -31,12 +31,12 @@ module.exports = {
 					link: {
 							type: "doc",
 							id: "api/overview/booking-methods-overview"
-						},
+					},
 			     	items: [
 						"api/methods/booking-serialize-method",
 						"api/methods/booking-setconfig-method",
 						"api/methods/booking-setconfirmhandler-method",
-						"api/methods/booking-setlocale-method",
+						"api/methods/booking-setlocale-method"
 					]
 				},
 				// Booking internal methods
@@ -61,7 +61,7 @@ module.exports = {
 								"api/internal/booking-exec",
 								"api/internal/booking-intercept",
 								"api/internal/booking-on",
-								"api/internal/booking-setnext",
+								"api/internal/booking-setnext"
 							]
 						},
 						{
@@ -76,9 +76,9 @@ module.exports = {
 							items: [
 								// "api/internal/booking_innermethodname_method",
 								"api/internal/booking-getreactivestate",
-								"api/internal/booking-getstate",
+								"api/internal/booking-getstate"
 							]
-						},
+						}
 					]
 				},
 				{
@@ -97,7 +97,7 @@ module.exports = {
 						"api/events/booking-filterdata-event",
 						"api/events/booking-selectslot-event",
 						"api/events/booking-selectitem-event",
-						"api/events/booking-selectitemdate-event",
+						"api/events/booking-selectitemdate-event"
 					]
 				},
 				{
@@ -112,19 +112,42 @@ module.exports = {
 					items: [
 						// Booking properties
 						"api/config/booking-cardshape",
+						"api/config/booking-cardtemplate",
 						"api/config/booking-data",
 						"api/config/booking-end",
 						"api/config/booking-filtershape",
 						"api/config/booking-formshape",
 						"api/config/booking-infoshape",
+						"api/config/booking-infotemplate",
 						"api/config/booking-locale",
+						"api/config/booking-rendertype",
 						"api/config/booking-slotgap",
 						"api/config/booking-slotsize",
-						"api/config/booking-start",
+						"api/config/booking-start"
 					]
 				}
 			]
 		},
+		//start Backend and frameworks integration
+        {
+            type: "category",
+            label: "Backend and frameworks integration",
+            link: {
+                type: 'generated-index',
+                title: "Backend and frameworks integration",
+                keywords: ['backend and frameworks integration'],
+                image: '/img/docusaurus.png'
+            },
+            items: [
+				"guides/saving-reservations",
+                "guides/integration-with-angular",
+                "guides/integration-with-react",
+                "guides/integration-with-vue",
+                "guides/integration-with-svelte",
+				"guides/integration-with-widgets",
+            ]
+        },
+        // end Backend and frameworks integration
 		{
 			type: "category",
 			label: "Guides",
@@ -134,16 +157,15 @@ module.exports = {
 				type: 'generated-index',
 				title: 'Guides',
 				keywords: ['guides'],
-				image: '/img/docusaurus.png',
+				image: '/img/docusaurus.png'
 			},
 			items: [
 				"guides/initialization",
 				"guides/loading-data",
 				"guides/configuration",
 				"guides/localization",				
-				"guides/saving-reservations",
-				"guides/styling",
-			],
-		},
+				"guides/styling"
+			]
+		}
 	]
 };
