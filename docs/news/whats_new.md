@@ -8,7 +8,7 @@ description: SEO data
 
 ## Version 1.1 
 
-Released on ...
+Released on March 12, 2025
 
 ### New functionality
 

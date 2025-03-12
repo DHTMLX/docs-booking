@@ -143,7 +143,8 @@ module.exports = {
                 "guides/integration-with-angular",
                 "guides/integration-with-react",
                 "guides/integration-with-vue",
-                "guides/integration-with-svelte"
+                "guides/integration-with-svelte",
+				"guides/integration-with-widgets",
             ]
         },
         // end Backend and frameworks integration
