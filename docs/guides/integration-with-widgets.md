@@ -8,7 +8,7 @@ description: You can learn about the integration with DHTMLX widgets in the docu
 
 You can integrate DHTMLX Booking with such DHTMLX widgets as [Scheduler](https://docs.dhtmlx.com/scheduler/). Check the example below and refer to [backend](https://github.com/DHTMLX/event-calendar-booking-go). 
 
-<iframe src="https://snippet.dhtmlx.com/d5zbq3g3?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="1200"></iframe>
+<iframe src="https://snippet.dhtmlx.com/d5zbq3g3?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="800"></iframe>
 
 
  
