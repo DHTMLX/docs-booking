@@ -1,7 +1,7 @@
 ---
 sidebar_label: What's new
-title: SEO data
-description: SEO data
+title: What's New
+description: You can explore what's new in DHTMLX Booking and its release history in the documentation of the DHTMLX JavaScript UI library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Booking.
 ---
 
 # What's new
