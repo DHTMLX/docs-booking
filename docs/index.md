@@ -41,7 +41,7 @@ To open the view of a single card, click inside the left area of a card. The sin
 
 ### Booking dialog
 
-The booking dialog allows booking a slot of the selected card:
+The booking dialog allows booking a slot of the selected card. To open it, click the time slot button. 
 
 ![booking](assets/bookingd.png)
 
@@ -59,7 +59,7 @@ It's possible to configure the filter settings via API: [Configuring the filter]
 
 ## Making an appointment
 
-To schedule an appointment, click a slot for the required card, and in the **Booking** dialog, fill in the fields, and then click **Make an appointment**.
+To schedule an appointment, click the time slot button for the required card, and in the **Booking** dialog, fill in the fields, and then click **Make an appointment**.
 
 You can also make an appointment via the single card view:
 

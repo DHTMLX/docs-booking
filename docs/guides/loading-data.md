@@ -167,4 +167,5 @@ About loading data from the server, refer to [Working with server](/guides/savin
 - [confirm-slot](/api/events/booking-confirmslot-event) event
 - [setConfig()](/api/methods/booking-setconfig-method) method
 - [setConfirmHandler()](/api/methods/booking-setconfirmhandler-method) method
+- [renderType](/api/config/booking-rendertype) property
 - [Saving slots reservations to the server](/guides/saving-reservations)
