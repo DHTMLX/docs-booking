@@ -32,7 +32,7 @@ So what you actually need is to generate booking slots from the schedule (the [s
 
 ## Main steps for integration and rules for generating events
 
-We will show how how to generate booking slots from the doctor's schedule using JSON data. 
+We will show how to generate booking slots from the doctor's schedule using JSON data. 
 
 **Step 1. Retrieve the doctor's schedule data (e.g., /doctors/worktime), which may contain both recurring and single events.**
 
