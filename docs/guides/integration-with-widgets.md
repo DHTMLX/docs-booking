@@ -19,52 +19,39 @@ The integration primarily focuses on converting the Scheduler data into Booking 
 So what you actually need is to generate booking slots from the schedule (the [snippet below](#example) shows how to generate booking slots from the doctor's schedule using JSON data).
 
 - **Recurring events limitation:**
-    - Booking supports only weekly recurring events (defined as INTERVAL=1;FREQ=WEEKLY in the Scheduler).
-    - Scheduler can handle any recurring pattern
+    - Booking supports only weekly recurring events (defined as INTERVAL=1;FREQ=WEEKLY in Scheduler).
+    - Scheduler can handle any recurring pattern so you will need to limit creating other recurring events in Scheduler config
 
 - **Timezone handling:**
     - Booking interprets timestamps in the local timezone.
-    - You need to convert timestamps between global and local timezones before sending them to Booking (and vice versa).
+    - If you use global timestamps, you need to convert them to local timezones before sending them to Booking (and vice versa before saving the data back).
+For conversion instructions, refer to [Working with UTC data](/guides/configuration/saving-reservations/#working-with-utc-data). 
 
-- **Slot creation strategy:**
-    - Use the `slots` and `usedSlots` properties to build the schedule, ensuring that used slots are excluded.
+- **Booking slot strategies:**
+    - Use `slots` and `usedSlots` to build the schedule, ensuring that used slots are excluded (we'll focus on this strategy)
+    - Use only `availableSlots`, which is suitable for events without recurrences.
+
+## Example 
+
+The snippet below demonstrates how to integrate Booking with the Scheduler widget by converting doctors' schedules into booking slots. Key data endpoints used for integration:
+
+- `/doctors/worktime` - Scheduler data (doctor schedules) that includes recurring and single-time events. These events are used to create time slots for the Booking system.
+- `/units` - final Booking slots generated from the Scheduler `worktime` data. The slots are generated on the server-side. Please, also refer to [backend](https://github.com/DHTMLX/scheduler-booking-go).  
+- `/doctors/reservations` - an auxiliary collection used to visualize `usedSlots` in the timeline view. This data comes from the Booking form, containing information about already reserved slots for doctors.
+- `/doctors` - contains all doctors, including their names and IDs. It is used for displaying doctor information in both the Scheduler and Booking widgets.
+
+Converting Scheduler events to Booking slots is the major part of integration and the rules for handling the events and converting them to slots are described in the [section below](#rules-for-converting-scheduler-events-to-booking-slots). 
+
+We also ensure that the timestamps are converted correctly. When global (UTC) timestamps are used, they need to be converted to local time before loading them into the system (**l2g** function in the example). Similarly, before saving the data back, the timestamps should be converted from local time to global (UTC) time (**g2l** function in the example).
+
+<iframe src="https://snippet.dhtmlx.com/d5zbq3g3?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="800"></iframe>
 
 
-## Main steps for integration and rules for generating events
+## Rules for converting Scheduler events to Booking slots
 
 We will show how to generate booking slots from the doctor's schedule using JSON data. 
 
-**Step 1. Retrieve the doctor's schedule data (e.g., /doctors/worktime), which may contain both recurring and single events.**
-
-Scheduler data example:
-
-~~~json
-[
-  {
-    "doctor_id": 1,
-    "start_date": "2025-03-18 02:00:00",
-    "end_date": "2025-03-18 06:00:00"
-  },
-  {
-    "doctor_id": 1,
-    "start_date": "2025-03-13 09:00:00",
-    "end_date": "9999-02-01 00:00:00",
-    "rrule": "INTERVAL=1;FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR",
-    "duration": 28800
-  },
-  {
-    "doctor_id": 2,
-    "start_date": "2025-03-13 20:00:00",
-    "end_date": "9999-02-01 00:00:00",
-    "rrule": "INTERVAL=1;FREQ=WEEKLY;BYDAY=SA",
-    "duration": 28800
-  }
-]
-~~~
-
-**Step 2. Convert Scheduler events to Booking slots following the next rules.**
-
-**Rule 1:** Single event slot creation. 
+**Rule 1. Single event slot creation.**
 
 For each single event in the schedule, convert the start and end times to Booking slots by creating an entry in the slots array, including the corresponding date (dates).
 
@@ -97,7 +84,7 @@ Booking slot:
 }
 ~~~
 
-**Rule 2:** Recurring events. 
+**Rule 2. Recurring events.** 
 
 For recurring events, we use a weekly pattern. The start and end dates must be the same for each occurrence, as Booking only supports weekly recurring slots.
 
@@ -130,7 +117,7 @@ Booking Slots: In Booking, the weekly schedule is represented as a single rule, 
 }
 ~~~
 
-**Rule 3:** Scheduling an event that spans multiple days.
+**Rule 3. Scheduling an event that spans multiple days.**
 
 If an event spans across multiple days (e.g., starts at 8 PM and ends at 4 AM), it should be split into two slots — one for each day.
 
@@ -170,7 +157,7 @@ Booking slot:
 }
 ~~~
 
-**Rule 4:** Additional single events added to recurring events.
+**Rule 4. Additional single events added to recurring events.**
 
 In this case, a single event is added to a recurring schedule. The Booking slots are generated for both the recurring and the single events. The single event dates are added to the recurring event's dates array. 
 
@@ -237,7 +224,7 @@ Booking slots:
 }
 ~~~
 
-**Rule 5:** Modifying a single instance of an recurring event.
+**Rule 5. Modifying a single instance of an recurring event.**
 
 If a single instance of a recurring event is edited (e.g., time change for a specific date), generate a new slot with the updated time and date in the dates array, overriding the days array.
 
@@ -286,7 +273,7 @@ Booking slot:
 }
 ~~~
 
-**Rule 6:** Deleting a single instance of a recurring event
+**Rule 6. Deleting a single instance of a recurring event.**
 
 When a single occurrence is removed from a recurring event in Scheduler, we need to update Booking rules to reflect this removal. This is done by creating a special rule for the removed date, using an empty time interval and the dates property (which has higher priority than days).
 
@@ -329,7 +316,7 @@ Booking slot:
 }
 ~~~
 
-**Rule 7:** Events starting later than Booking start date
+**Rule 7. Events starting later than Booking start date.**
 
 If a recurring event starts after the Booking start date (default is today), create rules with empty time intervals for the dates prior to the event's start date. This simulates the dates being "removed" from the recurrence.
 
@@ -360,16 +347,10 @@ Booking slots:
 }
 ~~~
 
-**Step 3. Timezone Conversion**
-
-Ensure that the timestamps are converted from global time to the local time of the user's timezone before sending them to Booking. This ensures correct slot display in the Booking widget.
 
 
-## Example 
 
-The snippet below demonstrates how to convert doctor schedules into booking slots. The doctors' schedules that include recurring and single-time events are fetched from the Scheduler widget via the `/doctors/worktime` URL, while the final booking slots generated from the scheduler data are provided by the `/units` URL. The slots are generated on the server-side. Please, also refer to [backend](https://github.com/DHTMLX/scheduler-booking-go).
 
-<iframe src="https://snippet.dhtmlx.com/d5zbq3g3?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="800"></iframe>
 
 
 
