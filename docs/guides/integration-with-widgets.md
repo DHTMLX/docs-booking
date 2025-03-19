@@ -16,7 +16,7 @@ The integration primarily focuses on converting the Scheduler data into Booking 
     - Scheduler handles events (e.g., single or recurring).
     - Booking generates available time slots from those events.
 
-So what you actually need is to generate booking slots from the schedule (the [snippet below](#example) shows how to generate booking slots from the doctor's schedule using JSON data).
+So what you actually need is to generate booking slots from the schedule (the [snippet below](#example) shows how to generate booking slots from the doctor's schedule by converting JSON data on server-side).
 
 - **Recurring events limitation:**
     - Booking supports only weekly recurring events (defined as INTERVAL=1;FREQ=WEEKLY in Scheduler).
@@ -42,14 +42,12 @@ The snippet below demonstrates how to integrate Booking with the Scheduler widge
 
 Converting Scheduler events to Booking slots is the major part of integration and the rules for handling the events and converting them to slots are described in the [section below](#rules-for-converting-scheduler-events-to-booking-slots). 
 
-We also ensure that the timestamps are converted correctly. When global (UTC) timestamps are used, they need to be converted to local time before loading them into the system (**l2g** function in the example). Similarly, before saving the data back, the timestamps should be converted from local time to global (UTC) time (**g2l** function in the example).
 
 <iframe src="https://snippet.dhtmlx.com/d5zbq3g3?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="800"></iframe>
 
-
 ## Rules for converting Scheduler events to Booking slots
 
-We will show how to generate booking slots from the doctor's schedule using JSON data. 
+We will show how to generate booking slots from the doctor's schedule using JSON data. Data is converted on the server-side. The schedule for the next period is considered: from 2025-03-13 to 2027-03-13
 
 **Rule 1. Single event slot creation.**
 
@@ -86,7 +84,7 @@ Booking slot:
 
 **Rule 2. Recurring events.** 
 
-For recurring events, we use a weekly pattern. The start and end dates must be the same for each occurrence, as Booking only supports weekly recurring slots.
+For recurring events, we use a weekly pattern. The start date and end date of each recurring event in Scheduler should be equal to Booking [start](/api/config/booking-start) and [end](/api/config/booking-end) dates, otherwise create placeholders for dates before and after the recurring event (see Rule 7).
 
 Scheduler event (weekly on weekdays): the recurrence rule (rrule) specifies that the event repeats weekly on Monday, Tuesday, Wednesday, Thursday, and Friday.
 
@@ -94,13 +92,13 @@ Scheduler event (weekly on weekdays): the recurrence rule (rrule) specifies that
 {
    "doctor_id": 1,
    "start_date": "2025-03-13 09:00:00",
-   "end_date": "9999-02-01 00:00:00",
+   "end_date": "2027-03-13 00:00:00",
    "rrule": "INTERVAL=1;FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR",
    "duration": 28800
 }
 ~~~
 
-Booking Slots: In Booking, the weekly schedule is represented as a single rule, with the same start and end times for all repeated events:
+Booking slots: In Booking, the weekly schedule is represented as a single rule, with the same start and end times for all recurring events:
 
 ~~~json
 {
@@ -129,7 +127,7 @@ Scheduler event:
 {
    "doctor_id": 2,
    "start_date": "2025-03-13 20:00:00",
-   "end_date": "9999-02-01 00:00:00",
+   "end_date": "2027-03-13 00:00:00",
    "rrule": "INTERVAL=1;FREQ=WEEKLY;BYDAY=SA",
    "duration": 28800
 }
@@ -163,8 +161,8 @@ In this case, a single event is added to a recurring schedule. The Booking slots
 
 Scheduler events:
 
-- Repeating event: Doctor’s availability from 9:00 AM to 5:00 PM on weekdays.
-- Single event: Doctor is also available from 2:00 AM to 6:00 AM on March 18th and 19th.
+- Recurring event: a doctor’s availability from 9:00 AM to 5:00 PM on weekdays.
+- Single event: a doctor is also available from 2:00 AM to 6:00 AM on March 18th and 19th.
 
 ~~~json
 [
@@ -172,7 +170,7 @@ Scheduler events:
    {
      "doctor_id": 1,
      "start_date": "2025-03-13 09:00:00",
-     "end_date": "9999-02-01 00:00:00",
+     "end_date": "2027-03-13 00:00:00",
      "rrule": "INTERVAL=1;FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR",
      "duration": 28800
    },
@@ -193,9 +191,8 @@ Scheduler events:
 
 Booking slots:
 
-- Merging events: The repeating event and single events are combined into one Booking rule.
-- If the single event has priority, its specific dates (March 18th and 19th) are added to the repeating event's rule.
-- If the single event needs to override the repeating one, it must not be added to the repeating event’s dates.
+- Merging events: the recurring event and single events are combined into one Booking rule.
+- If a single event has priority, its specific dates (March 18th and 19th) are added to the recurring event's rule. Please, refer to [Defining the slot rules](/guides/configuration/#defining-slot-rules)
 
 ~~~json
 {
@@ -235,7 +232,7 @@ Scheduler event:
    {
      "doctor_id": 1,
      "start_date": "2025-03-13 09:00:00",
-     "end_date": "9999-02-01 00:00:00",
+     "end_date": "2027-03-13 00:00:00",
      "rrule": "INTERVAL=1;FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR",
      "duration": 28800
    },
@@ -284,7 +281,7 @@ Scheduler event:
    {
      "doctor_id": 5,
      "start_date": "2025-03-14 09:00:00",
-     "end_date": "9999-02-01 00:00:00",
+     "end_date": "2027-03-13 00:00:00",
      "rrule": "INTERVAL=1;FREQ=WEEKLY;BYDAY=TH,FR,SA,SU",
      "duration": 28800
    },
@@ -318,7 +315,7 @@ Booking slot:
 
 **Rule 7. Events starting later than Booking start date.**
 
-If a recurring event starts after the Booking start date (default is today), create rules with empty time intervals for the dates prior to the event's start date. This simulates the dates being "removed" from the recurrence.
+If a recurring event starts after the Booking start date (default is today and in the example it's 2025-03-14), create rules with empty time intervals for the dates prior to the event's start date. This simulates the dates being "removed" from the recurrence.
 
 Scheduler event:
 
@@ -326,7 +323,7 @@ Scheduler event:
 {
     "id": "ffbe7628-25f4-4cbe-9127-3bc779d6bafa",
     "start_date": "2025-03-17 09:00:00",
-    "end_date": "9999-02-01 00:00:00",
+    "end_date": "2027-03-13 00:00:00",
     "rrule": "INTERVAL=1;FREQ=WEEKLY;BYDAY=SU,MO,TU,WE,TH,FR,SA",
     "duration": 28800
 }
@@ -335,6 +332,7 @@ Scheduler event:
 Booking slots:
 
 ~~~json
+// the start date is March 14, 2025
 {
     "slots": [
         { "from": "09:00", "to": "17:00", "days": [0, 1, 2, 3, 4, 5, 6] },
