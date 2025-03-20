@@ -221,7 +221,7 @@ Booking slots:
 }
 ~~~
 
-**Rule 5. Modifying a single instance of an recurring event.**
+**Rule 5. Modifying a single instance of a recurring event.**
 
 If a single instance of a recurring event is edited (e.g., time change for a specific date), generate a new slot with the updated time and date in the dates array, overriding the days array.
 
