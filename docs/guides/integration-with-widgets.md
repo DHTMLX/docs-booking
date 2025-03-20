@@ -133,7 +133,7 @@ Scheduler event:
 }
 ~~~
 
-Booking slot:
+Booking slots:
 
 ~~~json
 {
@@ -246,7 +246,7 @@ Scheduler event:
 ]
 ~~~
 
-Booking slot:
+Booking slots:
 
 ~~~json
 {
@@ -274,7 +274,7 @@ Booking slot:
 
 When a single occurrence is removed from a recurring event in Scheduler, we need to update Booking rules to reflect this removal. This is done by creating a special rule for the removed date, using an empty time interval and the dates property (which has higher priority than days).
 
-Scheduler event:
+Scheduler events:
 
 ~~~json
 [
@@ -296,20 +296,27 @@ Scheduler event:
 ]
 ~~~
 
-Booking slot:
+Booking slots:
 
 ~~~json
 {
-   "from": "09:00",
-   "to": "17:00",
-   "days": [4, 5, 6, 0] // Thursday to Sunday
-},
-{
-   "from": "00:00",
-   "to": "00:00",
-   "dates": [
-     1742688000000 // 2025-03-23 00:00:00 (deleted occurrence)
-   ]
+    "id": 5,
+    "slotSize":60,
+    "slotGap":10,
+    "slots":[
+        {
+            "from": "09:00",
+            "to": "17:00",
+            "days": [4, 5, 6, 0] // Thursday to Sunday
+        },
+        {
+            "from": "00:00",
+            "to": "00:00",
+            "dates": [
+                1742688000000 // 2025-03-23 00:00:00 (deleted occurrence)
+            ]
+        }
+    ]
 }
 ~~~
 
@@ -321,7 +328,7 @@ Scheduler event:
 
 ~~~json
 {
-    "id": "ffbe7628-25f4-4cbe-9127-3bc779d6bafa",
+    "doctor_id": 5,
     "start_date": "2025-03-17 09:00:00",
     "end_date": "2027-03-13 00:00:00",
     "rrule": "INTERVAL=1;FREQ=WEEKLY;BYDAY=SU,MO,TU,WE,TH,FR,SA",
@@ -333,6 +340,9 @@ Booking slots:
 
 ~~~json
 {
+    "id": 5,
+    "slotSize":60,
+    "slotGap":10,
     "slots": [
         { "from": "09:00", "to": "17:00", "days": [0, 1, 2, 3, 4, 5, 6] },
         { "from": "00:00", "to": "00:00", "dates": [
