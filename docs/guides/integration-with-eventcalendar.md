@@ -135,8 +135,8 @@ Event Calendar event:
   "end_date": "2025-03-14T04:00:00Z",
   "recurring": true,
   "RRULE": "FREQ=WEEKLY;INTERVAL=1;BYDAY=SA;UNTIL=2027-03-13T23:59:59",
-  "STDATE": "2025-03-13T20:00:00",
-  "DTEND": "2027-03-13T00:00:00"
+  "STDATE": "2025-03-13T20:00:00Z",
+  "DTEND": "2027-03-13T00:00:00Z"
 }
 ~~~
 
