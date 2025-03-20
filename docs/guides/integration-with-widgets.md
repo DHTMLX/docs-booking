@@ -332,11 +332,12 @@ Scheduler event:
 Booking slots:
 
 ~~~json
-// the start date here is March 14, 2025
+// the start date here is March 13, 2025
 {
     "slots": [
         { "from": "09:00", "to": "17:00", "days": [0, 1, 2, 3, 4, 5, 6] },
         { "from": "00:00", "to": "00:00", "dates": [
+            1741820400000,  // March 13, 2025б
             1741906800000,  // March 14, 2025
             1741993200000,  // March 15, 2025
             1742079600000   // March 16, 2025
