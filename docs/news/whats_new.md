@@ -14,7 +14,7 @@ Released on March 12, 2025
 
 - Lazy rendering of cards via the [`renderType`](/api/config/booking-rendertype) property
 - Ability to embed templates via the [`cardTemplate`](/api/config/booking-cardtemplate) and [`infoTemplate`](/api/config/booking-infotemplate) properties
-- [Integration with frameworks](/category/backend-and-frameworks-integration/) and [DHTMLX Event Calendar](https://snippet.dhtmlx.com/c5eu8pdk)
+- [Integration with frameworks](/category/backend-and-frameworks-integration/) and [DHTMLX Event Calendar](/guides/integration-with-eventcalendar)
 
 ## Version 1.0.1 
 

@@ -144,8 +144,22 @@ module.exports = {
                 "guides/integration-with-react",
                 "guides/integration-with-vue",
                 "guides/integration-with-svelte",
-				"guides/integration-with-widgets",
-            ]
+				
+            
+			{
+				type: "category",
+				label: "Integration with DHTMLX widgets",
+				collapsible: true,
+				collapsed: true,
+				link: {
+					type: 'generated-index',
+					title: "Integration with DHTMLX widgets"
+				},
+				items: [
+					"guides/integration-with-eventcalendar",
+					"guides/integration-with-scheduler",
+				]
+			},]
         },
         // end Backend and frameworks integration
 		{

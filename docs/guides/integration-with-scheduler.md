@@ -1,12 +1,12 @@
 ---
-sidebar_label: Integration with DHTMLX Scheduler
+sidebar_label: Integration with Scheduler
 title: Integration with DHTMLX Scheduler
 description: You can learn about the integration with DHTMLX Scheduler in the documentation of the DHTMLX JavaScript Booking library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Booking.
 ---
 
 # Integration with DHTMLX Scheduler
 
-This guide will show how to integrate the DHTMLX Booking widget with DHTMLX Scheduler. 
+This guide will show how to integrate the DHTMLX Booking widget with [DHTMLX Scheduler](https://docs.dhtmlx.com/scheduler/). 
 
 ## Main concepts
 
