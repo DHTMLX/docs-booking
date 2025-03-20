@@ -47,7 +47,7 @@ Converting Scheduler events to Booking slots is the major part of integration an
 
 ## Rules for converting Scheduler events to Booking slots
 
-We will show how to generate booking slots from the doctor's schedule using JSON data. Data is converted on the server-side. The schedule for the next period is considered: from 2025-03-13 to 2027-03-13
+We will show how to generate booking slots from the doctor's schedule using JSON data. Data is converted on the server-side. In all example below the schedule for the next period is considered: from 2025-03-13 to 2027-03-13
 
 **Rule 1. Single event slot creation.**
 
@@ -315,7 +315,7 @@ Booking slot:
 
 **Rule 7. Events starting later than Booking start date.**
 
-If a recurring event starts after the Booking start date (default is today and in the example it's 2025-03-14), create rules with empty time intervals for the dates prior to the event's start date. This simulates the dates being "removed" from the recurrence.
+If a recurring event starts after the Booking start date (default is today which is 2025-03-13 in all examples), create rules with empty time intervals for the dates prior to the event's start date. This simulates the dates being "removed" from the recurrence.
 
 Scheduler event:
 
@@ -332,7 +332,7 @@ Scheduler event:
 Booking slots:
 
 ~~~json
-// the start date is March 14, 2025
+// the start date here is March 14, 2025
 {
     "slots": [
         { "from": "09:00", "to": "17:00", "days": [0, 1, 2, 3, 4, 5, 6] },
