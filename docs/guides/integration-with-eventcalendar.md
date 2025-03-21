@@ -25,7 +25,7 @@ So what you actually need is to generate booking slots from events (the [snippet
 - **Timezone handling:**
     - Booking interprets timestamps in the local timezone.
     - If you use global timestamps, you need to convert them to local timezones before sending them to Booking (and vice versa before saving the data back).
-For conversion instructions, refer to [Working with UTC data](/guides/configuration/saving-reservations/#working-with-utc-data). 
+For conversion instructions, refer to [Working with UTC data](/guides/saving-reservations/#working-with-utc-data). 
 
 - **Booking slot strategies:**
     - Use `slots` and `usedSlots` to build the schedule, ensuring that used slots are excluded (we'll focus on this strategy)
