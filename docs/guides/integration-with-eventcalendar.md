@@ -50,7 +50,7 @@ Converting events to Booking slots is the major part of integration and the rule
 
 ## Rules for converting events to Booking slots
 
-We will show how to generate booking slots from the doctor's schedule/calendars using JSON data. Data is converted on the server-side. In all example below the schedule for the next period is considered: from 2025-03-13 to 2027-03-13. 
+We will show how to generate booking slots from the doctor's schedule/calendars using JSON data. Data is converted on the the server-side. In all example below the schedule for the next period is considered: from 2025-03-13 to 2027-03-13. 
 
 **Rule 1. Single event slot creation.**
 

@@ -16,7 +16,7 @@ The integration primarily focuses on converting the Scheduler data into Booking 
     - Scheduler handles events (e.g., single or recurring).
     - Booking generates available time slots from those events.
 
-So what you actually need is to generate booking slots from the schedule (the [snippet below](#example) shows how to generate booking slots from the doctor's schedule by converting JSON data on server-side).
+So what you actually need is to generate booking slots from the schedule (the [snippet below](#example) shows how to generate booking slots from the doctor's schedule by converting JSON data on the server-side).
 
 - **Recurring events limitation:**
     - Booking supports only weekly recurring events (defined as INTERVAL=1;FREQ=WEEKLY in Scheduler).
@@ -42,12 +42,11 @@ The snippet below demonstrates how to integrate Booking with the Scheduler widge
 
 Converting Scheduler events to Booking slots is the major part of integration and the rules for handling the events and converting them to slots are described in the [section below](#rules-for-converting-scheduler-events-to-booking-slots). 
 
-
 <iframe src="https://snippet.dhtmlx.com/d5zbq3g3?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="800"></iframe>
 
 ## Rules for converting Scheduler events to Booking slots
 
-We will show how to generate booking slots from the doctor's schedule using JSON data. Data is converted on the server-side. In all example below the schedule for the next period is considered: from 2025-03-13 to 2027-03-13
+We will show how to generate booking slots from the doctor's schedule using JSON data. Data is converted on the server-side. In all example below the schedule for the next period is considered: from 2025-03-13 to 2027-03-13.
 
 **Rule 1. Single event slot creation.**
 
