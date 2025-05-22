@@ -25,7 +25,7 @@ If you want to use the trial version of Booking, download the trial [booking pac
 #### Installing PRO Booking via npm and yarn
 
 :::info
-If you have already purchased Booking under the proprietary license, send your **license number** to the *contact@dhtmlx.com* email in order to receive *login* and *password* for private **npm** as well as detailed guide on how to install Booking. Note that private **npm** is available before the expiration of the proprietary Booking license.
+You can access the DHTMLX private **npm** directly in the [Client's Area](https://dhtmlx.com/clients/) by generating your login and password for **npm**. A detailed installation guide is also available there. Please note that access to the private **npm** is available only while your proprietary Booking license is active.
 :::
 
 ## Step 2. Including source files
