@@ -16,13 +16,13 @@ This clear and comprehensive tutorial will guide your through the steps you need
 
 You can import JavaScript Booking into your project using `yarn` or `npm` package manager.
 
-#### Installing trial Booking via npm and yarn
+#### Installing trial Booking via npm or yarn
 
 :::info
 If you want to use the trial version of Booking, download the trial [booking package](https://dhtmlx.com/docs/products/dhtmlxBooking/) and follow the steps mentioned in the *README* file. Note that trial booking is available for 30 days only.
 :::
 
-#### Installing PRO Booking via npm and yarn
+#### Installing PRO Booking via npm or yarn
 
 :::info
 You can access the DHTMLX private **npm** directly in the [Client's Area](https://dhtmlx.com/clients/) by generating your login and password for **npm**. A detailed installation guide is also available there. Please note that access to the private **npm** is available only while your proprietary Booking license is active.
