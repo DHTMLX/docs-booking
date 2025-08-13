@@ -6,7 +6,7 @@ description: You can learn about the integration with DHTMLX Event Calendar in t
 
 # Integration with DHTMLX Event Calendar
 
-This guide will show how to integrate the DHTMLX Booking widget with [DHTMLX Event Calendar](https://docs.dhtmlx.com/eventcalendar/). 
+This guide will show how to integrate the DHTMLX Booking widget with [DHTMLX Event Calendar](https://docs.dhtmlx.com/eventcalendar/).
 
 ## Main concepts
 
@@ -25,7 +25,7 @@ So what you actually need is to generate booking slots from events (the [snippet
 - **Timezone handling:**
     - Booking interprets timestamps in the local timezone.
     - If you use global timestamps, you need to convert them to local timezones before sending them to Booking (and vice versa before saving the data back).
-For conversion instructions, refer to [Working with UTC data](/guides/saving-reservations/#working-with-utc-data). 
+For conversion instructions, refer to [Working with UTC data](/guides/saving-reservations/#working-with-utc-data).
 
 - **Booking slot strategies:**
     - Use `slots` and `usedSlots` to build the schedule, ensuring that used slots are excluded (we'll focus on this strategy)
@@ -37,14 +37,13 @@ The snippet below demonstrates how to integrate Booking with the Event Calendar 
 
 - `/events` - Event Calendar data (doctor schedules) that includes recurring and single-time events. These events are used to create time slots for the Booking system.
 
-- `/units` - final Booking slots generated from the Event Calendar `events` data. The slots are generated on the server-side. Please, also refer to [backend](https://git.webix.io/XBS/event-calendar-booking-go). 
+- `/units` - final Booking slots generated from the Event Calendar `events` data. The slots are generated on the server-side. Please, also refer to [backend](https://github.com/DHTMLX/event-calendar-booking-go).
 
 - `/calendars` - contains doctors' calendars. It is used for displaying doctor information in both the Event Calendar and Booking widgets.
 
 - `/reservations` - an auxiliary collection used to visualize `usedSlots` in the timeline view. This data comes from the Booking form, containing information about already reserved slots for doctors.
 
-Converting events to Booking slots is the major part of integration and the rules for handling the events and converting them to slots are described in the [section below](#rules-for-converting-events-to-booking-slots). 
-
+Converting events to Booking slots is the major part of integration and the rules for handling the events and converting them to slots are described in the [section below](#rules-for-converting-events-to-booking-slots).
 
 <iframe src="https://snippet.dhtmlx.com/c5eu8pdk?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="800"></iframe>
 
@@ -85,7 +84,7 @@ Booking slot:
 }
 ~~~
 
-**Rule 2. Recurring events.** 
+**Rule 2. Recurring events.**
 
 For recurring events, we use a weekly pattern. The start date and end date of each recurring event in Event Calendar should be equal to Booking [start](/api/config/booking-start) and [end](/api/config/booking-end) dates, otherwise create placeholders for dates before and after the recurring event (see Rule 7).
 
