@@ -137,7 +137,7 @@ const config = {
 	url: 'https://docs.dhtmlx.com',
 	baseUrl: '/booking/',
 	onBrokenLinks: 'warn',
-	onBrokenMarkdownLinks: 'warn', // deprecated in v3.9.1
+	// onBrokenMarkdownLinks: 'warn', // deprecated in v3.9.1
 	favicon: 'img/favicon.ico',
 	organizationName: 'DHTMLX', // Usually your GitHub org/user name.
 	projectName: 'docs-booking', // Usually your repo name.
