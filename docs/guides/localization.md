@@ -384,12 +384,12 @@ const booking = new booking.Booking("#root", {
 });
 ~~~
 
-You can also apply the [`setLocale()`](/api/methods/booking-setlocale-method) method.
+You can also apply the [`setLocale()`](../../api/methods/booking-setlocale-method) method.
 
 To apply a custom locale, you need to:
 
 - create a custom locale object (or modify the default one) and provide translations for all text labels (it can be any language you need)
-- apply the new locale via its [`locale`](/api/config/booking-locale) property or use the [`setLocale()`](/api/methods/booking-setlocale-method) method
+- apply the new locale via its [`locale`](../../api/config/booking-locale) property or use the [`setLocale()`](../../api/methods/booking-setlocale-method) method
 
 ~~~jsx {}
 // create Booking
@@ -403,7 +403,7 @@ booking.setLocale(ko);
 
 ## Changing the time format
 
-You can change the time format via the `timeFormat` parameter of the `formats` object of [locale](/api/config/booking-locale). 
+You can change the time format via the `timeFormat` parameter of the `formats` object of [locale](../../api/config/booking-locale). 
 
 ~~~jsx {}
 let clockFormat = 12;
@@ -469,5 +469,5 @@ In this snippet you can see how to switch between the *EN* and *DE* locales:
 <iframe src="https://snippet.dhtmlx.com/7khy4ayf?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 **Related articles**:
-- [locale](/api/config/booking-locale)
-- [setLocale()](/api/methods/booking-setlocale-method)
+- [locale](../../api/config/booking-locale)
+- [setLocale()](../../api/methods/booking-setlocale-method)

@@ -39,4 +39,4 @@ booking.setLocale(); // or setLocale(null);
 
 **Related articles**:
 - [locale](../../../api/config/booking-locale)
-- [Localization](/guides/localization)
+- [Localization](../../../guides/localization)

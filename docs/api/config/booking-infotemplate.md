@@ -88,5 +88,5 @@ You can also control which fields to display in the information block of the Boo
 
 **Related articles:** 
 
-- [Configuring the Booking dialog](/guides/configuration/#configuring-the-booking-dialog)
+- [Configuring the Booking dialog](../../../guides/configuration/#configuring-the-booking-dialog)
 - [`infoShape`](../../../api/config/booking-infoshape)

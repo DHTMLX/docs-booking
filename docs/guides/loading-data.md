@@ -8,7 +8,7 @@ description: You can learn how to load data into Booking in the documentation of
 
 The following information can be loaded into Booking:
 
-- [`data`](/api/config/booking-data) - an array of objects containing cards data 
+- [`data`](../../api/config/booking-data) - an array of objects containing cards data 
 
 You can prepare data in a separate file. Here is an example of an appropriate data set:
 
@@ -159,13 +159,13 @@ const { data } = getData();
 const booking = new booking.Booking("#root", { data });
 ~~~
 
-About loading data from the server, refer to [Working with server](/guides/saving-reservations)
+About loading data from the server, refer to [Working with server](../../guides/saving-reservations)
 
 ---
 
 **Related articles**:
-- [confirm-slot](/api/events/booking-confirmslot-event) event
-- [setConfig()](/api/methods/booking-setconfig-method) method
-- [setConfirmHandler()](/api/methods/booking-setconfirmhandler-method) method
-- [renderType](/api/config/booking-rendertype) property
-- [Saving slots reservations to the server](/guides/saving-reservations)
+- [confirm-slot](../../api/events/booking-confirmslot-event) event
+- [setConfig()](../../api/methods/booking-setconfig-method) method
+- [setConfirmHandler()](../../api/methods/booking-setconfirmhandler-method) method
+- [renderType](../../api/config/booking-rendertype) property
+- [Saving slots reservations to the server](../../guides/saving-reservations)

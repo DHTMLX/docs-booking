@@ -55,7 +55,7 @@ To filter cards by different text fields, date and time, a user should enter the
 - from: 12, to: 17 (Afternoon)
 - from: 17, to: 20 (Evening)
 
-It's possible to configure the filter settings via API: [Configuring the filter](/guides/configuration#configuring-the-filter)
+It's possible to configure the filter settings via API: [Configuring the filter](../guides/configuration/#configuring-the-filter)
 
 ## Making an appointment
 

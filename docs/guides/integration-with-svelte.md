@@ -263,11 +263,11 @@ onDestroy(() => {
 <div bind:this={container} class="widget"></div>
 ~~~
 
-Now the Booking component is ready to use. When the element will be added to the page, it will initialize the Booking with data. You can provide necessary configuration settings as well. Visit our [Booking API docs](/api/overview/booking-properties-overview/) to check the full list of available properties.
+Now the Booking component is ready to use. When the element will be added to the page, it will initialize the Booking with data. You can provide necessary configuration settings as well. Visit our [Booking API docs](../../api/overview/booking-properties-overview/) to check the full list of available properties.
 
 #### Handling events
 
-When a user makes some action in the Booking, it invokes an event. You can use these events to detect the action and run the desired code for it. See the [full list of events](/api/overview/booking-events-overview/).
+When a user makes some action in the Booking, it invokes an event. You can use these events to detect the action and run the desired code for it. See the [full list of events](../../api/overview/booking-events-overview/).
 
 Open ***Booking.svelte*** and complete the `onMount()` method in the following way:
 

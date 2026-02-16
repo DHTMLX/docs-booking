@@ -8,7 +8,7 @@ description: You can learn about the configuration in the documentation of the D
 
 ## Loading data for cards
 
-To load data, add data to the [`data`](../../api/config/booking-data) array. See all instructions here: [`Loading data`](/guides/loading-data).
+To load data, add data to the [`data`](../../api/config/booking-data) array. See all instructions here: [`Loading data`](../../guides/loading-data).
 
 ## Defining the structure of cards 
 

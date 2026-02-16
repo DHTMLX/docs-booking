@@ -75,5 +75,5 @@ You can also configure the appearance of a card using the [`cardTemplate`](../..
 
 **Related articles:** 
 
-- [Defining the structure of cards](/guides/configuration/#defining-the-structure-of-cards)
+- [Defining the structure of cards](../../../guides/configuration/#defining-the-structure-of-cards)
 - [`cardTemplate`](../../../api/config/booking-cardtemplate)
