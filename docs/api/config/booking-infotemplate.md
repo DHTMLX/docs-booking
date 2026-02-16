@@ -83,10 +83,10 @@ The snippet below shows how to apply a template to the information block of the 
 <iframe src="https://snippet.dhtmlx.com/byb94ipu?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 :::info
-You can also control which fields to display in the information block of the Booking dialog using the [`infoShape`](/api/config/booking-infoshape) property. But if both properties are applied, `infoTemplate` will override the `infoShape` settings.
+You can also control which fields to display in the information block of the Booking dialog using the [`infoShape`](../../../api/config/booking-infoshape) property. But if both properties are applied, `infoTemplate` will override the `infoShape` settings.
 :::
 
 **Related articles:** 
 
 - [Configuring the Booking dialog](/guides/configuration/#configuring-the-booking-dialog)
-- [`infoShape`](/api/config/booking-infoshape)
+- [`infoShape`](../../../api/config/booking-infoshape)

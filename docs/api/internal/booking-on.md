@@ -25,8 +25,8 @@ api.on(
 - `handler` - (required) a handler to be attached (the handler arguments will depend on the event to be fired)
 
 :::info
-The full list of the Booking internal events you can find [**here**](/api/overview/booking-events-overview).
-Use the `api.on()` method if you want to listen to the actions without modifying them. To make changes to the actions, apply the [`api.intercept()`](/api/internal/booking-intercept) method.
+The full list of the Booking internal events you can find [**here**](../../../api/overview/booking-events-overview).
+Use the `api.on()` method if you want to listen to the actions without modifying them. To make changes to the actions, apply the [`api.intercept()`](../../../api/internal/booking-intercept) method.
 :::
 
 ### Example

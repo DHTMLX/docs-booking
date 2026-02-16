@@ -27,7 +27,7 @@ api.exec(
 ### Events
 
 :::info
-The full list of the Booking internal events can be found [**here**](/api/overview/booking-events-overview)
+The full list of the Booking internal events can be found [**here**](../../../api/overview/booking-events-overview)
 :::
 
 ### Example

@@ -18,7 +18,7 @@ setConfirmHandler(confirmHandler: (ev) => any): void;
 
 ### Parameters
 
-The method takes the `confirmHandler` function that will be called when confirming a slot for booking. The function takes the object as in the [`confirm-slot`](/api/events/booking-confirmslot-event) event.
+The method takes the `confirmHandler` function that will be called when confirming a slot for booking. The function takes the object as in the [`confirm-slot`](../../../api/events/booking-confirmslot-event) event.
 
 ### Example
 

@@ -22,7 +22,7 @@ api.detach(tag: number | string ): void;
 
 ## Example
 
-In the example below we add an object with the **tag** property to the [`api.on()`](/api/internal/booking-on) handler, and then we use the `api.detach()` method to stop logging the [`open-filter`](/api/events/booking-selectslot-event) event.
+In the example below we add an object with the **tag** property to the [`api.on()`](../../../api/internal/booking-on) handler, and then we use the `api.detach()` method to stop logging the [`open-filter`](../../../api/events/booking-selectslot-event) event.
 
 ~~~jsx {6-20}
 const booking = new booking.Booking("#root", {

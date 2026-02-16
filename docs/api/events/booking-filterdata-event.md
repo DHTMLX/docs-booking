@@ -40,7 +40,7 @@ The callback of the **filter-data** event can take an object with the following 
 
 ### Example
 
-The example below demonstrates how to apply filter at the initialization using the [`api.exec()`](/api/internal/booking-exec) method:
+The example below demonstrates how to apply filter at the initialization using the [`api.exec()`](../../../api/internal/booking-exec) method:
 
 ~~~jsx {6-18}
 // create Booking

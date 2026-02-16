@@ -13,7 +13,7 @@ description: You can learn about the cardTemplate config in the documentation of
 The property specifies the HTML structure and layout of each card's block (the left side of each card). It means you can manage which fields are displayed, how they are arranged, and how they look.
 
 :::info
-You can also specify which fields to display using the [`cardShape`](/api/config/booking-cardshape) property
+You can also specify which fields to display using the [`cardShape`](../../../api/config/booking-cardshape) property
 :::
 
 ### Usage
@@ -86,6 +86,6 @@ The snippet below demonstrates how to apply a template to the left block of a ca
 
 **Related articles:** 
 
-- [Defining the structure of cards](/guides/configuration/#defining-the-structure-of-cards)
-- [`cardShape`](/api/config/booking-cardshape)
+- [Defining the structure of cards](../../../guides/configuration/#defining-the-structure-of-cards)
+- [`cardShape`](../../../api/config/booking-cardshape)
 

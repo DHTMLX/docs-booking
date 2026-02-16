@@ -21,7 +21,7 @@ fetch(server + "/data").then((res) => res.json()).then((data) => {
 
 ## Saving slots reservations to the server
 
-To handle slots reservation, you should apply the [`setConfirmHandler`](/api/methods/booking-setconfirmhandler-method) method. 
+To handle slots reservation, you should apply the [`setConfirmHandler`](../../api/methods/booking-setconfirmhandler-method) method. 
 
 ~~~jsx {}
 // create a function to handle the logic of reservation
@@ -156,6 +156,6 @@ fetch( serverURL + "/units")
 <iframe src="https://snippet.dhtmlx.com/dpbmyr8j?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 **Related articles**:
-- [confirm-slot](/api/events/booking-confirmslot-event) event
-- [setConfig()](/api/methods/booking-setconfig-method) method
-- [setConfirmHandler()](/api/methods/booking-setconfirmhandler-method) method
+- [confirm-slot](../../api/events/booking-confirmslot-event) event
+- [setConfig()](../../api/methods/booking-setconfig-method) method
+- [setConfirmHandler()](../../api/methods/booking-setconfirmhandler-method) method

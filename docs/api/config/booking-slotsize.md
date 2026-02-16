@@ -11,7 +11,7 @@ description: You can learn about the slotSize in the documentation of the DHTMLX
 @short: Optional. Defines the duration of a booking slot for all cards
 
 :::note
-This value will be applied in case the size value is not set for the `size` or `slotSize` parameter inside the [`data`](/api/config/booking-data) property.
+This value will be applied in case the size value is not set for the `size` or `slotSize` parameter inside the [`data`](../../../api/config/booking-data) property.
 :::
 
 ### Usage
@@ -35,6 +35,6 @@ new booking.Booking("#root", {
 });
 ~~~
 
-The snippet below shows how to set duration and [gap](/api/config/booking-slotgap) for all slots:
+The snippet below shows how to set duration and [gap](../../../api/config/booking-slotgap) for all slots:
 
 <iframe src="https://snippet.dhtmlx.com/pw8xsl1p?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

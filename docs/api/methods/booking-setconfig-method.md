@@ -20,7 +20,7 @@ setConfig(config: object): void;
 
 ### Parameters
 
-- `config` - (required) an object of the Booking configuration. See the full list of properties [here](/api/overview/booking-properties-overview)
+- `config` - (required) an object of the Booking configuration. See the full list of properties [here](../../../api/overview/booking-properties-overview)
 
 :::info
 The method changes only the parameters you passed. It destroys the current component and initializes a new one.
