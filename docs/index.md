@@ -15,7 +15,7 @@ JavaScript Booking library is a ready-made component designed to be easily incor
 
 The Booking UI includes the two main parts: the filter area and the list of cards with slots. Each card's view consists of the card's information block and slots available for booking.
 
-![main](assets/main.png)
+![main](/assets/main.png)
 
 ### Cards list
 
@@ -37,13 +37,13 @@ The right side of each card has clickable slots available for booking. Slots are
 
 To open the view of a single card, click inside the left area of a card. The single card dialog shows the card's title, calendar and available slots for the date selected in the calendar.
 
-![single-card](assets/single-card.png)
+![single-card](/assets/single-card.png)
 
 ### Booking dialog
 
 The booking dialog allows booking a slot of the selected card. To open it, click the time slot button. 
 
-![booking](assets/bookingd.png)
+![booking](/assets/bookingd.png)
 
 For the instruction about booking, please, refer to [Making an appointment](#making-an-appointment)
 
@@ -68,7 +68,7 @@ You can also make an appointment via the single card view:
 3. Next to the selected time, click **Confirm**.
 4. In the **Booking** dialog that appears, fill in the fields, and then click **Make an appointment**.
 
-![booking-2](assets/booking-2.png)
+![booking-2](/assets/booking-2.png)
 
 ## What's next
 
