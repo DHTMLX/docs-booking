@@ -304,6 +304,6 @@ export default {
 
 After that, you can start the app to see Booking loaded with data on a page.
 
-![Booking initialization](../assets/trial-booking.png)
+![Booking initialization](/assets/trial-booking.png)
 
 Now you know how to integrate DHTMLX Booking with Vue. You can customize the code according to your specific requirements. The final example you can find on [**GitHub**](https://github.com/DHTMLX/vue-booking-demo).
