@@ -18,7 +18,7 @@ setConfirmHandler(confirmHandler: (ev) => any): void;
 
 ### Parameters
 
-The method takes the `confirmHandler` function that will be called when confirming a slot for booking. The function takes the object as in the [`confirm-slot`](../../../api/events/booking-confirmslot-event) event.
+The method takes the `confirmHandler` function that will be called when confirming a slot for booking. The function takes the object as in the [`confirm-slot`](/api/events/booking-confirmslot-event) event.
 
 ### Example
 
@@ -35,4 +35,4 @@ booking.setConfirmHandler((ev) => {
 
 <iframe src="https://snippet.dhtmlx.com/dpbmyr8j?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**Related articles**: [Saving slots reservations to the server](../../../guides/saving-reservations)
+**Related articles**: [Saving slots reservations to the server](/guides/saving-reservations)

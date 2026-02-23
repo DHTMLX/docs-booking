@@ -25,7 +25,7 @@ So what you actually need is to generate booking slots from the schedule (the [s
 - **Timezone handling:**
     - Booking interprets timestamps in the local timezone.
     - If you use global timestamps, you need to convert them to local timezones before sending them to Booking (and vice versa before saving the data back).
-For conversion instructions, refer to [Working with UTC data](../../guides/saving-reservations/#working-with-utc-data). 
+For conversion instructions, refer to [Working with UTC data](/guides/saving-reservations/#working-with-utc-data). 
 
 - **Booking slot strategies:**
     - Use `slots` and `usedSlots` to build the schedule, ensuring that used slots are excluded (we'll focus on this strategy)
@@ -83,7 +83,7 @@ Booking slot:
 
 **Rule 2. Recurring events.** 
 
-For recurring events, we use a weekly pattern. The start date and end date of each recurring event in Scheduler should be equal to Booking [start](../../api/config/booking-start) and [end](../../api/config/booking-end) dates, otherwise create placeholders for dates before and after the recurring event (see Rule 7).
+For recurring events, we use a weekly pattern. The start date and end date of each recurring event in Scheduler should be equal to Booking [start](/api/config/booking-start) and [end](/api/config/booking-end) dates, otherwise create placeholders for dates before and after the recurring event (see Rule 7).
 
 Scheduler event (weekly on weekdays): the recurrence rule (rrule) specifies that the event repeats weekly on Monday, Tuesday, Wednesday, Thursday, and Friday.
 
@@ -191,7 +191,7 @@ Scheduler events:
 Booking slots:
 
 - Merging events: the recurring event and single events are combined into one Booking rule.
-- If a single event has priority, its specific dates (March 18th and 19th) are added to the recurring event's rule. Please, refer to [Defining the slot rules](../../guides/configuration/#defining-slot-rules)
+- If a single event has priority, its specific dates (March 18th and 19th) are added to the recurring event's rule. Please, refer to [Defining the slot rules](/guides/configuration/#defining-slot-rules)
 
 ~~~json
 {
