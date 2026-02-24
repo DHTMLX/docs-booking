@@ -137,6 +137,16 @@ const config = {
 	tagline: 'DHTMLX Booking Docs',
 	url: 'https://docs.dhtmlx.com',
 	baseUrl: '/booking/',
+	i18n: {
+        defaultLocale: 'en',
+        locales: ['en', 'de', 'ru', 'zh', 'ko'],
+        localeConfigs: {
+            zh: {
+                htmlLang: 'zh-CN',
+                label: '中文'
+            },
+        }
+    },
 	onBrokenLinks: 'warn',
 	// onBrokenMarkdownLinks: 'warn', // deprecated in v3.9.1
 	favicon: 'img/favicon.ico',
@@ -235,7 +245,11 @@ const config = {
 					"label": "Download",
 					"href": "https://dhtmlx.com/docs/products/dhtmlxBooking/", 
 					"position": "right"
-				}
+				},
+				 {
+                    type: 'localeDropdown',
+                    position: 'right',
+                },
 			],
 		},
     	footer: {
