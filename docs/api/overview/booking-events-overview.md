@@ -8,8 +8,8 @@ description: You can have events overview of JavaScript Booking in the documenta
 
 | Name                                      | Description                                      |
 | ----------------------------------------- | ------------------------------------------------ |
-| [](../events/booking-confirmslot-event.md)  | @getshort(../events/booking-confirmslot-event.md)  |
-| [](../events/booking-filterdata-event.md)  | @getshort(../events/booking-filterdata-event.md)    |
-| [](../events/booking-selectitem-event.md)  | @getshort(../events/booking-selectitem-event.md)    |
-| [](../events/booking-selectitemdate-event.md)  | @getshort(../events/booking-selectitemdate-event.md) |
-| [](../events/booking-selectslot-event.md)   | @getshort(../events/booking-selectslot-event.md)   |
+| [confirm-slot](/api/events/booking-confirmslot-event/)  | @getshort(../events/booking-confirmslot-event.md)  |
+| [filter-data](/api/events/booking-filterdata-event/)  | @getshort(../events/booking-filterdata-event.md)    |
+| [select-item](/api/events/booking-selectitem-event/)  | @getshort(../events/booking-selectitem-event.md)    |
+| [select-item-date](/api/events/booking-selectitemdate-event/)  | @getshort(../events/booking-selectitemdate-event.md) |
+| [select-slot](/api/events/booking-selectslot-event/)   | @getshort(../events/booking-selectslot-event.md)   |

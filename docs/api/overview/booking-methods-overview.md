@@ -8,7 +8,7 @@ description: You can have methods overview of JavaScript Booking in the document
 
 | Name                                               | Description                                               |
 | -------------------------------------------------- | --------------------------------------------------------- |
-| [](../methods/booking-serialize-method.md)         | @getshort(../methods/booking-serialize-method.md)         |
-| [](../methods/booking-setconfig-method.md)         | @getshort(../methods/booking-setconfig-method.md)         |
-| [](../methods/booking-setconfirmhandler-method.md) | @getshort(../methods/booking-setconfirmhandler-method.md) |
-| [](../methods/booking-setlocale-method.md)         | @getshort(../methods/booking-setlocale-method.md)         |
+| [serialize()](/api/methods/booking-serialize-method/)  | @getshort(../methods/booking-serialize-method.md)         |
+| [setConfig()](/api/methods/booking-setconfig-method/)  | @getshort(../methods/booking-setconfig-method.md)         |
+| [setConfirmHandler()](/api/methods/booking-setconfirmhandler-method/) | @getshort(../methods/booking-setconfirmhandler-method.md) |
+| [setLocale()](/api/methods/booking-setlocale-method/)  | @getshort(../methods/booking-setlocale-method.md)         |
