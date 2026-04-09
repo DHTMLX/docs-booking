@@ -7,32 +7,32 @@ description: You can learn about the integration with React in the documentation
 # Integration with React
 
 :::tip
-You should be familiar with the basic concepts and patterns of [**React**](https://react.dev) before reading this documentation. To refresh your knowledge, please refer to the [**React documentation**](https://react.dev/learn).
+Familiarize yourself with the basic concepts of [**React**](https://react.dev) before reading this guide. To refresh your knowledge, see the [**React documentation**](https://react.dev/learn).
 :::
 
-DHTMLX Booking is compatible with **React**. We have prepared code examples on how to use DHTMLX Booking with **React**. For more information, refer to the corresponding [**Example on GitHub**](https://github.com/DHTMLX/react-booking-demo).
+DHTMLX Booking is compatible with **React**. For code examples, see the [**Example on GitHub**](https://github.com/DHTMLX/react-booking-demo).
 
-## Creating a project
+## Create a project
 
 :::info
-Before you start to create a new project, install [**Vite**](https://vite.dev/) (optional) and [**Node.js**](https://nodejs.org/en/).
+Before creating a new project, install [**Node.js**](https://nodejs.org/en/) and optionally [**Vite**](https://vite.dev/).
 :::
 
-You can create a basic **React** project or use **React with Vite**. Let's name the project as **my-react-booking-app**:
+Create a basic **React** project or use **React with Vite**. Name the project **my-react-booking-app**:
 
 ~~~json
 npx create-react-app my-react-booking-app
 ~~~
 
-### Installation of dependencies
+### Install dependencies
 
-Go to the new created app directory:
+Go to the app directory:
 
 ~~~json
 cd my-react-booking-app
 ~~~
 
-Install dependencies and start the dev server. For this, use a package manager:
+Install dependencies and start the dev server using one of the following package managers:
 
 - if you use [**yarn**](https://yarnpkg.com/), run the following commands:
 
@@ -48,32 +48,32 @@ npm install
 npm run dev
 ~~~
 
-The app should run on a localhost (for instance `http://localhost:3000`).
+The app runs on a localhost, for example `http://localhost:3000`.
 
-## Creating Booking
+## Create Booking
 
-Now you should get the DHTMLX Booking source code. First of all, stop the app and proceed with installing the Booking package.
+Get the DHTMLX Booking source code. Stop the app and install the Booking package.
 
-### Step 1. Package installation
+### Step 1. Install the package
 
 Download the [**trial Booking package**](/how-to-start/#installing-trial-booking-via-npm-or-yarn) and follow steps mentioned in the README file. Note that trial Booking is available 30 days only.
 
-### Step 2. Component creation
+### Step 2. Create the component
 
-Now you need to create a React component, to add an Booking into the application. Create a new file in the ***src/*** directory and name it ***Booking.jsx***.
+Create a React component to add Booking to the application. Add a new file in the `src/` directory and name it `Booking.jsx`.
 
 #### Import source files
 
-Open the ***Booking.jsx*** file and import Booking source files. Note that:
+Open `Booking.jsx` and import Booking source files:
 
-- if you use PRO version and install the Booking package from a local folder, the import paths look like this:
+- if you use PRO version and install the Booking package from a local folder, use the following import paths:
 
 ~~~jsx title="Booking.jsx"
 import { Booking } from 'dhx-booking-package';
 import 'dhx-booking-package/dist/booking.css';
 ~~~
 
-Note that depending on the used package, the source files can be minified. In this case make sure that you are importing the CSS file as ***booking.min.css***.
+Depending on the package, the source files may be minified. In that case, import `booking.min.css` instead.
 
 - if you use the trial version of Booking, specify the following paths:
 
@@ -83,12 +83,12 @@ import "@dhx/trial-booking/dist/booking.css";
 ~~~
 
 :::info
-In this tutorial you can see how to configure the **trial** version of Booking.
+This tutorial uses the **trial** version of Booking.
 :::
 
-#### Setting the container and adding Booking
+#### Set up the container and add Booking
 
-To display Booking on the page, you need to create the container for Booking, and initialize this component using the corresponding constructor:
+Create the container and initialize Booking with the constructor. The following code snippet sets up the component:
 
 ~~~jsx {2,6,9-10,17} title="Booking.jsx"
 import { useEffect, useRef } from "react";
@@ -96,7 +96,7 @@ import { Booking } from "@dhx/trial-booking";
 import "@dhx/trial-booking/dist/booking.css"; // include Booking styles
 
 export default function BookingComponent(props) {
-    let container = useRef(); // initialize container for Booking
+    let container = useRef(); // Booking container
 
     useEffect(() => {
         // initialize the Booking component
@@ -111,9 +111,9 @@ export default function BookingComponent(props) {
 }
 ~~~
 
-#### Adding styles
+#### Add styles
 
-To display Booking correctly, you need to specify important styles for Booking and its container in the main css file of the project:
+Add the following styles to the main CSS file of your project:
 
 ~~~css title="index.css"
 /* specify styles for initial page */
@@ -131,15 +131,15 @@ body,
 }
 ~~~
 
-#### Loading data
+#### Load data
 
-To add data into the Booking, you need to provide a data set. You can create the ***data.js*** file in the ***src/*** directory and add some data into it:
+Create a `data.js` file in the `src/` directory and add sample data:
 
 ~~~jsx title="data.js"
 export function getData() {
     function getDate(addDays, hoursValue = 0, minutesValue = 0) {
         const date = new Date();
-        const secondsValue = 0; // round to minutes
+        const secondsValue = 0; // rounded to minutes
         const msValue = 0;
     
         date.setDate(date.getDate() + addDays);
@@ -216,7 +216,7 @@ export function getData() {
 }
 ~~~
 
-Then open the ***App.js*** file and import data. After this you can pass data into the new created `<Booking/>` components as **props**:
+Open `App.js`, import the data, and pass it to the `<Booking/>` component as `props`:
 
 ~~~jsx {2,5-6} title="App.js"
 import Booking from "./Booking";
@@ -230,7 +230,7 @@ function App() {
 export default App;
 ~~~
 
-Go to the ***Booking.jsx*** file and apply the passed **props** to the Booking configuration object:
+Open `Booking.jsx` and apply the props to the Booking configuration:
 
 ~~~jsx {5,10} title="Booking.jsx"
 import { useEffect, useRef } from "react";
@@ -255,20 +255,20 @@ export default function BookingComponent(props) {
 }
 ~~~
 
-Now the Booking component is ready to use. When the element will be added to the page, it will initialize the Booking with data. You can provide necessary configuration settings as well. Visit our [Booking API docs](/api/overview/booking-properties-overview/) to check the full list of available properties.
+The Booking component is ready to use. When added to the page, it initializes with data. Provide additional configuration settings as needed. See the [Booking API docs](/api/overview/booking-properties-overview/) for the full list of available properties.
 
-#### Handling events
+#### Handle events
 
-When a user makes some action in the Booking, it invokes an event. You can use these events to detect the action and run the desired code for it. See the [full list of events](/api/overview/booking-events-overview/).
+Booking fires an event when a user performs an action. Use these events to detect actions and run custom code. See the [full list of events](/api/overview/booking-events-overview/).
 
-Open ***Booking.jsx*** and complete the `useEffect()` method in the following way:
+Open `Booking.jsx` and update the `useEffect()` method to listen for events:
 
 ~~~jsx {5-8} title="Booking.jsx"
 // ...
 useEffect(() => {
     const booking = new Booking(container.current, {});
 
-    // output the id of the selected slot
+    // log the id of the selected slot
     booking.api.on("select-slot", (obj) => {
         console.log(obj.id);
     });
@@ -280,8 +280,8 @@ useEffect(() => {
 // ...
 ~~~
 
-After that, you can start the app to see Booking loaded with data on a page.
+Start the app to see Booking loaded with data.
 
 ![Booking initialization](../assets/trial-booking.png)
 
-Now you know how to integrate DHTMLX Booking with React. You can customize the code according to your specific requirements. The final example you can find on [**GitHub**](https://github.com/DHTMLX/react-booking-demo).
+Customize the code to meet your project requirements. The complete example is available on [**GitHub**](https://github.com/DHTMLX/react-booking-demo).

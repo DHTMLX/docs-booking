@@ -4,11 +4,11 @@ title:  Working with server
 description: You can learn about working with server in the documentation of the DHTMLX JavaScript Booking library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Booking.
 ---
 
-# Working with server
+# Work with the server
 
-## Loading data 
+## Load data
 
-To get server data, you can send the request for data using the native **fetch** method (or any other way):
+Use the native `fetch` method to request data from the server:
 
 ~~~jsx {}
 const booking = new booking.Booking("#booking", {data: []});
@@ -19,27 +19,27 @@ fetch(server + "/data").then((res) => res.json()).then((data) => {
 });
 ~~~
 
-## Saving slots reservations to the server
+## Save slot reservations
 
-To handle slots reservation, you should apply the [`setConfirmHandler`](/api/methods/booking-setconfirmhandler-method) method. 
+Use the [`setConfirmHandler()`](/api/methods/booking-setconfirmhandler-method) method to handle slot reservations. The following code snippet fetches data, updates the widget configuration, and sends a POST request when a user confirms a slot:
 
 ~~~jsx {}
-// create a function to handle the logic of reservation
+// handle slot reservation logic
 const handleSlotReservation = (event) => {
     const { confirm, slot, data } = event;
 
-    // create the info object 
+    // build the info object
     const info = {
         item: slot.id,
         start: slot.time[0],
         data
     };
 
-    // send the POST request to the server with the info object in the request body
+    // send reservation data to the server
     fetch("/server/url", {
         method: "POST",
         body: JSON.stringify(info),
-    // handle the response
+    // handle the server response
     }).then((response) => {
         if (response.ok) confirm.done();
         else confirm.error();
@@ -52,23 +52,27 @@ const booking = new booking.Booking("#root", {
     // configuration parameters
 });
 
-// fetch available data from the server and convert it to JSON
+// fetch data from the server
 fetch("/server/url")
     .then((res) => res.json())        
     .then((items) => {
-        // update Booking configuration with the fetched items, allowing the widget to display them
+        // update Booking with fetched data
         booking.setConfig({ data: items });
-        // assign the handleSlotReservation function to be called when a user confirms booking, 
-        // link user actions to the reservation logic
+        // set the reservation handler
         booking.setConfirmHandler(handleSlotReservation);
     });
 ~~~
 
-## Working with UTC data
+## Work with UTC data
 
-The widget applies a local timezone but if you have UTC data it's necessary to convert data to a local timezone.
+The widget uses the local timezone. If your data is in UTC, convert it to the local timezone before loading.
 
-For example, if you have UTC timestamps, you can apply the functions provided in the example below to convert them. The **g2l** function converts a UTC timestamp into the local timezone. During the data loading process, this function is used to convert the times in *usedSlots* and *slots* from UTC to the local time. The **l2g** function converts a local time back to UTC. It's applied during slots reservation, namely, the **l2g** function is used to convert the local time (from slot.time[0]) to UTC before sending it to the server.
+The example below uses two helper functions to handle this conversion:
+
+- `g2l` converts a UTC timestamp to the local timezone. Use it during data loading to convert `usedSlots` and `slots` timestamps from UTC to local time.
+- `l2g` converts a local timestamp back to UTC. Use it when saving a reservation to convert the local time from `slot.time[0]` to UTC before sending it to the server.
+
+The following code snippet converts UTC timestamps to local time during data loading, and back to UTC when sending a reservation:
 
 ~~~jsx
 const serverURL = "https://some-backend-url";
@@ -150,12 +154,14 @@ fetch( serverURL + "/units")
     });
 ~~~
 
-
 ## Example
+
+The snippet below loads data from a server and handles slot reservations:
 
 <iframe src="https://snippet.dhtmlx.com/dpbmyr8j?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 **Related articles**:
-- [confirm-slot](/api/events/booking-confirmslot-event) event
-- [setConfig()](/api/methods/booking-setconfig-method) method
-- [setConfirmHandler()](/api/methods/booking-setconfirmhandler-method) method
+
+- [`confirmSlot`](/api/events/booking-confirmslot-event) — fires when a user confirms a booking slot
+- [`setConfig()`](/api/methods/booking-setconfig-method) — updates Booking configuration at runtime
+- [`setConfirmHandler()`](/api/methods/booking-setconfirmhandler-method) — sets a custom handler for booking confirmation

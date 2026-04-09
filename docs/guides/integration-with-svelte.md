@@ -7,15 +7,15 @@ description: You can learn about the integration with Svelte in the documentatio
 # Integration with Svelte
 
 :::tip
-You should be familiar with the basic concepts and patterns of **Svelte** before reading this documentation. To refresh your knowledge, please refer to the [**Svelte documentation**](https://svelte.dev/).
+Familiarize yourself with the basic concepts of [**Svelte**](https://svelte.dev/) before reading this guide. To refresh your knowledge, see the [**Svelte documentation**](https://svelte.dev/).
 :::
 
-DHTMLX Booking is compatible with **Svelte**. We have prepared code examples on how to use DHTMLX Booking with **Svelte**. For more information, refer to the corresponding [**Example on GitHub**](https://github.com/DHTMLX/svelte-booking-demo).
+DHTMLX Booking is compatible with **Svelte**. For code examples, see the [**Example on GitHub**](https://github.com/DHTMLX/svelte-booking-demo).
 
-## Creating a project
+## Create a project
 
 :::info
-Before you start to create a new project, install [**Vite**](https://vite.dev/) (optional) and [**Node.js**](https://nodejs.org/en/).
+Before creating a new project, install [**Node.js**](https://nodejs.org/en/) and optionally [**Vite**](https://vite.dev/).
 :::
 
 To create a **Svelte** JS project, run the following command:
@@ -24,9 +24,9 @@ To create a **Svelte** JS project, run the following command:
 npm create vite@latest
 ~~~
 
-Let's name the project as **my-svelte-booking-app**.
+Name the project **my-svelte-booking-app**.
 
-### Installation of dependencies
+### Install dependencies
 
 Go to the app directory:
 
@@ -34,7 +34,7 @@ Go to the app directory:
 cd my-svelte-booking-app
 ~~~
 
-Install dependencies and start the dev server. For this, use a package manager:
+Install dependencies and start the dev server using one of the following package managers:
 
 - if you use [**yarn**](https://yarnpkg.com/), run the following commands:
 
@@ -50,25 +50,25 @@ npm install
 npm run dev
 ~~~
 
-The app should run on a localhost (for instance `http://localhost:3000`).
+The app runs on a localhost, for example `http://localhost:3000`.
 
-## Creating Booking
+## Create Booking
 
-Now you should get the DHTMLX Booking source code. First of all, stop the app and proceed with installing the Booking package.
+Get the DHTMLX Booking source code. Stop the app and install the Booking package.
 
-### Step 1. Package installation
+### Step 1. Install the package
 
 Download the [**trial Booking package**](/how-to-start/#installing-trial-booking-via-npm-or-yarn) and follow steps mentioned in the README file. Note that trial Booking is available 30 days only.
 
-### Step 2. Component creation
+### Step 2. Create the component
 
-Now you need to create a Svelte component, to add Booking into the application. Let's create a new file in the ***src/*** directory and name it ***Booking.svelte***.
+Create a Svelte component to add Booking to the application. Add a new file in the `src/` directory and name it `Booking.svelte`.
 
 #### Import source files
 
-Open the ***Booking.svelte*** file and import Booking source files. Note that:
+Open `Booking.svelte` and import Booking source files:
 
-- if you use PRO version and install the Booking package from a local folder, the import paths look like this:
+- if you use PRO version and install the Booking package from a local folder, use the following import paths:
 
 ~~~html title="Booking.svelte"
 <script>
@@ -77,7 +77,7 @@ import 'dhx-booking-package/dist/booking.css';
 </script>
 ~~~
 
-Note that depending on the used package, the source files can be minified. In this case make sure that you are importing the CSS file as ***booking.min.css***.
+Depending on the package, the source files may be minified. In that case, import `booking.min.css` instead.
 
 - if you use the trial version of Booking, specify the following paths:
 
@@ -89,12 +89,12 @@ import '@dhx/trial-booking/dist/booking.css';
 ~~~
 
 :::info
-In this tutorial you can see how to configure the **trial** version of Booking.
+This tutorial uses the **trial** version of Booking.
 :::
 
-#### Setting the container and adding Booking
+#### Set up the container and add Booking
 
-To display Booking on the page, you need to create the container for Booking, and initialize this component using the corresponding constructor:
+Create the container and initialize Booking with the constructor. The following code snippet sets up the component:
 
 ~~~html {3,6,10-11,19} title="Booking.svelte"
 <script>
@@ -102,7 +102,7 @@ To display Booking on the page, you need to create the container for Booking, an
     import { Booking } from "@dhx/trial-booking";
     import "@dhx/trial-booking/dist/booking.css";
 
-    let container; // initialize container for Booking
+    let container; // Booking container
     let booking;
 
     onMount(() => {
@@ -118,9 +118,9 @@ To display Booking on the page, you need to create the container for Booking, an
 <div bind:this={container} class="widget"></div>
 ~~~
 
-#### Adding styles
+#### Add styles
 
-To display Booking correctly, you need to specify important styles for Booking and its container in the main css file of the project:
+Add the following styles to the main CSS file of your project:
 
 ~~~css title="main.css"
 /* specify styles for initial page */
@@ -138,15 +138,15 @@ body,
 }
 ~~~
 
-#### Loading data
+#### Load data
 
-To add data into the Booking, we need to provide a data set. You can create the ***data.js*** file in the ***src/*** directory and add some data into it:
+Create a `data.js` file in the `src/` directory and add sample data:
 
 ~~~jsx title="data.js"
 export function getData() {
     function getDate(addDays, hoursValue = 0, minutesValue = 0) {
         const date = new Date();
-        const secondsValue = 0; // round to minutes
+        const secondsValue = 0; // rounded to minutes
         const msValue = 0;
     
         date.setDate(date.getDate() + addDays);
@@ -223,7 +223,7 @@ export function getData() {
 }
 ~~~
 
-Then open the ***App.svelte*** file, import data, and pass it into the new created `<Booking/>` components as **props**:
+Open `App.svelte`, import the data, and pass it to the `<Booking/>` component as `props`:
 
 ~~~html {3,5,8} title="App.svelte"
 <script>
@@ -236,7 +236,7 @@ Then open the ***App.svelte*** file, import data, and pass it into the new creat
 <Booking data={dataset} />
 ~~~
 
-Go to the ***Booking.svelte*** file and apply the passed **props** to the Booking configuration object:
+Open `Booking.svelte` and apply the props to the Booking configuration:
 
 ~~~html {6,13} title="Booking.svelte"
 <script>
@@ -263,13 +263,13 @@ onDestroy(() => {
 <div bind:this={container} class="widget"></div>
 ~~~
 
-Now the Booking component is ready to use. When the element will be added to the page, it will initialize the Booking with data. You can provide necessary configuration settings as well. Visit our [Booking API docs](/api/overview/booking-properties-overview/) to check the full list of available properties.
+The Booking component is ready to use. When added to the page, it initializes with data. Provide additional configuration settings as needed. See the [Booking API docs](/api/overview/booking-properties-overview/) for the full list of available properties.
 
-#### Handling events
+#### Handle events
 
-When a user makes some action in the Booking, it invokes an event. You can use these events to detect the action and run the desired code for it. See the [full list of events](/api/overview/booking-events-overview/).
+Booking fires an event when a user performs an action. Use these events to detect actions and run custom code. See the [full list of events](/api/overview/booking-events-overview/).
 
-Open ***Booking.svelte*** and complete the `onMount()` method in the following way:
+Open `Booking.svelte` and update the `onMount()` method to listen for events:
 
 ~~~html {8-11} title="Booking.svelte"
 <script>
@@ -279,7 +279,7 @@ let booking;
 onMount(() => {
     booking = new Booking(container, {})
 
-    // output the id of the selected slot
+    // log the id of the selected slot
     booking.api.on("select-slot", (obj) => {
         console.log(obj.id);
     });
@@ -293,8 +293,8 @@ onDestroy(() => {
 // ...
 ~~~
 
-After that, you can start the app to see Booking loaded with data on a page.
+Start the app to see Booking loaded with data.
 
 ![Booking initialization](../assets/trial-booking.png)
 
-Now you know how to integrate DHTMLX Booking with Svelte. You can customize the code according to your specific requirements. The final example you can find on [**GitHub**](https://github.com/DHTMLX/svelte-booking-demo).
+Customize the code to meet your project requirements. The complete example is available on [**GitHub**](https://github.com/DHTMLX/svelte-booking-demo).

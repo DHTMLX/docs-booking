@@ -6,32 +6,34 @@ description: You can learn about the configuration in the documentation of the D
 
 # Configuration
 
-## Loading data for cards
+## Load data for cards
 
-To load data, add data to the [`data`](/api/config/booking-data) array. See all instructions here: [`Loading data`](/guides/loading-data).
+Add data to the [`data`](/api/config/booking-data) array. For full instructions, see [`Loading data`](/guides/loading-data).
 
-## Defining the structure of cards 
+## Define card structure
 
-You can configure what information all cards will display on their left side using the [`cardShape`](/api/config/booking-cardshape) property or the [`cardTemplate`](/api/config/booking-cardtemplate) property, which also allows customizing the appearance of each card's block.
+Use the [`cardShape`](/api/config/booking-cardshape) or [`cardTemplate`](/api/config/booking-cardtemplate) property to configure what information appears on the left side of each card.
 
 :::info
-`cardTemplate` helps completely customize the appearance of a card by providing your own custom HTML. It gives full control over the card's layout, design and content.
-`cardShape` allows you only to modify the default template by hiding/showing fields. 
-If both are applied, `cardTemplate` will override the `cardShape` settings.
+`cardTemplate` fully customizes the appearance of a card with custom HTML. It gives full control over the card's layout, design, and content.
+`cardShape` only modifies the default template by hiding or showing fields.
+If both are applied, `cardTemplate` overrides `cardShape`.
 :::
 
-On the left side of each card the following data fields are displayed by default:
-- preview: card image
-- review: rating information with the number of rating stars (out of five) and the number of reviews
-- category: the subtitle of a card
-- title: the title of a card which is a specialist's name
-- subtitle: the subtitle of a card, for example, experience details 
-- price: the price of the service
-- details: other details of a card
+### Hide or show card fields
 
-To hide any information block from cards' display, set the appropriate parameter value of the [`cardShape`](/api/config/booking-cardshape) property to **false**.
+Use [`cardShape`](/api/config/booking-cardshape) to control which fields appear on the left side of each card without changing the default layout.
 
-Example:
+The following fields appear on the left side of each card by default:
+- `preview` — card image
+- `review` — rating information including the number of stars (out of five) and the number of reviews
+- `category` — category name (e.g., a specialist's job)
+- `title` — card title (e.g., a specialist's name)
+- `subtitle` — card subtitle (e.g., experience details); hidden by default
+- `price` — service price
+- `details` — additional card details
+
+To hide a field, set the corresponding `cardShape` parameter to `false`. The following code snippet hides the `details` field from all cards:
 
 ~~~jsx {24}
 const data = [
@@ -71,9 +73,11 @@ new booking.Booking("#root", {
 Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/6mxd7918)
 :::
 
-To apply a template to each card (the left-hand block), use the [`cardTemplate`](/api/config/booking-cardtemplate) property. 
+### Apply a custom card template
 
-First, create a function that takes a card object and returns a string of HTML. To define a template, arrange card item properties into any HTML blocks with custom styles. In the example, `cardPreviewTemplate` returns HTML for a card that includes a preview image (card.preview), category (card.category), title (card.title), and price (card.price). 
+Use [`cardTemplate`](/api/config/booking-cardtemplate) to apply a custom HTML template to the left side of each card.
+
+Create a function that takes a card object and returns HTML. Arrange card item properties into HTML blocks with custom styles. The example below defines `cardPreviewTemplate`, which renders a preview image, category, title, and price:
 
 ~~~html {}
 <style>
@@ -118,7 +122,7 @@ First, create a function that takes a card object and returns a string of HTML. 
 </script>
 ~~~
 
-Then you also need to import the **template** helper and assign the`cardTemplate` property to your custom template function.
+Also import the `template` helper and assign your function to `cardTemplate`:
 
 ~~~jsx
 const { Booking, template } = booking;
@@ -134,14 +138,13 @@ const widget = new Booking("#root", {
 Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/k2v01vng)
 :::
 
-## Filling cards with slots
+## Fill cards with slots
 
-A slot is a time unit available for booking. Available slots for cards are displayed for the next five days starting from the current day or from the start date from the filter. 
+A slot is a time unit available for booking. Available slots appear for the next five days starting from the current date or from the start date set in the filter.
 
-### Adding slots for booking
+### Add slots for booking
 
-To add booking slots to a card, add an object to the `slots` array of the [`data`](/api/config/booking-data) property.
-In the example below, the slots are added for the specified card for Tuesdays and Fridays from 12 a.m. to 6 p.m and each slot duration is 30 minutes with 10-minutes gap between slots.
+Add an object to the `slots` array of the [`data`](/api/config/booking-data) property for each card. The example below adds slots for Tuesdays and Fridays from 12:00 to 18:00, with 30-minute duration and 10-minute gaps:
 
 ~~~jsx {15-22}
 const data = [
@@ -176,39 +179,37 @@ new booking.Booking("#root", {
 });
 ~~~
 
-### Defining slot rules
+### Define slot rules
 
-Parameters of each object in the `slots` array of the [`data`](/api/config/booking-data) property allow specifying the next settings: 
+Each object in the `slots` array of the [`data`](/api/config/booking-data) property supports the following settings:
 
-- slots start and end time
-- slot sizes (duration in minutes)
-- slot gaps (the length between slot)
-- days to which slots should be applied
+- slot start and end time
+- slot size (duration in minutes)
+- slot gap (gap length in minutes)
+- days when slots are available
 
-When applying these rules, you can apply one common rule to all days of the required card or apply different rules (specific rules to selected days or even dates), namely, you can:  
+You can apply one common rule to all days of a card, or define different rules for specific days or exact dates:
 
-- set the same parameters to all days of a specific card, which means you can add slots with the same duration, the same start and end time to all days of the selected card
-- set different slot duration and slot gaps to the same card by applying different parameters to days of the week of the same card or specific dates
+- apply the same parameters to all days of a card — same slot duration, start time, and end time
+- apply different slot duration and gaps to specific days of the week or exact dates
 
-When applying **slot size and gap**, you can:
-- set specific values to specific slots of the required card(s) using the `size` and `gap` parameters in the `slots` array of the [`data`](/api/config/booking-data) property (these values have the highest priority and will override the next values in this list)
-- set specific values to all slots of the selected card using the `slotSize` and `slotGap` parameters of the [`data`](/api/config/booking-data) property 
-- set global values to all cards in the widget by using the [`slotSize`](/api/config/booking-slotsize) and [`slotGap`](/api/config/booking-slotgap) properties
+To configure slot size and gap, use one of the following options (listed from highest to lowest priority):
+- `size` and `gap` in the `slots` array of [`data`](/api/config/booking-data) — set slot-specific values; override all other values
+- `slotSize` and `slotGap` in [`data`](/api/config/booking-data) — set card-level values; applied to all slots of a card if not overridden in `slots`
+- [`slotSize`](/api/config/booking-slotsize) and [`slotGap`](/api/config/booking-slotgap) — set widget-level values; applied to all cards if not overridden in `data`
 
 :::info
-In case you have common slots parameters and specific parameters for some days, you should be aware of the following: 
-- Slot parameters defined for specific days will override common parameters defined for all days. 
-- Slot parameters specified for dates will override parameters defined for specific days and all days. 
-- If several slots objects are created for the same day, make sure that slots time ranges (from and to) with **different** size and gap do not overlap, otherwise all slots data for these days will not be applied.
+If you mix common slot parameters with day-specific ones, note the priority order:
+- Slot parameters defined for specific days override common parameters defined for all days.
+- Slot parameters specified for dates override parameters defined for specific days and all days.
+- If multiple slot objects cover the same day, ensure their time ranges (`from`–`to`) with different `size` and `gap` values do not overlap. Overlapping ranges cause all slot data for those days to be ignored.
 :::
 
-For all slots of the widget, you can also set the [`end`](/api/config/booking-end) value that defines the date until which slots are displayed and/or the [`start`](/api/config/booking-start) date from which to start showing slots.
+Use [`end`](/api/config/booking-end) and [`start`](/api/config/booking-start) to define the date range in which slots appear across all cards.
 
-#### Examples of defining slot rules
+#### Slot rule examples
 
-For example, if you want to add booking slots with the same parameters to all days of the selected card, i.e., add slots with the same duration, the same start and end time to all days of the selected card, you should add one object to the `slots` array with the required parameters. 
-
-Example:
+To add slots with identical parameters to all days of a card, add a single object to the `slots` array. The following code snippet applies the same slot parameters to all days of a card:
 
 ~~~jsx {}
 const data = [
@@ -226,11 +227,11 @@ const data = [
         },
         slots: [
             {
-                //a common rule for all days
-                from: 14, //slots start time
-                to: 17, // slots end time
-                size: 30, // each slot duration in minutes
-                gap: 10 // a gap between slots
+                // common rule for all days
+                from: 14, // slot start time
+                to: 17, // slot end time
+                size: 30, // slot duration in minutes
+                gap: 10 // gap between slots
             }
         ]
     }
@@ -242,9 +243,7 @@ new booking.Booking("#root", {
 });
 ~~~
     
-But if you need to add slots with one set of parameters to some days of the week and other parameters to the other days, you need to add several objects to the `slots` array and specify days/dates to which these parameters should be applied.  
-
-Example:
+To apply different parameters to specific days, add multiple objects to the `slots` array and specify `days` or `dates` for each. The following code snippet applies different slot parameters to specific days and exact dates:
 
 ~~~jsx {}
 const data = [
@@ -262,15 +261,15 @@ const data = [
         },
         slots: [
             {
-                //a common slot rule for all days except those specified for the days and dates below
+                // common rule for all days except those specified below
                 from: 14,
                 to: 17,
                 size: 30,
                 gap: 10
             },
             {
-                //this rule is applied to days 2 and 5 (Tuesdays and Fridays) except
-                //the Friday from the slot object below
+                // applies to days 2 and 5 (Tuesdays and Fridays) except
+                // the Friday from the slot object below
                 from: 12,
                 to: 17,
                 size: 50,
@@ -278,7 +277,7 @@ const data = [
                 days: [2, 5]
             },
             {
-                //this rule is applied to days 3 and 4 (Wednesdays and Thursdays) and exact date
+                // applies to days 3 and 4 (Wednesdays and Thursdays) and exact dates
                 from: 18,
                 to: 20,
                 size: 45,
@@ -298,11 +297,9 @@ new booking.Booking("#root", {
 
 To see how to set [duration](/api/config/booking-slotsize) and [gap](/api/config/booking-slotgap) for all slots in the widget, [open the snippet tool](https://snippet.dhtmlx.com/pw8xsl1p).
 
-### Marking slots as used or available
+### Mark slots as used or available
 
-To mark slots as used (booked) and make them not visible for a user, use the `usedSlots` parameter of the required card item of the [`data`](/api/config/booking-data) property.
-
-Example:
+Use the `usedSlots` parameter in the [`data`](/api/config/booking-data) property to mark slots as booked and hide them from users. The following code snippet marks a specific slot as used:
 
 ~~~jsx {}
 const data = [
@@ -320,52 +317,14 @@ const data = [
         },
         slots: [
             {
-                //a common rule for all days\
-                from: 14, //slots start time
-                to: 17, // slots end time
-                size: 30, // each slot duration in minutes
-                gap: 10 // a gap between slots
+                // common rule for all days
+                from: 14, // slot start time
+                to: 17, // slot end time
+                size: 30, // slot duration in minutes
+                gap: 10 // gap between slots
             }
         ],
-        usedSlots: [ 1683234000000 ] // an array of timestamps of booked slots in milliseconds
-    },]
-
-new booking.Booking("#root", {
-    data,
-    // other parameters
-});
-~~~
-
-To mark available slots, use the `availableSlots` parameter of the [`data`](/api/config/booking-data) property.
-
-If available slots are specified here, all slots from the `slots` array are ignored (i.e., become unavailable).
-
-Example:
-
-~~~jsx {}
-const data = [
-    {
-        id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
-        title: "Natalie Tyson",
-        category: "Therapist",
-        subtitle: "2 years of experience",
-        details: "Cleveland Clinic\n9500 Euclid Ave",
-        preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
-        price: "37 $",
-        review: {
-            star: 1,
-            count: 40
-        },
-        slots: [
-            {
-                //a common rule for all days\
-                from: 14, //slots start time
-                to: 17, // slots end time
-                size: 30, // each slot duration in minutes
-                gap: 10 // a gap between slots
-            }
-        ],
-        availableSlots: [ 1693325145000, 1693584345000 ] // an array of timestamps of available slots in milliseconds
+        usedSlots: [ 1683234000000 ] // timestamps of booked slots in milliseconds
     }
 ];
 
@@ -375,11 +334,52 @@ new booking.Booking("#root", {
 });
 ~~~
 
-## Configuring the Booking dialog
+To mark available slots, use the `availableSlots` parameter of the [`data`](/api/config/booking-data) property.
 
-To configure the fields that should be displayed in the Booking dialog, use the [`formShape`](/api/config/booking-formshape) property.
+If `availableSlots` is specified, the `slots` array is ignored and those slots become unavailable. The following code snippet marks specific timestamps as the only available slots for a card:
 
-To add a new field, add a new object to the array. To make a field required for filling, set the `required` parameter to *true*. 
+~~~jsx {}
+const data = [
+    {
+        id: "5cf364d8-9997-4d8c-9586-48f90f3cb736",
+        title: "Natalie Tyson",
+        category: "Therapist",
+        subtitle: "2 years of experience",
+        details: "Cleveland Clinic\n9500 Euclid Ave",
+        preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
+        price: "37 $",
+        review: {
+            star: 1,
+            count: 40
+        },
+        slots: [
+            {
+                // common rule for all days
+                from: 14, // slot start time
+                to: 17, // slot end time
+                size: 30, // slot duration in minutes
+                gap: 10 // gap between slots
+            }
+        ],
+        availableSlots: [ 1693325145000, 1693584345000 ] // timestamps of available slots in milliseconds
+    }
+];
+
+new booking.Booking("#root", {
+    data,
+    // other parameters
+});
+~~~
+
+## Configure the Booking dialog
+
+The Booking dialog has two configurable areas: the form fields and the information block on the left side.
+
+### Configure form fields
+
+Use the [`formShape`](/api/config/booking-formshape) property to configure the fields in the Booking dialog.
+
+Add a new object to the array to include a new field. Set `required` to `true` to make a field mandatory. The following code snippet defines three fields, with the second one required:
 
 ~~~jsx {}
 const formShape = [
@@ -411,7 +411,9 @@ new booking.Booking("#root", {
 Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/yeqkuzx7)
 :::
 
-To manage information that is displayed on the left side of the Booking dialog, apply the [`infoShape`](/api/config/booking-infoshape) property. You can hide necessary fields from display by setting values to *false*.
+### Configure the info block
+
+Use the [`infoShape`](/api/config/booking-infoshape) property to manage information on the left side of the Booking dialog. Set individual fields to `false` to hide them.
 
 ~~~jsx {1-7,11}
 const infoShape = {
@@ -433,9 +435,9 @@ new booking.Booking("#root", {
 Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/pd6wp1xc)
 :::
 
-To fully customize the appearance and content of the information block, apply your own template using the [`infoTemplate`](/api/config/booking-infotemplate) property (`infoShape` can be used only to hide/show fields provided by the default template). If both properties are applied, `infoTemplate` will override the `infoShape` settings.
+Use the [`infoTemplate`](/api/config/booking-infotemplate) property to fully customize the appearance and content of the information block — `infoShape` only shows or hides fields from the default template. If both properties are applied, `infoTemplate` overrides `infoShape`.
 
-To apply a template, you need to define the function that will generate the custom HTML for the information block. This function will receive the card and slot objects as input parameters, which are `item` (card object) and `slot` (slot timestamp) as in the example below. You should also define your custom template by arranging card item properties into any HTML blocks with custom styles.
+Define a function that generates custom HTML for the information block. The function receives `item` (card object) and `slot` (slot timestamp) as parameters. Arrange card item properties into HTML blocks with custom styles:
 
 ~~~html
 <style>
@@ -485,7 +487,7 @@ To apply a template, you need to define the function that will generate the cust
 </script>
 ~~~
 
-Then you also need to import the **template** helper and pass the `infoTemplate` function into the Booking configuration as follows:
+Also import the `template` helper and pass your function to `infoTemplate`:
 
 ~~~jsx
 const { Booking, template } = booking;
@@ -502,9 +504,9 @@ Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/byb94ipu
 :::
 
 
-## Configuring the filter
+## Configure the filter
 
-You can configure filter settings via the [`filterShape`](/api/config/booking-filtershape) property. Default configuration is the following:
+Use the [`filterShape`](/api/config/booking-filtershape) property to configure filter settings. The default configuration is:
 
 ~~~jsx {}
 const defaultTimeRanges = [
@@ -525,11 +527,9 @@ const defaultFilterShape = {
 };
 ~~~
 
-### Hiding filter input fields
+### Hide filter input fields
 
-All input fields are displayed by default: text, time, and date. To hide the fields, apply the [`filterShape`](/api/config/booking-filtershape) property and set the corresponding parameters to **false**.
-
-Example:
+All input fields (text, time, and date) appear by default. Use the [`filterShape`](/api/config/booking-filtershape) property and set the corresponding parameters to `false` to hide them. The following code snippet hides the date field from the filter:
 
 ~~~jsx {}
 const filterShape = {
@@ -543,11 +543,9 @@ new booking.Booking("#root", {
 });
 ~~~
 
-### Configuring filter fields
+### Configure filter fields
 
-To enable the auto-complete and show the values that match a user's input text in the **text** field, set the `suggest` parameter of the [`filterShape`](/api/config/booking-filtershape) property to **true**. The values from the [`data`](/api/config/booking-data) object will be displayed. To add labels to these fields, apply the `label` parameter of the [`filterShape`](/api/config/booking-filtershape) property. 
-
-Example:
+Set `suggest` to `true` to enable autocomplete — values from [`data`](/api/config/booking-data) that match user input appear in the **text** field. Use the `label` parameter to add labels to these fields. The following code snippet enables autocomplete for all text filter fields:
 
 ~~~jsx {}
 const filterShape = {
@@ -565,14 +563,12 @@ new booking.Booking("#root", {
 });
 ~~~
 
-To define the time filtering options, for the `time` parameter of the [`filterShape`](/api/config/booking-filtershape) property specify the start and end slot time values:
+To define time filtering options, configure the `time` parameter with start and end slot time values:
 
-- `from` - the start time for a slot; it can be a number from 0 to 24 that specifies the time in hours (e.g., 9 means 9:00, 8.5 means 8:30) or a string in the format "h:m" (for example, "8:30")
-- `to` - the end time for a slot; it can be a number from 0 to 24 that specifies the time in hours (e.g., 9 means 9:00, 8.5 means 8:30) or a string in the format "h:m" (for example, "8:30")
+- `from` — start time for a slot; number from 0 to 24 (e.g., `9` means 9:00, `8.5` means 8:30) or string in `"h:m"` format (e.g., `"8:30"`)
+- `to` — end time for a slot; number from 0 to 24 or string in `"h:m"` format
 
-And you can also add a placeholder to each time range.
-
-Example:
+You can also add a label to each time range. The following code snippet defines custom time ranges for the filter:
 
 ~~~jsx {}
 const filterShape = {
@@ -591,11 +587,9 @@ new booking.Booking("#root", {
 });
 ~~~
 
-### Enabling the autoApply mode for the filter
+### Enable autoApply mode
 
-To hide the **Search** button and make the filter immediately apply a user's input, set the `autoApply` parameter of the [`filterShape`](/api/config/booking-filtershape) property to **true**.
-
-Example:
+Set the `autoApply` parameter of [`filterShape`](/api/config/booking-filtershape) to `true` to hide the **Search** button and apply filter criteria immediately. The following code snippet enables autoApply mode:
 
 ~~~jsx {}
 const filterShape = {
@@ -611,6 +605,20 @@ new booking.Booking("#root", {
 
 ### Example
 
-The snippet below demonstrates how to configure the filter:
+The snippet below configures the filter with all available options:
 
 <iframe src="https://snippet.dhtmlx.com/b5uj78bs?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
+
+## Configure card rendering
+
+Use the [`renderType`](/api/config/booking-rendertype) property to control how cards are rendered. Set it to `"lazy"` to render only visible cards and improve performance with large data sets.
+
+The following code snippet enables lazy rendering:
+
+~~~jsx {}
+new booking.Booking("#root", {
+    data,
+    renderType: "lazy",
+    // other parameters
+});
+~~~

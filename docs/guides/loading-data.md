@@ -4,13 +4,13 @@ title: Loading data
 description: You can learn how to load data into Booking in the documentation of the DHTMLX JavaScript Booking library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Booking.
 ---
 
-# Loading data
+# Load data
 
-The following information can be loaded into Booking:
+Booking loads data through the following property:
 
-- [`data`](/api/config/booking-data) - an array of objects containing cards data 
+- [`data`](/api/config/booking-data) — an array of objects containing card data
 
-You can prepare data in a separate file. Here is an example of an appropriate data set:
+Prepare data in a separate file. The example below shows a sample data file with three cards:
 
 ~~~jsx title="data.js"
 const data = [
@@ -91,11 +91,13 @@ const data = [
 ];
 ~~~
 
-You can load JSON data into Booking from an external file or the server-side script after the component has been initialized.
+Load JSON data into Booking from a local file or a server-side script after initializing the component.
 
-To load local data from a separate file, first prepare the source file with data.
+## Load data from a local file
 
-Example:
+To load local data from a file, prepare the source file first.
+
+The following code snippet defines a `getData` function that returns card data and card shape configuration:
 
 ~~~jsx {}
 function getData() {
@@ -143,7 +145,7 @@ const cardShape = {
 };
 ~~~
 
-Second, add the path to the source data file:
+Add the path to the data file in your HTML:
 
 ~~~html title="index.html"
 <script type="text/javascript" src="./dist/booking.js"></script>  
@@ -152,20 +154,23 @@ Second, add the path to the source data file:
 <script src="./common/data.js"></script>
 ~~~
 
-Create Booking and load data:
+Initialize Booking and pass data from the file:
 
 ~~~jsx {}
 const { data } = getData();
 const booking = new booking.Booking("#root", { data });
 ~~~
 
-About loading data from the server, refer to [Working with server](/guides/saving-reservations)
+## Load data from a server
+
+To load data from the server, see [Saving slot reservations to the server](/guides/saving-reservations).
 
 ---
 
 **Related articles**:
-- [confirm-slot](/api/events/booking-confirmslot-event) event
-- [setConfig()](/api/methods/booking-setconfig-method) method
-- [setConfirmHandler()](/api/methods/booking-setconfirmhandler-method) method
-- [renderType](/api/config/booking-rendertype) property
-- [Saving slots reservations to the server](/guides/saving-reservations)
+
+- [`confirmSlot`](/api/events/booking-confirmslot-event) — fires when a user confirms a booking slot
+- [`setConfig()`](/api/methods/booking-setconfig-method) — updates Booking configuration at runtime
+- [`setConfirmHandler()`](/api/methods/booking-setconfirmhandler-method) — sets a custom handler for booking confirmation
+- [`renderType`](/api/config/booking-rendertype) — controls how cards are rendered
+- [Saving slot reservations to the server](/guides/saving-reservations)

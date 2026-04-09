@@ -8,6 +8,8 @@ description: You can learn about Styling in the documentation of the DHTMLX Java
 
 ## Default style
 
+The following CSS variables define the default appearance of Booking:
+
 ~~~css
 .wx-material-theme {
     --wx-theme-name: material;
@@ -21,29 +23,29 @@ description: You can learn about Styling in the documentation of the DHTMLX Java
 ~~~
 
 :::tip Note
-Next versions of Booking can bring some changes for the variables and their names. Please, do not forget to check the names after updating to the newer versions and modify them in your code to avoid problems with display of the component.
+Future versions of Booking may rename CSS variables. Check variable names after each update and adjust your code accordingly.
 :::
 
 ## Built-in theme
 
-The widget provides one built-in theme which is the **Material** theme. 
+Booking provides one built-in theme: the **Material** theme.
 
-You can apply the theme via adding the corresponding *CSS* classes to the widget container:
+Add the `wx-material-theme` CSS class to the widget container:
 
 ~~~html {}
 <!-- Booking container -->
 <div id="root" class="wx-material-theme"></div>
 ~~~
 
-or just include the theme on the page from the skins folder:
+You can also include the theme directly from the skins folder:
 
 ~~~html {}
 <link type="stylesheet" href="path/to/booking/skins/material.css"/>
 ~~~
 
-## Customize built-in theme
+## Customize the built-in theme
 
-The example below demonstrates how to customize the **Material** theme that is applied to Booking:
+The example below customizes the **Material** theme with a dark color scheme:
 
 ~~~html
 <style>
@@ -66,7 +68,7 @@ The example below demonstrates how to customize the **Material** theme that is a
 
 ## Custom styles
 
-To customize the appearance of Booking to your project needs, you need to apply the corresponding CSS variables. 
+Apply CSS variables to customize Booking's appearance for your project. The following code snippet overrides the default color scheme:
 
 ~~~html
 <div id="root" class="demo"></div>
@@ -83,7 +85,7 @@ To customize the appearance of Booking to your project needs, you need to apply 
 </style>
 ~~~
 
-The next example shows how to change the background color for cards:
+The following code snippet changes the background color for cards and selected date items:
 
 ~~~html
 <style>
@@ -102,6 +104,6 @@ The next example shows how to change the background color for cards:
 
 ## Example
 
-In this snippet you can see how to apply a custom style to Booking:
+The snippet below applies a custom style to Booking:
 
 <iframe src="https://snippet.dhtmlx.com/d7w3jtqz?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

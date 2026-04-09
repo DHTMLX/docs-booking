@@ -6,36 +6,34 @@ description: You can explore how to start working with DHTMLX Booking in the doc
 
 # How to start
 
-This clear and comprehensive tutorial will guide your through the steps you need to take in order to get a full-functional Booking application on a page.
+Follow these steps to add a functional Booking application to your page.
 
 ![main](assets/main.png)
 
-## Step 1. Downloading and installing packages
+## Step 1. Download and install packages
 
-[Download the package](https://dhtmlx.com/docs/products/dhtmlxBooking/) and unpack it into a folder of your project.
+[Download the package](https://dhtmlx.com/docs/products/dhtmlxBooking/) and unpack it into your project folder.
 
-You can import JavaScript Booking into your project using `yarn` or `npm` package manager.
+Import Booking using `yarn` or `npm`:
 
-#### Installing trial Booking via npm or yarn
+### Install trial Booking via npm or yarn
 
 :::info
 If you want to use the trial version of Booking, download the trial [booking package](https://dhtmlx.com/docs/products/dhtmlxBooking/) and follow the steps mentioned in the *README* file. Note that trial booking is available for 30 days only.
 :::
 
-#### Installing PRO Booking via npm or yarn
+### Install PRO Booking via npm or yarn
 
 :::info
 You can access the DHTMLX private **npm** directly in the [Client's Area](https://dhtmlx.com/clients/) by generating your login and password for **npm**. A detailed installation guide is also available there. Please note that access to the private **npm** is available only while your proprietary Booking license is active.
 :::
 
-## Step 2. Including source files
+## Step 2. Include source files
 
-Start from creating an HTML file and call it *index.html*. Then proceed to include Booking source files into the created file.
+Create an HTML file named `index.html` and include the Booking source files:
 
-There are two necessary files:
-
-- the JS file of booking
-- the CSS file of booking
+- `booking.js`
+- `booking.css`
 
 ~~~html {5-6} title="index.html"
 <!DOCTYPE html>
@@ -54,12 +52,12 @@ There are two necessary files:
 ~~~
 
 :::tip
-If you want to integrate JavaScript Booking into React, Angular or Vue projects, refer to the corresponding [**Examples on CodeSandbox**](https://codesandbox.io/u/DHTMLX) for more information.
+To integrate Booking into React, Angular, or Vue projects, see the [**Examples on CodeSandbox**](https://codesandbox.io/u/DHTMLX).
 :::
 
-## Step 3. Creating booking
+## Step 3. Create Booking
 
-Now you are ready to add booking to the page. First, let's create the DIV container for Booking. 
+Add a container element and initialize Booking with the constructor:
 
 ~~~html {} title="index.html"
 <!DOCTYPE html>
@@ -80,12 +78,12 @@ Now you are ready to add booking to the page. First, let's create the DIV contai
 </html>
 ~~~
 
-## Step 4. Configuring Booking
+## Step 4. Configure Booking
 
-To start working with Booking, first you need to provide the initial data, and then you can add other configuration properties you want to be applied at the initialization. The example below creates Booking with two cards:
+Provide the initial data and any additional configuration properties. The following code snippet creates Booking with two cards using these properties:
 
-- the [`data`](/api/config/booking-data) property allows adding data to each card, such as title, image, rating data, and booking slots
-- the [`cardShape`](/api/config/booking-cardshape) property helps to configure which cards' data fields to display
+- [`data`](/api/config/booking-data) — adds card data, including title, image, rating, and booking slots
+- [`cardShape`](/api/config/booking-cardshape) — configures which data fields to display on cards
 
 ~~~jsx {}
 const data = [
@@ -153,7 +151,7 @@ new booking.Booking("#root", {
 
 ## What's next
 
-That's all you need to create a simple Booking on a page. Now you are ready to embark on a journey with the Booking API:
+Booking is ready. Explore the following resources to continue:
 
-- [Guides](/category/guides) pages provide instructions about installation, loading data, styling, and other helpful tips to go smoothly with the Booking configuration
-- [API reference](/api/overview/booking-api-overview) gives description of the Booking functionality
+- [Guides](/category/guides) — instructions for installation, loading data, styling, and other configuration topics
+- [API reference](/api/overview/booking-api-overview) — full description of the Booking functionality

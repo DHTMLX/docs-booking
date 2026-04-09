@@ -6,42 +6,42 @@ description: You can learn about the initialization in the documentation of the 
 
 # Initialization
 
-This guide will give you detailed instructions on how to create Booking on a page to enrich your application with rich features of this tool. Take the following steps to get a ready-to-use component:
+Follow these steps to add Booking to your page:
 
-1. [Include the Booking source files on a page](#including-source-files).
-2. [Create a container for Booking](#creating-container).
-3. [Initialize Booking with a constructor](#initializing-booking).
+1. [Include the Booking source files on a page](#include-source-files).
+2. [Create a container for Booking](#create-a-container).
+3. [Initialize Booking with a constructor](#initialize-booking).
 
-## Including source files
+## Include source files
 
 [Download the package](https://dhtmlx.com/docs/products/dhtmlxBooking/) and unpack it into a folder of your project.
 
-To create Booking, you need to include 2 source files on your page:
+Include two source files on your page:
 
-- *booking.js*
-- *booking.css*
+- `booking.js`
+- `booking.css`
 
-Make sure that you set correct relative paths to the source files:
+Set the correct relative paths to the source files:
 
 ~~~html title="index.html"
 <script type="text/javascript" src="./dist/booking.js"></script>  
 <link rel="stylesheet" href="./dist/booking.css">
 ~~~
 
-## Creating container
+## Create a container
 
-Add a container for Booking and give it an ID, for example *"root"*:
+Add a container for Booking and give it an ID, for example `"root"`:
 
 ~~~jsx title="index.html"
 <div id="root"></div>
 ~~~
 
-## Initializing Booking
+## Initialize Booking
 
-Initialize Booking using the **booking.Booking** constructor. It takes two parameters:
+Initialize Booking with the `booking.Booking` constructor. It takes two parameters:
 
-- an HTML container (the ID of the HTML container)
-- an object with configuration properties. [See the full list here](#configuration-properties)
+- an HTML container ID
+- an object with configuration properties — see [Configuration properties](#configuration-properties)
 
 ~~~jsx title="index.html"
 // create Booking
@@ -53,11 +53,11 @@ new booking.Booking("#root", {
 ### Configuration properties
 
 :::info
-The full list of properties to configure **Booking** can be found [**here**](api/overview/booking-properties-overview.md).
+See the [full list of configuration properties](api/overview/booking-properties-overview.md).
 :::
 
 ## Example
 
-In this snippet you can see how to initialize **JavaScript Booking** with initial settings:
+The snippet below initializes Booking with sample data and configuration:
 
 <iframe src="https://snippet.dhtmlx.com/6it4ohez?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

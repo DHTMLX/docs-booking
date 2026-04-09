@@ -7,69 +7,67 @@ description: You can have an overview of DHTMLX JavaScript Booking library in th
 
 # DHTMLX Booking overview
 
-## Overview
-
-JavaScript Booking library is a ready-made component designed to be easily incorporated into your application. It provides end-users with functionality for scheduling appointments online and wide filtering options. The widget is made responsive and optimised for mobile devices.
+JavaScript Booking is a ready-made component for scheduling appointments online. It provides filtering options and is optimized for mobile devices.
 
 ## Booking structure
 
-The Booking UI includes the two main parts: the filter area and the list of cards with slots. Each card's view consists of the card's information block and slots available for booking.
+The Booking UI has two main areas: the filter bar and the list of cards with slots. Each card includes an information block and available booking slots.
 
 ![main](assets/main.png)
 
 ### Cards list
 
-All cards are displayed as a list. The left side of each card in the list shows the following information items:
+Cards appear as a list. The left side of each card shows the following fields:
 
-- preview: card image
-- review: rating information with the number of rating stars (out of five) and the number of reviews
-- category: the subtitle of a card
-- title: the title of a card (for example, a specialist's name)
-- subtitle: the subtitle of a card (for example, experience details)
-- price: the price of the service
-- details: other details of a card
+- `preview` — card image
+- `review` — rating information including the number of stars (out of five) and the number of reviews
+- `category` — category name (e.g., a specialist's job)
+- `title` — card title (e.g., a specialist's name)
+- `subtitle` — card subtitle (e.g., experience details)
+- `price` — service price
+- `details` — additional card details
 
 ### Slots
 
-The right side of each card has clickable slots available for booking. Slots are displayed for the current month starting from the current date.
+The right side of each card shows clickable slots available for booking, starting from the current date.
 
-### A single card view
+### Single card view
 
-To open the view of a single card, click inside the left area of a card. The single card dialog shows the card's title, calendar and available slots for the date selected in the calendar.
+Click the left area of a card to open the single card view. It shows the card title, a calendar, and available slots for the selected date.
 
 ![single-card](assets/single-card.png)
 
 ### Booking dialog
 
-The booking dialog allows booking a slot of the selected card. To open it, click the time slot button. 
+The Booking dialog opens when you click a time slot button. Use it to book a slot for the selected card.
 
 ![booking](assets/bookingd.png)
 
-For the instruction about booking, please, refer to [Making an appointment](#making-an-appointment)
+See [Make an appointment](#make-an-appointment) for step-by-step instructions.
 
-## Filtering data
+## Filter data
 
-To filter cards by different text fields, date and time, a user should enter the required values in the input fields and click the **Search** button. A user can filter  cards by category and title by default. The next default time ranges are available for filtering:
+Enter values in the filter fields and click **Search** to filter cards by text, date, and time. By default, cards are filterable by category and title. The following time ranges are available by default:
 
-- from: 8, to: 12 (Morning)
-- from: 12, to: 17 (Afternoon)
-- from: 17, to: 20 (Evening)
+- `from: 8, to: 12` — Morning
+- `from: 12, to: 17` — Afternoon
+- `from: 17, to: 20` — Evening
 
-It's possible to configure the filter settings via API: [Configuring the filter](/guides/configuration#configuring-the-filter)
+Configure the filter settings with the API: [Configure the filter](/guides/configuration#configure-the-filter).
 
-## Making an appointment
+## Make an appointment
 
-To schedule an appointment, click the time slot button for the required card, and in the **Booking** dialog, fill in the fields, and then click **Make an appointment**.
+Click a time slot button for a card, fill in the fields in the **Booking** dialog, and click **Make an appointment**.
 
-You can also make an appointment via the single card view:
+You can also book through the single card view:
 
-1. Click inside the left area of a card.
-2. In the single card view that opens, select the required date and time.
+1. Click the left area of a card.
+2. In the single card view, select the required date and time.
 3. Next to the selected time, click **Confirm**.
-4. In the **Booking** dialog that appears, fill in the fields, and then click **Make an appointment**.
+4. In the **Booking** dialog, fill in the fields, and click **Make an appointment**.
 
 ![booking-2](assets/booking-2.png)
 
 ## What's next
 
-Now you can [start with creating a simple Booking widget on your page](/how-to-start).
+[Start creating a Booking widget on your page](/how-to-start).

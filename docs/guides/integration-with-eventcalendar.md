@@ -6,52 +6,48 @@ description: You can learn about the integration with DHTMLX Event Calendar in t
 
 # Integration with DHTMLX Event Calendar
 
-This guide will show how to integrate the DHTMLX Booking widget with [DHTMLX Event Calendar](https://docs.dhtmlx.com/eventcalendar/).
+This guide describes how to integrate the DHTMLX Booking widget with [DHTMLX Event Calendar](https://docs.dhtmlx.com/eventcalendar/).
 
 ## Main concepts
 
-The integration primarily focuses on converting the Event Calendar data into Booking slots.
+The integration focuses on converting Event Calendar data into Booking slots.
 
 - **Event Calendar events vs. Booking slots:**
     - Event Calendar handles events (e.g., single or recurring).
     - Booking generates available time slots from those events.
 
-So what you actually need is to generate booking slots from events (the [snippet below](#example) shows how to generate booking slots from the doctor's schedule by converting JSON data on server-side).
+Generate booking slots from events. The [snippet below](#example) converts doctor schedule data on the server side.
 
 - **Recurring events limitation:**
-    - Booking supports only weekly recurring events (defined as INTERVAL=1;FREQ=WEEKLY in Event Calendar).
-    - Event Calendar can handle any recurring pattern so you will need to hide other recurring options from Event calendar form
+    - Booking supports only weekly recurring events (defined as `INTERVAL=1;FREQ=WEEKLY` in Event Calendar).
+    - Event Calendar supports any recurring pattern. Hide other recurring options from the Event Calendar form to ensure compatibility.
 
 - **Timezone handling:**
     - Booking interprets timestamps in the local timezone.
-    - If you use global timestamps, you need to convert them to local timezones before sending them to Booking (and vice versa before saving the data back).
-For conversion instructions, refer to [Working with UTC data](/guides/saving-reservations/#working-with-utc-data).
+    - If you use UTC timestamps, convert them to the local timezone before sending to Booking, and back to UTC before saving. See [Work with UTC data](/guides/saving-reservations/#work-with-utc-data).
 
 - **Booking slot strategies:**
-    - Use `slots` and `usedSlots` to build the schedule, ensuring that used slots are excluded (we'll focus on this strategy)
-    - Use only `availableSlots`, which is suitable for events without recurrences.
+    - `slots` and `usedSlots` — build the schedule and exclude booked slots (this guide focuses on this strategy)
+    - `availableSlots` — suitable for events without recurrences
 
-## Example 
+## Example
 
-The snippet below demonstrates how to integrate Booking with the Event Calendar widget by converting doctors' schedules into booking slots. Key data endpoints used for integration:
+The snippet below integrates Booking with Event Calendar by converting doctors' schedules into booking slots. The integration uses the following data endpoints:
 
-- `/events` - Event Calendar data (doctor schedules) that includes recurring and single-time events. These events are used to create time slots for the Booking system.
+- `/events` — Event Calendar data (doctor schedules) with recurring and single-time events; used to generate time slots for Booking
+- `/units` — final Booking slots generated from the Event Calendar `events` data on the server side; see also [backend](https://github.com/DHTMLX/event-calendar-booking-go)
+- `/calendars` — doctors' calendars with names and IDs; used in both Event Calendar and Booking widgets
+- `/reservations` — auxiliary collection that visualizes `usedSlots` in the timeline view; populated from the Booking form
 
-- `/units` - final Booking slots generated from the Event Calendar `events` data. The slots are generated on the server-side. Please, also refer to [backend](https://github.com/DHTMLX/event-calendar-booking-go).
-
-- `/calendars` - contains doctors' calendars. It is used for displaying doctor information in both the Event Calendar and Booking widgets.
-
-- `/reservations` - an auxiliary collection used to visualize `usedSlots` in the timeline view. This data comes from the Booking form, containing information about already reserved slots for doctors.
-
-Converting events to Booking slots is the major part of integration and the rules for handling the events and converting them to slots are described in the [section below](#rules-for-converting-events-to-booking-slots).
+Converting events to Booking slots is the major part of integration and the rules for handling the events and converting them to slots are described in the [section below](#convert-events-to-booking-slots).
 
 <iframe src="https://snippet.dhtmlx.com/c5eu8pdk?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="800"></iframe>
 
-## Rules for converting events to Booking slots
+## Convert events to Booking slots
 
-We will show how to generate booking slots from the doctor's schedule/calendars using JSON data. Data is converted on the the server-side. In all example below the schedule for the next period is considered: from 2025-03-13 to 2027-03-13. 
+The examples below use JSON data converted on the server side. All examples cover the period from 2025-03-13 to 2027-03-13.
 
-**Rule 1. Single event slot creation.**
+**Rule 1. Create a slot from a single event.**
 
 For each single event in the schedule, convert the start and end times to Booking slots by creating an entry in the slots array, including the corresponding date (dates).
 
@@ -84,9 +80,9 @@ Booking slot:
 }
 ~~~
 
-**Rule 2. Recurring events.**
+**Rule 2. Handle recurring events.**
 
-For recurring events, we use a weekly pattern. The start date and end date of each recurring event in Event Calendar should be equal to Booking [start](/api/config/booking-start) and [end](/api/config/booking-end) dates, otherwise create placeholders for dates before and after the recurring event (see Rule 7).
+Use a weekly pattern for recurring events. The start and end dates of each recurring event in Event Calendar must match the Booking [`start`](/api/config/booking-start) and [`end`](/api/config/booking-end) dates. If they do not match, create placeholder rules for the dates before and after the event (see Rule 7).
 
 Event Calendar event (weekly on weekdays): the recurrence rule (rrule) specifies that the event repeats weekly on Monday, Tuesday, Wednesday, Thursday, and Friday.
 
@@ -119,11 +115,11 @@ Booking slots: In Booking, the weekly schedule is represented as a single rule, 
 }
 ~~~
 
-**Rule 3. Scheduling an event that spans multiple days.**
+**Rule 3. Handle events that span multiple days.**
 
-If an event spans across multiple days (e.g., starts at 8 PM and ends at 4 AM), it should be split into two slots — one for each day.
+If an event spans multiple days (e.g., starts at 8 PM and ends at 4 AM), split it into two slots — one for each day.
 
-For example, when a doctor's shift starts on Saturday evening and lasts into Sunday morning, Booking can only generate slots within one day. In this case, we need to split the event into two separate rules: one for Saturday and another for Sunday.
+When a doctor's shift starts on Saturday evening and continues into Sunday morning, split the event into two separate rules: one for Saturday and one for Sunday.
 
 Event Calendar event:
 
@@ -161,14 +157,14 @@ Booking slots:
 }
 ~~~
 
-**Rule 4. Additional single events added to recurring events.**
+**Rule 4. Add single events to a recurring schedule.**
 
-In this case, a single event is added to a recurring schedule. The Booking slots are generated for both the recurring and the single events. The single event dates are added to the recurring event's dates array. 
+A single event is added to a recurring schedule. Booking generates slots for both the recurring and single events. Add single event dates to the recurring event's `dates` array.
 
 Event Calendar events:
 
-- Recurring event: a doctor’s availability from 9:00 AM to 5:00 PM on weekdays.
-- Single event: a doctor is also available from 2:00 AM to 6:00 AM on March 18th and 19th.
+- Recurring event: a doctor's availability from 9:00 AM to 5:00 PM on weekdays.
+- Single event: a doctor is also available from 2:00 AM to 6:00 AM on March 18 and 19.
 
 ~~~json
 [
@@ -198,8 +194,8 @@ Event Calendar events:
 
 Booking slots:
 
-- Merging events: the recurring event and single events are combined into one Booking rule.
-- If a single event has priority, its specific dates (March 18th and 19th) are added to the recurring event's rule. Please, refer to [Defining the slot rules](/guides/configuration/#defining-slot-rules)
+- Merging events: combine the recurring and single events into one Booking rule.
+- Add specific dates (March 18 and 19) to the recurring event's rule to give them priority. See [Define slot rules](/guides/configuration/#define-slot-rules).
 
 ~~~json
 {
@@ -228,9 +224,9 @@ Booking slots:
 }
 ~~~
 
-**Rule 5. Modifying a single instance of a recurring event.**
+**Rule 5. Modify a single instance of a recurring event.**
 
-If a single instance of a recurring event is edited (e.g., time change for a specific date), generate a new slot with the updated time and date in the dates array, overriding the days array.
+If a single instance of a recurring event is edited (e.g., the time changes for a specific date), create a new slot with the updated time in the `dates` array. The `dates` array takes priority over `days`.
 
 Event Calendar event:
 
@@ -252,7 +248,7 @@ Event Calendar event:
     "recurring": false,
     "recurringEventId": 1,
     "originalStartTime": "2025-03-14T09:00:00Z"
-  },
+  }
 ]
 ~~~
 
@@ -280,9 +276,9 @@ Booking slots:
 }
 ~~~
 
-**Rule 6. Deleting a single instance of a recurring event.**
+**Rule 6. Delete a single instance of a recurring event.**
 
-When a single occurrence is removed from a recurring event in Event Calendar, we need to update Booking rules to reflect this removal. This is done by creating a special rule for the removed date, using an empty time interval and the dates property (which has higher priority than days).
+When a single occurrence is removed from a recurring event in Event Calendar, update the Booking rules to reflect the removal. Create a rule for the removed date with an empty time interval and the `dates` property. The `dates` property takes priority over `days`.
 
 Event Calendar events:
 
@@ -331,9 +327,9 @@ Booking slots:
 }
 ~~~
 
-**Rule 7. Events starting later than Booking start date.**
+**Rule 7. Handle events that start after the Booking start date.**
 
-If a recurring event starts after the Booking start date (default is today which is 2025-03-13 in all examples), create rules with empty time intervals for the dates prior to the event's start date. This simulates the dates being "removed" from the recurrence.
+If a recurring event starts after the Booking start date (2025-03-13 in these examples), create rules with empty time intervals for all dates before the event's start date. This effectively removes those dates from the recurrence.
 
 Event Calendar event:
 
@@ -347,7 +343,6 @@ Event Calendar event:
   "STDATE": "2025-03-17T09:00:00Z",
   "DTEND": "2027-03-13T00:00:00Z"
 }
-
 ~~~
 
 Booking slots:
@@ -368,13 +363,3 @@ Booking slots:
     ]
 }
 ~~~
-
-
-
-
-
-
-
-
-
-
