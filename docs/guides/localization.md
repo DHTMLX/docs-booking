@@ -390,7 +390,7 @@ const booking = new booking.Booking("#root", {
 To apply a custom locale:
 
 - create a locale object with translated strings for all labels
-- pass it to the [`locale`](/api/config/booking-locale) property or apply it at runtime with [`setLocale()`](/api/methods/booking-setlocale-method)
+- pass the locale object to the [`locale`](/api/config/booking-locale) property or apply the locale at runtime with [`setLocale()`](/api/methods/booking-setlocale-method)
 
 The following code snippet applies a custom Korean locale using `setLocale()`:
 

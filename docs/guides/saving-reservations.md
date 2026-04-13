@@ -1,6 +1,6 @@
 ---
-sidebar_label: Working with server
-title:  Working with server
+sidebar_label: Work with the server
+title: Work with the server
 description: You can learn about working with server in the documentation of the DHTMLX JavaScript Booking library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Booking.
 ---
 
@@ -65,12 +65,12 @@ fetch("/server/url")
 
 ## Work with UTC data
 
-The widget uses the local timezone. If your data is in UTC, convert it to the local timezone before loading.
+The widget uses the local timezone. If your data is in UTC, convert the data to the local timezone before loading.
 
 The example below uses two helper functions to handle this conversion:
 
-- `g2l` converts a UTC timestamp to the local timezone. Use it during data loading to convert `usedSlots` and `slots` timestamps from UTC to local time.
-- `l2g` converts a local timestamp back to UTC. Use it when saving a reservation to convert the local time from `slot.time[0]` to UTC before sending it to the server.
+- `g2l` converts a UTC timestamp to the local timezone. Use `g2l` during data loading to convert `usedSlots` and `slots` timestamps from UTC to local time.
+- `l2g` converts a local timestamp back to UTC. Use `l2g` when saving a reservation to convert the local time from `slot.time[0]` to UTC before sending the data to the server.
 
 The following code snippet converts UTC timestamps to local time during data loading, and back to UTC when sending a reservation:
 
@@ -125,12 +125,12 @@ const handleSlotReservation = event => {
     });
 };
 
-// widget initialization
+// initialize the widget
 const widget = new booking.Booking("#root", {
     data: [],
 });
 
-// data loading
+// load data
 fetch( serverURL + "/units")
     .then(res => res.json())
     .then(units => {
@@ -152,6 +152,21 @@ fetch( serverURL + "/units")
         widget.setConfig({ data: units });
         widget.setConfirmHandler(handleSlotReservation);
     });
+~~~
+
+## Handle user actions
+
+Booking fires events when users interact with cards and slots. Use these events to track selections and run custom code.
+
+- [`select-item`](/api/events/booking-selectitem-event) — fires when a user selects a card
+- [`select-slot`](/api/events/booking-selectslot-event) — fires when a user selects a slot
+
+The following code snippet logs the card ID when a user selects a card:
+
+~~~jsx {}
+booking.api.on("select-item", (obj) => {
+    console.log(obj.id);
+});
 ~~~
 
 ## Example

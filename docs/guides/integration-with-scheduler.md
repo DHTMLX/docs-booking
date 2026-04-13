@@ -39,7 +39,7 @@ The snippet below integrates Booking with Scheduler by converting doctors' sched
 - `/doctors/reservations` — auxiliary collection that visualizes `usedSlots` in the timeline view; populated from the Booking form
 - `/doctors` — list of all doctors with names and IDs; used in both Scheduler and Booking widgets
 
-Converting Scheduler events to Booking slots is the major part of integration and the rules for handling the events and converting them to slots are described in the [section below](#convert-scheduler-events-to-booking-slots).
+Event conversion is the major part of integration. The [section below](#convert-scheduler-events-to-booking-slots) describes the rules for handling events and converting the data to slots.
 
 <iframe src="https://snippet.dhtmlx.com/d5zbq3g3?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="800"></iframe>
 
@@ -115,7 +115,7 @@ Booking slots: In Booking, the weekly schedule is represented as a single rule, 
 
 **Rule 3. Handle events that span multiple days.**
 
-If an event spans multiple days (e.g., starts at 8 PM and ends at 4 AM), split it into two slots — one for each day.
+If an event spans multiple days (e.g., starts at 8 PM and ends at 4 AM), split the event into two slots, one for each day.
 
 When a doctor's shift starts on Saturday evening and continues into Sunday morning, split the event into two separate rules: one for Saturday and one for Sunday.
 
@@ -155,7 +155,7 @@ Booking slots:
 
 **Rule 4. Add single events to a recurring schedule.**
 
-A single event is added to a recurring schedule. Booking generates slots for both the recurring and single events. Add single event dates to the recurring event's `dates` array.
+Add a single event to a recurring schedule. Booking generates slots for both the recurring and single events. Add single event dates to the recurring event's `dates` array.
 
 Scheduler events:
 
@@ -190,7 +190,7 @@ Scheduler events:
 Booking slots:
 
 - Merging events: combine the recurring and single events into one Booking rule.
-- Add specific dates (March 18 and 19) to the recurring event's rule to give them priority. See [Define slot rules](/guides/configuration/#define-slot-rules).
+- Add specific dates (March 18 and 19) to the recurring event's rule to give those dates priority. See [Define slot rules](/guides/configuration/#define-slot-rules).
 
 ~~~json
 {
@@ -221,7 +221,7 @@ Booking slots:
 
 **Rule 5. Modify a single instance of a recurring event.**
 
-If a single instance of a recurring event is edited (e.g., the time changes for a specific date), create a new slot with the updated time in the `dates` array. The `dates` array takes priority over `days`.
+If you edit a single instance of a recurring event (e.g., the time changes for a specific date), create a new slot with the updated time in the `dates` array. The `dates` array takes priority over `days`.
 
 Scheduler event:
 
@@ -270,7 +270,7 @@ Booking slots:
 
 **Rule 6. Delete a single instance of a recurring event.**
 
-When a single occurrence is removed from a recurring event in Scheduler, update the Booking rules to reflect the removal. Create a rule for the removed date with an empty time interval and the `dates` property. The `dates` property takes priority over `days`.
+When you remove a single occurrence from a recurring event in Scheduler, update the Booking rules to reflect the removal. Create a rule for the removed date with an empty time interval and the `dates` property. The `dates` property takes priority over `days`.
 
 Scheduler events:
 

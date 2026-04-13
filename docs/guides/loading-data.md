@@ -161,9 +161,22 @@ const { data } = getData();
 const booking = new booking.Booking("#root", { data });
 ~~~
 
+## Read current data
+
+Use [`serialize()`](/api/methods/booking-serialize-method) to read the current Booking data as a JSON array. The method returns the `data` array with all card objects in their current state.
+
+The following code snippet reads the data after Booking initializes:
+
+~~~jsx {}
+const booking = new booking.Booking("#root", { data });
+
+const currentData = booking.serialize();
+console.log(currentData);
+~~~
+
 ## Load data from a server
 
-To load data from the server, see [Saving slot reservations to the server](/guides/saving-reservations).
+To load data from the server, see [Work with the server](/guides/saving-reservations).
 
 ---
 
@@ -173,4 +186,4 @@ To load data from the server, see [Saving slot reservations to the server](/guid
 - [`setConfig()`](/api/methods/booking-setconfig-method) — updates Booking configuration at runtime
 - [`setConfirmHandler()`](/api/methods/booking-setconfirmhandler-method) — sets a custom handler for booking confirmation
 - [`renderType`](/api/config/booking-rendertype) — controls how cards are rendered
-- [Saving slot reservations to the server](/guides/saving-reservations)
+- [Work with the server](/guides/saving-reservations)

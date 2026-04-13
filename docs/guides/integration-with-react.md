@@ -56,15 +56,15 @@ Get the DHTMLX Booking source code. Stop the app and install the Booking package
 
 ### Step 1. Install the package
 
-Download the [**trial Booking package**](/how-to-start/#installing-trial-booking-via-npm-or-yarn) and follow steps mentioned in the README file. Note that trial Booking is available 30 days only.
+Download the [**trial Booking package**](/how-to-start/#installing-trial-booking-via-npm-or-yarn) and follow the steps in the README file. Note that trial Booking is available 30 days only.
 
 ### Step 2. Create the component
 
-Create a React component to add Booking to the application. Add a new file in the `src/` directory and name it `Booking.jsx`.
+Create a React component to add Booking to the application. Add a new file in the *src/* directory and name it *Booking.jsx*.
 
 #### Import source files
 
-Open `Booking.jsx` and import Booking source files:
+Open *Booking.jsx* and import Booking source files:
 
 - if you use PRO version and install the Booking package from a local folder, use the following import paths:
 
@@ -73,7 +73,7 @@ import { Booking } from 'dhx-booking-package';
 import 'dhx-booking-package/dist/booking.css';
 ~~~
 
-Depending on the package, the source files may be minified. In that case, import `booking.min.css` instead.
+Depending on the package, the source files may be minified. In that case, import *booking.min.css* instead.
 
 - if you use the trial version of Booking, specify the following paths:
 
@@ -133,7 +133,7 @@ body,
 
 #### Load data
 
-Create a `data.js` file in the `src/` directory and add sample data:
+Create a *data.js* file in the *src/* directory and add sample data:
 
 ~~~jsx title="data.js"
 export function getData() {
@@ -216,7 +216,7 @@ export function getData() {
 }
 ~~~
 
-Open `App.js`, import the data, and pass it to the `<Booking/>` component as `props`:
+Open *App.js*, import the data, and pass the data to the `<Booking/>` component as `props`:
 
 ~~~jsx {2,5-6} title="App.js"
 import Booking from "./Booking";
@@ -230,7 +230,7 @@ function App() {
 export default App;
 ~~~
 
-Open `Booking.jsx` and apply the props to the Booking configuration:
+Open *Booking.jsx* and apply the props to the Booking configuration:
 
 ~~~jsx {5,10} title="Booking.jsx"
 import { useEffect, useRef } from "react";
@@ -255,13 +255,13 @@ export default function BookingComponent(props) {
 }
 ~~~
 
-The Booking component is ready to use. When added to the page, it initializes with data. Provide additional configuration settings as needed. See the [Booking API docs](/api/overview/booking-properties-overview/) for the full list of available properties.
+The Booking component is ready to use. When you add the component to the page, Booking initializes with data. Provide additional configuration settings as needed. See the [Booking API docs](/api/overview/booking-properties-overview/) for the full list of available properties.
 
 #### Handle events
 
 Booking fires an event when a user performs an action. Use these events to detect actions and run custom code. See the [full list of events](/api/overview/booking-events-overview/).
 
-Open `Booking.jsx` and update the `useEffect()` method to listen for events:
+Open *Booking.jsx* and update the `useEffect()` method to listen for events:
 
 ~~~jsx {5-8} title="Booking.jsx"
 // ...

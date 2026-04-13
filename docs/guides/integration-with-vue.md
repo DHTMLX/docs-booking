@@ -60,15 +60,15 @@ Get the DHTMLX Booking source code. Stop the app and install the Booking package
 
 ### Step 1. Install the package
 
-Download the [**trial Booking package**](/how-to-start/#installing-trial-booking-via-npm-or-yarn) and follow steps mentioned in the README file. Note that trial Booking is available 30 days only.
+Download the [**trial Booking package**](/how-to-start/#installing-trial-booking-via-npm-or-yarn) and follow the steps in the README file. Note that trial Booking is available 30 days only.
 
 ### Step 2. Create the component
 
-Create a Vue component to add Booking to the application. Add a new file in the `src/components/` directory and name it `Booking.vue`.
+Create a Vue component to add Booking to the application. Add a new file in the *src/components/* directory and name it *Booking.vue*.
 
 #### Import source files
 
-Open `Booking.vue` and import Booking source files:
+Open *Booking.vue* and import Booking source files:
 
 - if you use PRO version and install the Booking package from a local folder, use the following import paths:
 
@@ -79,7 +79,7 @@ import 'dhx-booking-package/dist/booking.css';
 </script>
 ~~~
 
-Depending on the package, the source files may be minified. In that case, import `booking.min.css` instead.
+Depending on the package, the source files may be minified. In that case, import *booking.min.css* instead.
 
 - if you use the trial version of Booking, specify the following paths:
 
@@ -142,7 +142,7 @@ body,
 
 #### Load data
 
-Create a `data.js` file in the `src/` directory and add sample data:
+Create a *data.js* file in the *src/* directory and add sample data:
 
 ~~~jsx title="data.js"
 export function getData() {
@@ -225,7 +225,7 @@ export function getData() {
 }
 ~~~
 
-Open `App.vue`, import the data, and pass it to the `<Booking/>` component as `props`:
+Open *App.vue*, import the data, and pass the data to the `<Booking/>` component as `props`:
 
 ~~~html {3,7-10,15} title="App.vue"
 <script>
@@ -246,7 +246,7 @@ export default {
 </template>
 ~~~
 
-Open `Booking.vue` and apply the props to the Booking configuration:
+Open *Booking.vue* and apply the props to the Booking configuration:
 
 ~~~html {6,10} title="Booking.vue"
 <script>
@@ -274,13 +274,13 @@ export default {
 </template>
 ~~~
 
-The Booking component is ready to use. When added to the page, it initializes with data. Provide additional configuration settings as needed. See the [Booking API docs](/api/overview/booking-properties-overview/) for the full list of available properties.
+The Booking component is ready to use. When you add the component to the page, Booking initializes with data. Provide additional configuration settings as needed. See the [Booking API docs](/api/overview/booking-properties-overview/) for the full list of available properties.
 
 #### Handle events
 
 Booking fires an event when a user performs an action. Use these events to detect actions and run custom code. See the [full list of events](/api/overview/booking-events-overview/).
 
-Open `Booking.vue` and update the `mounted()` method to listen for events:
+Open *Booking.vue* and update the `mounted()` method to listen for events:
 
 ~~~html {8-11} title="Booking.vue"
 <script>

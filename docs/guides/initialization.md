@@ -14,12 +14,12 @@ Follow these steps to add Booking to your page:
 
 ## Include source files
 
-[Download the package](https://dhtmlx.com/docs/products/dhtmlxBooking/) and unpack it into a folder of your project.
+[Download](https://dhtmlx.com/docs/products/dhtmlxBooking/) and unpack the Booking package into a folder of your project.
 
 Include two source files on your page:
 
-- `booking.js`
-- `booking.css`
+- *booking.js*
+- *booking.css*
 
 Set the correct relative paths to the source files:
 
@@ -30,7 +30,7 @@ Set the correct relative paths to the source files:
 
 ## Create a container
 
-Add a container for Booking and give it an ID, for example `"root"`:
+Add a container for Booking and give the container an ID, for example `"root"`:
 
 ~~~jsx title="index.html"
 <div id="root"></div>
@@ -38,19 +38,19 @@ Add a container for Booking and give it an ID, for example `"root"`:
 
 ## Initialize Booking
 
-Initialize Booking with the `booking.Booking` constructor. It takes two parameters:
+Initialize Booking with the `booking.Booking` constructor. The constructor takes two parameters:
 
 - an HTML container ID
-- an object with configuration properties — see [Configuration properties](#configuration-properties)
+- an object with configuration properties (see [Set configuration properties](#set-configuration-properties))
 
 ~~~jsx title="index.html"
-// create Booking
+// initialize Booking
 new booking.Booking("#root", {
     // configuration properties
 });
 ~~~
 
-### Configuration properties
+### Set configuration properties
 
 :::info
 See the [full list of configuration properties](api/overview/booking-properties-overview.md).

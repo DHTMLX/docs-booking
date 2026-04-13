@@ -37,7 +37,7 @@ Add the `wx-material-theme` CSS class to the widget container:
 <div id="root" class="wx-material-theme"></div>
 ~~~
 
-You can also include the theme directly from the skins folder:
+Include the theme directly from the skins folder:
 
 ~~~html {}
 <link type="stylesheet" href="path/to/booking/skins/material.css"/>

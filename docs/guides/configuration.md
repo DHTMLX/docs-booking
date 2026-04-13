@@ -15,9 +15,9 @@ Add data to the [`data`](/api/config/booking-data) array. For full instructions,
 Use the [`cardShape`](/api/config/booking-cardshape) or [`cardTemplate`](/api/config/booking-cardtemplate) property to configure what information appears on the left side of each card.
 
 :::info
-`cardTemplate` fully customizes the appearance of a card with custom HTML. It gives full control over the card's layout, design, and content.
+`cardTemplate` fully customizes the appearance of a card with custom HTML. `cardTemplate` gives full control over the card's layout, design, and content.
 `cardShape` only modifies the default template by hiding or showing fields.
-If both are applied, `cardTemplate` overrides `cardShape`.
+If you apply both, `cardTemplate` overrides `cardShape`.
 :::
 
 ### Hide or show card fields
@@ -33,7 +33,7 @@ The following fields appear on the left side of each card by default:
 - `price` — service price
 - `details` — additional card details
 
-To hide a field, set the corresponding `cardShape` parameter to `false`. The following code snippet hides the `details` field from all cards:
+To hide a field, set the `cardShape` parameter to `false`. The following code snippet hides the `details` field from all cards:
 
 ~~~jsx {24}
 const data = [
@@ -195,8 +195,8 @@ You can apply one common rule to all days of a card, or define different rules f
 
 To configure slot size and gap, use one of the following options (listed from highest to lowest priority):
 - `size` and `gap` in the `slots` array of [`data`](/api/config/booking-data) — set slot-specific values; override all other values
-- `slotSize` and `slotGap` in [`data`](/api/config/booking-data) — set card-level values; applied to all slots of a card if not overridden in `slots`
-- [`slotSize`](/api/config/booking-slotsize) and [`slotGap`](/api/config/booking-slotgap) — set widget-level values; applied to all cards if not overridden in `data`
+- `slotSize` and `slotGap` in [`data`](/api/config/booking-data) — set card-level values; apply to all slots of a card if not overridden in `slots`
+- [`slotSize`](/api/config/booking-slotsize) and [`slotGap`](/api/config/booking-slotgap) — set widget-level values; apply to all cards if not overridden in `data`
 
 :::info
 If you mix common slot parameters with day-specific ones, note the priority order:
@@ -336,7 +336,7 @@ new booking.Booking("#root", {
 
 To mark available slots, use the `availableSlots` parameter of the [`data`](/api/config/booking-data) property.
 
-If `availableSlots` is specified, the `slots` array is ignored and those slots become unavailable. The following code snippet marks specific timestamps as the only available slots for a card:
+If you specify `availableSlots`, Booking ignores the `slots` array and makes those slots unavailable. The following code snippet marks specific timestamps as the only available slots for a card:
 
 ~~~jsx {}
 const data = [
@@ -435,7 +435,7 @@ new booking.Booking("#root", {
 Please, see an example in the [snippet tool](https://snippet.dhtmlx.com/pd6wp1xc)
 :::
 
-Use the [`infoTemplate`](/api/config/booking-infotemplate) property to fully customize the appearance and content of the information block — `infoShape` only shows or hides fields from the default template. If both properties are applied, `infoTemplate` overrides `infoShape`.
+Use the [`infoTemplate`](/api/config/booking-infotemplate) property to fully customize the appearance and content of the information block. The `infoShape` property only shows or hides fields from the default template. If you apply both properties, `infoTemplate` overrides `infoShape`.
 
 Define a function that generates custom HTML for the information block. The function receives `item` (card object) and `slot` (slot timestamp) as parameters. Arrange card item properties into HTML blocks with custom styles:
 
@@ -529,7 +529,7 @@ const defaultFilterShape = {
 
 ### Hide filter input fields
 
-All input fields (text, time, and date) appear by default. Use the [`filterShape`](/api/config/booking-filtershape) property and set the corresponding parameters to `false` to hide them. The following code snippet hides the date field from the filter:
+All input fields (text, time, and date) appear by default. Use the [`filterShape`](/api/config/booking-filtershape) property and set the parameters to `false` to hide them. The following code snippet hides the date field from the filter:
 
 ~~~jsx {}
 const filterShape = {
@@ -545,7 +545,7 @@ new booking.Booking("#root", {
 
 ### Configure filter fields
 
-Set `suggest` to `true` to enable autocomplete — values from [`data`](/api/config/booking-data) that match user input appear in the **text** field. Use the `label` parameter to add labels to these fields. The following code snippet enables autocomplete for all text filter fields:
+Set `suggest` to `true` to enable autocomplete. Values from [`data`](/api/config/booking-data) that match user input appear in the `text` field. Use the `label` parameter to add labels to these fields. The following code snippet enables autocomplete for all text filter fields:
 
 ~~~jsx {}
 const filterShape = {
@@ -609,9 +609,23 @@ The snippet below configures the filter with all available options:
 
 <iframe src="https://snippet.dhtmlx.com/b5uj78bs?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
+### Handle filter changes
+
+Use the [`filter-data`](/api/events/booking-filterdata-event) event to react when users apply a filter. The event fires with the current text, date, and time filter values.
+
+The following code snippet logs filter values when a user applies a filter:
+
+~~~jsx {}
+const booking = new booking.Booking("#root", { data });
+
+booking.api.on("filter-data", (obj) => {
+    console.log(obj.text, obj.date, obj.time);
+});
+~~~
+
 ## Configure card rendering
 
-Use the [`renderType`](/api/config/booking-rendertype) property to control how cards are rendered. Set it to `"lazy"` to render only visible cards and improve performance with large data sets.
+Use the [`renderType`](/api/config/booking-rendertype) property to control how cards are rendered. Set `renderType` to `"lazy"` to render only visible cards and improve performance with large data sets.
 
 The following code snippet enables lazy rendering:
 

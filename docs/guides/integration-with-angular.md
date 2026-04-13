@@ -53,15 +53,15 @@ Get the DHTMLX Booking source code. Stop the app and install the Booking package
 
 ### Step 1. Install the package
 
-Download the [**trial Booking package**](/how-to-start/#installing-trial-booking-via-npm-or-yarn) and follow steps mentioned in the README file. Note that trial Booking is available 30 days only.
+Download the [**trial Booking package**](/how-to-start/#installing-trial-booking-via-npm-or-yarn) and follow the steps in the README file. Note that trial Booking is available 30 days only.
 
 ### Step 2. Create the component
 
-Create an Angular component to add Booking to the application. Create the `booking` folder in the `src/app/` directory, add a new file into it, and name it `booking.component.ts`.
+Create an Angular component to add Booking to the application. Create the *booking* folder in the *src/app/* directory, add a new file into it, and name it *booking.component.ts*.
 
 #### Import source files
 
-Open the file and import Booking source files:
+Open *booking.component.ts* and import Booking source files:
 
 - if you use PRO version and install the Booking package from a local folder, use the following import path:
 
@@ -113,7 +113,7 @@ export class BookingComponent implements OnInit, OnDestroy {
 
 #### Add styles
 
-Create the `booking.component.css` file in the `src/app/booking/` directory and add the following styles:
+Create the *booking.component.css* file in the *src/app/booking/* directory and add the following styles:
 
 ~~~css title="booking.component.css"
 /* import Booking styles */
@@ -135,7 +135,7 @@ body {
 
 #### Load data
 
-Create a `data.ts` file in the `src/app/booking/` directory and add sample data:
+Create a *data.ts* file in the *src/app/booking/* directory and add sample data:
 
 ~~~jsx title="data.ts"
 export function getData() : any {
@@ -218,7 +218,7 @@ export function getData() : any {
 }
 ~~~
 
-Open `booking.component.ts`, import the data file, and pass data to the Booking configuration in `ngOnInit()`:
+Open *booking.component.ts*, import the data file, and pass data to the Booking configuration in `ngOnInit()`:
 
 ~~~jsx {2,18,20} title="booking.component.ts"
 import { Booking } from '@dhx/trial-booking';
@@ -250,13 +250,13 @@ export class BookingComponent implements OnInit, OnDestroy {
 }
 ~~~
 
-The Booking component is ready to use. When added to the page, it initializes with data. Provide additional configuration settings as needed. See the [Booking API docs](/api/overview/booking-properties-overview/) for the full list of available properties.
+The Booking component is ready to use. When you add the component to the page, Booking initializes with data. Provide additional configuration settings as needed. See the [Booking API docs](/api/overview/booking-properties-overview/) for the full list of available properties.
 
 #### Handle events
 
 Booking fires an event when a user performs an action. Use these events to detect actions and run custom code. See the [full list of events](/api/overview/booking-events-overview/).
 
-Open `booking.component.ts` and update the `ngOnInit()` method to listen for events:
+Open *booking.component.ts* and update the `ngOnInit()` method to listen for events:
 
 ~~~jsx {7-10} title="booking.component.ts"
 // ...
@@ -278,7 +278,7 @@ ngOnDestroy(): void {
 
 ### Step 3. Add Booking to the app
 
-To add `BookingComponent` to the app, open `src/app/app.component.ts` and replace the default code with the following:
+To add `BookingComponent` to the app, open *src/app/app.component.ts* and replace the default code with the following:
 
 ~~~jsx {5} title="app.component.ts"
 import { Component } from "@angular/core";
@@ -292,7 +292,7 @@ export class AppComponent {
 }
 ~~~
 
-Create the `app.module.ts` file in the `src/app/` directory and specify `BookingComponent`:
+Create the *app.module.ts* file in the *src/app/* directory and specify `BookingComponent`:
 
 ~~~jsx {4-5,8} title="app.module.ts"
 import { NgModule } from "@angular/core";
@@ -309,7 +309,7 @@ import { BookingComponent } from "./booking/booking.component";
 export class AppModule {}
 ~~~
 
-Open `src/main.ts` and replace the existing code with the following:
+Open *src/main.ts* and replace the existing code with the following:
 
 ~~~jsx title="main.ts"
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
