@@ -206,6 +206,14 @@ const config = {
   	themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+		image: 'img/og-default-booking.png',
+		metadata: [
+			{ property: 'og:type', content: 'website' },
+			{ property: 'og:site_name', content: 'DHTMLX Booking Docs' },
+			{ property: 'og:locale', content: 'en_US' },
+			{ name: 'twitter:card', content: 'summary_large_image' },
+			{ name: 'twitter:site', content: '@dhtmlx' }
+		],
 		// hideableSidebar: true,
 		navbar: {
 			// hideOnScroll:true,
