@@ -6,11 +6,19 @@ description: You can learn how to load data into Booking in the documentation of
 
 # Loading data
 
-The following information can be loaded into Booking:
+The Booking widget accepts a single dataset through the configuration object:
 
-- [`data`](/api/config/booking-data) - an array of objects containing cards data 
+- [`data`](/api/config/booking-data) — array of card objects with slot rules
 
-You can prepare data in a separate file. Here is an example of an appropriate data set:
+:::tip
+For large datasets, enable lazy rendering with the [`renderType`](/api/config/booking-rendertype) property so the widget renders only visible cards.
+:::
+
+## Prepare a sample dataset
+
+Keep card data in a separate file to share the dataset across pages and tests. Each card object includes identifying fields, display fields, and a `slots` array that defines availability rules.
+
+The following code snippet defines three card objects in a *data.js* module:
 
 ~~~jsx title="data.js"
 const data = [
@@ -91,11 +99,11 @@ const data = [
 ];
 ~~~
 
-You can load JSON data into Booking from an external file or the server-side script after the component has been initialized.
+## Load data from a local file
 
-To load local data from a separate file, first prepare the source file with data.
+Load card data from a separate JavaScript file by exposing the dataset through a helper function.
 
-Example:
+The following code snippet defines `getData()`, which returns both `data` and a `cardShape` config:
 
 ~~~jsx {}
 function getData() {
@@ -129,7 +137,7 @@ const data = [
             }
         ]
     },
-    //other data
+    // other cards
 ];
 
 const cardShape = {
@@ -143,7 +151,9 @@ const cardShape = {
 };
 ~~~
 
-Second, add the path to the source data file:
+Include the data file on the page after the Booking source files.
+
+The following code snippet wires the *data.js* module into *index.html*:
 
 ~~~html title="index.html"
 <script type="text/javascript" src="./dist/booking.js"></script>  
@@ -152,20 +162,37 @@ Second, add the path to the source data file:
 <script src="./common/data.js"></script>
 ~~~
 
-Create Booking and load data:
+Pass the dataset returned by `getData()` to the Booking constructor.
+
+The following code snippet creates a Booking instance with the loaded data:
 
 ~~~jsx {}
 const { data } = getData();
 const booking = new booking.Booking("#root", { data });
 ~~~
 
-About loading data from the server, refer to [Working with server](/guides/saving-reservations)
+## Update data after initialization
+
+To replace the dataset after Booking is initialized, call the [`setConfig()`](/api/methods/booking-setconfig-method) method with a new `data` array. The method re-initializes the widget with the merged configuration.
+
+The following code snippet fetches a fresh dataset from the server and applies it to the existing Booking instance:
+
+~~~jsx {}
+fetch("/api/cards")
+    .then(res => res.json())
+    .then(data => {
+        booking.setConfig({ data });
+    });
+~~~
+
+For server-side persistence of bookings, see the [Saving reservations to the server](/guides/saving-reservations) guide.
 
 ---
 
 **Related articles**:
-- [confirm-slot](/api/events/booking-confirmslot-event) event
-- [setConfig()](/api/methods/booking-setconfig-method) method
-- [setConfirmHandler()](/api/methods/booking-setconfirmhandler-method) method
-- [renderType](/api/config/booking-rendertype) property
-- [Saving slots reservations to the server](/guides/saving-reservations)
+
+- [`confirm-slot`](/api/events/booking-confirmslot-event) — handle slot booking confirmation
+- [`setConfig()`](/api/methods/booking-setconfig-method) — update the widget configuration after initialization
+- [`setConfirmHandler()`](/api/methods/booking-setconfirmhandler-method) — define the slot confirmation handler
+- [`renderType`](/api/config/booking-rendertype) — switch between default and lazy rendering
+- [Saving reservations to the server](/guides/saving-reservations) — persist bookings server-side
