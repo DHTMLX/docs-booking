@@ -6,42 +6,48 @@ description: You can learn about the initialization in the documentation of the 
 
 # Initialization
 
-This guide will give you detailed instructions on how to create Booking on a page to enrich your application with rich features of this tool. Take the following steps to get a ready-to-use component:
+This guide walks you through creating a Booking instance on a page. Take the following steps to get a working component:
 
-1. [Include the Booking source files on a page](#including-source-files).
-2. [Create a container for Booking](#creating-container).
-3. [Initialize Booking with a constructor](#initializing-booking).
+1. [Include the Booking source files](#include-source-files).
+2. [Create a container](#create-a-container).
+3. [Initialize Booking with the constructor](#initialize-booking).
 
-## Including source files
+## Include source files
 
-[Download the package](https://dhtmlx.com/docs/products/dhtmlxBooking/) and unpack it into a folder of your project.
+The Booking widget ships as two files that you load on the page.
 
-To create Booking, you need to include 2 source files on your page:
+[Download the package](https://dhtmlx.com/docs/products/dhtmlxBooking/) and unpack it into a folder of your project. Add the following files to your page:
 
-- *booking.js*
-- *booking.css*
+- *booking.js* — Booking source code
+- *booking.css* — Booking stylesheet
 
-Make sure that you set correct relative paths to the source files:
+Set correct relative paths to the source files.
+
+The following code snippet includes the Booking files from a *dist/* folder:
 
 ~~~html title="index.html"
 <script type="text/javascript" src="./dist/booking.js"></script>  
 <link rel="stylesheet" href="./dist/booking.css">
 ~~~
 
-## Creating container
+## Create a container
 
-Add a container for Booking and give it an ID, for example *"root"*:
+Add an HTML element that hosts the Booking widget and assign it an ID, for example *root*.
+
+The following code snippet creates a container with the ID *root*:
 
 ~~~jsx title="index.html"
 <div id="root"></div>
 ~~~
 
-## Initializing Booking
+## Initialize Booking
 
-Initialize Booking using the **booking.Booking** constructor. It takes two parameters:
+Call the `booking.Booking` constructor with two parameters:
 
-- an HTML container (the ID of the HTML container)
-- an object with configuration properties. [See the full list here](#configuration-properties)
+- container — the selector or ID of the HTML container that hosts the widget
+- config — an object with configuration properties (see [Configuration properties](#configuration-properties))
+
+The following code snippet initializes Booking inside the `#root` container:
 
 ~~~jsx title="index.html"
 // create Booking
@@ -53,11 +59,11 @@ new booking.Booking("#root", {
 ### Configuration properties
 
 :::info
-The full list of properties to configure **Booking** can be found [**here**](api/overview/booking-properties-overview.md).
+For the full list of properties used to configure Booking, see the [Properties overview](/api/overview/booking-properties-overview).
 :::
 
 ## Example
 
-In this snippet you can see how to initialize **JavaScript Booking** with initial settings:
+The snippet below initializes Booking with a set of initial properties:
 
 <iframe src="https://snippet.dhtmlx.com/6it4ohez?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
