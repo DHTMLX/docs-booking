@@ -6,40 +6,54 @@ description: You can learn about working with server in the documentation of the
 
 # Working with server
 
-## Loading data 
+The Booking widget integrates with a backend through two main operations: loading cards data from the server and posting slot reservations back to the server. This guide covers both flows and the UTC conversion needed when server data uses a different timezone.
 
-To get server data, you can send the request for data using the native **fetch** method (or any other way):
+## Load data from the server
+
+Fetch card data with the native `fetch` API (or any equivalent HTTP client) and pass the parsed JSON to the widget through the [`setConfig()`](/api/methods/booking-setconfig-method) method.
+
+The following code snippet initializes an empty Booking instance and loads the dataset once the response arrives:
 
 ~~~jsx {}
-const booking = new booking.Booking("#booking", {data: []});
+const booking = new booking.Booking("#booking", { data: [] });
 const server = "https://some-backend-url";
 
-fetch(server + "/data").then((res) => res.json()).then((data) => { 
-    booking.setConfig({data});
-});
+fetch(server + "/data")
+    .then((res) => res.json())
+    .then((data) => {
+        booking.setConfig({ data });
+    });
 ~~~
 
-## Saving slots reservations to the server
+## Save slot reservations to the server
 
-To handle slots reservation, you should apply the [`setConfirmHandler`](/api/methods/booking-setconfirmhandler-method) method. 
+To process slot reservations on the backend, register a confirmation handler with the [`setConfirmHandler()`](/api/methods/booking-setconfirmhandler-method) method.
+
+The handler receives an event object with three fields:
+
+- `slot` — booked slot: `id` (card ID) and `time` (`[timestamp, duration]`)
+- `data` — form values keyed by [`formShape`](/api/config/booking-formshape) field IDs (defaults: `name`, `email`, `description`)
+- `confirm` — server-response callbacks: `done()` on success, `error()` on failure
+
+The following code snippet posts the reservation to the server and resolves the booking based on the response:
 
 ~~~jsx {}
-// create a function to handle the logic of reservation
+// handle the reservation logic
 const handleSlotReservation = (event) => {
     const { confirm, slot, data } = event;
 
-    // create the info object 
+    // build the payload
     const info = {
         item: slot.id,
         start: slot.time[0],
         data
     };
 
-    // send the POST request to the server with the info object in the request body
+    // post the payload to the server
     fetch("/server/url", {
         method: "POST",
         body: JSON.stringify(info),
-    // handle the response
+    // resolve or reject the booking based on the response
     }).then((response) => {
         if (response.ok) confirm.done();
         else confirm.error();
@@ -52,23 +66,31 @@ const booking = new booking.Booking("#root", {
     // configuration parameters
 });
 
-// fetch available data from the server and convert it to JSON
+// fetch the dataset from the server
 fetch("/server/url")
     .then((res) => res.json())        
     .then((items) => {
-        // update Booking configuration with the fetched items, allowing the widget to display them
+        // load the fetched items into the widget
         booking.setConfig({ data: items });
-        // assign the handleSlotReservation function to be called when a user confirms booking, 
-        // link user actions to the reservation logic
+        // register the reservation handler
         booking.setConfirmHandler(handleSlotReservation);
     });
 ~~~
 
-## Working with UTC data
+:::info
+The [`confirm-slot`](/api/events/booking-confirmslot-event) event delivers the same callback shape. Subscribe to the event with `booking.api.on("confirm-slot", handler)` if you need multiple subscribers. Use [`setConfirmHandler()`](/api/methods/booking-setconfirmhandler-method) for a single, replaceable handler.
+:::
 
-The widget applies a local timezone but if you have UTC data it's necessary to convert data to a local timezone.
+## Convert UTC data to the local timezone
 
-For example, if you have UTC timestamps, you can apply the functions provided in the example below to convert them. The **g2l** function converts a UTC timestamp into the local timezone. During the data loading process, this function is used to convert the times in *usedSlots* and *slots* from UTC to the local time. The **l2g** function converts a local time back to UTC. It's applied during slots reservation, namely, the **l2g** function is used to convert the local time (from slot.time[0]) to UTC before sending it to the server.
+The widget operates in the local timezone. If the server returns UTC timestamps, convert each timestamp before passing it into the widget, and convert it back to UTC before posting reservations.
+
+The helpers below handle both directions:
+
+- `g2l` — convert a UTC timestamp to the local timezone (apply on incoming `usedSlots` and `slots.dates`)
+- `l2g` — convert a local timestamp back to UTC (apply on `slot.time[0]` before sending to the server)
+
+The following code snippet combines both helpers in a complete load-and-reserve flow:
 
 ~~~jsx
 const serverURL = "https://some-backend-url";
@@ -153,9 +175,12 @@ fetch( serverURL + "/units")
 
 ## Example
 
+The snippet below demonstrates a full server-side booking flow:
+
 <iframe src="https://snippet.dhtmlx.com/dpbmyr8j?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 **Related articles**:
-- [confirm-slot](/api/events/booking-confirmslot-event) event
-- [setConfig()](/api/methods/booking-setconfig-method) method
-- [setConfirmHandler()](/api/methods/booking-setconfirmhandler-method) method
+
+- [`confirm-slot`](/api/events/booking-confirmslot-event) — event fired when a user confirms a slot
+- [`setConfig()`](/api/methods/booking-setconfig-method) — update the widget configuration with fetched data
+- [`setConfirmHandler()`](/api/methods/booking-setconfirmhandler-method) — register the slot reservation handler
