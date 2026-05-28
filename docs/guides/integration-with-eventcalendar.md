@@ -32,7 +32,7 @@ The snippet below integrates Booking with Event Calendar by converting doctors' 
 - `/calendars` — doctors' calendars; supplies doctor information to both the Event Calendar and Booking widgets
 - `/reservations` — auxiliary collection that visualizes `usedSlots` in the timeline view; holds already reserved slots from the Booking form
 
-Converting events to slots is the core of the integration. The [next section](#convert-events-to-booking-slots) describes the conversion rules.
+Event-to-slot conversion is the core of the integration. The [next section](#convert-events-to-booking-slots) describes the conversion rules.
 
 <iframe src="https://snippet.dhtmlx.com/c5eu8pdk?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="800"></iframe>
 

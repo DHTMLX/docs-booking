@@ -32,7 +32,7 @@ The snippet below integrates Booking with Scheduler by converting doctors' sched
 - `/doctors/reservations` — auxiliary collection that visualizes `usedSlots` in the timeline view; holds already reserved slots from the Booking form
 - `/doctors` — all doctors with their names and IDs; supplies doctor information to both the Scheduler and Booking widgets
 
-Converting events to slots is the core of the integration. The [next section](#convert-scheduler-events-to-booking-slots) describes the conversion rules.
+Event-to-slot conversion is the core of the integration. The [next section](#convert-scheduler-events-to-booking-slots) describes the conversion rules.
 
 <iframe src="https://snippet.dhtmlx.com/d5zbq3g3?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="800"></iframe>
 
