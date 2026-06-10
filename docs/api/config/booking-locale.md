@@ -28,9 +28,9 @@ To change the current locale dynamically, you can use the [`setLocale()`](/api/m
 
 ~~~jsx
 const { data } = getData();
-const booking = new booking.Booking("#root", {
+const widget = new booking.Booking("#root", {
     data,
-    locale: de
+    locale: booking.locales.de
 });
 ~~~
 

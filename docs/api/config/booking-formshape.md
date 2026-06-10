@@ -13,12 +13,12 @@ description: You can learn about the formShape config in the documentation of th
 ### Usage
 
 ~~~jsx {}
-formShape: {
+formShape: [{
     comp: "text" | "textarea",
     key: string,
     label?: string,
     required?: boolean
-};
+}];
 ~~~
 
 ### Parameters
@@ -68,17 +68,17 @@ const defaultFormShape = [
 ~~~jsx {1-17,21}
 const formShape = [
     {
-        type: "text",
+        comp: "text",
         key: "name",
         label: "Name"
     },
     {
-        type: "text",
+        comp: "text",
         key: "contact",
         label: "Mobile"
     },
     {
-        type: "textarea",
+        comp: "textarea",
         key: "description",
         label: "Details"
     },

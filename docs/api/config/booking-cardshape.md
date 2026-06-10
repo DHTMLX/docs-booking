@@ -45,7 +45,7 @@ const defaultCardShape = {
     preview: true,
     price: true,
     review: true,
-    subtitle: false,
+    subtitle: true,
     title: true
 };
 ~~~

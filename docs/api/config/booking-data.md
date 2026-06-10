@@ -26,7 +26,7 @@ data: [
             stars: number,
             count: number
         },
-        slots: [
+        slots?: [
             {
                 from: number | string, // hours from 0 to 24
                 to: number | string, // hours from 0 to 24
@@ -36,12 +36,7 @@ data: [
                 dates?: array, // exact dates for which rule can be applied, timestamps
             }
         ],
-        availableSlots?: [
-            {
-                id: string|number,
-                time:[number, number] //timestamp, length in minutes
-            },
-        ],
+        availableSlots?: [number, number][], // each slot: [timestamp, slot duration in minutes]
         usedSlots?: number[], //timestamps
         slotSize?: number, //minutes
         slotGap?: number //minutes
@@ -63,7 +58,7 @@ For each card object you can specify the following parameters:
 - `review` - (optional) rating information that includes the following parameters:  
   - `stars` - (optional) the number of rating stars (out of five)  
   - `count` - (optional) the number of reviews
-- `slots` - (required) an array of objects with the following parameters for each slot object:
+- `slots` - (optional) an array of objects that defines slot rules (either `slots` or `availableSlots` should be provided to display bookable time); each slot object has the following parameters:
   - `from` - (required) a slot start time in hours from 0 to 24
   - `to` - (required) a slot end time in hours from 0 to 24
   - `size` - (optional) the duration of one slot in minutes
@@ -77,9 +72,7 @@ Slot parameters specified for dates will override parameters defined for specifi
 If several slots objects are created for the same day, make sure that slots time ranges (from and to) with **different** size and gap do not overlap, otherwise all slots data for these days will not be applied.
 :::
 
-- `availableSlots` - (optional) an array of timestamps of available slots in milliseconds; if available slots are specified here, all slots from the `slots` array are ignored (i.e., become unavailable); each object in the array has the next parameters:
-  - `id` - (required) the id of a slot
-  - `time` - (required) an array that includes timestamp and slot duration in minutes (timestamps are in a local timezone)
+- `availableSlots` - (optional) an array of available slots; each slot is an array `[timestamp, duration]` where the timestamp is in milliseconds (in a local timezone) and the duration is the slot length in minutes; if available slots are specified here, all slots from the `slots` array are ignored (i.e., become unavailable)
 - `usedSlots` - (optional) an array of timestamps of booked slots in milliseconds (timestamps are in a local timezone)
 - `slotSize` - (optional) the duration of a slot in minutes; the value will be applied to all slots of this card if other value is not set inside the `slots` object; *60* minutes is set by default
 - `slotGap` - (optional) the gap between slots in minutes that is set for all slots in the current card; this value is applied if any other value is not specified inside the `slots` object; 0 is set by default
@@ -98,7 +91,7 @@ const data = [
         preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
         price: "37 $",
         review: {
-            star: 1,
+            stars: 1,
             count: 40
         },
         slots: [
