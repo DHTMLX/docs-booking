@@ -168,7 +168,7 @@ The following code snippet creates a Booking instance with the loaded data:
 
 ~~~jsx {}
 const { data } = getData();
-const booking = new booking.Booking("#root", { data });
+const widget = new booking.Booking("#root", { data });
 ~~~
 
 ## Update data after initialization
@@ -181,7 +181,7 @@ The following code snippet fetches a fresh dataset from the server and applies i
 fetch("/api/cards")
     .then(res => res.json())
     .then(data => {
-        booking.setConfig({ data });
+        widget.setConfig({ data });
     });
 ~~~
 

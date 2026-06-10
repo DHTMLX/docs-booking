@@ -384,7 +384,7 @@ The following code snippet applies the German locale at initialization through t
 
 ~~~jsx {4}
 const { data } = getData();
-const booking = new booking.Booking("#root", {
+const widget = new booking.Booking("#root", {
     data,
     locale: booking.locales.de
 });
@@ -400,12 +400,12 @@ The following code snippet applies a custom Korean locale to an existing Booking
 
 ~~~jsx {}
 // create Booking
-const booking = new booking.Booking("#root", {
+const widget = new booking.Booking("#root", {
   data,
 });
 
 const ko = {...} // custom locale object
-booking.setLocale(ko);
+widget.setLocale(ko);
 ~~~
 
 ## Reset to the default locale
@@ -415,9 +415,9 @@ To restore the default English locale, call [`setLocale()`](/api/methods/booking
 The following code snippet resets the active locale to English:
 
 ~~~jsx {}
-booking.setLocale();     // reset to default English
+widget.setLocale();     // reset to default English
 // or
-booking.setLocale(null); // same effect
+widget.setLocale(null); // same effect
 ~~~
 
 ## Change the time format
@@ -435,7 +435,7 @@ function setTimeFormat(clock) {
     locale.formats.timeFormat = clock === 12 ? "%g:%i %a" : "%H:%i";
 }
 
-const booking = new booking.Booking("#root", {
+const widget = new booking.Booking("#root", {
     locale, 
     data: dataset,
 });
@@ -443,7 +443,7 @@ const booking = new booking.Booking("#root", {
 function changeFormat() {
     clockFormat = clockFormat === 12 ? 24 : 12;
     setTimeFormat(clockFormat);
-    booking.setLocale(locale);
+    widget.setLocale(locale);
 }
 ~~~
 

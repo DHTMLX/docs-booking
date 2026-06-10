@@ -21,7 +21,7 @@ The following code snippet shows a subset of Booking-specific variables exposed 
     --wx-booking-content-padding: 0 74px 28px;
     --wx-booking-slots-width: 602px;
     --wx-booking-slots-padding: 0 30px 0 50px;
-    --wx-booking-separator: 1px solid var(--wx-color-line);
+    --wx-booking-separator: var(--wx-border);
 }
 ~~~
 
@@ -106,7 +106,7 @@ The following code snippet changes the background color of cards and the date it
             background-color: #e8f3f7;
         }
 
-        .wx-booking .wx-slot-dates > .wx-date-item.selected {
+        .wx-booking .wx-slot-dates > .wx-date-item.wx-selected {
             background-color: #bfdde7;
         }
     }

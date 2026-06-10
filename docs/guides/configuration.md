@@ -104,21 +104,21 @@ The following code snippet defines `cardPreviewTemplate`, which returns HTML for
 <script>
     const { Booking, template } = booking;
 
-    function cardPreviewTemplate({ card }) {
+    function cardPreviewTemplate({ item }) {
         return `
             <div class="custom-preview" data-action="preview-click">
                 <div class="preview-left">
                     <div
-                        style="background-image: url(${card.preview})"
+                        style="background-image: url(${item.preview})"
                         class="card-photo"
                     ></div>
                     <!-- <div class="card-photo-empty" /> -->
                     </div>
 
                     <div class="preview-right">
-                    <div class="category">${card.category}</div>
-                    <div class="title">${card.title}</div>
-                    <div class="price">${card.price}</div>
+                    <div class="category">${item.category}</div>
+                    <div class="title">${item.title}</div>
+                    <div class="price">${item.price}</div>
                 </div>
             </div>
             `;
@@ -135,7 +135,7 @@ const { Booking, template } = booking;
 
 const widget = new Booking("#root", {
 	data,
-	cardTemplate: template(card => cardPreviewTemplate(card)),
+	cardTemplate: template(item => cardPreviewTemplate(item)),
     // other parameters
 });
 ~~~
@@ -165,7 +165,7 @@ const data = [
         preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
         price: "37 $",
         review: {
-            star: 1,
+            stars: 1,
             count: 40
         },
         slots: [
@@ -230,7 +230,7 @@ const data = [
         preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
         price: "37 $",
         review: {
-            star: 1,
+            stars: 1,
             count: 40
         },
         slots: [
@@ -268,7 +268,7 @@ const data = [
         preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
         price: "37 $",
         review: {
-            star: 1,
+            stars: 1,
             count: 40
         },
         slots: [
@@ -333,7 +333,7 @@ const data = [
         preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
         price: "37 $",
         review: {
-            star: 1,
+            stars: 1,
             count: 40
         },
         slots: [
@@ -372,7 +372,7 @@ const data = [
         preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
         price: "37 $",
         review: {
-            star: 1,
+            stars: 1,
             count: 40
         },
         slots: [

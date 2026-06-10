@@ -15,13 +15,13 @@ Fetch card data with the native `fetch` API (or any equivalent HTTP client) and 
 The following code snippet initializes an empty Booking instance and loads the dataset once the response arrives:
 
 ~~~jsx {}
-const booking = new booking.Booking("#booking", { data: [] });
+const widget = new booking.Booking("#booking", { data: [] });
 const server = "https://some-backend-url";
 
 fetch(server + "/data")
     .then((res) => res.json())
     .then((data) => {
-        booking.setConfig({ data });
+        widget.setConfig({ data });
     });
 ~~~
 
@@ -61,7 +61,7 @@ const handleSlotReservation = (event) => {
 };
 
 // create Booking
-const booking = new booking.Booking("#root", {
+const widget = new booking.Booking("#root", {
     data: [],
     // configuration parameters
 });
@@ -71,14 +71,14 @@ fetch("/server/url")
     .then((res) => res.json())        
     .then((items) => {
         // load the fetched items into the widget
-        booking.setConfig({ data: items });
+        widget.setConfig({ data: items });
         // register the reservation handler
-        booking.setConfirmHandler(handleSlotReservation);
+        widget.setConfirmHandler(handleSlotReservation);
     });
 ~~~
 
 :::info
-The [`confirm-slot`](/api/events/booking-confirmslot-event) event delivers the same callback shape. Subscribe to the event with `booking.api.on("confirm-slot", handler)` if you need multiple subscribers. Use [`setConfirmHandler()`](/api/methods/booking-setconfirmhandler-method) for a single, replaceable handler.
+The [`setConfirmHandler()`](/api/methods/booking-setconfirmhandler-method) method is a shortcut that internally subscribes to the [`confirm-slot`](/api/events/booking-confirmslot-event) event via `widget.api.on("confirm-slot", handler)`. Both approaches register a handler with the same callback shape — call `widget.api.on("confirm-slot", handler)` directly when you need to add several subscribers.
 :::
 
 ## Convert UTC data to the local timezone
