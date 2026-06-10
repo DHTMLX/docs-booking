@@ -8,7 +8,7 @@ description: You can learn about the select-item-date event in the documentation
 
 ### Description
 
-@short: Fires when an item is selected
+@short: Fires when a date is selected for an item
 
 ### Usage
 
@@ -30,13 +30,13 @@ The callback of the **select-item-date** event can take an object with the follo
 
 ~~~jsx {7-10}
 // create Booking
-const booking = new booking.Booking("#root", {
+const widget = new booking.Booking("#root", {
     data,
     // other configuration parameters
 });
 
 // output the date  
-booking.api.on("select-item-date", (ev) => {
+widget.api.on("select-item-date", (ev) => {
     console.log(ev.date);
 });
 ~~~

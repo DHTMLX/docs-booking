@@ -44,11 +44,11 @@ The example below demonstrates how to apply filter at the initialization using t
 
 ~~~jsx {6-18}
 // create Booking
-const booking = new booking.Booking("#root", {
+const widget = new booking.Booking("#root", {
     data,
     // other configuration parameters
 });
-booking.api.exec("filter-data", {
+widget.api.exec("filter-data", {
     text: "Allergist",
     date: {
         start: new Date,
