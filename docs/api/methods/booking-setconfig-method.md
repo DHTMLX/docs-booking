@@ -30,7 +30,7 @@ The method changes only the parameters you passed. It destroys the current compo
 
 ~~~jsx {}
 // create Booking
-const booking = new booking.Booking("#root", {
+const widget = new booking.Booking("#root", {
     data,
     cardShape: {
         review: false,
@@ -49,20 +49,18 @@ const booking = new booking.Booking("#root", {
 });
 
 //update configuration parameters
-booking.setConfig({
-    config: {
-        cardShape: {
-            review: true
-        },
-        filterShape: {
-            date: true,
-            autoApply: false,
-            time: [
-                { from: 9, to: 11, label: "Morning" },
-                { from: 13, to: 17, label: "Afternoon" },
-                { from: 18, to: 20, label: "Evening" }
-            ]
-        }
+widget.setConfig({
+    cardShape: {
+        review: true
+    },
+    filterShape: {
+        date: true,
+        autoApply: false,
+        time: [
+            { from: 9, to: 11, label: "Morning" },
+            { from: 13, to: 17, label: "Afternoon" },
+            { from: 18, to: 20, label: "Evening" }
+        ]
     }
 });
 ~~~

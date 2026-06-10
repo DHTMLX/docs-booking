@@ -24,11 +24,11 @@ The method takes the `confirmHandler` function that will be called when confirmi
 
 ~~~jsx {}
 const { data } = getData();
-const booking = new booking.Booking("#root", {
+const widget = new booking.Booking("#root", {
     data
 });
 
-booking.setConfirmHandler((ev) => {
+widget.setConfirmHandler((ev) => {
     console.log("Booking info:", ev);
 });
 ~~~
