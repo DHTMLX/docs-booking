@@ -33,13 +33,13 @@ Use the [`api.on()`](/api/internal/booking-on) method if you want to listen to t
 
 ~~~jsx {7-11}
 // create Booking
-const booking = new booking.Booking("#root", {
+const widget = new booking.Booking("#root", {
     data,
     // other configuration parameters
 });
 
 // every time the filter-data event is triggered, slots will be shown only for the morning time
-booking.api.intercept("filter-data", data => {
+widget.api.intercept("filter-data", data => {
     data.time = [{ from: 9, to: 12 }];
 });
 ~~~

@@ -33,13 +33,13 @@ Use the `api.on()` method if you want to listen to the actions without modifying
 
 ~~~jsx {7-10}
 // create Booking
-const booking = new booking.Booking("#root", {
+const widget = new booking.Booking("#root", {
     data,
     // other configuration parameters
 });
 
 // output the selected slot id and time
-booking.api.on("select-slot", (obj) => {
+widget.api.on("select-slot", (obj) => {
     console.log("The selected slot", obj.id, "and time", obj.time);
 });
 ~~~

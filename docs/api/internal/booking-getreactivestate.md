@@ -22,7 +22,7 @@ The method returns an object with the following parameters:
 
 ~~~jsx {}
 {    
-    data: [], // an array of cards objects ?
+    data: [], // an array of cards objects
     cardShape: {}, // an object with settings for cards
     filteredData: [], // filtered data array
     filterShape: {}, // an object with filter settings
@@ -30,9 +30,12 @@ The method returns an object with the following parameters:
     formShape: [], // an array of objects with settings for the Booking editor dialog
     infoShape: {}, // an object with settings for the left side of the Booking editor
     selectedItem: {}, // single data item
-    selectedSlot: {}, // an object with slot id and timestamp in minutes
+    selectedSlot: {}, // an object with slot id and time ([timestamp, duration in minutes])
     slotGap: number, // slots gap in minutes
-    slotSize: number // slot size in minutes
+    slotSize: number, // slot size in minutes
+    start: Date, // start date of the displayed range
+    end: Date, // end date of the displayed range
+    renderType: "default" | "lazy" // cards rendering mode
 }
 ~~~
 
@@ -40,17 +43,17 @@ The method returns an object with the following parameters:
 
 ~~~jsx {7-9,11-14}
 // create Booking
-const booking = new booking.Booking("#root", {
+const widget = new booking.Booking("#root", {
     data,
     //other properties
 });
 
 // get the Reactive State of Booking and output it to console
-const state = booking.api.getReactiveState();
+const state = widget.api.getReactiveState();
 console.log(state);
 
 // subscribe on the cards changes and output the array of cards
-state.cards.subscribe((data) => {
+state.data.subscribe((data) => {
     console.log(data);
 });
 ~~~
