@@ -10,7 +10,7 @@ The Booking widget integrates with a backend through two main operations: loadin
 
 ## Load data from the server
 
-Fetch card data with the native `fetch` API (or any equivalent HTTP client) and pass the parsed JSON to the widget through the [`setConfig()`](/api/methods/booking-setconfig-method) method.
+Fetch card data with the native `fetch` API (or any equivalent HTTP client) and pass the parsed JSON to the widget through the [`setConfig()`](api/methods/booking-setconfig-method.md) method.
 
 The following code snippet initializes an empty Booking instance and loads the dataset once the response arrives:
 
@@ -27,12 +27,12 @@ fetch(server + "/data")
 
 ## Save slot reservations to the server
 
-To process slot reservations on the backend, register a confirmation handler with the [`setConfirmHandler()`](/api/methods/booking-setconfirmhandler-method) method.
+To process slot reservations on the backend, register a confirmation handler with the [`setConfirmHandler()`](api/methods/booking-setconfirmhandler-method.md) method.
 
 The handler receives an event object with three fields:
 
 - `slot` — booked slot: `id` (card ID) and `time` (`[timestamp, duration]`)
-- `data` — form values keyed by [`formShape`](/api/config/booking-formshape) field IDs (defaults: `name`, `email`, `description`)
+- `data` — form values keyed by [`formShape`](api/config/booking-formshape.md) field IDs (defaults: `name`, `email`, `description`)
 - `confirm` — server-response callbacks: `done()` on success, `error()` on failure
 
 The following code snippet posts the reservation to the server and resolves the booking based on the response:
@@ -78,7 +78,7 @@ fetch("/server/url")
 ~~~
 
 :::info
-The [`setConfirmHandler()`](/api/methods/booking-setconfirmhandler-method) method is a shortcut that internally subscribes to the [`confirm-slot`](/api/events/booking-confirmslot-event) event via `widget.api.on("confirm-slot", handler)`. Both approaches register a handler with the same callback shape — call `widget.api.on("confirm-slot", handler)` directly when you need to add several subscribers.
+The [`setConfirmHandler()`](api/methods/booking-setconfirmhandler-method.md) method is a shortcut that internally subscribes to the [`confirm-slot`](api/events/booking-confirmslot-event.md) event via `widget.api.on("confirm-slot", handler)`. Both approaches register a handler with the same callback shape — call `widget.api.on("confirm-slot", handler)` directly when you need to add several subscribers.
 :::
 
 ## Convert UTC data to the local timezone
@@ -181,6 +181,6 @@ The snippet below demonstrates a full server-side booking flow:
 
 **Related articles**:
 
-- [`confirm-slot`](/api/events/booking-confirmslot-event) — event fired when a user confirms a slot
-- [`setConfig()`](/api/methods/booking-setconfig-method) — update the widget configuration with fetched data
-- [`setConfirmHandler()`](/api/methods/booking-setconfirmhandler-method) — register the slot reservation handler
+- [`confirm-slot`](api/events/booking-confirmslot-event.md) — event fired when a user confirms a slot
+- [`setConfig()`](api/methods/booking-setconfig-method.md) — update the widget configuration with fetched data
+- [`setConfirmHandler()`](api/methods/booking-setconfirmhandler-method.md) — register the slot reservation handler

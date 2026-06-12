@@ -16,12 +16,12 @@ The integration centers on converting Event Calendar events into Booking slots. 
 
 **Recurring events limitation.** Booking supports only weekly recurring events, defined as `FREQ=WEEKLY;INTERVAL=1` in Event Calendar. Event Calendar handles any recurrence pattern, so hide the other recurrence options in the Event Calendar form.
 
-**Timezone handling.** Booking interprets timestamps in the local timezone. If you use global timestamps, convert them to the local timezone before sending them to Booking, and back to UTC before saving. For conversion instructions, see [Convert UTC data to the local timezone](/guides/saving-reservations/#convert-utc-data-to-the-local-timezone).
+**Timezone handling.** Booking interprets timestamps in the local timezone. If you use global timestamps, convert them to the local timezone before sending them to Booking, and back to UTC before saving. For conversion instructions, see [Convert UTC data to the local timezone](guides/saving-reservations.md#convert-utc-data-to-the-local-timezone).
 
 **Booking slot strategies.** Choose one of two approaches to build the schedule:
 
-- [`slots`](/api/config/booking-data) and [`usedSlots`](/api/config/booking-data) — build the schedule and exclude booked slots (the strategy covered here)
-- [`availableSlots`](/api/config/booking-data) — list bookable slots explicitly, suitable for events without recurrences
+- [`slots`](api/config/booking-data.md) and [`usedSlots`](api/config/booking-data.md) — build the schedule and exclude booked slots (the strategy covered here)
+- [`availableSlots`](api/config/booking-data.md) — list bookable slots explicitly, suitable for events without recurrences
 
 ## Example
 
@@ -75,7 +75,7 @@ The following code snippet shows the resulting Booking slot:
 
 ### Rule 2. Convert a recurring event
 
-Map a recurring event to a weekly pattern. The start and end dates of the recurring event in Event Calendar must equal the Booking [`start`](/api/config/booking-start) and [`end`](/api/config/booking-end) dates. Otherwise, create placeholders for the dates before and after the recurring event (see [Rule 7](#rule-7-handle-events-that-start-after-the-booking-start-date)).
+Map a recurring event to a weekly pattern. The start and end dates of the recurring event in Event Calendar must equal the Booking [`start`](api/config/booking-start.md) and [`end`](api/config/booking-end.md) dates. Otherwise, create placeholders for the dates before and after the recurring event (see [Rule 7](#rule-7-handle-events-that-start-after-the-booking-start-date)).
 
 The following code snippet shows a recurring Event Calendar event that repeats weekly on weekdays (Monday through Friday):
 
@@ -189,7 +189,7 @@ The following code snippet shows both Event Calendar events:
 ]
 ~~~
 
-Booking merges the recurring event and the single events into one rule. The single event dates (March 18 and 19) carry higher priority and join the recurring rule's `dates` array. For the priority order, see [Define slot rules](/guides/configuration/#define-slot-rules).
+Booking merges the recurring event and the single events into one rule. The single event dates (March 18 and 19) carry higher priority and join the recurring rule's `dates` array. For the priority order, see [Define slot rules](guides/configuration.md#define-slot-rules).
 
 The following code snippet shows the merged Booking slots:
 

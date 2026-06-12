@@ -8,14 +8,14 @@ description: You can learn about the configuration in the documentation of the D
 
 ## Load data for cards
 
-Pass card objects to the [`data`](/api/config/booking-data) array of the Booking configuration. For the full data format and loading scenarios, see the [Loading data](/guides/loading-data) guide.
+Pass card objects to the [`data`](api/config/booking-data.md) array of the Booking configuration. For the full data format and loading scenarios, see the [Loading data](guides/loading-data.md) guide.
 
 ## Define the structure of cards
 
 The left side of each card displays a fixed set of data fields. To control which fields appear or to fully replace the default layout, use one of the following properties:
 
-- [`cardShape`](/api/config/booking-cardshape) — toggle visibility of the default fields
-- [`cardTemplate`](/api/config/booking-cardtemplate) — replace the default layout with custom HTML
+- [`cardShape`](api/config/booking-cardshape.md) — toggle visibility of the default fields
+- [`cardTemplate`](api/config/booking-cardtemplate.md) — replace the default layout with custom HTML
 
 :::info
 The `cardTemplate` property fully customizes a card's appearance through custom HTML and gives full control over layout, design, and content. The `cardShape` property only hides or shows fields of the default template. If you apply both, `cardTemplate` overrides the `cardShape` settings.
@@ -33,7 +33,7 @@ The card's left side displays the following fields by default:
 - `price` — the price of the service
 - `details` — other details of a card
 
-To hide a field, set the corresponding parameter of the [`cardShape`](/api/config/booking-cardshape) property to `false`.
+To hide a field, set the corresponding parameter of the [`cardShape`](api/config/booking-cardshape.md) property to `false`.
 
 The example below hides the `details` field of a card:
 
@@ -77,7 +77,7 @@ See an example in the [snippet tool](https://snippet.dhtmlx.com/6mxd7918).
 
 ### Apply a custom card template
 
-The [`cardTemplate`](/api/config/booking-cardtemplate) property replaces the default left-hand block of a card with custom HTML.
+The [`cardTemplate`](api/config/booking-cardtemplate.md) property replaces the default left-hand block of a card with custom HTML.
 
 Create a function that takes a card object and returns an HTML string. Arrange card item properties into HTML blocks with custom styles.
 
@@ -150,7 +150,7 @@ A slot is a time unit available for booking. The widget displays available slots
 
 ### Add slots for booking
 
-To add booking slots to a card, add an object to the `slots` array of the [`data`](/api/config/booking-data) property.
+To add booking slots to a card, add an object to the `slots` array of the [`data`](api/config/booking-data.md) property.
 
 The example below adds slots for Tuesdays and Fridays from 12:00 to 18:00. Each slot lasts 30 minutes with a 10-minute gap between slots:
 
@@ -189,7 +189,7 @@ new booking.Booking("#root", {
 
 ### Define slot rules
 
-Each object in the `slots` array of the [`data`](/api/config/booking-data) property specifies:
+Each object in the `slots` array of the [`data`](api/config/booking-data.md) property specifies:
 
 - slot start and end time
 - slot size (duration in minutes)
@@ -200,9 +200,9 @@ Apply a single common rule to all days of a card, or combine several rules to us
 
 Set slot size and gap at three levels of priority (from highest to lowest):
 
-- `size` and `gap` inside an object of the [`data`](/api/config/booking-data) slots array — apply to that specific slot rule
-- `slotSize` and `slotGap` inside a card object of the [`data`](/api/config/booking-data) property — apply to all slots of that card
-- [`slotSize`](/api/config/booking-slotsize) and [`slotGap`](/api/config/booking-slotgap) at the widget level — apply to all cards
+- `size` and `gap` inside an object of the [`data`](api/config/booking-data.md) slots array — apply to that specific slot rule
+- `slotSize` and `slotGap` inside a card object of the [`data`](api/config/booking-data.md) property — apply to all slots of that card
+- [`slotSize`](api/config/booking-slotsize.md) and [`slotGap`](api/config/booking-slotgap.md) at the widget level — apply to all cards
 
 :::info
 When you mix common and specific rules, the widget resolves them as follows:
@@ -211,7 +211,7 @@ When you mix common and specific rules, the widget resolves them as follows:
 - If several slot objects target the same day, the time ranges (`from` and `to`) with different `size` or `gap` must not overlap. Otherwise, the widget skips all slot data for those days.
 :::
 
-To bound the range of displayed slots, set the [`start`](/api/config/booking-start) date and the [`end`](/api/config/booking-end) date at the widget level.
+To bound the range of displayed slots, set the [`start`](api/config/booking-start.md) date and the [`end`](api/config/booking-end.md) date at the widget level.
 
 #### Apply one rule to all days
 
@@ -307,11 +307,11 @@ new booking.Booking("#root", {
 });
 ~~~
 
-To see how to set [duration](/api/config/booking-slotsize) and [gap](/api/config/booking-slotgap) for all slots in the widget, [open the snippet tool](https://snippet.dhtmlx.com/pw8xsl1p).
+To see how to set [duration](api/config/booking-slotsize.md) and [gap](api/config/booking-slotgap.md) for all slots in the widget, [open the snippet tool](https://snippet.dhtmlx.com/pw8xsl1p).
 
 ### Mark slots as used or available
 
-Two parameters of the [`data`](/api/config/booking-data) card object control which slots a user can see or book:
+Two parameters of the [`data`](api/config/booking-data.md) card object control which slots a user can see or book:
 
 - `usedSlots` — hide booked slots from the user
 - `availableSlots` — display an explicit list of bookable slots and ignore the `slots` array rules
@@ -357,7 +357,7 @@ new booking.Booking("#root", {
 
 #### Mark slots as available
 
-To display an explicit list of bookable slots, use the `availableSlots` parameter of the [`data`](/api/config/booking-data) property. When you set `availableSlots`, the widget ignores every entry in the `slots` array.
+To display an explicit list of bookable slots, use the `availableSlots` parameter of the [`data`](api/config/booking-data.md) property. When you set `availableSlots`, the widget ignores every entry in the `slots` array.
 
 The following code snippet exposes two timestamps as the only bookable slots for the card:
 
@@ -398,13 +398,13 @@ new booking.Booking("#root", {
 
 The Booking dialog has two configurable parts: the form fields where a user enters booking details, and the information block on the left side. Use the following properties to control each part:
 
-- [`formShape`](/api/config/booking-formshape) — configure the form fields
-- [`infoShape`](/api/config/booking-infoshape) — toggle default fields of the information block
-- [`infoTemplate`](/api/config/booking-infotemplate) — replace the information block with a custom HTML template
+- [`formShape`](api/config/booking-formshape.md) — configure the form fields
+- [`infoShape`](api/config/booking-infoshape.md) — toggle default fields of the information block
+- [`infoTemplate`](api/config/booking-infotemplate.md) — replace the information block with a custom HTML template
 
 ### Configure form fields
 
-Pass an array of field descriptors to the [`formShape`](/api/config/booking-formshape) property. Each descriptor sets the field type, identifier, label, and an optional `required` flag.
+Pass an array of field descriptors to the [`formShape`](api/config/booking-formshape.md) property. Each descriptor sets the field type, identifier, label, and an optional `required` flag.
 
 The following code snippet defines three form fields, with the `contact` field marked as required:
 
@@ -440,7 +440,7 @@ See an example in the [snippet tool](https://snippet.dhtmlx.com/yeqkuzx7).
 
 ### Toggle default information fields
 
-The [`infoShape`](/api/config/booking-infoshape) property hides or shows the default fields of the information block. Set a field to `false` to hide it.
+The [`infoShape`](api/config/booking-infoshape.md) property hides or shows the default fields of the information block. Set a field to `false` to hide it.
 
 The following code snippet hides the `details` field of the information block:
 
@@ -466,7 +466,7 @@ See an example in the [snippet tool](https://snippet.dhtmlx.com/pd6wp1xc).
 
 ### Apply a custom information template
 
-Use the [`infoTemplate`](/api/config/booking-infotemplate) property to fully replace the default information block with custom HTML. If you apply both `infoTemplate` and `infoShape`, `infoTemplate` overrides the `infoShape` settings.
+Use the [`infoTemplate`](api/config/booking-infotemplate.md) property to fully replace the default information block with custom HTML. If you apply both `infoTemplate` and `infoShape`, `infoTemplate` overrides the `infoShape` settings.
 
 Define a function that takes `item` (the card object) and `slot` (the slot timestamp) and returns an HTML string. Arrange card item properties into HTML blocks with custom styles.
 
@@ -540,7 +540,7 @@ See an example in the [snippet tool](https://snippet.dhtmlx.com/byb94ipu).
 
 ## Configure the filter
 
-Use the [`filterShape`](/api/config/booking-filtershape) property to control which filter inputs appear and how each behaves. The default configuration enables three text fields, a date picker, and three time ranges:
+Use the [`filterShape`](api/config/booking-filtershape.md) property to control which filter inputs appear and how each behaves. The default configuration enables three text fields, a date picker, and three time ranges:
 
 ~~~jsx {}
 const defaultTimeRanges = [
@@ -563,7 +563,7 @@ const defaultFilterShape = {
 
 ### Hide filter input fields
 
-The widget displays all input fields by default — text, time, and date. To hide a field, set the corresponding parameter of the [`filterShape`](/api/config/booking-filtershape) property to `false`.
+The widget displays all input fields by default — text, time, and date. To hide a field, set the corresponding parameter of the [`filterShape`](api/config/booking-filtershape.md) property to `false`.
 
 The following code snippet hides the date filter:
 
@@ -581,7 +581,7 @@ new booking.Booking("#root", {
 
 ### Configure text filter fields
 
-To enable auto-complete in a text field, set the `suggest` parameter to `true`. The widget then displays values from the [`data`](/api/config/booking-data) array that match the user's input. Use the `label` parameter to add a placeholder.
+To enable auto-complete in a text field, set the `suggest` parameter to `true`. The widget then displays values from the [`data`](api/config/booking-data.md) array that match the user's input. Use the `label` parameter to add a placeholder.
 
 The following code snippet enables auto-complete and custom labels for three text fields:
 
@@ -603,7 +603,7 @@ new booking.Booking("#root", {
 
 ### Configure time ranges
 
-To define time filtering options, pass an array of objects to the `time` parameter of the [`filterShape`](/api/config/booking-filtershape) property. Each object accepts the following keys:
+To define time filtering options, pass an array of objects to the `time` parameter of the [`filterShape`](api/config/booking-filtershape.md) property. Each object accepts the following keys:
 
 - `from` — slot start time, as a number from 0 to 24 (for example, `9` means 9:00, `8.5` means 8:30) or a string in the `"h:m"` format (for example, `"8:30"`)
 - `to` — slot end time, in the same format as `from`
@@ -630,7 +630,7 @@ new booking.Booking("#root", {
 
 ### Enable autoApply mode
 
-To hide the **Search** button and apply filter input immediately, set the `autoApply` parameter of the [`filterShape`](/api/config/booking-filtershape) property to `true`.
+To hide the **Search** button and apply filter input immediately, set the `autoApply` parameter of the [`filterShape`](api/config/booking-filtershape.md) property to `true`.
 
 The following code snippet enables auto-apply for the filter:
 
@@ -654,7 +654,7 @@ The snippet below demonstrates a complete filter configuration:
 
 ## Optimize rendering of large datasets
 
-The Booking widget renders every loaded card by default. For large datasets, enable lazy rendering so the widget renders only visible cards. Use the [`renderType`](/api/config/booking-rendertype) property to switch between modes.
+The Booking widget renders every loaded card by default. For large datasets, enable lazy rendering so the widget renders only visible cards. Use the [`renderType`](api/config/booking-rendertype.md) property to switch between modes.
 
 The following code snippet enables lazy rendering of cards:
 

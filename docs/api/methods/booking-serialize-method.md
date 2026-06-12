@@ -18,7 +18,7 @@ serialize(): object[];
 
 ### Returns
 
-Returns [data](/api/config/booking-data) array.
+Returns [data](api/config/booking-data.md) array.
 
 ### Example
 

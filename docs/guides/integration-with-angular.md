@@ -59,7 +59,7 @@ Stop the dev server before installing the Booking package, then create an Angula
 
 ### Step 1. Install the package
 
-Download the [trial Booking package](/how-to-start/#installing-trial-booking-via-npm-or-yarn) and follow the steps in the package README. The trial version stays active for 30 days.
+Download the [trial Booking package](how-to-start.md#installing-trial-booking-via-npm-or-yarn) and follow the steps in the package README. The trial version stays active for 30 days.
 
 ### Step 2. Create the Booking component
 
@@ -150,7 +150,7 @@ body {
 
 #### Load data
 
-To load card data into Booking, prepare a dataset matching the [`data`](/api/config/booking-data) property. For the full data format and loading scenarios, see the [Loading data](/guides/loading-data) guide.
+To load card data into Booking, prepare a dataset matching the [`data`](api/config/booking-data.md) property. For the full data format and loading scenarios, see the [Loading data](guides/loading-data.md) guide.
 
 Create a *data.ts* file in the *src/app/booking/* directory.
 
@@ -271,11 +271,11 @@ export class BookingComponent implements OnInit, OnDestroy {
 }
 ~~~
 
-The Booking component now renders with the loaded data. To customize the widget further, pass extra configuration properties — see the full list in the [Properties overview](/api/overview/booking-properties-overview/).
+The Booking component now renders with the loaded data. To customize the widget further, pass extra configuration properties — see the full list in the [Properties overview](api/overview/booking-properties-overview.md).
 
 #### Handle events
 
-A user action in the widget triggers an event. Subscribe to an event with `booking.api.on(eventName, handler)` to react to the action. For the full list of events, see the [Events overview](/api/overview/booking-events-overview/).
+A user action in the widget triggers an event. Subscribe to an event with `booking.api.on(eventName, handler)` to react to the action. For the full list of events, see the [Events overview](api/overview/booking-events-overview.md).
 
 Open *booking.component.ts* and extend `ngOnInit()` with an event subscription.
 

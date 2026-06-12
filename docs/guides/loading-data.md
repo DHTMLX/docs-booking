@@ -8,10 +8,10 @@ description: You can learn how to load data into Booking in the documentation of
 
 The Booking widget accepts a single dataset through the configuration object:
 
-- [`data`](/api/config/booking-data) — array of card objects with slot rules
+- [`data`](api/config/booking-data.md) — array of card objects with slot rules
 
 :::tip
-For large datasets, enable lazy rendering with the [`renderType`](/api/config/booking-rendertype) property so the widget renders only visible cards.
+For large datasets, enable lazy rendering with the [`renderType`](api/config/booking-rendertype.md) property so the widget renders only visible cards.
 :::
 
 ## Prepare a sample dataset
@@ -173,7 +173,7 @@ const widget = new booking.Booking("#root", { data });
 
 ## Update data after initialization
 
-To replace the dataset after Booking is initialized, call the [`setConfig()`](/api/methods/booking-setconfig-method) method with a new `data` array. The method re-initializes the widget with the merged configuration.
+To replace the dataset after Booking is initialized, call the [`setConfig()`](api/methods/booking-setconfig-method.md) method with a new `data` array. The method re-initializes the widget with the merged configuration.
 
 The following code snippet fetches a fresh dataset from the server and applies it to the existing Booking instance:
 
@@ -185,14 +185,14 @@ fetch("/api/cards")
     });
 ~~~
 
-For server-side persistence of bookings, see the [Saving reservations to the server](/guides/saving-reservations) guide.
+For server-side persistence of bookings, see the [Saving reservations to the server](guides/saving-reservations.md) guide.
 
 ---
 
 **Related articles**:
 
-- [`confirm-slot`](/api/events/booking-confirmslot-event) — handle slot booking confirmation
-- [`setConfig()`](/api/methods/booking-setconfig-method) — update the widget configuration after initialization
-- [`setConfirmHandler()`](/api/methods/booking-setconfirmhandler-method) — define the slot confirmation handler
-- [`renderType`](/api/config/booking-rendertype) — switch between default and lazy rendering
-- [Saving reservations to the server](/guides/saving-reservations) — persist bookings server-side
+- [`confirm-slot`](api/events/booking-confirmslot-event.md) — handle slot booking confirmation
+- [`setConfig()`](api/methods/booking-setconfig-method.md) — update the widget configuration after initialization
+- [`setConfirmHandler()`](api/methods/booking-setconfirmhandler-method.md) — define the slot confirmation handler
+- [`renderType`](api/config/booking-rendertype.md) — switch between default and lazy rendering
+- [Saving reservations to the server](guides/saving-reservations.md) — persist bookings server-side

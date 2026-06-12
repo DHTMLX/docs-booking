@@ -38,5 +38,5 @@ widget.setLocale(); // or setLocale(null);
 ~~~
 
 **Related articles**:
-- [locale](/api/config/booking-locale)
-- [Localization](/guides/localization)
+- [locale](api/config/booking-locale.md)
+- [Localization](guides/localization.md)

@@ -6,7 +6,7 @@ description: You can learn about the localization in the documentation of the DH
 
 # Localization
 
-Localize the Booking interface by providing translated strings for all labels and applying the locale to the widget. The Booking widget ships with three built-in locales and supports custom ones through the [`locale`](/api/config/booking-locale) property and the [`setLocale()`](/api/methods/booking-setlocale-method) method.
+Localize the Booking interface by providing translated strings for all labels and applying the locale to the widget. The Booking widget ships with three built-in locales and supports custom ones through the [`locale`](api/config/booking-locale.md) property and the [`setLocale()`](api/methods/booking-setlocale-method.md) method.
 
 ## Default locale
 
@@ -380,7 +380,7 @@ const cn = {
 
 Access built-in locales through the `booking.locales` object. Booking provides three built-in locales: `en`, `cn`, and `de`.
 
-The following code snippet applies the German locale at initialization through the [`locale`](/api/config/booking-locale) property:
+The following code snippet applies the German locale at initialization through the [`locale`](api/config/booking-locale.md) property:
 
 ~~~jsx {4}
 const { data } = getData();
@@ -390,11 +390,11 @@ const widget = new booking.Booking("#root", {
 });
 ~~~
 
-To change the locale after initialization, call the [`setLocale()`](/api/methods/booking-setlocale-method) method.
+To change the locale after initialization, call the [`setLocale()`](api/methods/booking-setlocale-method.md) method.
 
 ## Apply a custom locale
 
-To use a language outside the built-in set, create a locale object with translations for every label and apply it through the [`locale`](/api/config/booking-locale) property or the [`setLocale()`](/api/methods/booking-setlocale-method) method.
+To use a language outside the built-in set, create a locale object with translations for every label and apply it through the [`locale`](api/config/booking-locale.md) property or the [`setLocale()`](api/methods/booking-setlocale-method.md) method.
 
 The following code snippet applies a custom Korean locale to an existing Booking instance:
 
@@ -410,7 +410,7 @@ widget.setLocale(ko);
 
 ## Reset to the default locale
 
-To restore the default English locale, call [`setLocale()`](/api/methods/booking-setlocale-method) without arguments or pass `null`.
+To restore the default English locale, call [`setLocale()`](api/methods/booking-setlocale-method.md) without arguments or pass `null`.
 
 The following code snippet resets the active locale to English:
 
@@ -422,7 +422,7 @@ widget.setLocale(null); // same effect
 
 ## Change the time format
 
-Switch between 12-hour and 24-hour time by updating the `timeFormat` parameter inside the `formats` object of the active [`locale`](/api/config/booking-locale).
+Switch between 12-hour and 24-hour time by updating the `timeFormat` parameter inside the `formats` object of the active [`locale`](api/config/booking-locale.md).
 
 The following code snippet toggles the active locale between 12-hour and 24-hour formats:
 
@@ -490,5 +490,5 @@ The snippet below switches between the `en` and `de` locales:
 
 **Related articles**:
 
-- [`locale`](/api/config/booking-locale) — set the active locale at initialization
-- [`setLocale()`](/api/methods/booking-setlocale-method) — change or reset the active locale at runtime
+- [`locale`](api/config/booking-locale.md) — set the active locale at initialization
+- [`setLocale()`](api/methods/booking-setlocale-method.md) — change or reset the active locale at runtime
