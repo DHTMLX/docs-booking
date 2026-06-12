@@ -90,7 +90,7 @@ This tutorial uses the trial version of Booking.
 
 #### Set the container and initialize Booking
 
-Define the host container in the component template and instantiate Booking in `ngOnInit()`. Call [`destructor()`](#) in `ngOnDestroy()` to unmount the widget when Angular removes the component.
+Define the host container in the component template and instantiate Booking in `ngOnInit()`. Call `destructor()` in `ngOnDestroy()` to unmount the widget when Angular removes the component.
 
 The following code snippet declares a Booking component with a container element and lifecycle hooks:
 

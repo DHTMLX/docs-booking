@@ -472,8 +472,8 @@ Booking uses the following characters to compose date and time format strings:
 | %g        | hours 12-format                                   | from 1 to 12            |
 | %H        | hours 24-format with leading zero                 | from 00 to 23           |
 | %G        | hours 24-format                                   | from 0 to 23            |
-| %i        | minutes with leading zero                         | from 01 to 59           |
-| %s        | seconds with leading zero                         | from 01 to 59           |
+| %i        | minutes with leading zero                         | from 00 to 59           |
+| %s        | seconds with leading zero                         | from 00 to 59           |
 | %S        | milliseconds                                      | 128                     |
 | %a        | am or pm                                          | am (for time from midnight until noon) and pm (for time from noon until midnight)|
 | %A        | AM or PM                                          | AM (for time from midnight until noon) and PM (for time from noon until midnight)|

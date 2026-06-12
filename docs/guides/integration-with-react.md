@@ -49,7 +49,7 @@ The following commands use [npm](https://www.npmjs.com/):
 
 ~~~json
 npm install
-npm run dev
+npm start
 ~~~
 
 The app runs on a localhost, for example *http://localhost:3000*.

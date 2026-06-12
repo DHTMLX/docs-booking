@@ -146,7 +146,7 @@ See an example in the [snippet tool](https://snippet.dhtmlx.com/k2v01vng).
 
 ## Fill cards with slots
 
-A slot is a time unit available for booking. The widget displays available slots for the next five days, starting from the current day or from the start date selected in the filter.
+A slot is a time unit available for booking. The widget displays available slots for six days (four on narrow screens), starting from the current day or from the start date selected in the filter.
 
 ### Add slots for booking
 
