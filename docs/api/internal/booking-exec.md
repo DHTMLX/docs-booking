@@ -10,13 +10,15 @@ description: You can learn about the exec method in the documentation of the DHT
 
 @short: Allows triggering the inner events
 
+The method is asynchronous and returns a Promise that resolves with the processed event config.
+
 ### Usage
 
 ~~~jsx {}
 api.exec(
     event: string,
     config: object
-): void;
+): Promise<any>;
 ~~~
 
 ### Parameters

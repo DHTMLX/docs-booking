@@ -28,7 +28,7 @@ cardShape?: {
 
 In the `cardShape` object you can specify the following parameters (fields):
 
-- `category` - (optional) shows/hides a card's name
+- `category` - (optional) shows/hides a category name
 - `details` - (optional) shows/hides details
 - `preview` - (optional) shows/hides a preview image
 - `price` - (optional) shows/hides price

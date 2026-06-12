@@ -15,7 +15,8 @@ description: You can learn about the intercept method in the documentation of th
 ~~~jsx {}
 api.intercept(
     event: string,
-    callback: function
+    callback: function,
+    config?: { tag?: number | string }
 ): void;
 ~~~
 
@@ -23,6 +24,8 @@ api.intercept(
 
 - `event` - (required) an event to be fired
 - `callback` - (required) a callback to be performed (the callback arguments will depend on the event to be fired)
+- `config` - (optional) an object with extra settings for the callback:
+  - `tag` - (optional) a tag that identifies the callback so it can be removed later via the [`api.detach()`](api/internal/booking-detach.md) method
 
 :::info
 The full list of the Booking internal events you can find [**here**](api/overview/booking-events-overview.md).

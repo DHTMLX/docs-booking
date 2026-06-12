@@ -19,7 +19,7 @@ description: You can learn about the confirm-slot event in the documentation of 
         time: [ number, number ]
     },
     data:{
-        [key]: any
+        [key]: string
     },
     confirm:{
         promise:Promise,

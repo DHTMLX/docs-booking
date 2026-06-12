@@ -15,7 +15,8 @@ description: You can learn about the on method in the documentation of the DHTML
 ~~~jsx {}
 api.on(
     event: string,
-    handler: function
+    handler: function,
+    config?: { tag?: number | string }
 ): void;
 ~~~
 
@@ -23,6 +24,8 @@ api.on(
 
 - `event` - (required) an event to be fired
 - `handler` - (required) a handler to be attached (the handler arguments will depend on the event to be fired)
+- `config` - (optional) an object with extra settings for the handler:
+  - `tag` - (optional) a tag that identifies the handler so it can be removed later via the [`api.detach()`](api/internal/booking-detach.md) method
 
 :::info
 The full list of the Booking internal events you can find [**here**](api/overview/booking-events-overview.md).
