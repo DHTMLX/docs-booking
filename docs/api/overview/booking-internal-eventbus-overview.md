@@ -8,8 +8,8 @@ description: You can have event bus methods overview of JavaScript Booking in th
 
 | Name                                 | Description                                         |
 | ------------------------------------ | --------------------------------------------------- |
-| [](../internal/booking-detach.md)    | @getshort(../internal/booking-detach.md)            |
-| [](../internal/booking-exec.md)      | @getshort(../internal/booking-exec.md)              |
-| [](../internal/booking-intercept.md) | @getshort(../internal/booking-intercept.md)         |
-| [](../internal/booking-on.md)        | @getshort(../internal/booking-on.md)                |
-| [](../internal/booking-setnext.md)   | @getshort(../internal/booking-setnext.md)           |
+| [](api/internal/booking-detach.md)    | @getshort(../internal/booking-detach.md)            |
+| [](api/internal/booking-exec.md)      | @getshort(../internal/booking-exec.md)              |
+| [](api/internal/booking-intercept.md) | @getshort(../internal/booking-intercept.md)         |
+| [](api/internal/booking-on.md)        | @getshort(../internal/booking-on.md)                |
+| [](api/internal/booking-setnext.md)   | @getshort(../internal/booking-setnext.md)           |
