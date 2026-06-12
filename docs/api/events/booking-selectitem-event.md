@@ -20,7 +20,7 @@ description: You can learn about the select-item event in the documentation of t
 
 ### Parameters
 
-The callback of the **select-item** event can take an object with the following parameters:
+The callback of the `select-item` event can take an object with the following parameters:
 
 - `id` - (required) the id of an item
 

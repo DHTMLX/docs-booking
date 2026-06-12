@@ -21,7 +21,7 @@ description: You can learn about the select-item-date event in the documentation
 
 ### Parameters
 
-The callback of the **select-item-date** event can take an object with the following parameters:
+The callback of the `select-item-date` event can take an object with the following parameters:
 
 - `id` - (required) the id of an item
 - `date` - (required) the date (in milliseconds) that was set for the selected item

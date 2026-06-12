@@ -31,17 +31,17 @@ filterShape: {
 
 ### Parameters
 
-- `text` - (optional) if **true**, the text input field is displayed (default); if **false**, the text field is hidden
+- `text` - (optional) if `true`, the text input field is displayed (default); if `false`, the text field is hidden
   - `id` - (required) the id of a card
-  - `suggest` - (optional) if **true**, the auto-complete is enabled and the values (from the [`data`](api/config/booking-data.md) object) that match a user's input text will be displayed
+  - `suggest` - (optional) if `true`, the auto-complete is enabled and the values (from the [`data`](api/config/booking-data.md) object) that match a user's input text will be displayed
   - `label` - (optional) the label for the property from the `data` object. See [Default config](#default-config) below.
-- `date` - (optional) shows/hides the date field; **true** is set by default (the field is shown)
-- `time` - (optional) shows/hides the time field. If set to **true**, it takes an array of objects with default time options for a slot. For each object you can specify the following parameters:
+- `date` - (optional) shows/hides the date field; `true` is set by default (the field is shown)
+- `time` - (optional) shows/hides the time field. If set to `true`, it takes an array of objects with default time options for a slot. For each object you can specify the following parameters:
   - `from` - (required) the start time for a slot; it can be a number from 0 to 24 that specifies the time in hours (e.g., 9 means 9:00, 8.5 means 8:30) or a string in the format "h:m" (for example, "8:30")
   - `to` - (required) the end time for a slot; it can be a number from 0 to 24 that specifies the time in hours (e.g., 9 means 9:00, 8.5 means 8:30) or a string in the format "h:m" (for example, "8:30")
   - `label` - (optional) placeholder for the time field
 If the `time` parameters are not set, the default values are applied: see [Default config](#default-config) below.
-- `autoApply` - (optional) if **true**, the search criteria will be automatically applied (no need to initiate the search by clicking the button); **false** is set by default
+- `autoApply` - (optional) if `true`, the search criteria will be automatically applied (no need to initiate the search by clicking the button); `false` is set by default
 
 ### Default config
 

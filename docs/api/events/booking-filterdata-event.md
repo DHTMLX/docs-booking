@@ -28,7 +28,7 @@ description: You can learn about the filter-data event in the documentation of t
 
 ### Parameters
 
-The callback of the **filter-data** event can take an object with the following parameters:
+The callback of the `filter-data` event can take an object with the following parameters:
 
 - `text` - (required) the text in the search field
 - `date` - (required) Date object with the start and end date for a slot: 

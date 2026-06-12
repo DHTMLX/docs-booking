@@ -26,7 +26,7 @@ cardShape?: {
 
 ### Parameters
 
-In the **cardShape** object you can specify the following parameters (fields):
+In the `cardShape` object you can specify the following parameters (fields):
 
 - `category` - (optional) shows/hides a card's name
 - `details` - (optional) shows/hides details
@@ -73,7 +73,7 @@ The snippet below demonstrates how to configure what fields to display on the le
 You can also configure the appearance of a card using the [`cardTemplate`](api/config/booking-cardtemplate.md) property. If both `cardTemplate` and `cardShape` are applied, `cardTemplate` will override the `cardShape` settings. 
 :::
 
-**Related articles:** 
+**Related articles**: 
 
 - [Defining the structure of cards](guides/configuration.md#define-the-structure-of-cards)
 - [`cardTemplate`](api/config/booking-cardtemplate.md)

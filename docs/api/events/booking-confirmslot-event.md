@@ -31,7 +31,7 @@ description: You can learn about the confirm-slot event in the documentation of 
 
 ### Parameters
 
-The callback of the **confirm-slot** event can take an object with the following parameters:
+The callback of the `confirm-slot` event can take an object with the following parameters:
 
 - `slot` - (required) an object with the next slot parameters:
     - `id` - (required) the ID of a card for which the booking of a slot is confirmed
@@ -57,4 +57,4 @@ widget.api.on("confirm-slot", (obj) => {
 });
 ~~~
 
-**Related articles:** [`setConfirmHandler`](api/methods/booking-setconfirmhandler-method.md) method
+**Related articles**: [`setConfirmHandler`](api/methods/booking-setconfirmhandler-method.md) method

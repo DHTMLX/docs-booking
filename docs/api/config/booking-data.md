@@ -63,8 +63,8 @@ For each card object you can specify the following parameters:
   - `to` - (required) a slot end time in hours from 0 to 24
   - `size` - (optional) the duration of one slot in minutes
   - `gap` - (optional) the gap between slots in minutes; 0 is set by default
-  - `days` - (optional) days of the week when a slot is available for booking; possible values: from 0 to 6 where 0 is Sunday and 6 is Saturday; if no days are specified, all days are applied by default; if days are specified, the slot parameters (**to**, **from**, **size**, **gap**) defined for these days will be applied
-  - `dates` - (optional) an array of timestamps in milliseconds which are exact dates when a slot is available; the slot parameters (**to**, **from**, **size**, **gap**) for these specified dates will be applied (timestamps are in a local timezone)
+  - `days` - (optional) days of the week when a slot is available for booking; possible values: from 0 to 6 where 0 is Sunday and 6 is Saturday; if no days are specified, all days are applied by default; if days are specified, the slot parameters (`to`, `from`, `size`, `gap`) defined for these days will be applied
+  - `dates` - (optional) an array of timestamps in milliseconds which are exact dates when a slot is available; the slot parameters (`to`, `from`, `size`, `gap`) for these specified dates will be applied (timestamps are in a local timezone)
 
 :::note
 Slot parameters specified for days will override common parameters defined for all days.
@@ -130,4 +130,4 @@ new booking.Booking("#root", {
 });
 ~~~
 
-**Related articles:** [Defining slot rules](guides/configuration.md#define-slot-rules)
+**Related articles**: [Defining slot rules](guides/configuration.md#define-slot-rules)

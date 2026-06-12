@@ -28,7 +28,7 @@ cardTemplate?: ({item: obj}) => string;
 
 ### Example
 
-In the example below we create a function that takes the `item` (card) object and returns HTML for a card that includes a preview image (item.preview), category (item.category), title (item.title), and price (item.price). You need to create your own HTML template to be applied to a card and import the **template** helper. Then pass the function into the Booking configuration by assigning the function to the `cardTemplate` property.  
+In the example below we create a function that takes the `item` (card) object and returns HTML for a card that includes a preview image (item.preview), category (item.category), title (item.title), and price (item.price). You need to create your own HTML template to be applied to a card and import the `template` helper. Then pass the function into the Booking configuration by assigning the function to the `cardTemplate` property.  
 
 ~~~html {}
 <style>
@@ -84,7 +84,7 @@ The snippet below demonstrates how to apply a template to the left block of a ca
 
 <iframe src="https://snippet.dhtmlx.com/k2v01vng" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**Related articles:**
+**Related articles**:
 
 - [Defining the structure of cards](guides/configuration.md#define-the-structure-of-cards)
 - [`cardShape`](api/config/booking-cardshape.md)
