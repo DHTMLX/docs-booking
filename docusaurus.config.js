@@ -163,7 +163,7 @@ const config = {
 			({
 				docs: {
 					sidebarPath: require.resolve('./sidebars.js'),
-					editUrl: 'https://github.com/DHTMLX/docs-booking/edit/master/',
+					//editUrl: 'https://github.com/DHTMLX/docs-booking/edit/master/',
 					routeBasePath: '/',
 				},
 				theme: {
