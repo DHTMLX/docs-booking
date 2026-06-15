@@ -13,7 +13,7 @@ description: You can learn about the setLocale() method in the documentation of 
 ### Usage
 
 ~~~jsx
-setLocale(null | locale?: object): void;
+setLocale(locale?: object | null): void;
 ~~~
 
 ### Parameters
@@ -25,18 +25,18 @@ setLocale(null | locale?: object): void;
 
 ~~~jsx {}
 // create Booking
-const booking = new booking.Booking("#root", {
+const widget = new booking.Booking("#root", {
     data,
     // initial configuration parameters
 });
 
 // apply the "de" locale to Booking
-booking.setLocale(de);
+widget.setLocale(booking.locales.de);
 
 // apply the default locale to Booking
-booking.setLocale(); // or setLocale(null);
+widget.setLocale(); // or setLocale(null);
 ~~~
 
 **Related articles**:
-- [locale](/api/config/booking-locale)
-- [Localization](/guides/localization)
+- [locale](api/config/booking-locale.md)
+- [Localization](guides/localization.md)

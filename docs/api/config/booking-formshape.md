@@ -13,22 +13,26 @@ description: You can learn about the formShape config in the documentation of th
 ### Usage
 
 ~~~jsx {}
-formShape: {
+formShape: [{
     comp: "text" | "textarea",
     key: string,
     label?: string,
-    required?: boolean
-};
+    required?: boolean,
+    validation?: (value: any) => boolean,
+    errorMessage?: string
+}];
 ~~~
 
 ### Parameters
 
 For each field you can specify the following parameters:
 
-- `comp` - (required) the field type (**text** or **textarea**)
+- `comp` - (required) the field type (`text` or `textarea`)
 - `key` - (required) the id of a field
 - `label` - (optional) the field label
-- `required` - (optional) if the value is set to **true**, the field should not be empty and it's required to submit the booking form; if **false**, the field can be empty
+- `required` - (optional) if the value is set to `true`, the field should not be empty and it's required to submit the booking form; if `false`, the field can be empty
+- `validation` - (optional) a function that takes the field value and returns a boolean; the field is considered valid when the function returns `true`
+- `errorMessage` - (optional) the message shown when the value does not pass validation
 
 ### Default config
 
@@ -68,17 +72,17 @@ const defaultFormShape = [
 ~~~jsx {1-17,21}
 const formShape = [
     {
-        type: "text",
+        comp: "text",
         key: "name",
         label: "Name"
     },
     {
-        type: "text",
+        comp: "text",
         key: "contact",
         label: "Mobile"
     },
     {
-        type: "textarea",
+        comp: "textarea",
         key: "description",
         label: "Details"
     },

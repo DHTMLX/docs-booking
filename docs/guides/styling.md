@@ -6,44 +6,55 @@ description: You can learn about Styling in the documentation of the DHTMLX Java
 
 # Styling
 
+Customize the Booking widget through CSS custom properties. The widget exposes Booking-specific layout tokens under the `--wx-booking-*` namespace and shares generic design tokens (colors, borders, typography) under the `--wx-*` namespace.
+
 ## Default style
 
+The Booking widget uses CSS custom properties for layout dimensions and shared theme tokens. Override these variables in your own CSS to customize the appearance.
+
+The following code snippet shows a subset of Booking-specific variables exposed by the widget (shown with their desktop values; internally the widget redefines some of them per screen size — desktop, tablet, and mobile):
+
 ~~~css
-.wx-material-theme {
-    --wx-theme-name: material;
-    --wx-pivot-primary-hover: #194e9e;
-    --wx-pivot-border-color: var(--wx-color-font-disabled);
-    --wx-pivot-field-hover: linear-gradient(
-        rgba(0, 0, 0, 0.1) 0%,
-        rgba(0, 0, 0, 0.1) 100%
-    );
+.wx-booking {
+    --wx-booking-content-min-width: 984px;
+    --wx-booking-content-max-width: 1132px;
+    --wx-booking-content-padding: 0 var(--wx-booking-content-h-padding) 28px;
+    --wx-booking-slots-width: 602px;
+    --wx-booking-slots-padding: 0 30px 0 50px;
+    --wx-booking-separator: var(--wx-border);
 }
 ~~~
 
 :::tip Note
-Next versions of Booking can bring some changes for the variables and their names. Please, do not forget to check the names after updating to the newer versions and modify them in your code to avoid problems with display of the component.
+Next versions of Booking may change variable names. Check the names after updating to a newer version and adjust your code to avoid display issues.
 :::
 
-## Built-in theme
+## Apply the built-in theme
 
-The widget provides one built-in theme which is the **Material** theme. 
+The widget provides one built-in theme — the Material theme.
 
-You can apply the theme via adding the corresponding *CSS* classes to the widget container:
+Apply the theme by adding the corresponding CSS class to the widget container.
+
+The following code snippet attaches the Material theme to the Booking container:
 
 ~~~html {}
 <!-- Booking container -->
 <div id="root" class="wx-material-theme"></div>
 ~~~
 
-or just include the theme on the page from the skins folder:
+To load the theme stylesheet from the skins folder, add a link tag on the page.
+
+The following code snippet includes the Material theme stylesheet:
 
 ~~~html {}
-<link type="stylesheet" href="path/to/booking/skins/material.css"/>
+<link rel="stylesheet" href="path/to/booking/skins/material.css"/>
 ~~~
 
-## Customize built-in theme
+## Customize the built-in theme
 
-The example below demonstrates how to customize the **Material** theme that is applied to Booking:
+Override the Material theme variables under the `.wx-material-theme` selector.
+
+The following code snippet recolors the Material theme for a dark layout:
 
 ~~~html
 <style>
@@ -64,9 +75,11 @@ The example below demonstrates how to customize the **Material** theme that is a
 </style>
 ~~~
 
-## Custom styles
+## Apply custom styles
 
-To customize the appearance of Booking to your project needs, you need to apply the corresponding CSS variables. 
+To match your project design, scope the CSS variables under a custom class on the Booking container.
+
+The following code snippet defines a custom palette for the `.demo` container:
 
 ~~~html
 <div id="root" class="demo"></div>
@@ -78,12 +91,12 @@ To customize the appearance of Booking to your project needs, you need to apply 
         --wx-icon-color: rgba(149, 179, 223, 0.7);
         --wx-booking-primary-hover: #194e9e;
         --wx-booking-border-color: 1px solid #818080;
-        --wx-border: 1px dashed #818080; 
+        --wx-border: 1px dashed #818080;
     }
 </style>
 ~~~
 
-The next example shows how to change the background color for cards:
+The following code snippet changes the background color of cards and the date items:
 
 ~~~html
 <style>
@@ -93,7 +106,7 @@ The next example shows how to change the background color for cards:
             background-color: #e8f3f7;
         }
 
-        .wx-booking .wx-slot-dates > .wx-date-item.selected {
+        .wx-booking .wx-slot-dates > .wx-date-item.wx-selected {
             background-color: #bfdde7;
         }
     }
@@ -102,6 +115,6 @@ The next example shows how to change the background color for cards:
 
 ## Example
 
-In this snippet you can see how to apply a custom style to Booking:
+The snippet below demonstrates a custom Booking style:
 
 <iframe src="https://snippet.dhtmlx.com/d7w3jtqz?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

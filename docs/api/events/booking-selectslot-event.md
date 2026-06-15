@@ -15,28 +15,28 @@ description: You can learn about the select-slot event in the documentation of t
 ~~~jsx {}
 "select-slot": ({
     id: string | number,
-    time:[ number, number ] 
+    time:[ number, number ]
 }) => void;
 ~~~
 
 ### Parameters
 
-The callback of the **select-slot** event can take an object with the following parameters:
+The callback of the `select-slot` event can take an object with the following parameters:
 
 - `id` - (required) the ID of a card the selected slot belongs to
-- `time` - (required) an array with the slot start time in milliseconds and the slot duration in minutes (timestamps are in a local timezone)
-  
+- `time` - (required) an array with the slot start time in milliseconds and the slot duration in minutes (the start time is in milliseconds and represents local wall-clock time)
+
 ### Example
 
 ~~~jsx {7-10}
 // create Booking
-const booking = new booking.Booking("#root", {
+const widget = new booking.Booking("#root", {
     data,
     // other configuration parameters
 });
 
 // output the id of the selected slot
-booking.api.on("select-slot", (obj) => {
+widget.api.on("select-slot", (obj) => {
     console.log(obj.id);
 });
 ~~~

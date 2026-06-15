@@ -13,21 +13,21 @@ description: You can learn about the serialize() method in the documentation of 
 ### Usage
 
 ~~~jsx
-serialize(): [];
+serialize(): object[];
 ~~~
 
 ### Returns
 
-Returns [data](/api/config/booking-data) array.
+Returns [data](api/config/booking-data.md) array.
 
 ### Example
 
 ~~~jsx {}
 // create Booking
-const booking = new booking.Booking("#root", {
+const widget = new booking.Booking("#root", {
     data,
     // configuration parameters
 });
 
-console.log(booking.serialize());
+console.log(widget.serialize());
 ~~~

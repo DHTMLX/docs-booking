@@ -6,11 +6,13 @@ description: You can learn about the localization in the documentation of the DH
 
 # Localization
 
-You can localize labels in the interface of JavaScript Booking and present it in any necessary language. You just need to provide localized strings for labels and apply your locale to the component.
+Localize the Booking interface by providing translated strings for all labels and applying the locale to the widget. The Booking widget ships with three built-in locales and supports custom ones through the [`locale`](api/config/booking-locale.md) property and the [`setLocale()`](api/methods/booking-setlocale-method.md) method.
 
 ## Default locale
 
-The English locale is applied by default:
+Booking applies the English (`en`) locale by default.
+
+The following code snippet shows the full structure of the built-in `en` locale:
 
 ~~~jsx {}
 const en = {
@@ -123,16 +125,18 @@ const en = {
             " should contain valid email address",
         monthDayFormat: "%M %d",
         fullDateFormat: "%D, %d %F %Y"
-    }    
+    }
 };
 ~~~
 
 :::info
-Besides the ***en*** locale, Booking also includes the built-in ***de*** and ***cn*** locales.
+Besides the `en` locale, Booking includes two more built-in locales — `de` (German) and `cn` (Chinese).
 :::
 
 <details>
 <summary><b>de</b> locale</summary>
+
+The following code snippet shows the full structure of the built-in `de` locale:
 
 ~~~jsx
 const de = {
@@ -255,6 +259,8 @@ const de = {
 <details>
 <summary><b>cn</b> locale</summary>
 
+The following code snippet shows the full structure of the built-in `cn` locale:
+
 ~~~jsx
 const cn = {
     // calendar
@@ -286,7 +292,7 @@ const cn = {
             "十月",
             "十一月",
             "十二月"
-        ],    
+        ],
         dayFull: [
             "星期日",
             "星期一",
@@ -318,7 +324,7 @@ const cn = {
     formats: {
         timeFormat: "%H:%i",
         dateFormat: "%Y-%m-%d",
-    }, 
+    },
     lang: "zh-CN",
     //booking
     booking: {
@@ -370,70 +376,84 @@ const cn = {
 ~~~
 </details>
 
-## Applying locales
+## Apply a built-in locale
 
-You can get access to the built-in locale via the *booking* object. Booking provides three built-in locales: en, cn, de.
+Access built-in locales through the `booking.locales` object. Booking provides three built-in locales: `en`, `cn`, and `de`.
 
-Example:
+The following code snippet applies the German locale at initialization through the [`locale`](api/config/booking-locale.md) property:
 
 ~~~jsx {4}
 const { data } = getData();
-const booking = new booking.Booking("#root", {
+const widget = new booking.Booking("#root", {
     data,
     locale: booking.locales.de
 });
 ~~~
 
-You can also apply the [`setLocale()`](/api/methods/booking-setlocale-method) method.
+To change the locale after initialization, call the [`setLocale()`](api/methods/booking-setlocale-method.md) method.
 
-To apply a custom locale, you need to:
+## Apply a custom locale
 
-- create a custom locale object (or modify the default one) and provide translations for all text labels (it can be any language you need)
-- apply the new locale via its [`locale`](/api/config/booking-locale) property or use the [`setLocale()`](/api/methods/booking-setlocale-method) method
+To use a language outside the built-in set, create a locale object with translations for every label and apply it through the [`locale`](api/config/booking-locale.md) property or the [`setLocale()`](api/methods/booking-setlocale-method.md) method.
+
+The following code snippet applies a custom Korean locale to an existing Booking instance:
 
 ~~~jsx {}
 // create Booking
-const booking = new booking.Booking("#root", {
+const widget = new booking.Booking("#root", {
   data,
 });
 
-const ko = {...} // object with locale
-booking.setLocale(ko);
+const ko = {...} // custom locale object
+widget.setLocale(ko);
 ~~~
 
-## Changing the time format
+## Reset to the default locale
 
-You can change the time format via the `timeFormat` parameter of the `formats` object of [locale](/api/config/booking-locale). 
+To restore the default English locale, call [`setLocale()`](api/methods/booking-setlocale-method.md) without arguments or pass `null`.
+
+The following code snippet resets the active locale to English:
+
+~~~jsx {}
+widget.setLocale();     // reset to default English
+// or
+widget.setLocale(null); // same effect
+~~~
+
+## Change the time format
+
+Switch between 12-hour and 24-hour time by updating the `timeFormat` parameter inside the `formats` object of the active [`locale`](api/config/booking-locale.md).
+
+The following code snippet toggles the active locale between 12-hour and 24-hour formats:
 
 ~~~jsx {}
 let clockFormat = 12;
 const locale = booking.locales["en"];
 setTimeFormat(clockFormat);
 
-function setTimeFormat(clock){
+function setTimeFormat(clock) {
     locale.formats.timeFormat = clock === 12 ? "%g:%i %a" : "%H:%i";
 }
 
-const booking = new booking.Booking("#root", {
-    locale, 
+const widget = new booking.Booking("#root", {
+    locale,
     data: dataset,
 });
 
 function changeFormat() {
-    clockFormat = clockFormat === 12 ? 24  : 12;
+    clockFormat = clockFormat === 12 ? 24 : 12;
     setTimeFormat(clockFormat);
-    booking.setLocale(locale);
-       
+    widget.setLocale(locale);
 }
 ~~~
 
 :::info
-You can also see an example in the [snippet tool](https://snippet.dhtmlx.com/rxjnw54x)
+See an example in the [snippet tool](https://snippet.dhtmlx.com/rxjnw54x).
 :::
 
-## Date and time format specification 
+## Date and time format specification
 
-Booking uses the following characters for setting the date and time format:
+Booking uses the following characters to compose date and time format strings:
 
 | Character | Definition                                        |Example                  |
 | :-------- | :------------------------------------------------ |:------------------------|
@@ -452,22 +472,23 @@ Booking uses the following characters for setting the date and time format:
 | %g        | hours 12-format                                   | from 1 to 12            |
 | %H        | hours 24-format with leading zero                 | from 00 to 23           |
 | %G        | hours 24-format                                   | from 0 to 23            |
-| %i        | minutes with leading zero                         | from 01 to 59           |
-| %s        | seconds with leading zero                         | from 01 to 59           |
+| %i        | minutes with leading zero                         | from 00 to 59           |
+| %s        | seconds with leading zero                         | from 00 to 59           |
 | %S        | milliseconds                                      | 128                     |
 | %a        | am or pm                                          | am (for time from midnight until noon) and pm (for time from noon until midnight)|
 | %A        | AM or PM                                          | AM (for time from midnight until noon) and PM (for time from noon until midnight)|
 | %c        | displays date and time in the ISO 8601 date format| 2024-10-04T05:04:09     |
 
 
-To present the 20th of June, 2024 with the exact time as *2024-09-20 16:47:08.128*, specify "%Y-%m-%d-%H:%i:%s.%u".
+To render the 20th of September, 2024 with the exact time as *2024-09-20 16:47:08.128*, specify `"%Y-%m-%d %H:%i:%s.%S"`.
 
 ## Example
 
-In this snippet you can see how to switch between the *EN* and *DE* locales:
+The snippet below switches between the `en` and `de` locales:
 
 <iframe src="https://snippet.dhtmlx.com/7khy4ayf?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 **Related articles**:
-- [locale](/api/config/booking-locale)
-- [setLocale()](/api/methods/booking-setlocale-method)
+
+- [`locale`](api/config/booking-locale.md) — set the active locale at initialization
+- [`setLocale()`](api/methods/booking-setlocale-method.md) — change or reset the active locale at runtime
