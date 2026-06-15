@@ -68,7 +68,7 @@ const widget = new booking.Booking("#root", {
 
 // fetch the dataset from the server
 fetch("/server/url")
-    .then((res) => res.json())        
+    .then((res) => res.json())
     .then((items) => {
         // load the fetched items into the widget
         widget.setConfig({ data: items });
@@ -166,7 +166,7 @@ fetch( serverURL + "/units")
                 });
             };
         });
-         
+
         widget.setConfig({ data: units });
         widget.setConfirmHandler(handleSlotReservation);
     });

@@ -169,10 +169,10 @@ export function getData() : any {
         const date = new Date();
         const secondsValue = 0; // round to minutes
         const msValue = 0;
-    
+
         date.setDate(date.getDate() + addDays);
         date.setHours(hoursValue, minutesValue, secondsValue, msValue);
-    
+
         return date.getTime();
     }
 
@@ -255,7 +255,7 @@ import { Component, ElementRef, OnInit, ViewChild, OnDestroy, ViewEncapsulation 
 
 @Component({
     encapsulation: ViewEncapsulation.None,
-    selector: "booking", 
+    selector: "booking",
     styleUrls: ["./booking.component.css"],
     template: `<div #container class="widget"></div>`,
 })
@@ -273,7 +273,7 @@ export class BookingComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy(): void {
-        this._booking.destructor(); 
+        this._booking.destructor();
     }
 }
 ~~~
@@ -302,7 +302,7 @@ ngOnInit() {
 }
 
 ngOnDestroy(): void {
-    this._booking.destructor(); 
+    this._booking.destructor();
 }
 ~~~
 

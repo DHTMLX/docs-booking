@@ -163,10 +163,10 @@ export function getData() {
         const date = new Date();
         const secondsValue = 0; // round to minutes
         const msValue = 0;
-    
+
         date.setDate(date.getDate() + addDays);
         date.setHours(hoursValue, minutesValue, secondsValue, msValue);
-    
+
         return date.getTime();
     }
 

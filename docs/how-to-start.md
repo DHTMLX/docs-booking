@@ -42,7 +42,7 @@ There are two necessary files:
 <html>
     <head>
         <title>How to Start with Booking</title>
-        <script src="./dist/booking.js"></script>   
+        <script src="./dist/booking.js"></script>
         <link href="./dist/booking.css" rel="stylesheet">
     </head>
     <body>
@@ -59,15 +59,15 @@ If you want to integrate JavaScript Booking into React, Angular or Vue projects,
 
 ## Step 3. Creating booking
 
-Now you are ready to add booking to the page. First, let's create the DIV container for Booking. 
+Now you are ready to add booking to the page. First, let's create the DIV container for Booking.
 
 ~~~html {} title="index.html"
 <!DOCTYPE html>
 <html>
     <head>
         <title>How to Start with Booking</title>
-        <script src="./dist/booking.js"></script>   
-        <link href="./dist/booking.css" rel="stylesheet">  
+        <script src="./dist/booking.js"></script>
+        <link href="./dist/booking.css" rel="stylesheet">
     </head>
     <body>
         <div id="root"></div>

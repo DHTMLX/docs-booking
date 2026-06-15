@@ -9,7 +9,7 @@ description: You can have an overview of DHTMLX JavaScript Booking library in th
 
 ## Overview
 
-JavaScript Booking library is a ready-made component designed to be easily incorporated into your application. It provides end-users with functionality for scheduling appointments online and wide filtering options. The widget is made responsive and optimised for mobile devices.
+JavaScript Booking library is a ready-made component designed to be easily incorporated into your application. It provides end-users with functionality for scheduling appointments online and wide filtering options. The widget is made responsive and optimized for mobile devices.
 
 ## Booking structure
 
@@ -41,15 +41,15 @@ To open the view of a single card, click inside the left area of a card. The sin
 
 ### Booking dialog
 
-The booking dialog allows booking a slot of the selected card. To open it, click the time slot button. 
+The booking dialog allows booking a slot of the selected card. To open it, click the time slot button.
 
 ![booking](assets/bookingd.png)
 
-For the instruction about booking, please, refer to [Making an appointment](#making-an-appointment)
+For instructions on booking, refer to [Making an appointment](#making-an-appointment).
 
 ## Filtering data
 
-To filter cards by different text fields, date and time, a user should enter the required values in the input fields and click the **Search** button. A user can filter  cards by category and title by default. The next default time ranges are available for filtering:
+To filter cards by different text fields, date and time, a user should enter the required values in the input fields and click the **Search** button. A user can filter cards by category and title by default. The next default time ranges are available for filtering:
 
 - from: 8, to: 12 (Morning)
 - from: 12, to: 17 (Afternoon)

@@ -18,7 +18,7 @@ api.setNext(next: any): void;
 
 ### Parameters
 
-- `next` - (required) the action to be included into the **Event Bus** order  
+- `next` - (required) the action to be included into the **Event Bus** order
 
 ### Example
 
@@ -31,9 +31,9 @@ const server = "https://some-backend-url";
 // Assume you have a custom server service class named someServerService
 const someServerService = new ServerDataService(server);
 
-fetch(server + "/data").then((res) => res.json()).then((data) => { 
+fetch(server + "/data").then((res) => res.json()).then((data) => {
     widget.setConfig({data});
-});   
+});
 // Integrate someServerService into the Event Bus order of the widget
 widget.api.setNext(someServerService);
 ~~~

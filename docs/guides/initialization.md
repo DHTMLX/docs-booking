@@ -26,7 +26,7 @@ Set correct relative paths to the source files.
 The following code snippet includes the Booking files from a *dist/* folder:
 
 ~~~html title="index.html"
-<script type="text/javascript" src="./dist/booking.js"></script>  
+<script type="text/javascript" src="./dist/booking.js"></script>
 <link rel="stylesheet" href="./dist/booking.css">
 ~~~
 

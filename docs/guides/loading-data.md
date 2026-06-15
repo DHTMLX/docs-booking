@@ -164,7 +164,7 @@ Include the data file on the page after the Booking source files.
 The following code snippet wires the *data.js* module into *index.html*:
 
 ~~~html title="index.html"
-<script type="text/javascript" src="./dist/booking.js"></script>  
+<script type="text/javascript" src="./dist/booking.js"></script>
 <link rel="stylesheet" href="./dist/booking.css">
 
 <script src="./common/data.js"></script>

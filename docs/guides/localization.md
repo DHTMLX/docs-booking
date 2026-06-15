@@ -125,7 +125,7 @@ const en = {
             " should contain valid email address",
         monthDayFormat: "%M %d",
         fullDateFormat: "%D, %d %F %Y"
-    }    
+    }
 };
 ~~~
 
@@ -292,7 +292,7 @@ const cn = {
             "十月",
             "十一月",
             "十二月"
-        ],    
+        ],
         dayFull: [
             "星期日",
             "星期一",
@@ -324,7 +324,7 @@ const cn = {
     formats: {
         timeFormat: "%H:%i",
         dateFormat: "%Y-%m-%d",
-    }, 
+    },
     lang: "zh-CN",
     //booking
     booking: {
@@ -436,7 +436,7 @@ function setTimeFormat(clock) {
 }
 
 const widget = new booking.Booking("#root", {
-    locale, 
+    locale,
     data: dataset,
 });
 

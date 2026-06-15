@@ -15,7 +15,7 @@ description: You can learn about the select-slot event in the documentation of t
 ~~~jsx {}
 "select-slot": ({
     id: string | number,
-    time:[ number, number ] 
+    time:[ number, number ]
 }) => void;
 ~~~
 
@@ -25,7 +25,7 @@ The callback of the `select-slot` event can take an object with the following pa
 
 - `id` - (required) the ID of a card the selected slot belongs to
 - `time` - (required) an array with the slot start time in milliseconds and the slot duration in minutes (the start time is in milliseconds and represents local wall-clock time)
-  
+
 ### Example
 
 ~~~jsx {7-10}

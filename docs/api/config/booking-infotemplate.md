@@ -78,7 +78,7 @@ In the example below, we define the `cardInfoTemplate` function that will genera
 </script>
 ~~~
 
-The snippet below shows how to apply a template to the information block of the Booking dialog that appears when a user clicks the time slot button: 
+The snippet below shows how to apply a template to the information block of the Booking dialog that appears when a user clicks the time slot button:
 
 <iframe src="https://snippet.dhtmlx.com/byb94ipu?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
@@ -86,7 +86,7 @@ The snippet below shows how to apply a template to the information block of the 
 You can also control which fields to display in the information block of the Booking dialog using the [`infoShape`](api/config/booking-infoshape.md) property. But if both properties are applied, `infoTemplate` will override the `infoShape` settings.
 :::
 
-**Related articles**: 
+**Related articles**:
 
 - [Configuring the Booking dialog](guides/configuration.md#configure-the-booking-dialog)
 - [`infoShape`](api/config/booking-infoshape.md)

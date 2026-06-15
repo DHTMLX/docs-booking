@@ -21,7 +21,7 @@ api.getState(): object;
 The method returns an object with the following state fields:
 
 ~~~jsx {}
-{    
+{
     data: [], // an array of cards objects
     cardShape: {}, // an object with settings for cards
     filteredData: [], // filtered data array
@@ -50,5 +50,5 @@ const widget = new booking.Booking("#root", {
 
 // get and output the State of Booking to console
 const state = widget.api.getState();
-console.log(state); 
+console.log(state);
 ~~~

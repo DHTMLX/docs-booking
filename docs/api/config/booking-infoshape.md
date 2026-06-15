@@ -67,7 +67,7 @@ The snippet below shows how to configure what to display on the left side of the
 You can also control which fields to display in the information block of the Booking dialog using the [`infoTemplate`](api/config/booking-infotemplate.md) property. But if both properties are applied, `infoTemplate` will override the `infoShape` settings.
 :::
 
-**Related articles**: 
+**Related articles**:
 
 - [Configuring the Booking dialog](guides/configuration.md#configure-the-booking-dialog)
 - [`infoTemplate`](api/config/booking-infotemplate.md)

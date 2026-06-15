@@ -91,7 +91,7 @@ The following code snippet defines a custom palette for the `.demo` container:
         --wx-icon-color: rgba(149, 179, 223, 0.7);
         --wx-booking-primary-hover: #194e9e;
         --wx-booking-border-color: 1px solid #818080;
-        --wx-border: 1px dashed #818080; 
+        --wx-border: 1px dashed #818080;
     }
 </style>
 ~~~

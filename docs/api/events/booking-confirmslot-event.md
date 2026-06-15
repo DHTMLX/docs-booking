@@ -15,7 +15,7 @@ description: You can learn about the confirm-slot event in the documentation of 
 ~~~jsx {}
 "confirm-slot": ({
     slot:{
-        id:string|number, 
+        id:string|number,
         time: [ number, number ]
     },
     data:{

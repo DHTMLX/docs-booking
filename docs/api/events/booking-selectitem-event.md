@@ -29,7 +29,7 @@ The callback of the `select-item` event can take an object with the following pa
 ~~~jsx {7-10}
 // create Booking
 const widget = new booking.Booking("#root", {
-    data, 
+    data,
     // other configuration parameters
 });
 

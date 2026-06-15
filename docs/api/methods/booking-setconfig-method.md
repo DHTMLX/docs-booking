@@ -45,7 +45,7 @@ const widget = new booking.Booking("#root", {
             { from: 12, to: 16, label: "Afternoon" },
             { from: 17, to: 20, label: "Evening" }
         ]
-    } 
+    }
 });
 
 //update configuration parameters

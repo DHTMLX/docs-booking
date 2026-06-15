@@ -48,15 +48,15 @@ data: [
 
 For each card object you can specify the following parameters:
 
-- `id` - (required) the ID of a card  
+- `id` - (required) the ID of a card
 - `title` - (required) the title of a card (e.g., a specialist's name)
 - `category` - (optional) the category name of a card (e.g., a specialist's job)
-- `subtitle` - (optional) the subtitle of a card  
+- `subtitle` - (optional) the subtitle of a card
 - `details` - (optional) other details of a card
 - `preview` - (optional) a card preview which is the link to the card image
-- `price` - (optional) the price of the service  
-- `review` - (optional) rating information that includes the following parameters:  
-  - `stars` - (optional) the number of rating stars (out of five)  
+- `price` - (optional) the price of the service
+- `review` - (optional) rating information that includes the following parameters:
+  - `stars` - (optional) the number of rating stars (out of five)
   - `count` - (optional) the number of reviews
 - `slots` - (optional) an array of objects that defines slot rules (either `slots` or `availableSlots` should be provided to display bookable time); each slot object has the following parameters:
   - `from` - (required) a slot start time in hours from 0 to 24
@@ -86,7 +86,7 @@ const data = [
         title: "Debra Weeks",
         category: "Allergist",
         subtitle: "7 years of experience",
-        details: 
+        details:
                 "Silverstone Medical Center (Vanderbilt Avenue 13, Chestnut, New Zealand)",
         preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
         price: "37 $",

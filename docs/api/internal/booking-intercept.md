@@ -28,7 +28,7 @@ api.intercept(
   - `tag` - (optional) a tag that identifies the callback so it can be removed later via the [`api.detach()`](api/internal/booking-detach.md) method
 
 :::info
-The full list of the Booking internal events you can find [**here**](api/overview/booking-events-overview.md).
+The full list of the Booking internal events can be found [**here**](api/overview/booking-events-overview.md).
 Use the [`api.on()`](api/internal/booking-on.md) method if you want to listen to the actions without modifying them. To make changes to the actions, apply the `api.intercept()` method.
 :::
 

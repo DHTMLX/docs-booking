@@ -15,11 +15,11 @@ description: You can learn about the filter-data event in the documentation of t
 ~~~jsx {}
 "filter-data": ({
     text: string,
-    date:{ 
+    date:{
         start: Date | null,
         end: Date | null
     },
-    time:[{ 
+    time:[{
         from: number | string,
         to: number | string,
         label?: string
@@ -42,7 +42,7 @@ The callback of the `filter-data` event can take an object with the following pa
 
 ### Example
 
-The example below demonstrates how to apply filter at the initialization using the [`api.exec()`](api/internal/booking-exec.md) method:
+The example below demonstrates how to apply a filter at initialization using the [`api.exec()`](api/internal/booking-exec.md) method:
 
 ~~~jsx {6-18}
 // create Booking

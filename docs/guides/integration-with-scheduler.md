@@ -348,4 +348,3 @@ The following code snippet shows the recurring rule plus empty intervals for the
     ]
 }
 ~~~
-

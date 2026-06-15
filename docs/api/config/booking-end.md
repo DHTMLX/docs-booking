@@ -18,7 +18,7 @@ end?: Date;
 
 ### Parameters
 
-- `Date` - the end date until which to display available slots; the default value is one year from the current date.
+- `end` - (optional) the end date until which to display available slots; the default value is one year from the current date.
 
 ### Example
 

@@ -21,7 +21,7 @@ api.getReactiveState(): object;
 The method returns an object where each field is a reactive writable store (`IPublicWritable`) that wraps the corresponding state value. Subscribe to a store with `.subscribe(callback)` to react to its changes. The underlying values are:
 
 ~~~jsx {}
-{    
+{
     data: [], // an array of cards objects
     cardShape: {}, // an object with settings for cards
     filteredData: [], // filtered data array

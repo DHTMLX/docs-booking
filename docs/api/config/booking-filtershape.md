@@ -84,6 +84,6 @@ new booking.Booking("#root", {
 });
 ~~~
 
-The snippet below demonstrates how to configure filter: 
+The snippet below demonstrates how to configure the filter:
 
 <iframe src="https://snippet.dhtmlx.com/b5uj78bs?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

@@ -180,7 +180,7 @@ const data = [
         ]
     }
 ];
-        
+
 new booking.Booking("#root", {
     data,
     // other parameters
@@ -250,7 +250,7 @@ new booking.Booking("#root", {
     // other parameters
 });
 ~~~
-    
+
 #### Apply different rules per day or date
 
 To use different parameters for selected weekdays or exact dates, add several objects to the `slots` array and set the `days` or `dates` parameter on each rule.
@@ -300,7 +300,7 @@ const data = [
         ]
     }
 ];
-        
+
 new booking.Booking("#root", {
     data,
     // other parameters

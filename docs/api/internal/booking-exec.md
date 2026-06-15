@@ -29,12 +29,12 @@ api.exec(
 ### Events
 
 :::info
-The full list of the Booking internal events can be found [**here**](api/overview/booking-events-overview.md)
+The full list of the Booking internal events can be found [**here**](api/overview/booking-events-overview.md).
 :::
 
 ### Example
 
-The example below demonstrates how to apply filter at the initialization:
+The example below demonstrates how to apply a filter at initialization:
 
 ~~~jsx {5-19}
 const widget = new booking.Booking("#root", {

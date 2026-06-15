@@ -85,7 +85,7 @@ The following code snippet shows a recurring Event Calendar event that repeats w
   "start_date": "2025-03-13T09:00:00Z",
   "end_date": "2025-03-13T17:00:00Z",
   "recurring": true,
-  "RRULE": "FREQ=WEEKLY;INTERVAL=1;BYDAY=MO,TU,WE,TH,FR;UNTIL=2027-03-13T23:59:59", 
+  "RRULE": "FREQ=WEEKLY;INTERVAL=1;BYDAY=MO,TU,WE,TH,FR;UNTIL=2027-03-13T23:59:59",
   "STDATE": "2025-03-13T09:00:00Z",
   "DTEND": "2027-03-13T00:00:00Z"
 }
@@ -359,4 +359,3 @@ The following code snippet shows the recurring rule plus empty intervals for the
     ]
 }
 ~~~
-

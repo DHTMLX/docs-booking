@@ -6,7 +6,7 @@ description: You can explore what's new in DHTMLX Booking and its release histor
 
 # What's new
 
-## Version 1.1 
+## Version 1.1
 
 Released on March 12, 2025
 
@@ -16,7 +16,7 @@ Released on March 12, 2025
 - Ability to embed templates via the [`cardTemplate`](api/config/booking-cardtemplate.md) and [`infoTemplate`](api/config/booking-infotemplate.md) properties
 - [Integration with frameworks](/category/backend-and-frameworks-integration/) and [DHTMLX Event Calendar](guides/integration-with-eventcalendar.md)
 
-## Version 1.0.1 
+## Version 1.0.1
 
 Released on November 29, 2024
 
@@ -37,6 +37,3 @@ Released on November 6, 2024
 - Configurable filtering by date, time and text
 - Configurable booking dialog
 - Localization
-
-
-

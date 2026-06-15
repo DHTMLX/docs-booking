@@ -15,7 +15,7 @@ description: You can learn about the select-item-date event in the documentation
 ~~~jsx {}
 "select-item-date": ({
     id: string|number,
-    date: number 
+    date: number
 }) => void;
 ~~~
 
@@ -35,7 +35,7 @@ const widget = new booking.Booking("#root", {
     // other configuration parameters
 });
 
-// output the date  
+// output the date
 widget.api.on("select-item-date", (ev) => {
     console.log(ev.date);
 });

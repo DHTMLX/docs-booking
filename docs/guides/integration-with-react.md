@@ -156,10 +156,10 @@ export function getData() {
         const date = new Date();
         const secondsValue = 0; // round to minutes
         const msValue = 0;
-    
+
         date.setDate(date.getDate() + addDays);
         date.setHours(hoursValue, minutesValue, secondsValue, msValue);
-    
+
         return date.getTime();
     }
 
@@ -257,7 +257,7 @@ import { Booking } from "@dhx/trial-booking";
 import "@dhx/trial-booking/dist/booking.css";
 
 export default function BookingComponent(props) {
-    let container = useRef(); 
+    let container = useRef();
 
     useEffect(() => {
         const booking = new Booking(container.current, {
@@ -293,7 +293,7 @@ useEffect(() => {
     booking.api.on("select-slot", (obj) => {
         console.log(obj.id);
     });
-    
+
     return () => {
         booking.destructor();
     }
