@@ -22,7 +22,7 @@ Install [Vite](https://vite.dev/) (optional) and [Node.js](https://nodejs.org/en
 
 The following command runs the Vite scaffolding tool:
 
-~~~json
+~~~bash
 npm create vite@latest
 ~~~
 
@@ -34,7 +34,7 @@ Switch to the project directory.
 
 The following command opens the newly created app folder:
 
-~~~json
+~~~bash
 cd my-svelte-booking-app
 ~~~
 
@@ -42,14 +42,14 @@ Install the dependencies and start the dev server with your package manager.
 
 The following commands use [yarn](https://yarnpkg.com/):
 
-~~~jsx
+~~~bash
 yarn
 yarn dev
 ~~~
 
 The following commands use [npm](https://www.npmjs.com/):
 
-~~~json
+~~~bash
 npm install
 npm run dev
 ~~~

@@ -1,26 +1,26 @@
 ---
 sidebar_label: api.detach()
-title: detach Method
+title: detach() Method
 description: You can learn about the detach method in the documentation of the DHTMLX JavaScript Booking library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Booking.
 ---
 
 # api.detach()
 
-## Description
+### Description
 
 @short: Allows removing/detaching event handlers
 
-## Usage
+### Usage
 
 ~~~jsx {}
 api.detach(tag: number | string ): void;
 ~~~
 
-## Parameters
+### Parameters
 
 - `tag` - (required) the name of the action tag
 
-## Example
+### Example
 
 In the example below we add an object with the `tag` property to the [`api.on()`](api/internal/booking-on.md) handler, and then we use the `api.detach()` method to stop logging the [`select-slot`](api/events/booking-selectslot-event.md) event.
 

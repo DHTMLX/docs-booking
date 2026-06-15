@@ -22,7 +22,7 @@ Install [Angular CLI](https://v17.angular.io/cli) and [Node.js](https://nodejs.o
 
 The following command creates a new *my-angular-booking-app* project:
 
-~~~json
+~~~bash
 ng new my-angular-booking-app
 ~~~
 
@@ -38,17 +38,24 @@ Switch to the project directory.
 
 The following command opens the newly created app folder:
 
-~~~json
+~~~bash
 cd my-angular-booking-app
 ~~~
 
-Install the dependencies and start the dev server with the [yarn](https://yarnpkg.com/) package manager.
+Install the dependencies and start the dev server with your package manager.
 
-The following commands install dependencies and launch the dev server:
+The following commands use [yarn](https://yarnpkg.com/):
 
-~~~json
+~~~bash
 yarn
 yarn start
+~~~
+
+The following commands use [npm](https://www.npmjs.com/):
+
+~~~bash
+npm install
+npm start
 ~~~
 
 The app runs on a localhost, for example *http://localhost:4200*.
@@ -74,13 +81,13 @@ Import the Booking class with the path that matches your distribution:
 
 The following code snippet imports Booking from the PRO package:
 
-~~~jsx
+~~~ts
 import { Booking } from 'dhx-booking-package';
 ~~~
 
 The following code snippet imports Booking from the trial package:
 
-~~~jsx
+~~~ts
 import { Booking } from '@dhx/trial-booking';
 ~~~
 
@@ -94,7 +101,7 @@ Define the host container in the component template and instantiate Booking in `
 
 The following code snippet declares a Booking component with a container element and lifecycle hooks:
 
-~~~jsx {1,8,12-13,18-19} title="booking.component.ts"
+~~~ts {1,8,12-13,18-19} title="booking.component.ts"
 import { Booking } from '@dhx/trial-booking';
 import { Component, ElementRef, OnInit, ViewChild, OnDestroy, ViewEncapsulation } from '@angular/core';
 
@@ -156,7 +163,7 @@ Create a *data.ts* file in the *src/app/booking/* directory.
 
 The following code snippet defines a `getData()` helper that returns a sample dataset:
 
-~~~jsx title="data.ts"
+~~~ts title="data.ts"
 export function getData() : any {
     function getDate(addDays : any, hoursValue = 0, minutesValue = 0) {
         const date = new Date();
@@ -241,7 +248,7 @@ Open *booking.component.ts*, import the dataset, and pass it to the Booking conf
 
 The following code snippet wires `getData()` into the Booking constructor:
 
-~~~jsx {2,18,20} title="booking.component.ts"
+~~~ts {2,18,20} title="booking.component.ts"
 import { Booking } from '@dhx/trial-booking';
 import { getData } from "./data"; // import data
 import { Component, ElementRef, OnInit, ViewChild, OnDestroy, ViewEncapsulation } from '@angular/core';
@@ -281,7 +288,7 @@ Open *booking.component.ts* and extend `ngOnInit()` with an event subscription.
 
 The following code snippet logs the slot ID when a user selects a slot:
 
-~~~jsx {7-10} title="booking.component.ts"
+~~~ts {7-10} title="booking.component.ts"
 // ...
 ngOnInit() {
     this._booking = new Booking(this.booking_container.nativeElement, {
@@ -305,7 +312,7 @@ Add the `BookingComponent` to the application bootstrap. Open *src/app/app.compo
 
 The following code snippet renders the Booking component inside `AppComponent`:
 
-~~~jsx {5} title="app.component.ts"
+~~~ts {5} title="app.component.ts"
 import { Component } from "@angular/core";
 
 @Component({
@@ -321,7 +328,7 @@ Create *app.module.ts* in *src/app/* and declare both components.
 
 The following code snippet registers `AppComponent` and `BookingComponent` in the root module:
 
-~~~jsx {4-5,8} title="app.module.ts"
+~~~ts {4-5,8} title="app.module.ts"
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 
@@ -340,7 +347,7 @@ Open *src/main.ts* and bootstrap the root module.
 
 The following code snippet starts the application with `AppModule`:
 
-~~~jsx title="main.ts"
+~~~ts title="main.ts"
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
 import { AppModule } from "./app/app.module";
 platformBrowserDynamic()

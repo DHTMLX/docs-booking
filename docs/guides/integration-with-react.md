@@ -22,7 +22,7 @@ Install [Vite](https://vite.dev/) (optional) and [Node.js](https://nodejs.org/en
 
 The following command creates a new *my-react-booking-app* project with Create React App:
 
-~~~json
+~~~bash
 npx create-react-app my-react-booking-app
 ~~~
 
@@ -32,7 +32,7 @@ Switch to the project directory.
 
 The following command opens the newly created app folder:
 
-~~~json
+~~~bash
 cd my-react-booking-app
 ~~~
 
@@ -40,14 +40,14 @@ Install the dependencies and start the dev server with your package manager.
 
 The following commands use [yarn](https://yarnpkg.com/):
 
-~~~json
+~~~bash
 yarn
 yarn start
 ~~~
 
 The following commands use [npm](https://www.npmjs.com/):
 
-~~~json
+~~~bash
 npm install
 npm start
 ~~~

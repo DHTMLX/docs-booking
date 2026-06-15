@@ -22,7 +22,7 @@ Install [Node.js](https://nodejs.org/en/) before you start.
 
 The following command runs the official Vue scaffolding tool:
 
-~~~json
+~~~bash
 npm create vue@latest
 ~~~
 
@@ -34,7 +34,7 @@ Switch to the project directory.
 
 The following command opens the newly created app folder:
 
-~~~json
+~~~bash
 cd my-vue-booking-app
 ~~~
 
@@ -42,14 +42,14 @@ Install the dependencies and start the dev server with your package manager.
 
 The following commands use [yarn](https://yarnpkg.com/):
 
-~~~jsx
+~~~bash
 yarn
 yarn dev
 ~~~
 
 The following commands use [npm](https://www.npmjs.com/):
 
-~~~json
+~~~bash
 npm install
 npm run dev
 ~~~
