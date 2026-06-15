@@ -23,7 +23,7 @@ All cards are displayed as a list. The left side of each card in the list shows 
 
 - preview: card image
 - review: rating information with the number of rating stars (out of five) and the number of reviews
-- category: the subtitle of a card
+- category: the category name of a card (for example, a specialist's job)
 - title: the title of a card (for example, a specialist's name)
 - subtitle: the subtitle of a card (for example, experience details)
 - price: the price of the service
@@ -31,7 +31,7 @@ All cards are displayed as a list. The left side of each card in the list shows 
 
 ### Slots
 
-The right side of each card has clickable slots available for booking. Slots are displayed for the current month starting from the current date.
+The right side of each card has clickable slots available for booking. Slots are displayed for the next six days (four on narrow screens) starting from the current date or the start date selected in the filter.
 
 ### A single card view
 

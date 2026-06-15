@@ -12,13 +12,13 @@ Customize the Booking widget through CSS custom properties. The widget exposes B
 
 The Booking widget uses CSS custom properties for layout dimensions and shared theme tokens. Override these variables in your own CSS to customize the appearance.
 
-The following code snippet shows a subset of Booking-specific variables exposed by the widget:
+The following code snippet shows a subset of Booking-specific variables exposed by the widget (shown with their desktop values; internally the widget redefines some of them per screen size — desktop, tablet, and mobile):
 
 ~~~css
 .wx-booking {
     --wx-booking-content-min-width: 984px;
     --wx-booking-content-max-width: 1132px;
-    --wx-booking-content-padding: 0 74px 28px;
+    --wx-booking-content-padding: 0 var(--wx-booking-content-h-padding) 28px;
     --wx-booking-slots-width: 602px;
     --wx-booking-slots-padding: 0 30px 0 50px;
     --wx-booking-separator: var(--wx-border);
@@ -26,7 +26,7 @@ The following code snippet shows a subset of Booking-specific variables exposed 
 ~~~
 
 :::tip Note
-Next versions of Booking can bring changes for variable names. Check the names after updating to a newer version and adjust your code to avoid display issues.
+Next versions of Booking may change variable names. Check the names after updating to a newer version and adjust your code to avoid display issues.
 :::
 
 ## Apply the built-in theme

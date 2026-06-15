@@ -6,7 +6,7 @@ description: You can learn about working with server in the documentation of the
 
 # Working with server
 
-The Booking widget integrates with a backend through two main operations: loading cards data from the server and posting slot reservations back to the server. This guide covers both flows and the UTC conversion needed when server data uses a different timezone.
+The Booking widget integrates with a backend through two main operations: loading card data from the server and posting slot reservations back to the server. This guide covers both flows and the UTC conversion needed when server data uses a different timezone.
 
 ## Load data from the server
 

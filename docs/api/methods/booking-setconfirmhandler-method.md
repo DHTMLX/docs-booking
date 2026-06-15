@@ -8,7 +8,7 @@ description: You can learn about the setConfirmHandler() method in the documenta
 
 ### Description
 
-@short: Allows setting the handler for confirming slots
+@short: Registers a handler for the confirm-slot event
 
 ### Usage
 

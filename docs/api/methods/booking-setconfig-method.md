@@ -23,7 +23,7 @@ setConfig(config: object): void;
 - `config` - (required) an object of the Booking configuration. See the full list of properties [here](api/overview/booking-properties-overview.md)
 
 :::info
-The method changes only the parameters you passed. It destroys the current component and initializes a new one.
+The method performs a shallow merge at the top level: each property you pass replaces the existing one entirely — nested objects such as `cardShape` or `filterShape` are not deep-merged. To keep previously set values inside a nested object, pass the whole object again. The method then destroys the current component and initializes a new one.
 :::
 
 ### Example

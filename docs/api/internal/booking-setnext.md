@@ -8,7 +8,7 @@ description: You can learn about the setNext method in the documentation of the 
 
 ### Description
 
-@short: Allows adding some action into the Event Bus order
+@short: Adds a custom handler to the end of the widget's Event Bus chain
 
 ### Usage
 
@@ -34,7 +34,7 @@ const someServerService = new ServerDataService(server);
 fetch(server + "/data").then((res) => res.json()).then((data) => { 
     widget.setConfig({data});
 });   
-// Integrate the serverDataService into the Event Bus order of widget
+// Integrate someServerService into the Event Bus order of the widget
 widget.api.setNext(someServerService);
 ~~~
 

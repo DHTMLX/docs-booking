@@ -18,7 +18,7 @@ api.getReactiveState(): object;
 
 ### Returns
 
-The method returns an object with the following parameters:
+The method returns an object where each field is a reactive writable store (`IPublicWritable`) that wraps the corresponding state value. Subscribe to a store with `.subscribe(callback)` to react to its changes. The underlying values are:
 
 ~~~jsx {}
 {    
@@ -26,7 +26,7 @@ The method returns an object with the following parameters:
     cardShape: {}, // an object with settings for cards
     filteredData: [], // filtered data array
     filterShape: {}, // an object with filter settings
-    filterValues: {}, // an object with filter values (text, data, time)
+    filterValues: {}, // an object with filter values (text, date, time)
     formShape: [], // an array of objects with settings for the Booking editor dialog
     infoShape: {}, // an object with settings for the left side of the Booking editor
     selectedItem: {}, // single data item

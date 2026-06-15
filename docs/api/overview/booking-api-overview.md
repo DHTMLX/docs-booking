@@ -16,7 +16,7 @@ new booking.Booking("#root", {
 
 **Parameters**:
 
-- an HTML container (the ID of the HTML container)
+- an HTML container or its ID selector (`HTMLElement | string`)
 - an object of the configuration parameters ([check here](#booking-properties))
 
 ## Booking methods

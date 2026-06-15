@@ -73,7 +73,7 @@ In the example below we create a function that takes the `item` (card) object an
 
     const widget = new Booking("#root", {
 	    data,
-	    cardTemplate: template(item => cardPreviewTemplate(item)), // pass the function to Booking configuration
+	    cardTemplate: template(cardPreviewTemplate), // pass the function to Booking configuration
     });
     // other parameters
 </script>

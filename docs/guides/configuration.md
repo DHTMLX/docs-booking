@@ -135,7 +135,7 @@ const { Booking, template } = booking;
 
 const widget = new Booking("#root", {
 	data,
-	cardTemplate: template(item => cardPreviewTemplate(item)),
+	cardTemplate: template(cardPreviewTemplate),
     // other parameters
 });
 ~~~
@@ -529,7 +529,7 @@ const { Booking, template } = booking;
 
 const widget = new Booking("#root", {
     data,
-    infoTemplate: template(item => cardInfoTemplate(item)),
+    infoTemplate: template(cardInfoTemplate),
     // other parameters
 });
 ~~~

@@ -6,7 +6,7 @@ description: You can explore how to start working with DHTMLX Booking in the doc
 
 # How to start
 
-This clear and comprehensive tutorial will guide your through the steps you need to take in order to get a full-functional Booking application on a page.
+This tutorial guides you through the steps you need to take to get a fully functional Booking application on a page.
 
 ![main](assets/main.png)
 
@@ -72,7 +72,7 @@ Now you are ready to add booking to the page. First, let's create the DIV contai
     <body>
         <div id="root"></div>
         <script>
-            const booking = new booking.Booking("#root", {
+            const widget = new booking.Booking("#root", {
                 // configuration properties
             });
         </script>
@@ -153,7 +153,7 @@ new booking.Booking("#root", {
 
 ## What's next
 
-That's all you need to create a simple Booking on a page. Now you are ready to embark on a journey with the Booking API:
+That's all you need to create a simple Booking on a page. Next, explore the Booking API:
 
 - [Guides](/category/guides) pages provide instructions about installation, loading data, styling, and other helpful tips to go smoothly with the Booking configuration
 - [API reference](api/overview/booking-api-overview.md) gives description of the Booking functionality

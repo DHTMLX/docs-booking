@@ -6,7 +6,7 @@ description: You can learn how to load data into Booking in the documentation of
 
 # Loading data
 
-The Booking widget accepts a single dataset through the configuration object:
+The Booking widget accepts one data array through the configuration object:
 
 - [`data`](api/config/booking-data.md) — array of card objects with slot rules
 
@@ -18,9 +18,17 @@ For large datasets, enable lazy rendering with the [`renderType`](api/config/boo
 
 Keep card data in a separate file to share the dataset across pages and tests. Each card object includes identifying fields, display fields, and a `slots` array that defines availability rules.
 
-The following code snippet defines three card objects in a *data.js* module:
+The following code snippet defines three card objects in a *data.js* module. The `getDate(addDays, hours, minutes)` helper returns a timestamp for a date relative to today (for example, `getDate(0, 12)` is today at 12:00 in local time):
 
 ~~~jsx title="data.js"
+// returns a timestamp for "today + addDays" at the given hours:minutes (local time)
+function getDate(addDays, hours = 0, minutes = 0) {
+    const date = new Date();
+    date.setDate(date.getDate() + addDays);
+    date.setHours(hours, minutes, 0, 0);
+    return date.getTime();
+}
+
 const data = [
     {
         id: "ee828b5d-a034-420c-889b-978840015d6a",

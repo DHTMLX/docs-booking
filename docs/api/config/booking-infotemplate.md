@@ -73,7 +73,7 @@ In the example below, we define the `cardInfoTemplate` function that will genera
 
     const widget = new Booking("#root", {
 	    data,
-	    infoTemplate: template(item => cardInfoTemplate(item)), // pass the function to the widget configuration
+	    infoTemplate: template(cardInfoTemplate), // pass the function to the widget configuration
     });
 </script>
 ~~~

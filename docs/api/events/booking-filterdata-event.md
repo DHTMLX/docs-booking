@@ -21,7 +21,8 @@ description: You can learn about the filter-data event in the documentation of t
     },
     time:[{ 
         from: number | string,
-        to: number | string
+        to: number | string,
+        label?: string
     }]
  }) => void;
 ~~~
@@ -30,13 +31,14 @@ description: You can learn about the filter-data event in the documentation of t
 
 The callback of the `filter-data` event can take an object with the following parameters:
 
-- `text` - (required) the text in the search field
-- `date` - (required) Date object with the start and end date for a slot: 
-    - `start` - the slot start date
-    - `end` - the slot end date 
-- `time` - (required) an array of objects containing time options for a slot. For each object, you can specify the following parameters:
+- `text` - (optional) the text in the search field
+- `date` - (optional) an object with the start and end date for a slot:
+    - `start` - the slot start date (`Date | null`)
+    - `end` - the slot end date (`Date | null`)
+- `time` - (optional) an array of objects containing time options for a slot. For each object, you can specify the following parameters:
     - `from` - (required) the start time for a slot; it can be a number from 0 to 24 that specifies the time in hours (e.g., 9 means 9:00, 8.5 means 8:30) or a string in the format "h:m" (for example, "8:30")
     - `to` - (required) the end time for a slot; it can be a number from 0 to 24 that specifies the time in hours (e.g., 9 means 9:00, 8.5 means 8:30) or a string in the format "h:m" (for example, "8:30")
+    - `label` - (optional) placeholder for the time range
 
 ### Example
 

@@ -26,7 +26,7 @@ The method returns an object with the following parameters of state:
     cardShape: {}, // an object with settings for cards
     filteredData: [], // filtered data array
     filterShape: {}, // an object with filter settings
-    filterValues: {}, // an object with filter values (text, data, time)
+    filterValues: {}, // an object with filter values (text, date, time)
     formShape: [], // an array of objects with settings for the Booking editor dialog
     infoShape: {}, // an object with settings for the left side of the Booking editor
     selectedItem: {}, // single data item

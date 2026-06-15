@@ -35,7 +35,7 @@ The callback of the `confirm-slot` event can take an object with the following p
 
 - `slot` - (required) an object with the next slot parameters:
     - `id` - (required) the ID of a card for which the booking of a slot is confirmed
-    - `time` - (required) an array with the slot start time in milliseconds and the slot duration in minutes (timestamps are in a local timezone)
+    - `time` - (required) an array with the slot start time in milliseconds and the slot duration in minutes (the start time is in milliseconds and represents local wall-clock time)
 - `data` - (required) an object with the booking screen fields with the following parameters for each field:
     - `key` - (required) the form field ID (from the [`formShape`](api/config/booking-formshape.md)). By default, three fields are added: *name*, *email*, *description*
 - `confirm` - (required) an object with the next parameters:

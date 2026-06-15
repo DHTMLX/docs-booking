@@ -168,7 +168,7 @@ export function getData() {
             id: "ee828b5d-a034-420c-889b-978840015d6a",
             title: "Natalie Tyson",
             category: "Therapist",
-            subtitle: "2 years of experiece",
+            subtitle: "2 years of experience",
             details: "Cleveland Clinic\n9500 Euclid Ave",
             preview: "https://snippet.dhtmlx.com/codebase/data/booking/01/img/01.jpg",
             price: "$35",
