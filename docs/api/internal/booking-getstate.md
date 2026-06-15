@@ -18,7 +18,7 @@ api.getState(): object;
 
 ### Returns
 
-The method returns an object with the following parameters of state:
+The method returns an object with the following state fields:
 
 ~~~jsx {}
 {    
