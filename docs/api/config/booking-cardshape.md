@@ -26,9 +26,9 @@ cardShape?: {
 
 ### Parameters
 
-In the **cardShape** object you can specify the following parameters (fields):
+In the `cardShape` object you can specify the following parameters (fields):
 
-- `category` - (optional) shows/hides a card's name
+- `category` - (optional) shows/hides a category name
 - `details` - (optional) shows/hides details
 - `preview` - (optional) shows/hides a preview image
 - `price` - (optional) shows/hides price
@@ -45,7 +45,7 @@ const defaultCardShape = {
     preview: true,
     price: true,
     review: true,
-    subtitle: false,
+    subtitle: true,
     title: true
 };
 ~~~
@@ -70,10 +70,10 @@ The snippet below demonstrates how to configure what fields to display on the le
 <iframe src="https://snippet.dhtmlx.com/6mxd7918?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 :::info
-You can also configure the appearance of a card using the [`cardTemplate`](/api/config/booking-cardtemplate) property. If both `cardTemplate` and `cardShape` are applied, `cardTemplate` will override the `cardShape` settings. 
+You can also configure the appearance of a card using the [`cardTemplate`](api/config/booking-cardtemplate.md) property. If both `cardTemplate` and `cardShape` are applied, `cardTemplate` will override the `cardShape` settings.
 :::
 
-**Related articles:** 
+**Related articles**:
 
-- [Defining the structure of cards](/guides/configuration/#defining-the-structure-of-cards)
-- [`cardTemplate`](/api/config/booking-cardtemplate)
+- [Defining the structure of cards](guides/configuration.md#define-the-structure-of-cards)
+- [`cardTemplate`](api/config/booking-cardtemplate.md)

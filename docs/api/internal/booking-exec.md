@@ -1,6 +1,6 @@
 ---
 sidebar_label: api.exec()
-title: exec Method
+title: exec() Method
 description: You can learn about the exec method in the documentation of the DHTMLX JavaScript Booking library. Browse developer guides and API reference, try out code examples and live demos, and download a free 30-day evaluation version of DHTMLX Booking.
 ---
 
@@ -10,13 +10,15 @@ description: You can learn about the exec method in the documentation of the DHT
 
 @short: Allows triggering the inner events
 
+The method is asynchronous and returns a Promise that resolves with the processed event config.
+
 ### Usage
 
 ~~~jsx {}
 api.exec(
     event: string,
     config: object
-): void;
+): Promise<any>;
 ~~~
 
 ### Parameters
@@ -27,31 +29,29 @@ api.exec(
 ### Events
 
 :::info
-The full list of the Booking internal events can be found [**here**](/api/overview/booking-events-overview)
+The full list of the Booking internal events can be found [**here**](api/overview/booking-events-overview.md).
 :::
 
 ### Example
 
-The example below demonstrates how to apply filter at the initialization:
+The example below demonstrates how to apply a filter at initialization:
 
 ~~~jsx {5-19}
-const booking = new booking.Booking("#root", {
+const widget = new booking.Booking("#root", {
     data,
     //other configuration parameters
 });
-booking.api.exec("filter-data", {
-    filterData: {
-        text: "Allergist",
-        date: {
-            start: new Date,
-            end: new Date(2025, 2, 12)
-        },
-        time: [
-            {
-                from: 12,
-                to: 20
-            }
-        ]
-    }
+widget.api.exec("filter-data", {
+    text: "Allergist",
+    date: {
+        start: new Date,
+        end: new Date(2025, 2, 12)
+    },
+    time: [
+        {
+            from: 12,
+            to: 20
+        }
+    ]
 });
 ~~~

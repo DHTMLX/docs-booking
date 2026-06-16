@@ -18,7 +18,7 @@ end?: Date;
 
 ### Parameters
 
-- `Date` - the end date until which to display available slots; the default value is one year from the current date.
+- `end` - (optional) the end date until which to display available slots; the default value is one year from the current date.
 
 ### Example
 
@@ -30,6 +30,6 @@ new booking.Booking("#root", {
 });
 ~~~
 
-The snippet below shows how to set the [start](/api/config/booking-start) and end dates:
+The snippet below shows how to set the [start](api/config/booking-start.md) and end dates:
 
 <iframe src="https://snippet.dhtmlx.com/cc28whe7?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

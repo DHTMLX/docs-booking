@@ -10,7 +10,7 @@ description: You can learn about renderType in the documentation of the DHTMLX J
 
 @short: Optional. Defines how cards are rendered
 
-The property helps optimize performance when working with a large number of cards. 
+The property helps optimize performance when working with a large number of cards.
 
 ### Usage
 
@@ -33,6 +33,6 @@ new booking.Booking("#root", {
 });
 ~~~
 
-The snippet below shows how to handle rendering large data sets: 
+The snippet below shows how to handle rendering large data sets:
 
 <iframe src="https://snippet.dhtmlx.com/fb9a5a3b?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>

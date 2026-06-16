@@ -23,7 +23,7 @@ infoTemplate?: ({item: obj, slot: number}) => string;
 
 ### Example
 
-In the example below, we define the `cardInfoTemplate` function that will generate the custom HTML for the information block. This function will receive the `item` (card object) and `slot` (slot timestamp) as input parameters. The function returns div containers representing the information block for a selected booking item, including an image, category, title, and formatted date. You should also import the **template** helper and assign your custom function to `infoTemplate`.
+In the example below, we define the `cardInfoTemplate` function that will generate the custom HTML for the information block. This function will receive the `item` (card object) and `slot` (slot timestamp) as input parameters. The function returns div containers representing the information block for a selected booking item, including an image, category, title, and formatted date. You should also import the `template` helper and assign your custom function to `infoTemplate`.
 
 ~~~html
 <style>
@@ -73,20 +73,20 @@ In the example below, we define the `cardInfoTemplate` function that will genera
 
     const widget = new Booking("#root", {
 	    data,
-	    infoTemplate: template(item => cardInfoTemplate(item)), // pass the function to the widget configuration
+	    infoTemplate: template(cardInfoTemplate), // pass the function to the widget configuration
     });
 </script>
 ~~~
 
-The snippet below shows how to apply a template to the information block of the Booking dialog that appears when a user clicks the time slot button: 
+The snippet below shows how to apply a template to the information block of the Booking dialog that appears when a user clicks the time slot button:
 
 <iframe src="https://snippet.dhtmlx.com/byb94ipu?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 :::info
-You can also control which fields to display in the information block of the Booking dialog using the [`infoShape`](/api/config/booking-infoshape) property. But if both properties are applied, `infoTemplate` will override the `infoShape` settings.
+You can also control which fields to display in the information block of the Booking dialog using the [`infoShape`](api/config/booking-infoshape.md) property. But if both properties are applied, `infoTemplate` will override the `infoShape` settings.
 :::
 
-**Related articles:** 
+**Related articles**:
 
-- [Configuring the Booking dialog](/guides/configuration/#configuring-the-booking-dialog)
-- [`infoShape`](/api/config/booking-infoshape)
+- [Configuring the Booking dialog](guides/configuration.md#configure-the-booking-dialog)
+- [`infoShape`](api/config/booking-infoshape.md)

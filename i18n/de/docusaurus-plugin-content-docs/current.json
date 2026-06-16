@@ -1,0 +1,58 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.API": {
+    "message": "API",
+    "description": "The label for category 'API' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Booking methods": {
+    "message": "Booking-Methoden",
+    "description": "The label for category 'Booking methods' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Booking internal API": {
+    "message": "Interne Booking-API",
+    "description": "The label for category 'Booking internal API' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Event Bus methods": {
+    "message": "Event-Bus-Methoden",
+    "description": "The label for category 'Event Bus methods' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.State methods": {
+    "message": "State-Methoden",
+    "description": "The label for category 'State methods' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Booking events": {
+    "message": "Booking-Ereignisse",
+    "description": "The label for category 'Booking events' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Booking properties": {
+    "message": "Booking-Eigenschaften",
+    "description": "The label for category 'Booking properties' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Backend and frameworks integration": {
+    "message": "Backend- und Framework-Integration",
+    "description": "The label for category 'Backend and frameworks integration' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Backend and frameworks integration.link.generated-index.title": {
+    "message": "Backend- und Framework-Integration",
+    "description": "The generated-index page title for category 'Backend and frameworks integration' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Integration with DHTMLX widgets": {
+    "message": "Integration mit DHTMLX-Widgets",
+    "description": "The label for category 'Integration with DHTMLX widgets' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Integration with DHTMLX widgets.link.generated-index.title": {
+    "message": "Integration mit DHTMLX-Widgets",
+    "description": "The generated-index page title for category 'Integration with DHTMLX widgets' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Guides": {
+    "message": "Anleitungen",
+    "description": "The label for category 'Guides' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Guides.link.generated-index.title": {
+    "message": "Anleitungen",
+    "description": "The generated-index page title for category 'Guides' in sidebar 'docs'"
+  }
+}
