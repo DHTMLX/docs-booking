@@ -8,7 +8,7 @@ description: Erfahren Sie, wie Sie mit DHTMLX Booking beginnen – in der Dokume
 
 Dieses Tutorial führt Sie durch die Schritte, die Sie ausführen müssen, um eine vollständig funktionsfähige Booking-Anwendung auf einer Seite einzurichten.
 
-![main](assets/main.png)
+![Voll funktionsfähige DHTMLX Booking-Anwendung auf einer Webseite](/img/main.png)
 
 ## Schritt 1. Pakete herunterladen und installieren {#step-1-downloading-and-installing-packages}
 

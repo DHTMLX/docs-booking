@@ -316,6 +316,6 @@ onDestroy(() => {
 
 启动应用，即可在页面上看到加载了数据的 Booking。
 
-![Booking 初始化](../assets/trial-booking.png)
+![在 Svelte 应用中加载数据的 DHTMLX Booking 小部件](/img/trial-booking.png)
 
 根据您的项目需求自定义代码。完整的参考实现可在 [GitHub](https://github.com/DHTMLX/svelte-booking-demo) 上获取。

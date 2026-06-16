@@ -316,6 +316,6 @@ onDestroy(() => {
 
 Запустите приложение, чтобы увидеть Booking с загруженными данными на странице.
 
-![Инициализация Booking](../assets/trial-booking.png)
+![Виджет DHTMLX Booking с загруженными данными в приложении Svelte](/img/trial-booking.png)
 
 Настройте код в соответствии с требованиями вашего проекта. Полная эталонная реализация доступна на [GitHub](https://github.com/DHTMLX/svelte-booking-demo).

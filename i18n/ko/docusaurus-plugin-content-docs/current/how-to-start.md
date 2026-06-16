@@ -8,7 +8,7 @@ description: DHTMLX JavaScript Booking 라이브러리 문서에서 DHTMLX Booki
 
 이 튜토리얼은 페이지에서 완전히 동작하는 Booking 애플리케이션을 구축하기 위해 필요한 단계를 안내합니다.
 
-![main](assets/main.png)
+![웹 페이지에 표시된 완전한 기능의 DHTMLX Booking 애플리케이션](/img/main.png)
 
 ## 1단계. 패키지 다운로드 및 설치 {#step-1-downloading-and-installing-packages}
 

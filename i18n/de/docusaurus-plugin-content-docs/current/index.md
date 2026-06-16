@@ -15,7 +15,7 @@ Die JavaScript Booking-Bibliothek ist eine fertige Komponente, die sich probleml
 
 Die Booking-Oberfläche besteht aus zwei Hauptbereichen: dem Filterbereich und der Liste der Karten mit Slots. Jede Kartenansicht umfasst einen Informationsblock der Karte sowie die für die Buchung verfügbaren Slots.
 
-![main](assets/main.png)
+![DHTMLX Booking-Widget mit Filterbereich und einer Liste von Karten mit verfügbaren Slots](/img/main.png)
 
 ### Kartenliste {#cards-list}
 
@@ -37,13 +37,13 @@ Die rechte Seite jeder Karte enthält anklickbare Slots, die für die Buchung ve
 
 Um die Ansicht einer einzelnen Karte zu öffnen, klicken Sie in den linken Bereich einer Karte. Der Einzelkarten-Dialog zeigt den Titel der Karte, einen Kalender sowie die für das im Kalender ausgewählte Datum verfügbaren Slots.
 
-![single-card](assets/single-card.png)
+![Dialog einer einzelnen Karte in DHTMLX Booking mit Kalender und verfügbaren Slots](/img/single-card.png)
 
 ### Buchungsdialog {#booking-dialog}
 
 Der Buchungsdialog ermöglicht die Buchung eines Slots der ausgewählten Karte. Klicken Sie dazu auf die Schaltfläche des gewünschten Zeitslots.
 
-![booking](assets/bookingd.png)
+![DHTMLX Booking-Dialog zum Buchen eines ausgewählten Zeitslots](/img/bookingd.png)
 
 Anweisungen zur Buchung finden Sie unter [Einen Termin vereinbaren](#making-an-appointment).
 
@@ -68,7 +68,7 @@ Sie können einen Termin auch über die Einzelkartenansicht vereinbaren:
 3. Klicken Sie neben der ausgewählten Uhrzeit auf **Bestätigen**.
 4. Füllen Sie im daraufhin erscheinenden Dialog **Buchung** die Felder aus und klicken Sie auf **Termin vereinbaren**.
 
-![booking-2](assets/booking-2.png)
+![Ausgefülltes Buchungsformular im DHTMLX Booking-Dialog](/img/booking-2.png)
 
 ## Wie geht es weiter? {#whats-next}
 

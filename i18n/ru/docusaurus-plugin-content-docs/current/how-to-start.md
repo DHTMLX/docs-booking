@@ -8,7 +8,7 @@ description: Узнайте, как начать работу с DHTMLX Booking,
 
 Это руководство проведёт вас через шаги, необходимые для создания полноценного приложения Booking на странице.
 
-![main](assets/main.png)
+![Полнофункциональное приложение DHTMLX Booking на веб-странице](/img/main.png)
 
 ## Шаг 1. Скачивание и установка пакетов {#step-1-downloading-and-installing-packages}
 

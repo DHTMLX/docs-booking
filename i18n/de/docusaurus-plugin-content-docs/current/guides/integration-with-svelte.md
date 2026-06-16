@@ -316,6 +316,6 @@ onDestroy(() => {
 
 Starten Sie die App, um Booking mit Daten auf der Seite zu sehen.
 
-![Booking-Initialisierung](../assets/trial-booking.png)
+![DHTMLX Booking-Widget mit geladenen Daten in einer Svelte-Anwendung](/img/trial-booking.png)
 
 Passen Sie den Code an Ihre Projektanforderungen an. Die vollständige Referenzimplementierung ist auf [GitHub](https://github.com/DHTMLX/svelte-booking-demo) verfügbar.

@@ -316,6 +316,6 @@ onDestroy(() => {
 
 앱을 시작하면 페이지에 데이터가 로드된 Booking을 확인할 수 있습니다.
 
-![Booking 초기화](../assets/trial-booking.png)
+![Svelte 애플리케이션에서 데이터가 로드된 DHTMLX Booking 위젯](/img/trial-booking.png)
 
 프로젝트 요구 사항에 맞게 코드를 커스터마이즈하세요. 완전한 참조 구현은 [GitHub](https://github.com/DHTMLX/svelte-booking-demo)에서 확인할 수 있습니다.

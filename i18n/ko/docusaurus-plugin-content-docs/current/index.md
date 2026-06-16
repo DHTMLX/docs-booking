@@ -15,7 +15,7 @@ JavaScript Booking 라이브러리는 애플리케이션에 손쉽게 통합할 
 
 Booking UI는 필터 영역과 슬롯이 포함된 카드 목록, 두 가지 주요 부분으로 구성됩니다. 각 카드의 뷰는 카드 정보 블록과 예약 가능한 슬롯으로 이루어져 있습니다.
 
-![main](assets/main.png)
+![필터 영역과 예약 가능한 슬롯이 있는 카드 목록을 갖춘 DHTMLX Booking 위젯](/img/main.png)
 
 ### 카드 목록 {#cards-list}
 
@@ -37,13 +37,13 @@ Booking UI는 필터 영역과 슬롯이 포함된 카드 목록, 두 가지 주
 
 단일 카드의 뷰를 열려면 카드의 왼쪽 영역 내부를 클릭합니다. 단일 카드 다이얼로그에는 카드의 제목, 캘린더, 그리고 캘린더에서 선택한 날짜에 대한 예약 가능한 슬롯이 표시됩니다.
 
-![single-card](assets/single-card.png)
+![캘린더와 예약 가능한 슬롯이 있는 DHTMLX Booking의 단일 카드 대화 상자](/img/single-card.png)
 
 ### 예약 다이얼로그 {#booking-dialog}
 
 예약 다이얼로그를 사용하면 선택한 카드의 슬롯을 예약할 수 있습니다. 열려면 시간 슬롯 버튼을 클릭합니다.
 
-![booking](assets/bookingd.png)
+![선택한 시간 슬롯을 예약하기 위한 DHTMLX Booking 대화 상자](/img/bookingd.png)
 
 예약 방법은 [예약하기](#making-an-appointment)를 참조하세요.
 
@@ -68,7 +68,7 @@ API를 통해 필터 설정을 구성할 수 있습니다: [필터 구성](guide
 3. 선택한 시간 옆의 **Confirm**을 클릭합니다.
 4. 나타나는 **Booking** 다이얼로그에서 필드를 작성한 후 **Make an appointment**를 클릭합니다.
 
-![booking-2](assets/booking-2.png)
+![DHTMLX Booking 대화 상자에서 작성 완료된 예약 양식](/img/booking-2.png)
 
 ## 다음 단계 {#whats-next}
 

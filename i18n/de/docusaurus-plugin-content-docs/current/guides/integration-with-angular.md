@@ -357,6 +357,6 @@ platformBrowserDynamic()
 
 Starten Sie die App, um Booking mit geladenen Daten auf der Seite anzuzeigen.
 
-![Booking-Initialisierung](../assets/trial-booking.png)
+![DHTMLX Booking-Widget mit geladenen Daten in einer Angular-Anwendung](/img/trial-booking.png)
 
 Passen Sie den Code an Ihre Projektanforderungen an. Die vollständige Referenzimplementierung ist auf [GitHub](https://github.com/DHTMLX/angular-booking-demo) verfügbar.

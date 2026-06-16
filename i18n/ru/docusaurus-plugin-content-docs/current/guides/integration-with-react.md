@@ -303,6 +303,6 @@ useEffect(() => {
 
 Запустите приложение, чтобы увидеть Booking с загруженными данными на странице.
 
-![Инициализация Booking](../assets/trial-booking.png)
+![Виджет DHTMLX Booking с загруженными данными в приложении React](/img/trial-booking.png)
 
 Адаптируйте код под требования вашего проекта. Полная эталонная реализация доступна на [GitHub](https://github.com/DHTMLX/react-booking-demo).

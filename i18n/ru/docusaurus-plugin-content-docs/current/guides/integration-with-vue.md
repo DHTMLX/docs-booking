@@ -323,6 +323,6 @@ export default {
 
 Запустите приложение, чтобы увидеть Booking с загруженными данными на странице.
 
-![Инициализация Booking](../assets/trial-booking.png)
+![Виджет DHTMLX Booking с загруженными данными в приложении Vue](/img/trial-booking.png)
 
 Настройте код в соответствии с требованиями вашего проекта. Полная эталонная реализация доступна на [GitHub](https://github.com/DHTMLX/vue-booking-demo).
