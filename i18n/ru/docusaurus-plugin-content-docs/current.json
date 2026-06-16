@@ -1,0 +1,58 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.API": {
+    "message": "API",
+    "description": "The label for category 'API' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Booking methods": {
+    "message": "Методы Booking",
+    "description": "The label for category 'Booking methods' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Booking internal API": {
+    "message": "Внутренний API Booking",
+    "description": "The label for category 'Booking internal API' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Event Bus methods": {
+    "message": "Методы Event Bus",
+    "description": "The label for category 'Event Bus methods' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.State methods": {
+    "message": "Методы состояния",
+    "description": "The label for category 'State methods' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Booking events": {
+    "message": "События Booking",
+    "description": "The label for category 'Booking events' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Booking properties": {
+    "message": "Свойства Booking",
+    "description": "The label for category 'Booking properties' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Backend and frameworks integration": {
+    "message": "Интеграция с бэкендом и фреймворками",
+    "description": "The label for category 'Backend and frameworks integration' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Backend and frameworks integration.link.generated-index.title": {
+    "message": "Интеграция с бэкендом и фреймворками",
+    "description": "The generated-index page title for category 'Backend and frameworks integration' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Integration with DHTMLX widgets": {
+    "message": "Интеграция с виджетами DHTMLX",
+    "description": "The label for category 'Integration with DHTMLX widgets' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Integration with DHTMLX widgets.link.generated-index.title": {
+    "message": "Интеграция с виджетами DHTMLX",
+    "description": "The generated-index page title for category 'Integration with DHTMLX widgets' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Guides": {
+    "message": "Руководства",
+    "description": "The label for category 'Guides' in sidebar 'docs'"
+  },
+  "sidebar.docs.category.Guides.link.generated-index.title": {
+    "message": "Руководства",
+    "description": "The generated-index page title for category 'Guides' in sidebar 'docs'"
+  }
+}

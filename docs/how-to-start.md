@@ -8,7 +8,7 @@ description: You can explore how to start working with DHTMLX Booking in the doc
 
 This tutorial guides you through the steps you need to take to get a fully functional Booking application on a page.
 
-![main](assets/main.png)
+![Fully functional DHTMLX Booking application on a web page](/img/main.png)
 
 ## Step 1. Downloading and installing packages
 
