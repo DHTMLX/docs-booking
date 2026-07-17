@@ -1,7 +1,7 @@
 ---
 sidebar_label: filter-data
 title: filter-data Event
-description: Вы можете узнать о событии filter-data в документации JavaScript-библиотеки DHTMLX Booking. Изучайте руководства разработчика и справочник АПИ, запускайте примеры кода и живые демо, загружайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
+description: Вы можете узнать о событии filter-data в документации JavaScript-библиотеки DHTMLX Booking. Изучайте руководства разработчика и справочник API, запускайте примеры кода и живые демо, загружайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
 ---
 
 # filter-data

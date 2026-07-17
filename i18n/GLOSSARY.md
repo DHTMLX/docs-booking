@@ -72,3 +72,33 @@ words distinct between types (no `caution`/`warning` duplicates).
 | `:::warning` | `Предупреждение` | `Warnung` | `경고` | `警告` |
 | `:::caution` | `Осторожно` | `Vorsicht` | `주의` | `注意` |
 | `:::danger` | `Опасно` | `Gefahr` | `위험` | `危险` |
+
+## 5. Do not translate
+
+Keep these terms in English across all locales.
+
+**Product & modules:**
+- `Booking` — the widget/product name (e.g. "DHTMLX Booking"). *The generic concept* — the act of
+  booking/reserving — may be localized (ru `бронирование`, ko `예약`, zh `预约`); only the product name
+  stays `Booking`.
+- `DHTMLX`, `dhx` (the `dhx.*` code namespace)
+- `Event Bus` — the module name. Keep the English spelling; German may hyphenate it inside a compound
+  (`Event-Bus-Methoden`).
+
+**Frameworks & libraries:**
+- `React`, `Vue`, `Svelte`, `Angular`
+
+**Runtime, languages & tooling:**
+- `Node.js`, `Vite`
+- `JavaScript`, `TypeScript`
+- `npm`, `yarn`, `CLI`
+
+**Data formats:**
+- `JSON`
+
+**Services:**
+- `GitHub`, `CDN`
+
+**Other:**
+- `API` — always the Latin `API`, never the Cyrillic transliteration `АПИ`.
+- Code identifiers (method / config / event names, `dhx.*`) inside backticks are never translated.

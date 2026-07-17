@@ -1,10 +1,10 @@
 ---
-sidebar_label: Обзор АПИ
-title: Обзор АПИ
-description: Вы можете ознакомиться с обзором АПИ JavaScript Booking в документации библиотеки DHTMLX JavaScript Booking. Изучайте руководства разработчика и справочник АПИ, пробуйте примеры кода и живые демо, а также загружайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
+sidebar_label: Обзор API
+title: Обзор API
+description: Вы можете ознакомиться с обзором API JavaScript Booking в документации библиотеки DHTMLX JavaScript Booking. Изучайте руководства разработчика и справочник API, пробуйте примеры кода и живые демо, а также загружайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
 ---
 
-# Обзор АПИ {#api-overview}
+# Обзор API {#api-overview}
 
 ## Конструктор Booking {#booking-constructor}
 
@@ -28,7 +28,7 @@ new booking.Booking("#root", {
 | [](api/methods/booking-setconfirmhandler-method.md) | @getshort(../methods/booking-setconfirmhandler-method.md) |
 | [](api/methods/booking-setlocale-method.md)         | @getshort(../methods/booking-setlocale-method.md)         |
 
-## Внутреннее АПИ Booking {#booking-internal-api}
+## Внутреннее API Booking {#booking-internal-api}
 
 ### Методы Event Bus {#event-bus-methods}
 

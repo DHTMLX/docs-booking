@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.getReactiveState()
 title: Метод getReactiveState()
-description: В документации библиотеки DHTMLX JavaScript Booking вы можете узнать о методе getReactiveState. Изучайте руководства разработчика и справочник АПИ, просматривайте примеры кода и живые демо, а также скачайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
+description: В документации библиотеки DHTMLX JavaScript Booking вы можете узнать о методе getReactiveState. Изучайте руководства разработчика и справочник API, просматривайте примеры кода и живые демо, а также скачайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
 ---
 
 # api.getReactiveState()

@@ -1,7 +1,7 @@
 ---
 sidebar_label: Интеграция с Scheduler
 title: Интеграция с DHTMLX Scheduler
-description: Вы можете узнать об интеграции с DHTMLX Scheduler в документации библиотеки DHTMLX JavaScript Booking. Изучайте руководства для разработчиков и справочник АПИ, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
+description: Вы можете узнать об интеграции с DHTMLX Scheduler в документации библиотеки DHTMLX JavaScript Booking. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
 ---
 
 # Интеграция с DHTMLX Scheduler {#integration-with-dhtmlx-scheduler}

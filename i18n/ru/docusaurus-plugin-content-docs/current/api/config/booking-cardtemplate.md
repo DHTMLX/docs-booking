@@ -1,7 +1,7 @@
 ---
 sidebar_label: cardTemplate
 title: cardTemplate
-description: Вы можете узнать о конфигурации cardTemplate в документации библиотеки DHTMLX JavaScript Booking. Просматривайте руководства разработчика и справочник АПИ, пробуйте примеры кода и живые демо, а также загрузите бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
+description: Вы можете узнать о конфигурации cardTemplate в документации библиотеки DHTMLX JavaScript Booking. Просматривайте руководства разработчика и справочник API, пробуйте примеры кода и живые демо, а также загрузите бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
 ---
 
 # cardTemplate
