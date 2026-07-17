@@ -130,4 +130,4 @@ new booking.Booking("#root", {
 });
 ~~~
 
-**Связанные статьи**: [Определение правил слотов](guides/configuration.md#define-slot-rules)
+**Связанная статья**: [Определение правил слотов](guides/configuration.md#define-slot-rules)

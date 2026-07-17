@@ -18,7 +18,7 @@ description: DHTMLX JavaScript Booking 라이브러리 문서에서 renderType�
 renderType?: "default" | "lazy";
 ~~~
 
-### 매개변수 {#parameters}
+### 파라미터 {#parameters}
 
 - `default` - 위젯에 로드된 모든 카드를 렌더링합니다 (기본값으로 설정됨)
 - `lazy` - 화면에 보이는 카드만 렌더링합니다

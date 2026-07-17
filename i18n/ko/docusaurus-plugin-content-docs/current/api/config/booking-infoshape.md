@@ -22,7 +22,7 @@ infoShape?: {
 };
 ~~~
 
-### 매개변수 {#parameters}
+### 파라미터 {#parameters}
 
 객체에는 다음 매개변수가 있습니다:
 

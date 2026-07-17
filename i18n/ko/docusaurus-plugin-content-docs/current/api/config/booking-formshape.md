@@ -34,7 +34,7 @@ formShape: [{
 - `validation` - (선택 사항) 필드 값을 인수로 받아 boolean을 반환하는 함수입니다. 함수가 `true`를 반환하면 해당 필드는 유효한 것으로 간주됩니다.
 - `errorMessage` - (선택 사항) 값이 유효성 검사를 통과하지 못했을 때 표시되는 메시지
 
-### 기본 구성 {#default-config}
+### 기본 설정 {#default-config}
 
 ~~~jsx {}
 const defaultFormShape = [

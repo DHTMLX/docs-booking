@@ -16,7 +16,7 @@ description: DHTMLX JavaScript Booking 라이브러리 문서에서 setNext 메�
 api.setNext(next: any): void;
 ~~~
 
-### 매개변수 {#parameters}
+### 파라미터 {#parameters}
 
 - `next` - (필수) **Event Bus** 순서에 포함될 동작
 

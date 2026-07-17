@@ -12,9 +12,14 @@ The **canonical** (most frequent) variant is given.
 
 The colon stays **outside** the bold markers (`**...**:`); zh uses a full-width colon `：`.
 
+Use the **singular** form when a single article is listed, the **plural** form for a list of two or
+more. ko/zh have no number inflection — the same label serves both. The number must agree with the
+number of links in the block.
+
 | EN | ru | de | ko | zh |
 |---|---|---|---|---|
 | `**Related articles**:` | `**Связанные статьи**:` | `**Verwandte Artikel**:` | `**관련 문서**:` | `**相关文章**：` |
+| `**Related article**:` | `**Связанная статья**:` | `**Verwandter Artikel**:` | `**관련 문서**:` | `**相关文章**：` |
 
 ## 2. Section headings
 

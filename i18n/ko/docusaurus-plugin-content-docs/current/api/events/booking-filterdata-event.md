@@ -27,7 +27,7 @@ description: DHTMLX JavaScript Booking 라이브러리의 filter-data 이벤트�
  }) => void;
 ~~~
 
-### 매개변수 {#parameters}
+### 파라미터 {#parameters}
 
 `filter-data` 이벤트의 callback은 다음 매개변수를 포함하는 객체를 받을 수 있습니다:
 
