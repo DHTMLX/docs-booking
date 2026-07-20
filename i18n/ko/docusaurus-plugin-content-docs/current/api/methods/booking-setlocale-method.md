@@ -16,7 +16,7 @@ description: DHTMLX JavaScript Booking 라이브러리 문서에서 setLocale() 
 setLocale(locale?: object | null): void;
 ~~~
 
-### 매개변수 {#parameters}
+### 파라미터 {#parameters}
 
 - `null` - (선택 사항) 기본 로케일(영어)로 초기화합니다
 - `locale` - (선택 사항) 적용할 새 로케일 데이터 객체

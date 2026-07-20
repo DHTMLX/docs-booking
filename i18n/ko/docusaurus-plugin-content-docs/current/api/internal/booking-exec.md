@@ -21,7 +21,7 @@ api.exec(
 ): Promise<any>;
 ~~~
 
-### 매개변수 {#parameters}
+### 파라미터 {#parameters}
 
 - `event` - (필수) 실행할 이벤트
 - `config` - (필수) 매개변수가 포함된 config 객체 (실행할 이벤트를 참조하세요)

@@ -1,7 +1,7 @@
 ---
 sidebar_label: formShape
 title: formShape
-description: В документации библиотеки DHTMLX JavaScript Booking вы можете узнать о конфиге formShape. Изучайте руководства разработчика и справочник АПИ, пробуйте примеры кода и живые демо, загрузите бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
+description: В документации библиотеки DHTMLX JavaScript Booking вы можете узнать о конфиге formShape. Изучайте руководства разработчика и справочник API, пробуйте примеры кода и живые демо, загрузите бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
 ---
 
 # formShape

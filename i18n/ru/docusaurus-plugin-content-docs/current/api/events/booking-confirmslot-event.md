@@ -1,7 +1,7 @@
 ---
 sidebar_label: confirm-slot
 title: Событие confirm-slot
-description: Вы можете узнать о событии confirm-slot в документации библиотеки DHTMLX JavaScript Booking. Изучайте руководства разработчика и справочник АПИ, пробуйте примеры кода и живые демо, а также загружайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
+description: Вы можете узнать о событии confirm-slot в документации библиотеки DHTMLX JavaScript Booking. Изучайте руководства разработчика и справочник API, пробуйте примеры кода и живые демо, а также загружайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
 ---
 
 # confirm-slot
@@ -57,4 +57,4 @@ widget.api.on("confirm-slot", (obj) => {
 });
 ~~~
 
-**Связанные статьи**: метод [`setConfirmHandler`](api/methods/booking-setconfirmhandler-method.md)
+**Связанная статья**: метод [`setConfirmHandler`](api/methods/booking-setconfirmhandler-method.md)

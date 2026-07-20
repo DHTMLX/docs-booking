@@ -16,7 +16,7 @@ description: DHTMLX JavaScript Booking 라이브러리 문서에서 setConfirmHa
 setConfirmHandler(confirmHandler: (ev) => any): void;
 ~~~
 
-### 매개변수 {#parameters}
+### 파라미터 {#parameters}
 
 이 메서드는 슬롯 예약을 확정할 때 호출될 `confirmHandler` 함수를 인수로 받습니다. 해당 함수는 [`confirm-slot`](api/events/booking-confirmslot-event.md) 이벤트와 동일한 객체를 매개변수로 받습니다.
 

@@ -24,7 +24,7 @@ cardShape?: {
 };
 ~~~
 
-### Parameters {#parameters}
+### 파라미터 {#parameters}
 
 `cardShape` 객체에서 다음 parameters(필드)를 지정할 수 있습니다:
 
