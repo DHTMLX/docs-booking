@@ -16,7 +16,7 @@ description: DHTMLX JavaScript Booking 라이브러리 문서에서 종료 날�
 end?: Date;
 ~~~
 
-### 파라미터 {#parameters}
+### 매개변수 {#parameters}
 
 - `end` - (선택 사항) 예약 가능한 슬롯을 표시할 종료 날짜입니다. 기본값은 현재 날짜로부터 1년 후입니다.
 

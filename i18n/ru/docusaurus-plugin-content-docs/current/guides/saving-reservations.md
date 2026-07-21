@@ -179,7 +179,7 @@ fetch( serverURL + "/units")
 
 <iframe src="https://snippet.dhtmlx.com/dpbmyr8j?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**Связанные статьи**:
+**Полезные статьи:**
 
 - [`confirm-slot`](api/events/booking-confirmslot-event.md) — событие, возникающее при подтверждении пользователем слота
 - [`setConfig()`](api/methods/booking-setconfig-method.md) — обновление конфигурации виджета загруженными данными

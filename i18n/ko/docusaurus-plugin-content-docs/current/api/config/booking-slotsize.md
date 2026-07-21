@@ -20,7 +20,7 @@ description: DHTMLX JavaScript Booking 라이브러리 문서에서 slotSize에 
 slotSize?: number;
 ~~~
 
-### 파라미터 {#parameters}
+### 매개변수 {#parameters}
 
 - `number` - (선택 사항) 예약 슬롯의 지속 시간(분 단위); 기본값은 60분입니다
 

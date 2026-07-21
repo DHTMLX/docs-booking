@@ -35,4 +35,4 @@ widget.setConfirmHandler((ev) => {
 
 <iframe src="https://snippet.dhtmlx.com/dpbmyr8j?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**Verwandter Artikel**: [Reservierungen auf dem Server speichern](guides/saving-reservations.md)
+**Verwandter Artikel:** [Reservierungen auf dem Server speichern](guides/saving-reservations.md)

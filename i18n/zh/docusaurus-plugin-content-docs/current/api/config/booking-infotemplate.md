@@ -86,7 +86,7 @@ infoTemplate?: ({item: obj, slot: number}) => string;
 您也可以使用 [`infoShape`](api/config/booking-infoshape.md) 属性控制 Booking 对话框信息块中显示的字段。但如果两个属性同时使用，`infoTemplate` 将覆盖 `infoShape` 的设置。
 :::
 
-**相关文章**：
+**相关文章：**
 
 - [配置 Booking 对话框](guides/configuration.md#configure-the-booking-dialog)
 - [`infoShape`](api/config/booking-infoshape.md)

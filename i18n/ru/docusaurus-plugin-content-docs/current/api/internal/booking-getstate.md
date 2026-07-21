@@ -16,7 +16,7 @@ description: В документации DHTMLX JavaScript Booking вы може
 api.getState(): object;
 ~~~
 
-### Возвращает {#returns}
+### Возвращаемое значение {#returns}
 
 Метод возвращает объект со следующими полями состояния:
 

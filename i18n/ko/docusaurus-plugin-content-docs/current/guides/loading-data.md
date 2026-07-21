@@ -197,7 +197,7 @@ fetch("/api/cards")
 
 ---
 
-**관련 문서**:
+**관련 문서:**
 
 - [`confirm-slot`](api/events/booking-confirmslot-event.md) — 슬롯 예약 확인 처리
 - [`setConfig()`](api/methods/booking-setconfig-method.md) — 초기화 이후 위젯 구성 업데이트

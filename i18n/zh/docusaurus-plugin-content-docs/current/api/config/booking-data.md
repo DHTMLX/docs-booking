@@ -130,4 +130,4 @@ new booking.Booking("#root", {
 });
 ~~~
 
-**相关文章**：[定义时间槽规则](guides/configuration.md#define-slot-rules)
+**相关文章：**[定义时间槽规则](guides/configuration.md#define-slot-rules)

@@ -16,7 +16,7 @@ description: DHTMLX JavaScript Booking 라이브러리 문서에서 setNext 메�
 api.setNext(next: any): void;
 ~~~
 
-### 파라미터 {#parameters}
+### 매개변수 {#parameters}
 
 - `next` - (필수) **Event Bus** 순서에 포함될 동작
 
@@ -38,4 +38,4 @@ fetch(server + "/data").then((res) => res.json()).then((data) => {
 widget.api.setNext(someServerService);
 ~~~
 
-**관련 문서**: [데이터 로딩](guides/loading-data.md)
+**관련 문서:** [데이터 로딩](guides/loading-data.md)

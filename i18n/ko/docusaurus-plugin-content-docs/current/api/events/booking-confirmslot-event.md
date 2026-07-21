@@ -29,7 +29,7 @@ description: DHTMLX JavaScript Booking 라이브러리 문서에서 confirm-slot
 }) => void;
 ~~~
 
-### 파라미터 {#parameters}
+### 매개변수 {#parameters}
 
 `confirm-slot` 이벤트의 callback은 다음 매개변수를 가진 객체를 받을 수 있습니다:
 
@@ -57,4 +57,4 @@ widget.api.on("confirm-slot", (obj) => {
 });
 ~~~
 
-**관련 문서**: [`setConfirmHandler`](api/methods/booking-setconfirmhandler-method.md) 메서드
+**관련 문서:** [`setConfirmHandler`](api/methods/booking-setconfirmhandler-method.md) 메서드

@@ -179,7 +179,7 @@ fetch( serverURL + "/units")
 
 <iframe src="https://snippet.dhtmlx.com/dpbmyr8j?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**관련 문서**:
+**관련 문서:**
 
 - [`confirm-slot`](api/events/booking-confirmslot-event.md) — 사용자가 슬롯을 확인할 때 발생하는 이벤트
 - [`setConfig()`](api/methods/booking-setconfig-method.md) — 가져온 데이터로 위젯 구성을 업데이트합니다

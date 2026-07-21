@@ -29,7 +29,7 @@ filterShape: {
 };
 ~~~
 
-### 파라미터 {#parameters}
+### 매개변수 {#parameters}
 
 - `text` - (선택 사항) `true`이면 텍스트 입력 필드가 표시됩니다(기본값). `false`이면 텍스트 필드가 숨겨집니다.
   - `id` - (필수) 필터링할 카드 필드의 이름 (`data` 속성으로, 예: `category` 또는 `title`)

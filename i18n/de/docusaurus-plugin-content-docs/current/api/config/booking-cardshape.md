@@ -73,7 +73,7 @@ Das folgende Snippet zeigt, wie Sie konfigurieren, welche Felder auf der linken 
 Sie können das Erscheinungsbild einer Karte auch mithilfe der Eigenschaft [`cardTemplate`](api/config/booking-cardtemplate.md) konfigurieren. Wenn sowohl `cardTemplate` als auch `cardShape` angewendet werden, überschreibt `cardTemplate` die `cardShape`-Einstellungen.
 :::
 
-**Verwandte Artikel**:
+**Verwandte Artikel:**
 
 - [Struktur der Karten definieren](guides/configuration.md#define-the-structure-of-cards)
 - [`cardTemplate`](api/config/booking-cardtemplate.md)

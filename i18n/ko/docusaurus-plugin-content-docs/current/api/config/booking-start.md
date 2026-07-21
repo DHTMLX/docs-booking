@@ -16,7 +16,7 @@ description: DHTMLX JavaScript Booking 라이브러리 문서에서 시작 날�
 start?: Date;
 ~~~
 
-### 파라미터 {#parameters}
+### 매개변수 {#parameters}
 
 - `Date` - (선택 사항) 사용 가능한 슬롯을 표시하기 시작할 날짜입니다. 기본값은 현재 날짜입니다.
 

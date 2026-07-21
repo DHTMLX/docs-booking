@@ -73,7 +73,7 @@ new booking.Booking("#root", {
 Вы также можете настроить внешний вид карточки с помощью свойства [`cardTemplate`](api/config/booking-cardtemplate.md). Если применены оба свойства — `cardTemplate` и `cardShape`, — `cardTemplate` переопределит настройки `cardShape`.
 :::
 
-**Связанные статьи**:
+**Полезные статьи:**
 
 - [Определение структуры карточек](guides/configuration.md#define-the-structure-of-cards)
 - [`cardTemplate`](api/config/booking-cardtemplate.md)

@@ -488,7 +488,7 @@ Booking использует следующие символы для соста
 
 <iframe src="https://snippet.dhtmlx.com/7khy4ayf?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**Связанные статьи**:
+**Полезные статьи:**
 
 - [`locale`](api/config/booking-locale.md) — установка активной локали при инициализации
 - [`setLocale()`](api/methods/booking-setlocale-method.md) — изменение или сброс активной локали во время выполнения

@@ -22,7 +22,7 @@ infoShape?: {
 };
 ~~~
 
-### 파라미터 {#parameters}
+### 매개변수 {#parameters}
 
 객체에는 다음 매개변수가 있습니다:
 
@@ -67,7 +67,7 @@ new booking.Booking("#root", {
 [`infoTemplate`](api/config/booking-infotemplate.md) 속성을 사용하여 Booking 대화 상자의 정보 블록에 표시할 필드를 제어할 수도 있습니다. 단, 두 속성이 모두 적용되면 `infoTemplate`이 `infoShape` 설정을 재정의합니다.
 :::
 
-**관련 문서**:
+**관련 문서:**
 
 - [Booking 대화 상자 구성하기](guides/configuration.md#configure-the-booking-dialog)
 - [`infoTemplate`](api/config/booking-infotemplate.md)

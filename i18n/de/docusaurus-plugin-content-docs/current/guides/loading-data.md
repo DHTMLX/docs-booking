@@ -197,7 +197,7 @@ Informationen zur serverseitigen Speicherung von Buchungen finden Sie im Leitfad
 
 ---
 
-**Verwandte Artikel**:
+**Verwandte Artikel:**
 
 - [`confirm-slot`](api/events/booking-confirmslot-event.md) — Slot-Buchungsbestätigung behandeln
 - [`setConfig()`](api/methods/booking-setconfig-method.md) — Widget-Konfiguration nach der Initialisierung aktualisieren

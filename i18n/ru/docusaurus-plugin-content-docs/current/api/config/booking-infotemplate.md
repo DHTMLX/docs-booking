@@ -86,7 +86,7 @@ infoTemplate?: ({item: obj, slot: number}) => string;
 Вы также можете управлять тем, какие поля отображаются в информационном блоке диалога Booking, используя свойство [`infoShape`](api/config/booking-infoshape.md). Однако если применены оба свойства, `infoTemplate` переопределит настройки `infoShape`.
 :::
 
-**Связанные статьи**:
+**Полезные статьи:**
 
 - [Настройка диалога Booking](guides/configuration.md#configure-the-booking-dialog)
 - [`infoShape`](api/config/booking-infoshape.md)

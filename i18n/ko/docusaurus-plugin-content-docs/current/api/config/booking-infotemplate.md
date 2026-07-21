@@ -16,7 +16,7 @@ description: DHTMLX JavaScript Booking 라이브러리 문서에서 infoTemplate
 infoTemplate?: ({item: obj, slot: number}) => string;
 ~~~
 
-### 파라미터 {#parameters}
+### 매개변수 {#parameters}
 
 `infoTemplate`은 `card` 항목 객체와 선택된 `slot` 타임스탬프를 입력으로 받아 HTML 문자열을 반환합니다.
 
@@ -86,7 +86,7 @@ infoTemplate?: ({item: obj, slot: number}) => string;
 [`infoShape`](api/config/booking-infoshape.md) 속성을 사용하여 Booking 대화 상자의 정보 블록에 표시할 필드를 제어할 수도 있습니다. 단, 두 속성이 모두 적용된 경우 `infoTemplate`이 `infoShape` 설정을 재정의합니다.
 :::
 
-**관련 문서**:
+**관련 문서:**
 
 - [Booking 대화 상자 구성하기](guides/configuration.md#configure-the-booking-dialog)
 - [`infoShape`](api/config/booking-infoshape.md)

@@ -73,7 +73,7 @@ new booking.Booking("#root", {
 您也可以使用 [`cardTemplate`](api/config/booking-cardtemplate.md) 属性配置卡片的外观。如果同时应用了 `cardTemplate` 和 `cardShape`，`cardTemplate` 将覆盖 `cardShape` 的设置。
 :::
 
-**相关文章**：
+**相关文章：**
 
 - [定义卡片结构](guides/configuration.md#define-the-structure-of-cards)
 - [`cardTemplate`](api/config/booking-cardtemplate.md)

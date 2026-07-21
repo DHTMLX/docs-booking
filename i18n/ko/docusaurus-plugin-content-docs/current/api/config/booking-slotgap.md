@@ -20,7 +20,7 @@ description: DHTMLX JavaScript Booking 라이브러리 문서에서 slotGap에 �
 slotGap?: number;
 ~~~
 
-### 파라미터 {#parameters}
+### 매개변수 {#parameters}
 
 - `number` - (선택 사항) 슬롯 사이의 간격(분 단위); 기본값은 0
 

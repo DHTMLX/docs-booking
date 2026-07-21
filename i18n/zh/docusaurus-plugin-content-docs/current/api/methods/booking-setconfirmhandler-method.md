@@ -35,4 +35,4 @@ widget.setConfirmHandler((ev) => {
 
 <iframe src="https://snippet.dhtmlx.com/dpbmyr8j?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**相关文章**：[将预约信息保存到服务器](guides/saving-reservations.md)
+**相关文章：**[将预约信息保存到服务器](guides/saving-reservations.md)

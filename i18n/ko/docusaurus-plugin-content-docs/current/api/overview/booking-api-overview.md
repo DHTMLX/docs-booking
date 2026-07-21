@@ -14,7 +14,7 @@ new booking.Booking("#root", {
 });
 ~~~
 
-**파라미터**:
+**매개변수**:
 
 - HTML 컨테이너 또는 해당 ID 선택자 (`HTMLElement | string`)
 - 구성 파라미터 객체 ([여기서 확인](#booking-properties))

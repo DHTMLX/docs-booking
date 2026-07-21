@@ -10,7 +10,7 @@ description: Вы можете узнать, что нового появило�
 
 Выпущена 12 марта 2025 г.
 
-### Новая функциональность {#new-functionality}
+### Новый функционал {#new-functionality}
 
 - Ленивый рендеринг карточек через свойство [`renderType`](api/config/booking-rendertype.md)
 - Возможность встраивать шаблоны через свойства [`cardTemplate`](api/config/booking-cardtemplate.md) и [`infoTemplate`](api/config/booking-infotemplate.md)

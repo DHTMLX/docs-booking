@@ -19,7 +19,7 @@ description: DHTMLX JavaScript Booking 라이브러리 문서에서 select-slot 
 }) => void;
 ~~~
 
-### 파라미터 {#parameters}
+### 매개변수 {#parameters}
 
 `select-slot` 이벤트의 callback은 다음 파라미터를 포함하는 객체를 받을 수 있습니다:
 

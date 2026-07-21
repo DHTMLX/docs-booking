@@ -16,7 +16,7 @@ description: DHTMLX JavaScript Booking 라이브러리 문서에서 setConfirmHa
 setConfirmHandler(confirmHandler: (ev) => any): void;
 ~~~
 
-### 파라미터 {#parameters}
+### 매개변수 {#parameters}
 
 이 메서드는 슬롯 예약을 확정할 때 호출될 `confirmHandler` 함수를 인수로 받습니다. 해당 함수는 [`confirm-slot`](api/events/booking-confirmslot-event.md) 이벤트와 동일한 객체를 매개변수로 받습니다.
 
@@ -35,4 +35,4 @@ widget.setConfirmHandler((ev) => {
 
 <iframe src="https://snippet.dhtmlx.com/dpbmyr8j?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**관련 문서**: [서버에 예약 저장하기](guides/saving-reservations.md)
+**관련 문서:** [서버에 예약 저장하기](guides/saving-reservations.md)

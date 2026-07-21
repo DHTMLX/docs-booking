@@ -16,7 +16,7 @@ description: Вы можете узнать о методе serialize() в до�
 serialize(): object[];
 ~~~
 
-### Возвращает {#returns}
+### Возвращаемое значение {#returns}
 
 Возвращает массив [data](api/config/booking-data.md).
 

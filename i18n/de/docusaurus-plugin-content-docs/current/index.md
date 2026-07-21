@@ -70,6 +70,6 @@ Sie können einen Termin auch über die Einzelkartenansicht vereinbaren:
 
 ![Ausgefülltes Buchungsformular im DHTMLX Booking-Dialog](/img/booking-2.png)
 
-## Wie geht es weiter? {#whats-next}
+## Wie geht es weiter {#whats-next}
 
 Jetzt können Sie [mit der Erstellung eines einfachen Booking-Widgets auf Ihrer Seite beginnen](how-to-start.md).

@@ -488,7 +488,7 @@ Der folgende Ausschnitt wechselt zwischen der `en`- und der `de`-Locale:
 
 <iframe src="https://snippet.dhtmlx.com/7khy4ayf?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**Verwandte Artikel**:
+**Verwandte Artikel:**
 
 - [`locale`](api/config/booking-locale.md) — aktive Locale bei der Initialisierung festlegen
 - [`setLocale()`](api/methods/booking-setlocale-method.md) — aktive Locale zur Laufzeit ändern oder zurücksetzen

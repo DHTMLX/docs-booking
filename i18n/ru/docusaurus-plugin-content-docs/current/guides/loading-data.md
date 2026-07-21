@@ -197,7 +197,7 @@ fetch("/api/cards")
 
 ---
 
-**Связанные статьи**:
+**Полезные статьи:**
 
 - [`confirm-slot`](api/events/booking-confirmslot-event.md) — обработка подтверждения бронирования слота
 - [`setConfig()`](api/methods/booking-setconfig-method.md) — обновление конфигурации виджета после инициализации

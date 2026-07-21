@@ -86,7 +86,7 @@ Das folgende Snippet zeigt, wie Sie eine Vorlage auf den Informationsblock des B
 Sie können auch steuern, welche Felder im Informationsblock des Booking-Dialogs angezeigt werden, indem Sie die Eigenschaft [`infoShape`](api/config/booking-infoshape.md) verwenden. Wenn jedoch beide Eigenschaften angewendet werden, überschreibt `infoTemplate` die `infoShape`-Einstellungen.
 :::
 
-**Verwandte Artikel**:
+**Verwandte Artikel:**
 
 - [Den Booking-Dialog konfigurieren](guides/configuration.md#configure-the-booking-dialog)
 - [`infoShape`](api/config/booking-infoshape.md)

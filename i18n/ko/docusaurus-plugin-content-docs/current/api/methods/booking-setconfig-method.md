@@ -18,7 +18,7 @@ description: DHTMLX JavaScript Booking 라이브러리 문서에서 setConfig() 
 setConfig(config: object): void;
 ~~~
 
-### 파라미터 {#parameters}
+### 매개변수 {#parameters}
 
 - `config` - (필수) Booking 구성 객체. 전체 속성 목록은 [여기](api/overview/booking-properties-overview.md)를 참조하세요
 

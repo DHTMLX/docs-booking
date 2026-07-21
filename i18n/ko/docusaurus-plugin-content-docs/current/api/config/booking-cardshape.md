@@ -24,7 +24,7 @@ cardShape?: {
 };
 ~~~
 
-### 파라미터 {#parameters}
+### 매개변수 {#parameters}
 
 `cardShape` 객체에서 다음 parameters(필드)를 지정할 수 있습니다:
 
@@ -73,7 +73,7 @@ new booking.Booking("#root", {
 [`cardTemplate`](api/config/booking-cardtemplate.md) 속성을 사용하여 카드의 외관을 구성할 수도 있습니다. `cardTemplate`과 `cardShape`이 모두 적용된 경우, `cardTemplate`이 `cardShape` 설정을 재정의합니다.
 :::
 
-**관련 문서**:
+**관련 문서:**
 
 - [카드 구조 정의하기](guides/configuration.md#define-the-structure-of-cards)
 - [`cardTemplate`](api/config/booking-cardtemplate.md)

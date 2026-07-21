@@ -151,7 +151,7 @@ new booking.Booking("#root", {
 });
 ~~~
 
-## Wie geht es weiter? {#whats-next}
+## Wie geht es weiter {#whats-next}
 
 Das ist alles, was Sie benötigen, um ein einfaches Booking auf einer Seite zu erstellen. Erkunden Sie nun die Booking-API:
 

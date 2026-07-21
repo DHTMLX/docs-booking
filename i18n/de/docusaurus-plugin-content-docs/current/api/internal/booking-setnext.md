@@ -38,4 +38,4 @@ fetch(server + "/data").then((res) => res.json()).then((data) => {
 widget.api.setNext(someServerService);
 ~~~
 
-**Verwandter Artikel**: [Daten laden](guides/loading-data.md)
+**Verwandter Artikel:** [Daten laden](guides/loading-data.md)
