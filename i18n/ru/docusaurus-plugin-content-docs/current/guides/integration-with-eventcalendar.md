@@ -1,7 +1,7 @@
 ---
 sidebar_label: Интеграция с Event Calendar
 title: Интеграция с DHTMLX Event Calendar
-description: Вы можете узнать об интеграции с DHTMLX Event Calendar в документации библиотеки DHTMLX JavaScript Booking. Изучайте руководства для разработчиков и справочник АПИ, пробуйте примеры кода и живые демо, а также загрузите бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
+description: Вы можете узнать об интеграции с DHTMLX Event Calendar в документации библиотеки DHTMLX JavaScript Booking. Изучайте руководства для разработчиков и справочник API, пробуйте примеры кода и живые демо, а также загрузите бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
 ---
 
 # Интеграция с DHTMLX Event Calendar

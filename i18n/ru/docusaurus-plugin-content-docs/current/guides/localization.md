@@ -1,7 +1,7 @@
 ---
 sidebar_label: Локализация
 title: Локализация
-description: Вы можете узнать о локализации в документации библиотеки DHTMLX JavaScript Booking. Просматривайте руководства разработчика и справочник АПИ, изучайте примеры кода и живые демо, а также загрузите бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
+description: Вы можете узнать о локализации в документации библиотеки DHTMLX JavaScript Booking. Просматривайте руководства разработчика и справочник API, изучайте примеры кода и живые демо, а также загрузите бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
 ---
 
 # Локализация {#localization}
@@ -488,7 +488,7 @@ Booking использует следующие символы для соста
 
 <iframe src="https://snippet.dhtmlx.com/7khy4ayf?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**Связанные статьи**:
+**Полезные статьи:**
 
 - [`locale`](api/config/booking-locale.md) — установка активной локали при инициализации
 - [`setLocale()`](api/methods/booking-setlocale-method.md) — изменение или сброс активной локали во время выполнения

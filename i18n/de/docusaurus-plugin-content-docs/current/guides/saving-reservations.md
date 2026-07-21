@@ -179,7 +179,7 @@ Das folgende Snippet zeigt einen vollständigen serverseitigen Buchungsablauf:
 
 <iframe src="https://snippet.dhtmlx.com/dpbmyr8j?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**Verwandte Artikel**:
+**Verwandte Artikel:**
 
 - [`confirm-slot`](api/events/booking-confirmslot-event.md) — Ereignis, das ausgelöst wird, wenn ein Benutzer einen Slot bestätigt
 - [`setConfig()`](api/methods/booking-setconfig-method.md) — Widget-Konfiguration mit abgerufenen Daten aktualisieren

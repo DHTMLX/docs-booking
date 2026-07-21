@@ -179,7 +179,7 @@ The snippet below demonstrates a full server-side booking flow:
 
 <iframe src="https://snippet.dhtmlx.com/dpbmyr8j?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**Related articles**:
+**Related articles:**
 
 - [`confirm-slot`](api/events/booking-confirmslot-event.md) — event fired when a user confirms a slot
 - [`setConfig()`](api/methods/booking-setconfig-method.md) — update the widget configuration with fetched data

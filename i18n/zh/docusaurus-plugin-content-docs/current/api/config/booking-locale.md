@@ -34,6 +34,6 @@ const widget = new booking.Booking("#root", {
 });
 ~~~
 
-**相关文章**：
+**相关文章：**
 - [setLocale()](api/methods/booking-setlocale-method.md)
 - [本地化](guides/localization.md)

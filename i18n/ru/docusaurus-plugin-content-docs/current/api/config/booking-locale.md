@@ -1,7 +1,7 @@
 ---
 sidebar_label: locale
 title: locale
-description: В документации библиотеки DHTMLX JavaScript Booking вы можете узнать о настройке локали. Изучайте руководства разработчика и справочник АПИ, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
+description: В документации библиотеки DHTMLX JavaScript Booking вы можете узнать о настройке локали. Изучайте руководства разработчика и справочник API, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
 ---
 
 # locale
@@ -34,6 +34,6 @@ const widget = new booking.Booking("#root", {
 });
 ~~~
 
-**Связанные статьи**:
+**Полезные статьи:**
 - [setLocale()](api/methods/booking-setlocale-method.md)
 - [Локализация](guides/localization.md)

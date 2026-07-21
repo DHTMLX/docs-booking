@@ -488,7 +488,7 @@ Booking은 다음 문자들을 사용하여 날짜 및 시간 형식 문자열�
 
 <iframe src="https://snippet.dhtmlx.com/7khy4ayf?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**관련 문서**:
+**관련 문서:**
 
 - [`locale`](api/config/booking-locale.md) — 초기화 시 활성 로케일 설정
 - [`setLocale()`](api/methods/booking-setlocale-method.md) — 런타임에 활성 로케일 변경 또는 재설정

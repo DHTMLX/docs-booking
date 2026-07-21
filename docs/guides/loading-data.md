@@ -197,7 +197,7 @@ For server-side persistence of bookings, see the [Saving reservations to the ser
 
 ---
 
-**Related articles**:
+**Related articles:**
 
 - [`confirm-slot`](api/events/booking-confirmslot-event.md) — handle slot booking confirmation
 - [`setConfig()`](api/methods/booking-setconfig-method.md) — update the widget configuration after initialization

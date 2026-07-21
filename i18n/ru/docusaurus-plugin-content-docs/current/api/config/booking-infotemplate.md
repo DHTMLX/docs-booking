@@ -1,7 +1,7 @@
 ---
 sidebar_label: infoTemplate
 title: infoTemplate
-description: Узнайте о конфигурационном параметре infoTemplate в документации библиотеки DHTMLX JavaScript Booking. Изучайте руководства разработчика и справочник АПИ, смотрите примеры кода и демонстрации, а также загрузите бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
+description: Узнайте о конфигурационном параметре infoTemplate в документации библиотеки DHTMLX JavaScript Booking. Изучайте руководства разработчика и справочник API, смотрите примеры кода и демонстрации, а также загрузите бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
 ---
 
 # infoTemplate
@@ -86,7 +86,7 @@ infoTemplate?: ({item: obj, slot: number}) => string;
 Вы также можете управлять тем, какие поля отображаются в информационном блоке диалога Booking, используя свойство [`infoShape`](api/config/booking-infoshape.md). Однако если применены оба свойства, `infoTemplate` переопределит настройки `infoShape`.
 :::
 
-**Связанные статьи**:
+**Полезные статьи:**
 
 - [Настройка диалога Booking](guides/configuration.md#configure-the-booking-dialog)
 - [`infoShape`](api/config/booking-infoshape.md)

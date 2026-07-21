@@ -35,4 +35,4 @@ widget.setConfirmHandler((ev) => {
 
 <iframe src="https://snippet.dhtmlx.com/dpbmyr8j?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**관련 문서**: [서버에 예약 저장하기](guides/saving-reservations.md)
+**관련 문서:** [서버에 예약 저장하기](guides/saving-reservations.md)

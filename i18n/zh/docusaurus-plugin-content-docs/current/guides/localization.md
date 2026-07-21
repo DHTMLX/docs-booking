@@ -488,7 +488,7 @@ Booking 使用以下字符组合日期和时间格式字符串：
 
 <iframe src="https://snippet.dhtmlx.com/7khy4ayf?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**相关文章**：
+**相关文章：**
 
 - [`locale`](api/config/booking-locale.md) — 在初始化时设置当前语言环境
 - [`setLocale()`](api/methods/booking-setlocale-method.md) — 在运行时更改或重置当前语言环境

@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.setNext()
 title: Метод setNext()
-description: В документации библиотеки DHTMLX JavaScript Booking вы можете узнать о методе setNext. Изучите руководства для разработчиков и справочник АПИ, ознакомьтесь с примерами кода и живыми демо, а также загрузите бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
+description: В документации библиотеки DHTMLX JavaScript Booking вы можете узнать о методе setNext. Изучите руководства для разработчиков и справочник API, ознакомьтесь с примерами кода и живыми демо, а также загрузите бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
 ---
 
 # api.setNext()
@@ -38,4 +38,4 @@ fetch(server + "/data").then((res) => res.json()).then((data) => {
 widget.api.setNext(someServerService);
 ~~~
 
-**Связанные статьи**: [Загрузка данных](guides/loading-data.md)
+**Полезная статья:** [Загрузка данных](guides/loading-data.md)

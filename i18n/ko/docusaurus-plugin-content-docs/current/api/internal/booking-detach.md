@@ -16,7 +16,7 @@ description: DHTMLX JavaScript Booking 라이브러리 문서에서 detach 메�
 api.detach(tag: number | string ): void;
 ~~~
 
-### Parameters {#parameters}
+### 매개변수 {#parameters}
 
 - `tag` - (필수) 액션 태그의 이름
 

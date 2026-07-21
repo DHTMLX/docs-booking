@@ -1,7 +1,7 @@
 ---
 sidebar_label: cardShape
 title: cardShape
-description: Вы можете узнать о конфиге cardShape в документации библиотеки DHTMLX JavaScript Booking. Изучайте руководства разработчика и справочник АПИ, пробуйте примеры кода и живые демо, и загружайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
+description: Вы можете узнать о конфиге cardShape в документации библиотеки DHTMLX JavaScript Booking. Изучайте руководства разработчика и справочник API, пробуйте примеры кода и живые демо, и загружайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
 ---
 
 # cardShape
@@ -36,7 +36,7 @@ cardShape?: {
 - `subtitle` - (необязательный) показывает/скрывает подзаголовок карточки
 - `title` - (необязательный) показывает/скрывает заголовок карточки
 
-### Конфиг по умолчанию {#default-config}
+### Конфигурация по умолчанию {#default-config}
 
 ~~~jsx {}
 const defaultCardShape = {
@@ -73,7 +73,7 @@ new booking.Booking("#root", {
 Вы также можете настроить внешний вид карточки с помощью свойства [`cardTemplate`](api/config/booking-cardtemplate.md). Если применены оба свойства — `cardTemplate` и `cardShape`, — `cardTemplate` переопределит настройки `cardShape`.
 :::
 
-**Связанные статьи**:
+**Полезные статьи:**
 
 - [Определение структуры карточек](guides/configuration.md#define-the-structure-of-cards)
 - [`cardTemplate`](api/config/booking-cardtemplate.md)

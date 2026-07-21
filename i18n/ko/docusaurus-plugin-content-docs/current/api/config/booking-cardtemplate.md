@@ -22,7 +22,7 @@ description: DHTMLX JavaScript Booking 라이브러리 문서에서 cardTemplate
 cardTemplate?: ({item: obj}) => string;
 ~~~
 
-### 파라미터 {#parameters}
+### 매개변수 {#parameters}
 
 `cardTemplate`는 `item`(카드) 객체를 입력으로 받아 카드의 표시 방식을 정의하는 HTML 문자열을 반환하는 함수를 받습니다.
 
@@ -83,7 +83,7 @@ cardTemplate?: ({item: obj}) => string;
 
 <iframe src="https://snippet.dhtmlx.com/k2v01vng?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**관련 문서**:
+**관련 문서:**
 
 - [카드 구조 정의](guides/configuration.md#define-the-structure-of-cards)
 - [`cardShape`](api/config/booking-cardshape.md)

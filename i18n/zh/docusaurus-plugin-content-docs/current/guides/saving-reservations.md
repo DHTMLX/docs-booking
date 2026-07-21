@@ -179,7 +179,7 @@ fetch( serverURL + "/units")
 
 <iframe src="https://snippet.dhtmlx.com/dpbmyr8j?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**相关文章**：
+**相关文章：**
 
 - [`confirm-slot`](api/events/booking-confirmslot-event.md) — 用户确认时间段时触发的事件
 - [`setConfig()`](api/methods/booking-setconfig-method.md) — 使用获取的数据更新组件配置

@@ -57,4 +57,4 @@ widget.api.on("confirm-slot", (obj) => {
 });
 ~~~
 
-**관련 문서**: [`setConfirmHandler`](api/methods/booking-setconfirmhandler-method.md) 메서드
+**관련 문서:** [`setConfirmHandler`](api/methods/booking-setconfirmhandler-method.md) 메서드

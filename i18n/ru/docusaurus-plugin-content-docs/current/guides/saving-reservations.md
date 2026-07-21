@@ -1,7 +1,7 @@
 ---
 sidebar_label: Работа с сервером
 title:  Работа с сервером
-description: В документации по библиотеке DHTMLX JavaScript Booking вы найдёте информацию о работе с сервером. Изучайте руководства разработчика и справочник АПИ, пробуйте примеры кода и живые демо, а также загрузите бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
+description: В документации по библиотеке DHTMLX JavaScript Booking вы найдёте информацию о работе с сервером. Изучайте руководства разработчика и справочник API, пробуйте примеры кода и живые демо, а также загрузите бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
 ---
 
 # Работа с сервером
@@ -10,7 +10,7 @@ description: В документации по библиотеке DHTMLX JavaSc
 
 ## Загрузка данных с сервера {#load-data-from-the-server}
 
-Получите данные карточек с помощью нативного АПИ `fetch` (или любого другого HTTP-клиента) и передайте разобранный JSON в виджет через метод [`setConfig()`](api/methods/booking-setconfig-method.md).
+Получите данные карточек с помощью нативного API `fetch` (или любого другого HTTP-клиента) и передайте разобранный JSON в виджет через метод [`setConfig()`](api/methods/booking-setconfig-method.md).
 
 Следующий фрагмент кода инициализирует пустой экземпляр Booking и загружает набор данных после получения ответа:
 
@@ -179,7 +179,7 @@ fetch( serverURL + "/units")
 
 <iframe src="https://snippet.dhtmlx.com/dpbmyr8j?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**Связанные статьи**:
+**Полезные статьи:**
 
 - [`confirm-slot`](api/events/booking-confirmslot-event.md) — событие, возникающее при подтверждении пользователем слота
 - [`setConfig()`](api/methods/booking-setconfig-method.md) — обновление конфигурации виджета загруженными данными

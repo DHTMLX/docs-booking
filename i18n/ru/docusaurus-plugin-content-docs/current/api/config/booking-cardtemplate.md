@@ -1,7 +1,7 @@
 ---
 sidebar_label: cardTemplate
 title: cardTemplate
-description: Вы можете узнать о конфигурации cardTemplate в документации библиотеки DHTMLX JavaScript Booking. Просматривайте руководства разработчика и справочник АПИ, пробуйте примеры кода и живые демо, а также загрузите бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
+description: Вы можете узнать о конфигурации cardTemplate в документации библиотеки DHTMLX JavaScript Booking. Просматривайте руководства разработчика и справочник API, пробуйте примеры кода и живые демо, а также загрузите бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
 ---
 
 # cardTemplate
@@ -83,7 +83,7 @@ cardTemplate?: ({item: obj}) => string;
 
 <iframe src="https://snippet.dhtmlx.com/k2v01vng?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
-**Связанные статьи**:
+**Полезные статьи:**
 
 - [Определение структуры карточек](guides/configuration.md#define-the-structure-of-cards)
 - [`cardShape`](api/config/booking-cardshape.md)

@@ -1,7 +1,7 @@
 ---
 sidebar_label: serialize()
 title: Метод serialize()
-description: Вы можете узнать о методе serialize() в документации библиотеки DHTMLX JavaScript Booking. Изучайте руководства разработчика и справочник АПИ, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
+description: Вы можете узнать о методе serialize() в документации библиотеки DHTMLX JavaScript Booking. Изучайте руководства разработчика и справочник API, пробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
 ---
 
 # serialize()
@@ -16,7 +16,7 @@ description: Вы можете узнать о методе serialize() в до�
 serialize(): object[];
 ~~~
 
-### Возвращает {#returns}
+### Возвращаемое значение {#returns}
 
 Возвращает массив [data](api/config/booking-data.md).
 

@@ -67,7 +67,7 @@ new booking.Booking("#root", {
 您也可以使用 [`infoTemplate`](api/config/booking-infotemplate.md) 属性控制 Booking 对话框信息块中显示的字段。但如果两个属性同时应用，`infoTemplate` 将覆盖 `infoShape` 的设置。
 :::
 
-**相关文章**：
+**相关文章：**
 
 - [配置 Booking 对话框](guides/configuration.md#configure-the-booking-dialog)
 - [`infoTemplate`](api/config/booking-infotemplate.md)

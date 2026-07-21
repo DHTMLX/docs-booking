@@ -44,7 +44,7 @@ data: [
 ];
 ~~~
 
-### 파라미터 {#parameters}
+### 매개변수 {#parameters}
 
 각 카드 객체에 대해 다음 파라미터를 지정할 수 있습니다:
 
@@ -130,4 +130,4 @@ new booking.Booking("#root", {
 });
 ~~~
 
-**관련 문서**: [슬롯 규칙 정의](guides/configuration.md#define-slot-rules)
+**관련 문서:** [슬롯 규칙 정의](guides/configuration.md#define-slot-rules)

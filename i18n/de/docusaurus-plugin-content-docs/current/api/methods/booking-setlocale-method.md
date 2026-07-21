@@ -37,6 +37,6 @@ widget.setLocale(booking.locales.de);
 widget.setLocale(); // oder setLocale(null);
 ~~~
 
-**Verwandte Artikel**:
+**Verwandte Artikel:**
 - [locale](api/config/booking-locale.md)
 - [Lokalisierung](guides/localization.md)

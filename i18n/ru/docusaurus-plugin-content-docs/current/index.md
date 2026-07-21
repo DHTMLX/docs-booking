@@ -2,7 +2,7 @@
 sidebar_label: Обзор Booking
 title: Обзор JavaScript Booking
 slug: /
-description: В документации вы найдёте обзор библиотеки DHTMLX JavaScript Booking. Изучите руководства разработчика и справочник АПИ, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
+description: В документации вы найдёте обзор библиотеки DHTMLX JavaScript Booking. Изучите руководства разработчика и справочник API, попробуйте примеры кода и живые демо, а также скачайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
 ---
 
 # Обзор DHTMLX Booking
@@ -55,7 +55,7 @@ JavaScript Booking — это готовый компонент, предназ�
 - from: 12, to: 17 (Afternoon)
 - from: 17, to: 20 (Evening)
 
-Настроить параметры фильтра можно через АПИ: [Настройка фильтра](guides/configuration.md#configure-the-filter)
+Настроить параметры фильтра можно через API: [Настройка фильтра](guides/configuration.md#configure-the-filter)
 
 ## Запись на приём {#making-an-appointment}
 

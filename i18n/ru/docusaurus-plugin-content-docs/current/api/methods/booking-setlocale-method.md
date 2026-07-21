@@ -1,7 +1,7 @@
 ---
 sidebar_label: setLocale()
 title: Метод setLocale()
-description: В документации DHTMLX JavaScript Booking вы можете узнать о методе setLocale(). Изучайте руководства разработчика и справочник АПИ, запускайте примеры кода и живые демо, а также скачайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
+description: В документации DHTMLX JavaScript Booking вы можете узнать о методе setLocale(). Изучайте руководства разработчика и справочник API, запускайте примеры кода и живые демо, а также скачайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
 ---
 
 # setLocale()
@@ -37,6 +37,6 @@ widget.setLocale(booking.locales.de);
 widget.setLocale(); // или setLocale(null);
 ~~~
 
-**Связанные статьи**:
+**Полезные статьи:**
 - [locale](api/config/booking-locale.md)
 - [Локализация](guides/localization.md)

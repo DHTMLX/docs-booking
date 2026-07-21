@@ -1,7 +1,7 @@
 ---
 sidebar_label: select-item-date
 title: Событие select-item-date
-description: В документации DHTMLX JavaScript Booking можно узнать о событии select-item-date. Изучайте руководства разработчика и справочник АПИ, пробуйте примеры кода и живые демо, скачайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
+description: В документации DHTMLX JavaScript Booking можно узнать о событии select-item-date. Изучайте руководства разработчика и справочник API, пробуйте примеры кода и живые демо, скачайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
 ---
 
 # select-item-date

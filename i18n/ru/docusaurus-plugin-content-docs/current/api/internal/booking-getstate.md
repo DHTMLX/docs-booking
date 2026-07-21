@@ -1,7 +1,7 @@
 ---
 sidebar_label: api.getState()
 title: Метод getState()
-description: В документации DHTMLX JavaScript Booking вы можете узнать о методе getState. Изучайте руководства разработчика и справочник АПИ, просматривайте примеры кода и живые демо, а также скачайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
+description: В документации DHTMLX JavaScript Booking вы можете узнать о методе getState. Изучайте руководства разработчика и справочник API, просматривайте примеры кода и живые демо, а также скачайте бесплатную 30-дневную ознакомительную версию DHTMLX Booking.
 ---
 
 # api.getState()
@@ -16,7 +16,7 @@ description: В документации DHTMLX JavaScript Booking вы може
 api.getState(): object;
 ~~~
 
-### Возвращает {#returns}
+### Возвращаемое значение {#returns}
 
 Метод возвращает объект со следующими полями состояния:
 

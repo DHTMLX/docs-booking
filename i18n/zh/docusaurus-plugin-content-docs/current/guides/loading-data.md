@@ -197,7 +197,7 @@ fetch("/api/cards")
 
 ---
 
-**相关文章**：
+**相关文章：**
 
 - [`confirm-slot`](api/events/booking-confirmslot-event.md) — 处理时间段预约确认
 - [`setConfig()`](api/methods/booking-setconfig-method.md) — 初始化后更新 widget 配置
