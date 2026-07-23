@@ -157,3 +157,4 @@ That's all you need to create a simple Booking on a page. Next, explore the Book
 
 - [Guides](/category/guides) pages provide instructions about installation, loading data, styling, and other helpful tips to go smoothly with the Booking configuration
 - [API reference](api/overview/booking-api-overview.md) gives description of the Booking functionality
+- [DHTMLX MCP server](guides/mcp-server.md) connects an AI coding assistant to this documentation, so it can look up current Booking APIs while you build

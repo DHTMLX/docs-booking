@@ -177,8 +177,9 @@ module.exports = {
 				"guides/initialization",
 				"guides/loading-data",
 				"guides/configuration",
-				"guides/localization",				
-				"guides/styling"
+				"guides/localization",
+				"guides/styling",
+				"guides/mcp-server"
 			]
 		}
 	]
