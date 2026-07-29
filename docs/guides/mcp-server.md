@@ -195,13 +195,13 @@ Name the object before you ask: a card, a slot, the filter, or the confirm handl
 **Cards and slots**
 
 ~~~
-How do I hide the price and review fields on a card using cardShape in DHTMLX Booking? Use the docs.
+How do I hide the price and review fields on a Booking card? Use the docs.
 ~~~
 ~~~
 How do I define a 45-minute slot duration for Tuesdays and Fridays only, using the slots array?
 ~~~
 ~~~
-How do I mark a slot as already booked with usedSlots in DHTMLX Booking?
+How do I mark a slot as already booked in DHTMLX Booking?
 ~~~
 
 **Filtering**
@@ -210,7 +210,7 @@ How do I mark a slot as already booked with usedSlots in DHTMLX Booking?
 How do I add a custom time range labeled "Urgent" to the DHTMLX Booking filter bar?
 ~~~
 ~~~
-How do I enable autoApply so the filter runs without clicking the Search button?
+How do I make the Booking filter apply automatically without clicking the Search button?
 ~~~
 
 **Reservations and server sync**
@@ -219,7 +219,7 @@ How do I enable autoApply so the filter runs without clicking the Search button?
 How do I use setConfirmHandler to post a reservation and call confirm.done() once the server responds?
 ~~~
 ~~~
-How do I load card data from a REST endpoint and apply it to an existing Booking instance with setConfig?
+How do I load card data from a REST endpoint and apply it to an existing Booking instance?
 ~~~
 ~~~
 How do I listen for the confirm-slot event without replacing the default confirm handler in DHTMLX Booking?
@@ -228,10 +228,10 @@ How do I listen for the confirm-slot event without replacing the default confirm
 **Localization and styling**
 
 ~~~
-How do I switch DHTMLX Booking to the German locale with setLocale?
+How do I switch DHTMLX Booking to the German locale?
 ~~~
 ~~~
-How do I override the --wx-booking-slots-width variable for a narrower layout?
+How do I make the Booking slots column narrower?
 ~~~
 
 ## Prompt habits useful for Booking
