@@ -48,7 +48,7 @@ Most Booking teams register the MCP endpoint once, right when they scaffold the 
 https://docs.dhtmlx.com/mcp
 ~~~
 
-Below are setup instructions for commonly used tools.
+Pick your tool below for its exact setup steps.
 
 ### Claude Code
 
@@ -182,11 +182,11 @@ If your tool isn't listed above, check its settings for "Model Context Protocol"
 
 ## Data handling behind the MCP server
 
-The MCP server is a hosted service: nothing runs on your machine, no files from your environment are read, and no personal user data is stored.
+The DHTMLX MCP server lives entirely off your machine: it never touches local files, and it keeps no record of who you are.
 
-Queries may be logged for debugging and service improvement purposes.
+The only queries it logs are the ones that help with debugging or improving the service.
 
-Teams that require stricter privacy guarantees can request a commercial deployment with query logging disabled. Contact us at `info@dhtmlx.com` for details.
+A commercial deployment turns query logging off completely for teams that need the extra guarantee. Arrange one through `info@dhtmlx.com`.
 
 ## Prompts to try when building with Booking
 
