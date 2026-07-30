@@ -6,7 +6,7 @@ description: For DHTMLX Booking cards, slots, filters, and the confirm handler, 
 
 # DHTMLX Booking MCP server: slot rules, not guesswork
 
-DHTMLX Booking gives a scheduling widget real range: [slot rules](guides/configuration.md#fill-cards-with-slots) flex down to the day or the exact date, a card's layout bends through either [toggling its default fields](api/config/booking-cardshape.md) or [swapping in a custom template](api/config/booking-cardtemplate.md), and the booking flow wraps up with a [reservation handler](api/methods/booking-setconfirmhandler-method.md) you control end to end. Getting the most from that range means starting each piece from its current setup, slot-rule priority, the right layout approach, an accurate reservation contract, rather than a training-time guess.
+DHTMLX Booking gives a scheduling widget real range: [slot rules](guides/configuration.md#fill-cards-with-slots) flex down to the day or the exact date, a card's layout bends through either [toggling its default fields](api/config/booking-cardshape.md) or [swapping in a custom template](api/config/booking-cardtemplate.md), and the booking flow wraps up with a [reservation handler](api/methods/booking-setconfirmhandler-method.md) you control end to end. Booking's slot-rule priority, layout approach, and reservation contract all need to match what's actually shipping today, not a training-time guess.
 
 Query the DHTMLX MCP server instead: it surfaces the current [slot configuration](guides/configuration.md#fill-cards-with-slots) rules, the [confirm handler](guides/saving-reservations.md#save-slot-reservations-to-the-server) contract, and the [filter setup](guides/configuration.md#configure-the-filter), so the assistant works from today's API rather than last year's.
 
