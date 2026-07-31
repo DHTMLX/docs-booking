@@ -42,7 +42,7 @@ Take the prompt *"How do I set up a confirm handler that posts a reservation and
 
 ## Plugging the MCP endpoint into your AI tool
 
-Most Booking teams register the MCP endpoint once, right when they scaffold the reservation backend, then reuse that registration across every project after. Only the mechanics differ from tool to tool: a CLI command for some, a JSON configuration file for others.
+Most Booking teams register the MCP endpoint once, right when they scaffold the reservation backend, then reuse that registration across every project after. Only the mechanics differ from tool to tool, a CLI command for some, a JSON configuration file for others, but all of them point at this address:
 
 ~~~jsx
 https://docs.dhtmlx.com/mcp
@@ -62,7 +62,7 @@ To register the server from the command line, run:
 claude mcp add --transport http dhtmlx-mcp https://docs.dhtmlx.com/mcp
 ~~~
 
-For manual setup, add the following to your `mcp.json`:
+Prefer to skip the CLI? Add the following entry to your `mcp.json` instead:
 
 ~~~jsx
 {
