@@ -1,16 +1,16 @@
 ---
 sidebar_label: DHTMLX MCP server
-title: DHTMLX Booking MCP server explains slots and reservations
+title: DHTMLX Booking MCP integration for slots and reservations
 description: For DHTMLX Booking cards, slots, filters, and the confirm handler, the MCP server keeps AI assistants on the current API instead of a training snapshot.
 ---
 
-# DHTMLX Booking MCP server: slot rules, not guesswork
+# DHTMLX Booking MCP server: slots, filters, and reservations
 
 DHTMLX Booking gives a scheduling widget real range: [slot rules](guides/configuration.md#fill-cards-with-slots) flex down to the day or the exact date, a card's layout bends through either [toggling its default fields](api/config/booking-cardshape.md) or [swapping in a custom template](api/config/booking-cardtemplate.md), and the booking flow wraps up with a [reservation handler](api/methods/booking-setconfirmhandler-method.md) you control end to end. Booking's slot-rule priority, layout approach, and reservation contract all need to match what's actually shipping today, not a training-time guess.
 
 Query the DHTMLX MCP server instead: it surfaces the current [slot configuration](guides/configuration.md#fill-cards-with-slots) rules, the [confirm handler](guides/saving-reservations.md#save-slot-reservations-to-the-server) contract, and the [filter setup](guides/configuration.md#configure-the-filter), so the assistant works from today's API rather than last year's.
 
-**MCP endpoint**
+### MCP endpoint
 
 ~~~jsx
 https://docs.dhtmlx.com/mcp
@@ -36,9 +36,16 @@ DHTMLX Booking's cards, slots, and server-sync logic all live in the MCP server'
 
 ## What the MCP server does with a Booking prompt
 
-Think of the MCP server as offering two speeds of help: fetch the paperwork and read it yourself, or ask someone who already has. That choice comes down to two workflows, *Search* and *Inference*, and the assistant picks one per request rather than running both on every query. A shared Retrieval-Augmented Generation (RAG) index of the Booking documentation backs both workflows, accessed through the single Model Context Protocol (MCP) endpoint.
+Behind a Booking question sits a Retrieval-Augmented Generation (RAG) pipeline the DHTMLX MCP server runs over the Model Context Protocol (MCP). The server hands each request to one of two workflows: *Search*, which returns matching reference pages, or *Inference*, which reads those pages and answers on its own. Follow the prompt *"How do I set up a confirm handler that posts a reservation and resolves it once the server responds?"* through the process:
 
-Take the prompt *"How do I set up a confirm handler that posts a reservation and resolves it once the server responds?"* The assistant sends it to *Search* because writing that handler means generating code: the workflow matches it against the server-integration documentation, returns the reference pages, and the assistant builds the handler from the `confirm`, `slot`, and `data` fields those pages describe. A narrower question, such as which parameter carries the booked slot's start time, goes to *Inference* instead: the workflow reads the same pages and hands back the parameter name directly, skipping the code-writing step entirely.
+1. The assistant issues the query via MCP.
+2. The server tracks it to the server-integration documentation.
+3. Writing a confirm handler calls for code, so *Search* picks it up (a narrower question, like which parameter carries the booked slot's start time, would go to *Inference* instead).
+4. *Search* draws the matching pages from a vector index built on the current Booking documentation.
+5. Those pages arrive back at the assistant as context.
+6. The assistant assembles the confirm handler from the `confirm`, `slot`, and `data` fields those pages describe.
+
+Booking suggestions stay tied to the widget's current slot rules and reservation handling this way, not an outdated guess.
 
 ## Plugging the MCP endpoint into your AI tool
 
