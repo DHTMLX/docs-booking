@@ -36,16 +36,18 @@ DHTMLX Booking's cards, slots, and server-sync logic all live in the MCP server'
 
 ## What the MCP server does with a Booking prompt
 
-Behind a Booking question sits a Retrieval-Augmented Generation (RAG) pipeline the DHTMLX MCP server runs over the Model Context Protocol (MCP). The server hands each request to one of two workflows: *Search*, which returns matching reference pages, or *Inference*, which reads those pages and answers on its own. Follow the prompt *"How do I set up a confirm handler that posts a reservation and resolves it once the server responds?"* through the process:
+Behind a Booking question sits a Retrieval-Augmented Generation (RAG) pipeline the DHTMLX MCP server runs over the Model Context Protocol (MCP). The server hands each request to one of two workflows: *Search*, which returns matching reference pages, or *Inference*, which reads those pages and answers on its own. Since Booking prompts often mix a coding question with details about the user's own backend, the assistant handles the two separately: it breaks out the part that needs documentation and answers the rest itself.
 
-1. The assistant issues the query via MCP.
+Follow the prompt *"How do I set up a confirm handler that posts a reservation to my company's internal booking-management API and resolves it once that responds?"* through the process:
+
+1. What lands in MCP is narrow: how to structure a confirm handler using the `confirm`, `slot`, and `data` fields.
 2. The server tracks it to the server-integration documentation.
 3. Writing a confirm handler calls for code, so *Search* picks it up (a narrower question, like which parameter carries the booked slot's start time, would go to *Inference* instead).
 4. *Search* draws the matching pages from a vector index built on the current Booking documentation.
 5. Those pages arrive back at the assistant as context.
-6. The assistant assembles the confirm handler from the `confirm`, `slot`, and `data` fields those pages describe.
+6. The assistant assembles the confirm handler from the `confirm`, `slot`, and `data` fields those pages describe, then fills in the specific request and response handling for the target backend from its own knowledge.
 
-Booking suggestions stay tied to the widget's current slot rules and reservation handling this way, not an outdated guess.
+Booking suggestions stay tied to the widget's current slot rules and reservation handling this way.
 
 ## Plugging the MCP endpoint into your AI tool
 
