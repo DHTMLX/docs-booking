@@ -6,9 +6,9 @@ description: For DHTMLX Booking cards, slots, filters, and the confirm handler, 
 
 # DHTMLX Booking MCP server: slots, filters, and reservations
 
-DHTMLX Booking gives a scheduling widget real range: [slot rules](guides/configuration.md#fill-cards-with-slots) flex down to the day or the exact date, a card's layout bends through either [toggling its default fields](api/config/booking-cardshape.md) or [swapping in a custom template](api/config/booking-cardtemplate.md), and the booking flow wraps up with a [reservation handler](api/methods/booking-setconfirmhandler-method.md) you control end to end. Booking's slot-rule priority, layout approach, and reservation contract all need to match what's actually shipping today, not a training-time guess.
+DHTMLX Booking exposes detailed configuration for a scheduling widget: you can define [slot rules](guides/configuration.md#fill-cards-with-slots) down to the day or the exact date, adjust a card's layout by either [toggling its default fields](api/config/booking-cardshape.md) or [swapping in a custom template](api/config/booking-cardtemplate.md), and fully customize the [reservation handler](api/methods/booking-setconfirmhandler-method.md) that closes out the booking flow. Booking's slot-rule priority, layout approach, and reservation contract all need to match what's actually shipping today, not a training-time guess.
 
-Query the DHTMLX MCP server instead: it surfaces the current [slot configuration](guides/configuration.md#fill-cards-with-slots) rules, the [confirm handler](guides/saving-reservations.md#save-slot-reservations-to-the-server) contract, and the [filter setup](guides/configuration.md#configure-the-filter), so the assistant works from today's API rather than last year's.
+Query the DHTMLX MCP server instead: it surfaces the current [slot configuration](guides/configuration.md#fill-cards-with-slots) rules, the [confirm handler](guides/saving-reservations.md#save-slot-reservations-to-the-server) contract, and the [filter setup](guides/configuration.md#configure-the-filter), so the assistant works from the current API instead of an outdated one.
 
 ### MCP endpoint
 
@@ -49,9 +49,9 @@ Follow the prompt *"How do I set up a confirm handler that posts a reservation t
 
 Booking suggestions stay tied to the widget's current slot rules and reservation handling this way.
 
-## Plugging the MCP endpoint into your AI tool
+## MCP setup, tool by tool
 
-Most Booking teams register the MCP endpoint once, right when they scaffold the reservation backend, then reuse that registration across every project after. Only the mechanics differ from tool to tool, a CLI command for some, a JSON configuration file for others, but all of them point at this address:
+Most Booking teams register the MCP endpoint once, when they set up the reservation backend, then reuse that registration across every project after. The mechanics differ from tool to tool, a CLI command for some, a JSON configuration file for others, but all of them point at this address:
 
 ~~~jsx
 https://docs.dhtmlx.com/mcp
@@ -191,7 +191,7 @@ If your tool isn't listed above, check its settings for "Model Context Protocol"
 
 ## Data handling behind the MCP server
 
-The DHTMLX MCP server lives entirely off your machine: it never touches local files, and it keeps no record of who you are.
+The DHTMLX MCP server runs entirely off your machine: it never touches local files and does not store any personal information.
 
 The only queries it logs are the ones that help with debugging or improving the service.
 
@@ -207,7 +207,7 @@ Name the object before you ask: a card, a slot, the filter, or the confirm handl
 How do I hide the price and review fields on a Booking card? Use the docs.
 ~~~
 ~~~
-How do I define a 45-minute slot duration for Tuesdays and Fridays only, using the slots array?
+How do I define a 45-minute slot duration for Tuesdays and Fridays only in DHTMLX Booking?
 ~~~
 ~~~
 How do I mark a slot as already booked in DHTMLX Booking?
@@ -225,13 +225,13 @@ How do I make the Booking filter apply automatically without clicking the Search
 **Reservations and server sync**
 
 ~~~
-How do I use setConfirmHandler to post a reservation and call confirm.done() once the server responds?
+How do I post a reservation to my server and resolve it once the server responds?
 ~~~
 ~~~
 How do I load card data from a REST endpoint and apply it to an existing Booking instance?
 ~~~
 ~~~
-How do I listen for the confirm-slot event without replacing the default confirm handler in DHTMLX Booking?
+How do I react to a confirmed reservation without replacing the default confirm handler in DHTMLX Booking?
 ~~~
 
 **Localization and styling**
