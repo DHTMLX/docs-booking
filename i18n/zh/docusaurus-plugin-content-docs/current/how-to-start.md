@@ -157,3 +157,4 @@ new booking.Booking("#root", {
 
 - [指南](/category/guides)页面提供了有关安装、加载数据、样式设置及其他有用提示的说明，帮助您顺利完成 Booking 配置
 - [API 参考](api/overview/booking-api-overview.md)提供了 Booking 功能的详细描述
+- [DHTMLX MCP server](guides/mcp-server.md) 将 AI 编码助手连接到本文档，让它在您开发时随时查阅当前的 Booking API

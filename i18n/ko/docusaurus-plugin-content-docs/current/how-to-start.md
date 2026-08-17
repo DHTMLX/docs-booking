@@ -157,3 +157,4 @@ new booking.Booking("#root", {
 
 - [가이드](/category/guides) 페이지에서는 설치, 데이터 로드, 스타일링 및 Booking 구성을 원활하게 진행하는 데 도움이 되는 기타 유용한 팁에 대한 지침을 제공합니다
 - [API 레퍼런스](api/overview/booking-api-overview.md)는 Booking 기능에 대한 설명을 제공합니다
+- [DHTMLX MCP server](guides/mcp-server.md)는 AI 코딩 어시스턴트를 이 문서에 연결하여, 개발 중에도 최신 Booking API를 조회할 수 있게 해줍니다

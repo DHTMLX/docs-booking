@@ -157,3 +157,4 @@ Das ist alles, was Sie benötigen, um ein einfaches Booking auf einer Seite zu e
 
 - Die Seiten unter [Guides](/category/guides) bieten Anleitungen zur Installation, zum Laden von Daten, zur Gestaltung und weitere hilfreiche Tipps für eine reibungslose Booking-Konfiguration
 - Die [API-Referenz](api/overview/booking-api-overview.md) beschreibt die Funktionalität von Booking
+- Der [DHTMLX MCP server](guides/mcp-server.md) verbindet einen AI-Coding-Assistenten mit dieser Dokumentation, sodass er beim Entwickeln das aktuelle Booking-API nachschlagen kann
