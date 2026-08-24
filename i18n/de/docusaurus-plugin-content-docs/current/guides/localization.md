@@ -130,7 +130,7 @@ const en = {
 ~~~
 
 :::info
-Neben der `en`-Locale enthält Booking zwei weitere integrierte Locales — `de` (Deutsch) und `cn` (Chinesisch).
+Neben der `en`-Locale enthält Booking zwei weitere integrierte Locales: `de` (Deutsch) und `cn` (Chinesisch).
 :::
 
 <details>

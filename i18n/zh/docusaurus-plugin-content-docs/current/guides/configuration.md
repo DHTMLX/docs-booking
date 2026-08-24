@@ -255,7 +255,7 @@ new booking.Booking("#root", {
 
 要为特定星期几或具体日期使用不同参数，在 `slots` 数组中添加多个对象，并为每条规则设置 `days` 或 `dates` 参数。
 
-以下代码片段组合了三条规则——通用规则、适用于周二和周五的星期规则，以及适用于周三、周四和一个具体日期的规则：
+以下代码片段组合了三条规则：通用规则、适用于周二和周五的星期规则，以及适用于周三、周四和一个具体日期的规则：
 
 ~~~jsx {}
 const data = [
@@ -562,7 +562,7 @@ const defaultFilterShape = {
 
 ### 隐藏过滤器输入字段 {#hide-filter-input-fields}
 
-widget 默认显示所有输入字段——文本、时间和日期。要隐藏某个字段，将 [`filterShape`](api/config/booking-filtershape.md) 属性中对应的参数设置为 `false`。
+widget 默认显示所有输入字段：文本、时间和日期。要隐藏某个字段，将 [`filterShape`](api/config/booking-filtershape.md) 属性中对应的参数设置为 `false`。
 
 以下代码片段隐藏日期过滤器：
 

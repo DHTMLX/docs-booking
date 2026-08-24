@@ -274,7 +274,7 @@ export default function BookingComponent(props) {
 }
 ~~~
 
-Die Booking-Komponente rendert nun mit den geladenen Daten. Um das Widget weiter anzupassen, übergeben Sie zusätzliche Konfigurationseigenschaften — die vollständige Liste finden Sie in der [Eigenschaften-Übersicht](api/overview/booking-properties-overview.md).
+Die Booking-Komponente rendert nun mit den geladenen Daten. Um das Widget weiter anzupassen, übergeben Sie zusätzliche Konfigurationseigenschaften. Die vollständige Liste finden Sie in der [Eigenschaften-Übersicht](api/overview/booking-properties-overview.md).
 
 #### Events behandeln {#handle-events}
 

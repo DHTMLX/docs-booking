@@ -12,7 +12,7 @@ description: 您可以在 DHTMLX JavaScript Booking 库的文档中了解样式�
 
 Booking widget 使用 CSS 自定义属性来控制布局尺寸和共享主题 token。在您自己的 CSS 中覆盖这些变量以定制外观。
 
-以下代码片段展示了 widget 提供的 Booking 特定变量的子集（显示的是桌面端默认值；widget 内部会根据屏幕尺寸——桌面端、平板端和移动端——分别重新定义部分变量）：
+以下代码片段展示了 widget 提供的 Booking 特定变量的子集（显示的是桌面端默认值；widget 内部会针对桌面端、平板端和移动端分别重新定义部分变量）：
 
 ~~~css
 .wx-booking {
@@ -31,7 +31,7 @@ Booking widget 使用 CSS 自定义属性来控制布局尺寸和共享主题 to
 
 ## 应用内置主题 {#apply-the-built-in-theme}
 
-widget 提供一个内置主题——Material 主题。
+widget 提供一个内置主题，即 Material 主题。
 
 通过向 widget 容器添加对应的 CSS 类来应用主题。
 

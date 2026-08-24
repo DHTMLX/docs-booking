@@ -70,7 +70,7 @@ new booking.Booking("#root", {
 <iframe src="https://snippet.dhtmlx.com/6mxd7918?mode=result" frameborder="0" class="snippet_iframe" width="100%" height="600"></iframe>
 
 :::info
-Вы также можете настроить внешний вид карточки с помощью свойства [`cardTemplate`](api/config/booking-cardtemplate.md). Если применены оба свойства — `cardTemplate` и `cardShape`, — `cardTemplate` переопределит настройки `cardShape`.
+Вы также можете настроить внешний вид карточки с помощью свойства [`cardTemplate`](api/config/booking-cardtemplate.md). Если применены оба свойства, `cardTemplate` и `cardShape`, то `cardTemplate` переопределит настройки `cardShape`.
 :::
 
 **Полезные статьи:**

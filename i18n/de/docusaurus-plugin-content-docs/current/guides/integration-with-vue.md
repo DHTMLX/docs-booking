@@ -291,7 +291,7 @@ export default {
 </template>
 ~~~
 
-Die Booking-Komponente rendert nun mit den geladenen Daten. Um das Widget weiter anzupassen, übergeben Sie zusätzliche Konfigurationseigenschaften — die vollständige Liste finden Sie in der [Übersicht der Eigenschaften](api/overview/booking-properties-overview.md).
+Die Booking-Komponente rendert nun mit den geladenen Daten. Um das Widget weiter anzupassen, übergeben Sie zusätzliche Konfigurationseigenschaften. Die vollständige Liste finden Sie in der [Übersicht der Eigenschaften](api/overview/booking-properties-overview.md).
 
 #### Events verarbeiten {#handle-events}
 

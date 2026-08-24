@@ -1,7 +1,7 @@
 ---
 sidebar_label: Erste Schritte
 title: Erste Schritte
-description: Erfahren Sie, wie Sie mit DHTMLX Booking beginnen – in der Dokumentation der DHTMLX JavaScript Booking-Bibliothek. Lesen Sie Entwickler-Guides und API-Referenz, probieren Sie Code-Beispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Evaluierungsversion von DHTMLX Booking herunter.
+description: Erfahren Sie in der Dokumentation der DHTMLX JavaScript Booking-Bibliothek, wie Sie mit DHTMLX Booking beginnen. Lesen Sie Entwickler-Guides und API-Referenz, probieren Sie Code-Beispiele und Live-Demos aus und laden Sie eine kostenlose 30-Tage-Evaluierungsversion von DHTMLX Booking herunter.
 ---
 
 # Erste Schritte {#how-to-start}

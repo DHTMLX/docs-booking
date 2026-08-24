@@ -26,7 +26,7 @@ Die Karten, Slots und die Server-Sync-Logik von DHTMLX Booking liegen alle im du
 
 - Das aktuelle API für [Methoden](api/overview/booking-methods-overview.md), [Events](api/overview/booking-events-overview.md) und [Eigenschaften](api/overview/booking-properties-overview.md) nachschlagen, einschließlich der [Event Bus](api/overview/booking-internal-eventbus-overview.md)- und [state](api/overview/booking-internal-state-overview.md)-Methoden.
 - Sofort lauffähigen [Initialisierungscode](guides/initialization.md) für eine neue Booking-Instanz aus einer Beschreibung der benötigten Karten und Slots generieren.
-- Kartenfelder mit [`cardShape`](api/config/booking-cardshape.md) und [`cardTemplate`](api/config/booking-cardtemplate.md) umschalten oder ersetzen — und dasselbe für den Informationsblock des Buchungsdialogs mit [`infoShape`](api/config/booking-infoshape.md) und [`infoTemplate`](api/config/booking-infotemplate.md).
+- Kartenfelder mit [`cardShape`](api/config/booking-cardshape.md) und [`cardTemplate`](api/config/booking-cardtemplate.md) umschalten oder ersetzen sowie dasselbe für den Informationsblock des Buchungsdialogs mit [`infoShape`](api/config/booking-infoshape.md) und [`infoTemplate`](api/config/booking-infotemplate.md) tun.
 - [Slot-Regeln](guides/configuration.md#fill-cards-with-slots) (Größe, Abstand, Tage und Daten) und ihre Prioritätsreihenfolge ausarbeiten sowie Slots als [belegt oder verfügbar](guides/configuration.md#mark-slots-as-used-or-available) markieren.
 - Die [Filterleiste](guides/configuration.md#configure-the-filter) konfigurieren: Textfelder, Zeitbereiche und den `autoApply`-Modus.
 - Die [Server-Synchronisierung](guides/saving-reservations.md) verdrahten: Kartendaten mit [`setConfig()`](api/methods/booking-setconfig-method.md) laden und Reservierungen über [`setConfirmHandler()`](api/methods/booking-setconfirmhandler-method.md) senden.
@@ -51,7 +51,7 @@ So bleiben Booking-Vorschläge an die aktuellen Slot-Regeln und die Reservierung
 
 ## MCP-Setup, Tool für Tool {#mcp-setup-tool-by-tool}
 
-Die meisten Booking-Teams registrieren den MCP-Endpunkt einmal, wenn sie das Reservierungs-Backend aufsetzen, und verwenden diese Registrierung danach in jedem weiteren Projekt wieder. Die Mechanik unterscheidet sich von Tool zu Tool — bei den einen ein CLI-Befehl, bei den anderen eine JSON-Konfigurationsdatei —, aber alle zeigen auf diese Adresse:
+Die meisten Booking-Teams registrieren den MCP-Endpunkt einmal, wenn sie das Reservierungs-Backend aufsetzen, und verwenden diese Registrierung danach in jedem weiteren Projekt wieder. Die Mechanik unterscheidet sich von Tool zu Tool: bei den einen ist es ein CLI-Befehl, bei den anderen eine JSON-Konfigurationsdatei. Alle zeigen jedoch auf diese Adresse:
 
 ~~~jsx
 https://docs.dhtmlx.com/mcp
