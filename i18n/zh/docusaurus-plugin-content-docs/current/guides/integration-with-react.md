@@ -274,7 +274,7 @@ export default function BookingComponent(props) {
 }
 ~~~
 
-Booking 组件现在将渲染已加载的数据。如需进一步自定义 widget，可传入更多配置属性——完整列表请参阅[属性概览](api/overview/booking-properties-overview.md)。
+Booking 组件现在将渲染已加载的数据。如需进一步自定义 widget，可传入更多配置属性。完整列表请参阅[属性概览](api/overview/booking-properties-overview.md)。
 
 #### 处理事件 {#handle-events}
 

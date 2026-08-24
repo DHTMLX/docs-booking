@@ -12,7 +12,7 @@ Diese Anleitung zeigt, wie Sie das DHTMLX Booking-Widget mit [DHTMLX Event Calen
 
 Der Kern der Integration ist die Konvertierung von Event Calendar-Ereignissen in Booking-Slots. Beachten Sie die folgenden Punkte, bevor Sie beginnen.
 
-**Event Calendar-Ereignisse vs. Booking-Slots.** Event Calendar verwaltet Ereignisse – sowohl einzelne als auch wiederkehrende. Booking generiert aus diesen Ereignissen verfügbare Zeitslots. Das [folgende Snippet](#example) generiert Booking-Slots aus dem Zeitplan eines Arztes, indem es JSON-Daten serverseitig konvertiert.
+**Event Calendar-Ereignisse vs. Booking-Slots.** Event Calendar verwaltet sowohl einzelne als auch wiederkehrende Ereignisse. Booking generiert aus diesen Ereignissen verfügbare Zeitslots. Das [folgende Snippet](#example) generiert Booking-Slots aus dem Zeitplan eines Arztes, indem es JSON-Daten serverseitig konvertiert.
 
 **Einschränkung bei wiederkehrenden Ereignissen.** Booking unterstützt nur wöchentlich wiederkehrende Ereignisse, die im Event Calendar als `FREQ=WEEKLY;INTERVAL=1` definiert sind. Da Event Calendar beliebige Wiederholungsmuster unterstützt, sollten Sie die anderen Wiederholungsoptionen im Event Calendar-Formular ausblenden.
 

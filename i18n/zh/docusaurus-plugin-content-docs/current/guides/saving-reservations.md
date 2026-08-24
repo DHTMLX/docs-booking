@@ -78,7 +78,7 @@ fetch("/server/url")
 ~~~
 
 :::info
-[`setConfirmHandler()`](api/methods/booking-setconfirmhandler-method.md) 方法是一个快捷方式，其内部通过 `widget.api.on("confirm-slot", handler)` 订阅 [`confirm-slot`](api/events/booking-confirmslot-event.md) 事件。两种方式注册的处理函数具有相同的 callback 结构——当需要添加多个订阅者时，可直接调用 `widget.api.on("confirm-slot", handler)`。
+[`setConfirmHandler()`](api/methods/booking-setconfirmhandler-method.md) 方法是一个快捷方式，其内部通过 `widget.api.on("confirm-slot", handler)` 订阅 [`confirm-slot`](api/events/booking-confirmslot-event.md) 事件。两种方式注册的处理函数具有相同的 callback 结构。当需要添加多个订阅者时，可直接调用 `widget.api.on("confirm-slot", handler)`。
 :::
 
 ## 将 UTC 数据转换为本地时区 {#convert-utc-data-to-the-local-timezone}

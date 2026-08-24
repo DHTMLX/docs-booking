@@ -23,7 +23,7 @@ setConfig(config: object): void;
 - `config` - (erforderlich) ein Objekt der Booking-Konfiguration. Die vollständige Liste der Eigenschaften finden Sie [hier](api/overview/booking-properties-overview.md)
 
 :::info
-Die Methode führt ein flaches Zusammenführen auf der obersten Ebene durch: Jede übergebene Eigenschaft ersetzt die vorhandene vollständig — verschachtelte Objekte wie `cardShape` oder `filterShape` werden nicht tief zusammengeführt. Um zuvor gesetzte Werte innerhalb eines verschachtelten Objekts beizubehalten, übergeben Sie das gesamte Objekt erneut. Die Methode zerstört anschließend die aktuelle Komponente und initialisiert eine neue.
+Die Methode führt ein flaches Zusammenführen auf der obersten Ebene durch: Jede übergebene Eigenschaft ersetzt die vorhandene vollständig; verschachtelte Objekte wie `cardShape` oder `filterShape` werden nicht tief zusammengeführt. Um zuvor gesetzte Werte innerhalb eines verschachtelten Objekts beizubehalten, übergeben Sie das gesamte Objekt erneut. Die Methode zerstört anschließend die aktuelle Komponente und initialisiert eine neue.
 :::
 
 ### Beispiel {#example}
