@@ -78,7 +78,7 @@ fetch("/server/url")
 ~~~
 
 :::info
-Die Methode [`setConfirmHandler()`](api/methods/booking-setconfirmhandler-method.md) ist eine Kurzform, die intern das Ereignis [`confirm-slot`](api/events/booking-confirmslot-event.md) über `widget.api.on("confirm-slot", handler)` abonniert. Beide Ansätze registrieren einen Handler mit derselben Callback-Signatur — verwenden Sie `widget.api.on("confirm-slot", handler)` direkt, wenn Sie mehrere Abonnenten hinzufügen möchten.
+Die Methode [`setConfirmHandler()`](api/methods/booking-setconfirmhandler-method.md) ist eine Kurzform, die intern das Ereignis [`confirm-slot`](api/events/booking-confirmslot-event.md) über `widget.api.on("confirm-slot", handler)` abonniert. Beide Ansätze registrieren einen Handler mit derselben Callback-Signatur. Verwenden Sie `widget.api.on("confirm-slot", handler)` direkt, wenn Sie mehrere Abonnenten hinzufügen möchten.
 :::
 
 ## UTC-Daten in die lokale Zeitzone konvertieren {#convert-utc-data-to-the-local-timezone}

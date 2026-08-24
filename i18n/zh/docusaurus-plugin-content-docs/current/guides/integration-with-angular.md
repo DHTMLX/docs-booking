@@ -278,7 +278,7 @@ export class BookingComponent implements OnInit, OnDestroy {
 }
 ~~~
 
-Booking 组件现在将渲染已加载的数据。如需进一步自定义 widget，可传入额外的配置属性——完整列表请参阅 [Properties 概览](api/overview/booking-properties-overview.md)。
+Booking 组件现在将渲染已加载的数据。如需进一步自定义 widget，可传入额外的配置属性。完整列表请参阅 [Properties 概览](api/overview/booking-properties-overview.md)。
 
 #### 处理事件 {#handle-events}
 

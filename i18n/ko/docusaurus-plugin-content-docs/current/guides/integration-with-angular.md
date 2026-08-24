@@ -278,7 +278,7 @@ export class BookingComponent implements OnInit, OnDestroy {
 }
 ~~~
 
-Booking 컴포넌트가 이제 로드된 데이터와 함께 렌더링됩니다. 위젯을 추가로 커스터마이징하려면 추가 구성 속성을 전달하십시오 — 전체 목록은 [속성 개요](api/overview/booking-properties-overview.md)를 참조하십시오.
+Booking 컴포넌트가 이제 로드된 데이터와 함께 렌더링됩니다. 위젯을 추가로 커스터마이징하려면 추가 구성 속성을 전달하십시오. 전체 목록은 [속성 개요](api/overview/booking-properties-overview.md)를 참조하십시오.
 
 #### Events 처리 {#handle-events}
 

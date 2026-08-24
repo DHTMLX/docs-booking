@@ -23,7 +23,7 @@ setConfig(config: object): void;
 - `config` - （必填）Booking 配置对象。完整属性列表请参见[此处](api/overview/booking-properties-overview.md)
 
 :::info
-该方法在顶层执行浅合并：您传入的每个属性都会完全替换现有属性——`cardShape` 或 `filterShape` 等嵌套对象不会进行深度合并。若要保留嵌套对象中先前设置的值，需要重新传入完整的对象。该方法随后会销毁当前组件并初始化一个新的组件。
+该方法在顶层执行浅合并：您传入的每个属性都会完全替换现有属性；`cardShape` 或 `filterShape` 等嵌套对象不会进行深度合并。若要保留嵌套对象中先前设置的值，需要重新传入完整的对象。该方法随后会销毁当前组件并初始化一个新的组件。
 :::
 
 ### 示例 {#example}

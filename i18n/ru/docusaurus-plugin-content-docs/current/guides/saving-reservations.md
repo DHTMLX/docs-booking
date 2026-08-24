@@ -78,7 +78,7 @@ fetch("/server/url")
 ~~~
 
 :::info
-Метод [`setConfirmHandler()`](api/methods/booking-setconfirmhandler-method.md) является сокращённым вариантом, который внутренне подписывается на событие [`confirm-slot`](api/events/booking-confirmslot-event.md) через `widget.api.on("confirm-slot", handler)`. Оба подхода регистрируют обработчик с одинаковой сигнатурой калбэка — используйте `widget.api.on("confirm-slot", handler)` напрямую, если нужно добавить несколько подписчиков.
+Метод [`setConfirmHandler()`](api/methods/booking-setconfirmhandler-method.md) является сокращённым вариантом, который внутренне подписывается на событие [`confirm-slot`](api/events/booking-confirmslot-event.md) через `widget.api.on("confirm-slot", handler)`. Оба подхода регистрируют обработчик с одинаковой сигнатурой калбэка. Используйте `widget.api.on("confirm-slot", handler)` напрямую, если нужно добавить несколько подписчиков.
 :::
 
 ## Конвертация UTC-данных в локальный часовой пояс {#convert-utc-data-to-the-local-timezone}

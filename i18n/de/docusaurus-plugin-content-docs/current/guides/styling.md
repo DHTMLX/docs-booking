@@ -12,7 +12,7 @@ Passen Sie das Booking-Widget über CSS-Custom-Properties an. Das Widget stellt 
 
 Das Booking-Widget verwendet CSS-Custom-Properties für Layout-Dimensionen und gemeinsame Theme-Tokens. Überschreiben Sie diese Variablen in Ihrem eigenen CSS, um das Erscheinungsbild anzupassen.
 
-Der folgende Code-Ausschnitt zeigt eine Teilmenge der Booking-spezifischen Variablen, die das Widget bereitstellt (mit ihren Desktop-Werten; intern definiert das Widget einige davon je nach Bildschirmgröße neu — Desktop, Tablet und Mobil):
+Der folgende Code-Ausschnitt zeigt eine Teilmenge der Booking-spezifischen Variablen, die das Widget bereitstellt (mit ihren Desktop-Werten; intern definiert das Widget einige davon für Desktop, Tablet und Mobil neu):
 
 ~~~css
 .wx-booking {
@@ -31,7 +31,7 @@ In zukünftigen Versionen von Booking können sich Variablennamen ändern. Über
 
 ## Eingebautes Theme anwenden {#apply-the-built-in-theme}
 
-Das Widget bietet ein eingebautes Theme — das Material-Theme.
+Das Widget bietet ein eingebautes Theme, das Material-Theme.
 
 Wenden Sie das Theme an, indem Sie die entsprechende CSS-Klasse zum Widget-Container hinzufügen.
 

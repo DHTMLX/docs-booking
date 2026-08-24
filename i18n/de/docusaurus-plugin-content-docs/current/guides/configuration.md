@@ -255,7 +255,7 @@ new booking.Booking("#root", {
 
 Um unterschiedliche Parameter für ausgewählte Wochentage oder genaue Daten zu verwenden, fügen Sie dem `slots`-Array mehrere Objekte hinzu und setzen Sie den Parameter `days` oder `dates` für jede Regel.
 
-Das folgende Code-Snippet kombiniert drei Regeln — eine gemeinsame Regel, eine Wochentags-Regel für Dienstag und Freitag sowie eine Regel für Mittwoch, Donnerstag und ein genaues Datum:
+Das folgende Code-Snippet kombiniert drei Regeln: eine gemeinsame Regel, eine Wochentags-Regel für Dienstag und Freitag sowie eine Regel für Mittwoch, Donnerstag und ein genaues Datum:
 
 ~~~jsx {}
 const data = [
@@ -563,7 +563,7 @@ const defaultFilterShape = {
 
 ### Filter-Eingabefelder ausblenden {#hide-filter-input-fields}
 
-Das Widget zeigt standardmäßig alle Eingabefelder an — Text, Zeit und Datum. Um ein Feld auszublenden, setzen Sie den entsprechenden Parameter der Eigenschaft [`filterShape`](api/config/booking-filtershape.md) auf `false`.
+Das Widget zeigt standardmäßig alle Eingabefelder an: Text, Zeit und Datum. Um ein Feld auszublenden, setzen Sie den entsprechenden Parameter der Eigenschaft [`filterShape`](api/config/booking-filtershape.md) auf `false`.
 
 Das folgende Code-Snippet blendet den Datumsfilter aus:
 
